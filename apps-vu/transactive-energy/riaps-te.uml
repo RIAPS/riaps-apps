@@ -1,0 +1,69 @@
+@startuml
+
+skinparam componentStyle uml2
+
+title RIAPS - Transactive Energy App
+
+
+
+node GenControlNode {
+  rectangle GenPriceControl <<Actor>> {
+  	component GenGridlabD [
+	GenGridlabD
+	----
+	timer clock 3000;
+    pub sensor : GenSensorData;
+    sub actuator : GenActuatorCommand
+	]
+  	(gen) <-> [GenGridlabD]
+  	() GenSensorData 
+	() GenActuatorCommand
+	component GenController [
+	GenController
+	----
+	sub sensor : GenSensorData;
+    pub actuator : GenActuatorCommand;
+	]
+  }
+}
+
+GenGridlabD -r-> GenSensorData
+GenSensorData )-r-> GenController
+GenController -d-> GenActuatorCommand
+GenActuatorCommand )-u-> GenGridlabD
+
+node CustDemandControlNode {
+  rectangle CustDemandControl <<Actor>> {
+  component CustGridlabD [
+    CustGridlabD
+    -----
+	timer clock 3000;
+    pub sensor : CustSensorData;
+    sub actuator : CustActuatorCommand;
+  ]
+  (cust) <-> [CustGridlabD]
+  () CustSensorData
+  () CustActuatorCommand
+  component CustController [
+  CustController
+  --------
+      	sub sensor : CustSensorData;
+    	pub actuator : CustActuatorCommand;
+  ]
+  }
+}
+
+CustGridlabD -r-> CustSensorData
+CustSensorData )-r-> CustController
+CustController -d-> CustActuatorCommand
+CustActuatorCommand )-u-> CustGridlabD
+
+cloud Plant {
+  rectangle GridlabD {
+  }
+}
+
+GridlabD <-right-> gen
+GridlabD <-right-> cust
+
+@enduml

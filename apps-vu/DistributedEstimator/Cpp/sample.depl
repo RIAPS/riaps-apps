@@ -1,0 +1,5 @@
+// Eclipse-based execution (no deployment manager, just disco and direct start of actors)
+app DistributedEstimator {
+	on all Estimator;
+	on all Aggregator(posArg=12,optArg="fromDeployment"); 
+}

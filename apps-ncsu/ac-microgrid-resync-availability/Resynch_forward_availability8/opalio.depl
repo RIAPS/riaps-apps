@@ -1,0 +1,6 @@
+app OpalIO {
+	on (192.168.10.110) OpalIOActor;
+	on (192.168.10.111) Forwarder(priorityArg=2, availablityArg=1, ipArg=111, pmu_idArg=1, pmu_aliasArg="BBB1");
+    on (192.168.10.112) Forwarder(priorityArg=1, availablityArg=1, ipArg=112, pmu_idArg=2, pmu_aliasArg="BBB2"); 
+    on (192.168.10.113) OpalLogger; 
+    }

@@ -1,0 +1,56 @@
+// RIAPS Demo with OPAL-RT
+
+app OpalIO {
+    message C37Data;   		// tuple: raw frame (bytes), dictionary of interpreted values
+    message C37Header;		// tuple: raw frame (bytes), string
+    message C37Config;		// tuple: raw frame (bytes), dictionary of interpreted values
+    message PhasorData;
+    library pypmu;
+
+    device C37Receiver(pmu_ip='127.0.0.1', pmu_port=9876) {
+      inside data_queue; 			// Inside port for forwarding messages coming from an internal thread.
+      inside config_queue;
+      inside header_queue;
+
+      timer clock 2000;
+      pub c37data : C37Data;		// Publish port for received C37 data messages
+      pub c37header : C37Header;	// Publish port for received C37 header messages
+      pub c37config : C37Config;	// Publish port for received C37 config messages
+    }
+
+    device C37Sender(listen_port=9876) {
+      timer clock 2000;
+      sub c37data : C37Data;		// Subscribe port for C37 data messages to be sent
+      sub c37header : C37Header;	// Publish port for updating C37 header info
+      sub c37config : C37Config;	// Publish port for updating C37 config info
+    }
+
+    // Data Processor component
+    component Processor() {
+      sub rx_c37data : C37Data;
+      sub rx_c37header : C37Header;
+      sub rx_c37config : C37Config;
+	  pub tx_phasorData: PhasorData;
+    }
+
+	component Logger(db_host='127.0.0.1', db_port=8086, db_name='OpalIO', db_user='riaps', db_password='riaps') {
+      sub rx_phasorData : PhasorData;
+    }
+
+    // PDC actor
+    actor OpalIOActor() {
+       local C37Data, C37Header, C37Config;
+       {
+       	  c37receiver : C37Receiver(pmu_ip='127.0.0.1', pmu_port=9876);
+       	  c37sender : C37Sender(listen_port=9877);
+          processor : Processor();
+
+       }
+    }
+
+	actor OpalLogger(){
+		{
+		 logger : Logger(db_host='127.0.0.1', db_port=8086, db_name='OpalIO', db_user='riaps', db_password='riaps');
+		}
+	}
+}

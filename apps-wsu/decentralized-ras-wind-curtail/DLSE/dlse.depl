@@ -1,0 +1,6 @@
+app DLSE {
+	on (192.168.7.2) groupActor(gr_num = 1);
+	on (192.168.7.2) DLSEDataProvider;
+	on (192.168.3.225) groupActor(gr_num = 2);
+	on (192.168.3.225) groupActor(gr_num = 3);
+}

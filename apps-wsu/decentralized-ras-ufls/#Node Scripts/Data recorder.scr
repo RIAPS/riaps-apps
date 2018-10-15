@@ -1,0 +1,23 @@
+float f2_float;
+string cur_time;
+string filename = "#Data/data.csv";
+
+float pslider2, qslider2, pslider3, qslider3, pslider4, qslider4;
+
+fopen(filename,"w");
+
+while(1)
+{
+    cur_time = time();
+    
+    f2_float = MeterCapture("F02");
+    
+    pslider2 = SliderCapture("L2-P");
+    qslider2 = SliderCapture("L2-Q");
+    pslider3 = SliderCapture("L3-P");
+    qslider3 = SliderCapture("L3-Q");
+    pslider4 = SliderCapture("L4-P");
+    qslider4 = SliderCapture("L4-Q");
+    
+    fprintf(filename,"%s, %f, %f, %f, %f, %f, %f, %f\n", cur_time, f2_float, pslider2, qslider2, pslider3, qslider3, pslider4, qslider4);
+}

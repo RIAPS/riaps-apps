@@ -1,0 +1,34 @@
+struct PositionType {
+	value: Double;
+}
+
+struct ForceType {
+	value: Double;
+}
+
+message Position:PositionType;
+message Force:ForceType;
+
+app Sltest{
+	component Sensor {
+		timer clock 10
+		pub position : Position
+	}
+	
+	component ControllerSL {
+		pub force : Force
+		sub position : Position
+	}
+	
+	component Actuator {
+		sub force : Force
+	}
+	
+	actor ActOne {
+        {
+            sensor:Sensor;
+            controller:ControllerSL;
+            actuator:Actuator;
+        }
+    }
+}

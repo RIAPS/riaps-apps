@@ -1,0 +1,17 @@
+SetSwitch "G2 Locker" = 1;
+SetSwitch "G1 Locker" = 1;
+
+SetSwitch "SW_CS1" = 1;
+
+SetSwitch "Subsystem #1 : CTLs : Inputs : SW49" = 1;
+SetSwitch "Subsystem #1 : CTLs : Inputs : SW47" = 1;
+SetSwitch "Subsystem #1 : CTLs : Inputs : SW45" = 1;
+SetSwitch "Subsystem #1 : CTLs : Inputs : SW25" = 1;
+SetSwitch "SW21" = 1;
+
+SetSlider "L4-Q" = 10.0;
+SetSlider "L4-P" = 20.0;
+SetSlider "L3-Q" = 10.0;
+SetSlider "L3-P" = 26.0;
+SetSlider "L2-Q" = 12.0;
+SetSlider "L2-P" = 20.0;

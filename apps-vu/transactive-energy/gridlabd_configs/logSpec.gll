@@ -1,0 +1,5 @@
+[
+	[ "house15", "heating_setpoint", "degF" ],
+	[ "Market_1", "fixed_price", "MW" ],
+	[ "trip_meter15", "measured_real_power", "W" ]	
+]

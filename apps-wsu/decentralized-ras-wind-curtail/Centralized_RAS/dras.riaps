@@ -1,0 +1,43 @@
+app DRAS {
+	message phasorData;
+	message indexMessage;
+	message minMessage;
+    message pivotMessage;
+    message readyMessage;
+    message completeMessage;
+    message resultMessage;
+
+	component Group (group_no) {
+		timer clock 40000;
+		sub phasorPort: phasorData;
+		pub indexPub: indexMessage;
+		pub minPub: minMessage;
+        pub pivotPub: pivotMessage;
+        pub readyPub: readyMessage;
+        pub completePub: completeMessage;
+        pub resultPort: resultMessage;
+		sub indexSub: indexMessage;
+		sub minSub: minMessage;
+        sub pivotSub: pivotMessage;
+        sub readySub: readyMessage;
+        sub completeSub: completeMessage;
+	}
+	
+	component DataProvider {
+		timer clock 1000;
+		pub phasorPort: phasorData;
+        sub resultPort: resultMessage;
+	}
+
+	actor groupActor (group_no) {
+		{
+			group: Group(group_no = group_no);
+		}
+	}
+
+    actor DRASDataProvider {
+        {
+            dataProvider: DataProvider;
+        }
+    }
+}

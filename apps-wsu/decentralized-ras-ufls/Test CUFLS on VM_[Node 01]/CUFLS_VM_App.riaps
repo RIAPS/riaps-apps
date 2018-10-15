@@ -1,0 +1,17 @@
+app CUFLS_VM_App
+{
+	message random;
+	library CUFLS_lib;
+
+	component CuflsRelayNode
+	{
+		timer clock 20;
+    }
+
+	actor Node_01
+	{
+		{
+			crn_01: CuflsRelayNode;
+		}
+	}
+}

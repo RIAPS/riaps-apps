@@ -1,0 +1,11 @@
+float temp_float;
+string temp_string;
+float myArrayValues;
+int myArraySize;
+float mresult;
+float temp;
+
+ListenOnPort(7571, true);
+
+
+fprintf(stdmsg, "Runtime is now finished acting as TCP Server\n");

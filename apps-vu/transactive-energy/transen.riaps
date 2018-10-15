@@ -1,0 +1,77 @@
+package riaps.transactiveEnergy
+struct Sensordata
+{
+	Energy: Int32
+  		Interval: Int32
+}
+enumeration Command{
+  		INCREASE
+  		DECREASE
+  	}
+struct ActuatorCommand
+{
+	comm: Command
+  	Interval: Int32
+}
+message GenSensorData: Sensordata
+message GenActuatorCommand: ActuatorCommand
+message CustSensorData: Sensordata
+message CustActuatorCommand: ActuatorCommand 
+app TransEn
+{
+	component GenGridlabD(gldServer,
+    					  sensorObject,sensorParameter,sensorUnit,
+                 		  actuatorObject,actuatorParameter,actuatorUnit)
+	{
+		timer clock 3000;
+    	pub sensor : GenSensorData;
+    	sub actuator : GenActuatorCommand;
+	}
+	component GenController(upperThreshold,upperValue,
+                 		 	lowerThreshold,lowerValue,
+                 		 	initialValue)
+	{
+		sub sensor : GenSensorData;
+    	pub actuator : GenActuatorCommand;
+	}
+	component CustGridlabD(gldServer,
+    					  sensorObject,sensorParameter,sensorUnit,
+                 		  actuatorObject,actuatorParameter,actuatorUnit)
+	{
+		timer clock 3000;
+    	pub sensor : CustSensorData;
+    	sub actuator : CustActuatorCommand;
+	}
+	component CustController(upperThreshold,upperValue,
+                 		 	lowerThreshold,lowerValue,
+                 		 	initialValue)
+	{
+		sub sensor : CustSensorData;
+    	pub actuator : CustActuatorCommand;
+	}
+	// Actors
+	actor GenPriceControl
+	{
+		local GenSensorData,GenActuatorCommand; // Local message types
+		{
+			grid : GenGridlabD(gldServer='http://192.168.88.188:6267',
+       	  					 sensorObject='house15',sensorParameter='heating_setpoint',sensorUnit='degF',
+    					  	 actuatorObject='Market_1',actuatorParameter='fixed_price',actuatorUnit='MW');
+			controller : GenController(upperThreshold=65,upperValue=150,
+                 		 			 lowerThreshold=65,lowerValue=50,
+                 		 		  	 initialValue=50);
+		}
+	}
+	actor CustDemandControl
+	{
+		local CustSensorData,CustActuatorCommand; // Local message types
+		{
+			grid : CustGridlabD(gldServer='http://192.168.88.188:6267',
+       	      				 sensorObject='Market_1',sensorParameter='fixed_price',sensorUnit='MW',
+       	  					 actuatorObject='house15',actuatorParameter='heating_setpoint',actuatorUnit='degF');
+			controller : CustController(upperThreshold=100,upperValue=70,
+                 		 			 lowerThreshold=100,lowerValue=60,
+                 		 		  	 initialValue=70);
+		}
+	}
+}

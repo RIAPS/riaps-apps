@@ -1,0 +1,119 @@
+// RIAPS Demo with OPAL-RT
+
+app OpalIO {
+    message C37Data;   		// tuple: raw frame (bytes), dictionary of interpreted values
+    message C37Header;		// tuple: raw frame (bytes), string
+    message C37Config;		// tuple: raw frame (bytes), dictionary of interpreted values
+    message PhasorData;
+	message HeaderData;
+	message ConfigData;
+    
+	message AvaiResync;
+    message AvaiResyncDecision;
+    message GlobalAvaiResyncDecision;
+	
+    message DataValue;
+    
+//	message C37Data2;
+//	message C37Header2;
+//	message C37Config2;
+    library pypmu;
+
+    device C37Receiver(pmu_ip='192.168.10.31', pmu_port=9877) {
+      inside data_queue; 			// Inside port for forwarding messages coming from an internal thread.
+      inside config_queue;
+      inside header_queue;
+
+      timer clock 2000;
+      pub c37data : C37Data;		// Publish port for received C37 data messages
+      pub c37header : C37Header;	// Publish port for received C37 header messages
+      pub c37config : C37Config;	// Publish port for received C37 config messages
+    }
+
+    device C37Sender(listen_port=9876, pmu_id=1, pmu_alias="pmu1") {
+      timer clock 2000;
+      sub c37data : C37Data;		// Subscribe port for C37 data messages to be sent
+      sub c37header : C37Header;	// Publish port for updating C37 header info
+      sub c37config : C37Config;	// Publish port for updating C37 config info
+      sub rx_avaiResyncDecision: AvaiResyncDecision;
+    }
+	
+    device GpioDeviceComponent(bbb_pin_name='P8_11', direction='OUT', pull_up_down='PUD_OFF') {
+      inside dataIn_queue; 	 // Receive data from a specified GPIO and send to component
+      inside dataOut_queue;  // Receive from component and write to a specified GPIO
+      
+      timer clock 400;                      // Connect to GPIO on first clock
+      pub reportedData : DataValue;	    // Publish value read from the specified GPIO 
+      //sub readGpio     : ReadRequest  ;     //Received request to read the value of the specific GPIO
+      //sub writeGpio    : WriteRequest ;        
+    }
+    
+    
+    
+   // Data Processor component (from local to global)
+    component Processor() {
+      sub rx_c37data : C37Data;
+      sub rx_c37header : C37Header;
+      sub rx_c37config : C37Config;
+	  pub tx_phasorData: PhasorData;
+	  pub tx_headerData: HeaderData;
+	  pub tx_configData: ConfigData;
+    }
+	
+	// Data Processor component 2(from globle to local)
+	
+	component Processor2() {
+	
+      sub rx_phasorData2 : PhasorData;
+      sub rx_headerData2 : HeaderData;
+      sub rx_configData2 : ConfigData;
+      
+	  pub tx_c37data2 : C37Data;
+      pub tx_c37header2 : C37Header;
+      pub tx_c37config2 : C37Config;
+	  }
+
+	component Logger(db_host='192.168.10.121', db_port=8086, db_name='OpalIO', db_user='riaps', db_password='riaps') {
+      sub rx_phasorData : PhasorData;
+      sub rx_globalAvaiResyncDecision :GlobalAvaiResyncDecision;
+      }
+      
+    component AvaiChecker(priority=100, availablity=0, ip=111) {
+      timer clock 5000;
+      
+      sub resyncAvai: AvaiResync;
+      sub resyncFromGPIO: DataValue;
+      pub avaiResyncDecision: AvaiResyncDecision;
+      pub thisResyncAvai: AvaiResync;
+      pub globalAvaiResyncDecision: GlobalAvaiResyncDecision;
+    }
+
+    // PDC actor
+    actor OpalIOActor() {
+       local C37Data, C37Header, C37Config;
+       {
+       	  c37receiver : C37Receiver(pmu_ip='192.168.10.31', pmu_port=9877);
+       	  //c37sender : C37Sender(listen_port=9876);
+          processor : Processor();
+
+       }
+    }
+
+	actor Forwarder(priorityArg, availablityArg, ipArg, pmu_idArg,pmu_aliasArg="optString") {
+	   local   DataValue, AvaiResyncDecision, C37Data, C37Header, C37Config;
+       {
+      	 c37sender : C37Sender(listen_port=9876,pmu_id=pmu_idArg, pmu_alias=pmu_aliasArg);
+         gpioDevice : GpioDeviceComponent(bbb_pin_name='P8_11', direction='IN');
+         processor : Processor2();
+         avaichecker : AvaiChecker(priority=priorityArg, availablity=availablityArg, ip=ipArg);
+      }
+    }
+   
+	
+	actor OpalLogger(){
+		{
+		 logger : Logger(db_host='192.168.10.121', db_port=8086, db_name='OpalIO', db_user='riaps', db_password='riaps');
+		}
+	}
+    
+}

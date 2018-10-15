@@ -1,0 +1,28 @@
+app DLSE {
+	message testMessage;
+	message phasorData;
+	message phasorReply;
+
+	component Group (group_no) {
+		timer clock 2000;
+		sub phasorPort: phasorData;
+	}
+	
+	component DataProvider {
+		timer clock 1000;
+		pub phasorPort: phasorData;
+	}
+	
+	actor groupActor (gr_num) {
+		{
+			group: Group(group_no = gr_num);
+		}
+	}	
+	
+	actor DLSEDataProvider {
+		{
+			dataProvider: DataProvider;
+		}
+	}
+		
+}

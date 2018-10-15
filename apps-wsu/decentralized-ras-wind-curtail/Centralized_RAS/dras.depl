@@ -1,0 +1,7 @@
+app DRAS {
+	on (192.168.3.138) DRASDataProvider;
+	on (192.168.3.185) groupActor(group_no = 1);
+	on (192.168.3.186) groupActor(group_no = 2);
+	on (192.168.3.187) groupActor(group_no = 3);
+	on (192.168.3.138) groupActor(group_no = 4);
+}

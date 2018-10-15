@@ -1,0 +1,6 @@
+host vm {
+    net enx0050b67c77f8 address 10.76.0.144;
+}
+app IOT {
+    on vm IOTActor;
+}

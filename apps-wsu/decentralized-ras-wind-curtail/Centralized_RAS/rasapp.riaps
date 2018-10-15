@@ -1,0 +1,44 @@
+app RASApplication {
+	message TempPG;
+	message RTDSCommands;
+	message KeepAlive;
+	
+	component Leader {
+		timer clock 1000; //Defines how often keepalive messages are sent
+		sub providermsg: TempPG;
+		pub resultready: RTDSCommands;
+		pub backuplink: KeepAlive;
+	}
+	
+	component Backup {
+		timer clock 3500; //How often keepalive messages are checked.
+		sub providermsg: TempPG;
+		pub resultready: RTDSCommands;
+		sub leadermsg: KeepAlive;
+	}
+	
+	component RTDSDataProvider {
+		timer clock 7000;
+		sub commandmsg: RTDSCommands;
+		pub tempport: TempPG;
+	}
+	
+	actor DataProvider {
+		{
+			dataprovider: RTDSDataProvider;
+		}
+	}
+	
+	actor LeaderNode {
+		{
+			leader: Leader;
+		}
+	}
+	
+	actor BackupNode {
+		{
+			backup: Backup;
+		}
+	}
+}
+	

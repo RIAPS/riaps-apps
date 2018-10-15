@@ -1,0 +1,6 @@
+app DRAS {
+	on (192.168.3.183) groupActor(group_no = 1);
+	on (192.168.3.183) groupActor(group_no = 2);
+	on (192.168.3.183) groupActor(group_no = 3);
+	on (192.168.3.183) groupActor(group_no = 4);
+}

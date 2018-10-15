@@ -1,0 +1,136 @@
+digraph RIAPSModbusUART {
+orientation=l;
+nodesep="0.1";
+ranksep="1.5";
+rankdir=TB;
+subgraph msgs {
+rank=min;
+ModbusData [shape=ellipse];
+NodeData [shape=ellipse];
+PhasorData [shape=ellipse];
+}
+
+ModbusCommand_ModbusResponse_4 -> modbus_ModbusUartReqRepDevice_3;
+commInitiator_ComputationalComponent_5 -> NodeData;
+commInitiator_ComputationalComponent_5 -> ModbusData;
+PhasorData -> commInitiator_ComputationalComponent_5;
+NodeData -> commInitiator_ComputationalComponent_5;
+commInitiator_ComputationalComponent_5 -> ModbusCommand_ModbusResponse_4;
+subgraph "cluster_192.168.10.112" {
+label="192.168.10.112";
+rankdir=BT;
+rank=max;
+subgraph ModbusExampleActor_msgs_2 {
+rank=min;
+ModbusCommand_ModbusResponse_4 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_ModbusExampleActor_1 {
+label=ModbusExampleActor;
+style=rounded;
+modbus_ModbusUartReqRepDevice_3 [label="modbus:ModbusUartReqRepDevice", shape=component, rank=max];
+commInitiator_ComputationalComponent_5 [label="commInitiator:ComputationalComponent", shape=component, rank=max];
+}
+
+}
+
+ModbusCommand_ModbusResponse_9 -> modbus_ModbusUartReqRepDevice_8;
+commInitiator_ComputationalComponent_10 -> NodeData;
+commInitiator_ComputationalComponent_10 -> ModbusData;
+PhasorData -> commInitiator_ComputationalComponent_10;
+NodeData -> commInitiator_ComputationalComponent_10;
+commInitiator_ComputationalComponent_10 -> ModbusCommand_ModbusResponse_9;
+subgraph "cluster_192.168.10.114" {
+label="192.168.10.114";
+rankdir=BT;
+rank=max;
+subgraph ModbusExampleActor_msgs_7 {
+rank=min;
+ModbusCommand_ModbusResponse_9 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_ModbusExampleActor_6 {
+label=ModbusExampleActor;
+style=rounded;
+modbus_ModbusUartReqRepDevice_8 [label="modbus:ModbusUartReqRepDevice", shape=component, rank=max];
+commInitiator_ComputationalComponent_10 [label="commInitiator:ComputationalComponent", shape=component, rank=max];
+}
+
+}
+
+processor_Processor_13 -> PhasorData;
+C37Data_14 -> processor_Processor_13;
+C37Config_15 -> processor_Processor_13;
+C37Header_16 -> processor_Processor_13;
+c37receiver_C37Receiver1P13A2D_17 -> C37Data_14;
+c37receiver_C37Receiver1P13A2D_17 -> C37Config_15;
+c37receiver_C37Receiver1P13A2D_17 -> C37Header_16;
+subgraph "cluster_192.168.10.110" {
+label="192.168.10.110";
+rankdir=BT;
+rank=max;
+subgraph OpalIOActor_msgs_12 {
+rank=min;
+C37Data_14 [label=C37Data, shape=ellipse];
+C37Config_15 [label=C37Config, shape=ellipse];
+C37Header_16 [label=C37Header, shape=ellipse];
+}
+
+subgraph cluster_OpalIOActor_11 {
+label=OpalIOActor;
+style=rounded;
+processor_Processor_13 [label="processor:Processor", shape=component, rank=max];
+c37receiver_C37Receiver1P13A2D_17 [label="c37receiver:C37Receiver1P13A2D", shape=component, rank=max];
+}
+
+}
+
+ModbusCommand_ModbusResponse_21 -> modbus_ModbusUartReqRepDevice_20;
+commInitiator_ComputationalComponent_22 -> NodeData;
+commInitiator_ComputationalComponent_22 -> ModbusData;
+PhasorData -> commInitiator_ComputationalComponent_22;
+NodeData -> commInitiator_ComputationalComponent_22;
+commInitiator_ComputationalComponent_22 -> ModbusCommand_ModbusResponse_21;
+subgraph "cluster_192.168.10.111" {
+label="192.168.10.111";
+rankdir=BT;
+rank=max;
+subgraph ModbusExampleActor_msgs_19 {
+rank=min;
+ModbusCommand_ModbusResponse_21 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_ModbusExampleActor_18 {
+label=ModbusExampleActor;
+style=rounded;
+modbus_ModbusUartReqRepDevice_20 [label="modbus:ModbusUartReqRepDevice", shape=component, rank=max];
+commInitiator_ComputationalComponent_22 [label="commInitiator:ComputationalComponent", shape=component, rank=max];
+}
+
+}
+
+ModbusCommand_ModbusResponse_26 -> modbus_ModbusUartReqRepDevice_25;
+commInitiator_ComputationalComponent_27 -> NodeData;
+commInitiator_ComputationalComponent_27 -> ModbusData;
+PhasorData -> commInitiator_ComputationalComponent_27;
+NodeData -> commInitiator_ComputationalComponent_27;
+commInitiator_ComputationalComponent_27 -> ModbusCommand_ModbusResponse_26;
+subgraph "cluster_192.168.10.113" {
+label="192.168.10.113";
+rankdir=BT;
+rank=max;
+subgraph ModbusExampleActor_msgs_24 {
+rank=min;
+ModbusCommand_ModbusResponse_26 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_ModbusExampleActor_23 {
+label=ModbusExampleActor;
+style=rounded;
+modbus_ModbusUartReqRepDevice_25 [label="modbus:ModbusUartReqRepDevice", shape=component, rank=max];
+commInitiator_ComputationalComponent_27 [label="commInitiator:ComputationalComponent", shape=component, rank=max];
+}
+
+}
+
+}

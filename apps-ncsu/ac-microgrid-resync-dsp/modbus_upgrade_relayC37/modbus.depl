@@ -1,0 +1,10 @@
+app RIAPSModbusUART {
+
+	on (192.168.10.110) OpalIOActor;
+	on (192.168.10.111) ModbusExampleActor(Ts = 0.05, ipArg=111 );
+    on (192.168.10.112) ModbusExampleActor(Ts = 0.05, ipArg=112 );
+    on (192.168.10.113) ModbusExampleActor(Ts = 0.05, ipArg=113 );
+    on (192.168.10.114) ModbusExampleActor(Ts = 0.05, ipArg=114 );
+	on (192.168.10.115) RelayC37Actor;
+	
+}

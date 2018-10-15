@@ -1,0 +1,7 @@
+// Application Deployment Configuration
+app DistributedEstimatorGpio {
+	on (bbb-a652.local) Estimator(freqArg=0.5,value=1.0);   // 0.5 Hz update rate
+	on (bbb-53c9.local) Estimator(freqArg=1.0,value=2.0);   // 1 Hz update rate
+	on (bbb-d995.local) Estimator(freqArg=2.0,value=3.0);   // 2 Hz update rate	
+	on (192.168.1.101) Aggregator();  
+}

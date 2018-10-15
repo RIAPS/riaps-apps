@@ -1,0 +1,8 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(ARCH amd64)
+set(RIAPS_PREFIX /opt/riaps/${ARCH})
+set(CMAKE_C_COMPILER gcc-7)
+set(CMAKE_CXX_COMPILER g++-7)
+set(CMAKE_FIND_ROOT_PATH /usr/)
+set (CMAKE_CXX_FLAGS "-std=c++11")
+set (CMAKE_C_FLAGS "-std=c99")

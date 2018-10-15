@@ -1,0 +1,11 @@
+package riaps.transactiveEnergy
+import riaps.transactiveEnergy.*
+
+nodeType BBB {
+	mem 512 MB
+}
+
+app TransEn {
+	on all BBB TransEn.GenPriceControl;
+	on all BBB TransEn.CustDemandControl; 
+}
