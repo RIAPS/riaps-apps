@@ -5,6 +5,8 @@ each other's local sensor data.  A running average of the gathered sensor data i
 on each RIAPS node.  This simple application demonstrates two different message handling
 types:  publish/subscribe and request/reply.  Two different language implementations are
 provided to allow users to see how to program using Python or C++ for the component code.
+There is also a mixed language application solution where LocalEstimator component is
+written in C++ and the other components are written in Python.
 
 
 ## Equipment Utilized
@@ -20,31 +22,26 @@ provided to allow users to see how to program using Python or C++ for the compon
 
 The following steps can be used to pull this application into an Eclipse project.
 
-0) Pull the content of this repository.
+1) Pull the content of this repository.
 
-1) Create a "C/C++" project from "Existing Code as Makefile Project".
+2) Create a "C/C++" project from "Makefile Project with Existing Code".
 
-2) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Linux GCC"
-toolchain for indexer settings.  
+3) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Linux GCC"
+toolchain for indexer settings.  The same can be done for the application under the "Mixed" folder.
 
-3) Build files are provided with the project to allow compilation for both amd64
-and armhf libraries of the components.  The makefile will utilize the project specific
-CMakeLists.txt file and toolchain specific .cmake files (.toolchain.amd64.cmake
-and .toolchain.arm-linux-gnueabihf.cmake).  The CMakeList.txt file has application specific instructions.
+4) The "compselection.sh" file identifies the application JSON file name and the language used for each component.  This file is currently created by the developer once the components are defined in the model file.  If multiple components are listed for a language type, they are delimited by a space and double quotes are needed around the group.
 
-4) Create build targets for both the amd64 and armhf architectures, along with
-a generic clean target.  Default setup works, names typically used are build-amd64
-and build-armhf.  
+5) Create build targets for both the amd64 and armhf architectures, along with a realclean target.  Default setup works, names typically used are all-amd64 and all-armhf.  The make commands can be found in the "makefile".
 
-5) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then
-"Paths and Symbols", add the following GNU C++ Includes for this project:
+6) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then
+"Paths and Symbols", add the following GNU C++ Includes for this project under both GNU C and GNU C++:
 
 - /usr/include/python3.6m
 - /opt/riaps/amd64/include
 - /opt/riaps/amd64/include/pybind11/include
-- /DistributedEstimatorCpp/include (this is a workspace path)
+- /Cpp/include (this is a workspace path and depends on the project name, utilize "Workspace" navigation when adding this directory path)
 
-6) To easily access the RIAPS platform tools from within Eclipse, import the [riaps_ctrl.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_ctrl.launch) and [riaps_deplo.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_deplo.launch) files.  
+7) To easily access the RIAPS platform tools from within Eclipse, import the [riaps_ctrl.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_ctrl.launch) and [riaps_deplo.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_deplo.launch) files.  
 
 >Note: Once imported, be sure to uncheck the "Build before launch" flag which is automatically checked under the "Build" tab of each of these imported external tool configurations.
 

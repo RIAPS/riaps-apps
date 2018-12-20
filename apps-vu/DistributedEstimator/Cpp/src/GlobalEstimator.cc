@@ -1,46 +1,58 @@
-//
-// Created by istvan on 11/11/16.
-//
+
 
 
 #include <GlobalEstimator.h>
+// riaps:keep_header:begin
 
-#include <pybind11/stl.h>
-#include <pybind11/pybind11.h>
-
-namespace py = pybind11;
+// riaps:keep_header:end
 
 namespace distributedestimator {
     namespace components {
-        GlobalEstimator::GlobalEstimator(const py::object *parent_actor,
-                                         const py::dict actor_spec, // Actor json config
-                                         const py::dict type_spec,  // component json config
-                                         const std::string &name,
-                                         const std::string &type_name,
-                                         const py::dict args,
-                                         const std::string &application_name,
-                                         const std::string &actor_name)
-                : GlobalEstimatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name,
-                                      actor_name) {
+
+        // riaps:keep_construct:begin
+        GlobalEstimator::GlobalEstimator(const py::object*  parent_actor     ,
+                      const py::dict     actor_spec       ,
+                      const py::dict     type_spec        ,
+                      const std::string& name             ,
+                      const std::string& type_name        ,
+                      const py::dict     args             ,
+                      const std::string& application_name ,
+                      const std::string& actor_name       )
+            : GlobalEstimatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
 
         }
+        // riaps:keep_construct:end
 
-        void GlobalEstimator::OnEstimate(messages::Estimate::Reader &message,
-                                         riaps::ports::PortBase *port) {
-            component_logger()->info("GlobalEstimator::OnEstimate(): {}", message.getMsg().cStr());
+        void GlobalEstimator::OnEstimate() {
+            // riaps:keep_onestimate:begin
+            auto [msg, error] = RecvEstimate();
+            if (!error)
+                component_logger()->info("{}:{}", __func__, msg->getMsg().cStr());
+            else
+                component_logger()->warn("Recv() error in {}, errorcode: {}", __func__, error.error_code());
+            // riaps:keep_onestimate:end
         }
 
-        void GlobalEstimator::OnWakeup(riaps::ports::PortBase *port) {
-            component_logger()->info("GlobalEstimator::OnWakeUp(): {}", port->GetPortName());
+        void GlobalEstimator::OnWakeup() {
+            // riaps:keep_onwakeup:begin
+            auto time = RecvWakeup();
+            char buffer[80];
+            std::strftime(buffer, 80, "%T", std::localtime(&time.tv_sec));
+            component_logger()->info("{}: {}:{}", __func__, buffer, time.tv_nsec/1000);
+            // riaps:keep_onwakeup:end
         }
 
+        // riaps:keep_impl:begin
 
+        // riaps:keep_impl:end
 
+        // riaps:keep_destruct:begin
         GlobalEstimator::~GlobalEstimator() {
 
         }
-    }
+        // riaps:keep_destruct:end
 
+    }
 }
 
 std::unique_ptr<distributedestimator::components::GlobalEstimator>
@@ -72,6 +84,7 @@ PYBIND11_MODULE(libglobalestimator, m) {
     testClass.def("handleNetLimit"        , &distributedestimator::components::GlobalEstimator::HandleNetLimit);
     testClass.def("handleNICStateChange"  , &distributedestimator::components::GlobalEstimator::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &distributedestimator::components::GlobalEstimator::HandlePeerStateChange);
+    testClass.def("handleReinstate"       , &distributedestimator::components::GlobalEstimator::HandleReinstate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

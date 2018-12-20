@@ -1,0 +1,4 @@
+app DistributedEstimator {
+	on all Estimator;
+	on all Aggregator(posArg=12,optArg="fromDeployment"); 
+}

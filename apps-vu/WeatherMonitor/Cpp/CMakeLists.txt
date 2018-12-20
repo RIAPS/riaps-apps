@@ -1,39 +1,80 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.10)
+project(WeatherMonitor)
+
+option(arch "amd64/armhf" "amd64")
+set(CMAKE_SYSTEM_NAME Linux)
+
+set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "-Wno-psabi")
+
+set(PYBIND11_CPP_STANDARD -std=c++17)
+
+
+#Set the platform
+if (${arch} STREQUAL "armhf")
+ set(TOOLCHAIN_PREFIX /usr/bin/arm-linux-gnueabihf)
+ set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
+ set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++-7)
+ set(CMAKE_FIND_ROOT_PATH /usr/${TOOLCHAIN_PREFIX})
+ set (CMAKE_C_FLAGS "-std=c99")
+else()
+ set(CMAKE_C_COMPILER gcc-7)
+ set(CMAKE_CXX_COMPILER g++-7)
+ set (CMAKE_C_FLAGS "-std=c99")
+endif()
+
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+set(CMAKE_INSTALL_PREFIX ${riaps_prefix}/${arch})
+
+set(DEPENDENCIES ${riaps_prefix})
+set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/${arch}/include)
+set (LIBALLPATH_LIB ${DEPENDENCIES}/${arch}/lib)
+include_directories(${LIBALLPATH_INCLUDE})
+include_directories(${LIBALLPATH_INCLUDE}/pybind11/include)
+link_directories(${LIBALLPATH_LIB})
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY  ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-
-include_directories(/usr/include/python3.6m/)
-include_directories(${RIAPS_PREFIX}/include/pybind11/include)
-
-include_directories(${RIAPS_PREFIX}/include)
-link_directories(${RIAPS_PREFIX}/lib)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
 include_directories(include)
+include_directories(/usr/include/python3.6m/)
+
+# riaps:keep_cmake:begin
+
+# riaps:keep_cmake:end
+
 
 add_custom_command(
-        OUTPUT  ${CMAKE_CURRENT_SOURCE_DIR}/include/messages/TempData.capnp.c++ ${CMAKE_CURRENT_SOURCE_DIR}/include/messages/TempData.capnp.h
-        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/include/messages/TempData.capnp
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/messages
-        COMMAND /opt/riaps/amd64/bin/capnp compile TempData.capnp -oc++:./
+        OUTPUT  "${CMAKE_SOURCE_DIR}/include/messages/weathermonitor.capnp.c++"
+        DEPENDS "${CMAKE_SOURCE_DIR}/weathermonitor.capnp"
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+        COMMAND /opt/riaps/amd64/bin/capnp compile ./weathermonitor.capnp -oc++:./include/messages/
         COMMENT "=== Generating capnp ==="
 )
 
-add_library(tempsensor SHARED src/TempSensor.cc
-                              src/base/TempSensorBase.cc
-                              ${CMAKE_CURRENT_SOURCE_DIR}/include/messages/TempData.capnp.c++
-                              include/base/TempSensorBase.h
-                              include/TempSensor.h)
-target_link_libraries(tempsensor PRIVATE czmq riaps dl capnp kj)
-set_target_properties(tempsensor PROPERTIES PREFIX lib SUFFIX .so)
-
-add_library(tempmonitor SHARED src/TempMonitor.cc
-                   			   src/base/TempMonitorBase.cc
-							   ${CMAKE_CURRENT_SOURCE_DIR}/include/messages/TempData.capnp.c++
-							   include/base/TempMonitorBase.h
-							   include/TempMonitor.h)
+# riaps:keep_tempmonitor:begin
+add_library(tempmonitor SHARED
+        src/TempMonitor.cc
+        src/base/TempMonitorBase.cc
+        include/base/TempMonitorBase.h
+        include/TempMonitor.h
+        include/messages/weathermonitor.capnp.c++
+        )
 target_link_libraries(tempmonitor PRIVATE czmq riaps dl capnp kj)
 set_target_properties(tempmonitor PROPERTIES PREFIX lib SUFFIX .so)
+# riaps:keep_tempmonitor:end
 
-
-
+# riaps:keep_tempsensor:begin
+add_library(tempsensor SHARED
+        src/TempSensor.cc
+        src/base/TempSensorBase.cc
+        include/base/TempSensorBase.h
+        include/TempSensor.h
+        include/messages/weathermonitor.capnp.c++
+        )
+target_link_libraries(tempsensor PRIVATE czmq riaps dl capnp kj)
+set_target_properties(tempsensor PROPERTIES PREFIX lib SUFFIX .so)
+# riaps:keep_tempsensor:end

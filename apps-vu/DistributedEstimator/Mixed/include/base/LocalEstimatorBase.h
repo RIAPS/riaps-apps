@@ -1,7 +1,7 @@
 
 
-#ifndef SENSORBASE_H
-#define SENSORBASE_H
+#ifndef LOCALESTIMATORBASE_H
+#define LOCALESTIMATORBASE_H
 
 #include <pybind11/stl.h>
 #include <pybind11/pybind11.h>
@@ -11,16 +11,16 @@
 #include <messages/distributedestimator.capnp.h>
 
 namespace py = pybind11;
-constexpr auto PORT_PUB_READY = "ready";
-constexpr auto PORT_REP_REQUEST = "request";
-constexpr auto PORT_TIMER_CLOCK = "clock";
+constexpr auto PORT_PUB_ESTIMATE = "estimate";
+constexpr auto PORT_REQ_QUERY = "query";
+constexpr auto PORT_SUB_READY = "ready";
 
 
 namespace distributedestimator {
     namespace components {
-        class SensorBase : public riaps::ComponentBase {
+        class LocalEstimatorBase : public riaps::ComponentBase {
         public:
-            SensorBase(const py::object*  parent_actor     ,
+            LocalEstimatorBase(const py::object*  parent_actor     ,
                           const py::dict     actor_spec       ,
                           const py::dict     type_spec        ,
                           const std::string& name             ,
@@ -29,17 +29,18 @@ namespace distributedestimator {
                           const std::string& application_name ,
                           const std::string& actor_name       );
 
-            virtual void OnRequest()=0;
-            virtual void OnClock()=0;
+            virtual void OnQuery()=0;
+            virtual void OnReady()=0;
 
 
-            virtual std::tuple<MessageReader<messages::SensorQuery>, riaps::ports::PortError> RecvRequest() final;
-            virtual timespec RecvClock() final;
+            virtual std::tuple<MessageReader<messages::SensorValue>, riaps::ports::PortError> RecvQuery() final;
 
-            virtual riaps::ports::PortError SendReady(MessageBuilder<messages::SensorReady>& message) final;
-            virtual riaps::ports::PortError SendRequest(MessageBuilder<messages::SensorValue>& message) final;
+            virtual std::tuple<MessageReader<messages::SensorReady>, riaps::ports::PortError> RecvReady() final;
 
-            virtual ~SensorBase() = default;
+            virtual riaps::ports::PortError SendEstimate(MessageBuilder<messages::Estimate>& message) final;
+            virtual riaps::ports::PortError SendQuery(MessageBuilder<messages::SensorQuery>& message) final;
+
+            virtual ~LocalEstimatorBase() = default;
         protected:
             virtual void DispatchMessage(riaps::ports::PortBase* port) final;
 
@@ -49,4 +50,4 @@ namespace distributedestimator {
 }
 
 
-#endif // SENSORBASE_H
+#endif // LOCALESTIMATORBASE_H

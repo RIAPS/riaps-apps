@@ -4,13 +4,13 @@ app WeatherMonitor {
     message TempData;
 
 	// TempSensor component
-    component TempSensor {
+    component TempSensor in C++ {
       timer clock 5000;
       pub ready : TempData ;	// Publish port for Temperature messages
     }
 
     // TempMonitor component
-    component TempMonitor {
+    component TempMonitor in C++ {
       sub tempupdate : TempData;	// Subscriber port to trigger component with Temperature messages
     }
 

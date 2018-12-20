@@ -1,59 +1,61 @@
-//
-// Created by istvan on 3/10/17.
-//
 
-#include <base/SensorBase.h>
+
+
+
 #include <componentmodel/r_pyconfigconverter.h>
+#include <base/SensorBase.h>
+
+using namespace std;
+using namespace riaps::ports;
 
 namespace distributedestimator {
     namespace components {
-
-        SensorBase::SensorBase(const py::object *parent_actor,
-                               const py::dict actor_spec, // Actor json config
-                               const py::dict type_spec,  // component json config
-                               const std::string &name,
-                               const std::string &type_name,
-                               const py::dict args,
-                               const std::string &application_name,
-                               const std::string &actor_name)
-                : ComponentBase(application_name, actor_name) {
-            auto config = PyConfigConverter::convert(type_spec, actor_spec);
-            config.component_name = name;
-            config.component_type = type_name;
-            config.isDevice=false;
-            set_config(config);
+        SensorBase::SensorBase(const py::object*  parent_actor     ,
+                          const py::dict     actor_spec       ,
+                          const py::dict     type_spec        ,
+                          const std::string& name             ,
+                          const std::string& type_name        ,
+                          const py::dict     args             ,
+                          const std::string& application_name ,
+                          const std::string& actor_name       ) : ComponentBase(application_name, actor_name){
+            auto conf = PyConfigConverter::convert(type_spec, actor_spec);
+            conf.component_name = name;
+            conf.component_type = type_name;
+            conf.is_device=false;
+            set_config(conf);
         }
 
-        void SensorBase::DispatchMessage(capnp::FlatArrayMessageReader* capnpreader,
-                                              riaps::ports::PortBase *port,
-                                              std::shared_ptr<riaps::MessageParams> params) {
-            auto portName = port->GetPortName();
-            if (portName == PORT_TIMER_CLOCK) {
-                OnClock(port);
-            } else if (portName == PORT_REP_REQUEST) {
-                auto sensorQuery = capnpreader->getRoot<messages::SensorQuery>();
-                OnRequest(sensorQuery, port);
+        tuple<MessageReader<messages::SensorQuery>, PortError> SensorBase::RecvRequest() {
+            auto port = GetPortAs<riaps::ports::ResponsePort>(PORT_REP_REQUEST);
+            auto [msg_bytes, error] = port->Recv();
+            MessageReader<messages::SensorQuery> reader(msg_bytes);
+            return make_tuple(reader, error);
+        }
+
+        timespec SensorBase::RecvClock() {
+            auto port = GetPortAs<riaps::ports::PeriodicTimer>(PORT_TIMER_CLOCK);
+            return port->Recv();
+        }
+
+        riaps::ports::PortError SensorBase::SendReady(MessageBuilder<messages::SensorReady>& message) {
+            return SendMessageOnPort(message.capnp_builder(), PORT_PUB_READY);
+        }
+
+        riaps::ports::PortError SensorBase::SendRequest(MessageBuilder<messages::SensorValue>& message) {
+            return SendMessageOnPort(message.capnp_builder(), PORT_REP_REQUEST);
+        }
+
+
+        void SensorBase::DispatchMessage(riaps::ports::PortBase* port) {
+            auto port_name = port->port_name();
+            if (port_name == PORT_REP_REQUEST) {
+                OnRequest();
             }
-
+            if (port_name == PORT_TIMER_CLOCK) {
+                OnClock();
+            }
         }
 
-        void SensorBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) {
-
-        }
-
-        bool SensorBase::SendRequest(capnp::MallocMessageBuilder&    messageBuilder,
-                                          messages::SensorValue::Builder& message) {
-            return SendMessageOnPort(messageBuilder, PORT_REP_REQUEST);
-        }
-
-        bool SensorBase::SendReady(capnp::MallocMessageBuilder&    messageBuilder,
-                                        messages::SensorReady::Builder& message) {
-            return SendMessageOnPort(messageBuilder, PORT_PUB_READY);
-        }
-
-        SensorBase::~SensorBase() {
-
-        }
-
+        void SensorBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
     }
 }

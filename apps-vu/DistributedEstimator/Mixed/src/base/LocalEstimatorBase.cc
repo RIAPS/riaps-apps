@@ -40,12 +40,12 @@ namespace distributedestimator {
         }
 
 
-        riaps::ports::PortError LocalEstimatorBase::SendQuery(MessageBuilder<messages::SensorQuery>& message) {
-            return SendMessageOnPort(message.capnp_builder(), PORT_REQ_QUERY);
-        }
-
         riaps::ports::PortError LocalEstimatorBase::SendEstimate(MessageBuilder<messages::Estimate>& message) {
             return SendMessageOnPort(message.capnp_builder(), PORT_PUB_ESTIMATE);
+        }
+
+        riaps::ports::PortError LocalEstimatorBase::SendQuery(MessageBuilder<messages::SensorQuery>& message) {
+            return SendMessageOnPort(message.capnp_builder(), PORT_REQ_QUERY);
         }
 
 
@@ -62,3 +62,5 @@ namespace distributedestimator {
         void LocalEstimatorBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
     }
 }
+
+

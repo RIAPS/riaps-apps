@@ -67,26 +67,6 @@ target_link_libraries(localestimator PRIVATE czmq riaps dl capnp kj)
 set_target_properties(localestimator PROPERTIES PREFIX lib SUFFIX .so)
 # riaps:keep_localestimator:end
 
-# riaps:keep_globalestimator:begin
-add_library(globalestimator SHARED
-        src/GlobalEstimator.cc
-        src/base/GlobalEstimatorBase.cc
-        include/base/GlobalEstimatorBase.h
-        include/GlobalEstimator.h
-        include/messages/distributedestimator.capnp.c++
-        )
-target_link_libraries(globalestimator PRIVATE czmq riaps dl capnp kj)
-set_target_properties(globalestimator PROPERTIES PREFIX lib SUFFIX .so)
-# riaps:keep_globalestimator:end
 
-# riaps:keep_sensor:begin
-add_library(sensor SHARED
-        src/Sensor.cc
-        src/base/SensorBase.cc
-        include/base/SensorBase.h
-        include/Sensor.h
-        include/messages/distributedestimator.capnp.c++
-        )
-target_link_libraries(sensor PRIVATE czmq riaps dl capnp kj)
-set_target_properties(sensor PROPERTIES PREFIX lib SUFFIX .so)
-# riaps:keep_sensor:end
+
+

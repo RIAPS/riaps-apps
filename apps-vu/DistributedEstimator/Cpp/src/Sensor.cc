@@ -1,66 +1,70 @@
-//
-// Created by istvan on 11/11/16.
-//
 
-#include "Sensor.h"
-#include <capnp/serialize.h>
-#include <capnp/message.h>
+
+
+#include <Sensor.h>
+// riaps:keep_header:begin
+
+// riaps:keep_header:end
 
 namespace distributedestimator {
     namespace components {
 
-        Sensor::Sensor(const py::object *parent_actor,
-                       const py::dict actor_spec, // Actor json config
-                       const py::dict type_spec,  // component json config
-                       const std::string &name,
-                       const std::string &type_name,
-                       const py::dict args,
-                       const std::string &application_name,
-                       const std::string &actor_name)
-                : SensorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name,
-                                      actor_name) {
+        // riaps:keep_construct:begin
+        Sensor::Sensor(const py::object*  parent_actor     ,
+                      const py::dict     actor_spec       ,
+                      const py::dict     type_spec        ,
+                      const std::string& name             ,
+                      const std::string& type_name        ,
+                      const py::dict     args             ,
+                      const std::string& application_name ,
+                      const std::string& actor_name       )
+            : SensorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+
         }
+        // riaps:keep_construct:end
 
-        void Sensor::OnClock(riaps::ports::PortBase *port) {
-            int64_t time = zclock_mono();
-            component_logger()->info("Sensor::OnClock(): {}", time);
+        void Sensor::OnClock() {
+            // riaps:keep_onclock:begin
+            auto time = RecvClock();
 
-            capnp::MallocMessageBuilder messageBuilder;
-            auto msgSensorReady = messageBuilder.initRoot<messages::SensorReady>();
-            msgSensorReady.setMsg("data_ready");
+            char buffer[80];
+            std::strftime(buffer, 80, "%T", std::localtime(&time.tv_sec));
+            component_logger()->info("{}: {}:{}", __func__, buffer, time.tv_nsec/1000);
 
-            SendReady(messageBuilder, msgSensorReady);
-        }
-
-        void Sensor::OnRequest(const messages::SensorQuery::Reader &message,
-                                    riaps::ports::PortBase *port) {
-
-            if (port->GetPortBaseConfig()->isTimed){
-                auto responsePort = port->AsResponsePort();
-                component_logger()->info_if(responsePort!=nullptr,
-                                 "Sensor::OnRequest(): {}, sentTimestamp: {}.{}, recvTimestamp: {}.{}",
-                                 message.getMsg().cStr(),
-                                 responsePort->GetLastSendTimestamp().tv_sec ,
-                                 responsePort->GetLastSendTimestamp().tv_nsec,
-                                 responsePort->GetLastRecvTimestamp().tv_sec ,
-                                 responsePort->GetLastRecvTimestamp().tv_nsec);
-            } else
-                component_logger()->info("Sensor::OnRequest(): {}", message.getMsg().cStr());
-
-            capnp::MallocMessageBuilder messageBuilder;
-            messages::SensorValue::Builder msgSensorValue = messageBuilder.initRoot<messages::SensorValue>();
-            msgSensorValue.setMsg("sensor_rep");
-
-            if (!SendRequest(messageBuilder, msgSensorValue)){
-                // Couldn't send the response
+            MessageBuilder<messages::SensorReady> builder;
+            builder->setMsg("data_ready");
+            auto error = SendReady(builder);
+            if (error) {
+                component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, error.error_code());
             }
+            // riaps:keep_onclock:end
         }
 
+        void Sensor::OnRequest() {
+            // riaps:keep_onrequest:begin
+            auto [msg, err] = RecvRequest();
 
+            component_logger()->info("{}: {}", __func__, msg->getMsg().cStr());
 
+            MessageBuilder<messages::SensorValue> msg_sensor_value;
+            msg_sensor_value->setMsg("sensor_rep");
+            auto send_error = SendRequest(msg_sensor_value);
+            if (send_error){
+                component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, send_error.error_code());
+            }
+            // riaps:keep_onrequest:end
+        }
+
+        // riaps:keep_impl:begin
+
+        // riaps:keep_impl:end
+
+        // riaps:keep_destruct:begin
         Sensor::~Sensor() {
 
         }
+        // riaps:keep_destruct:end
+
     }
 }
 
@@ -93,6 +97,7 @@ PYBIND11_MODULE(libsensor, m) {
     testClass.def("handleNetLimit"        , &distributedestimator::components::Sensor::HandleNetLimit);
     testClass.def("handleNICStateChange"  , &distributedestimator::components::Sensor::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &distributedestimator::components::Sensor::HandlePeerStateChange);
+    testClass.def("handleReinstate"       , &distributedestimator::components::Sensor::HandleReinstate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

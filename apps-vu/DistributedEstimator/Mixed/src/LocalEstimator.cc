@@ -25,37 +25,38 @@ namespace distributedestimator {
 
         void LocalEstimator::OnQuery() {
             // riaps:keep_onquery:begin
-            auto [msg_query, query_error] = RecvQuery();
-
-            if (!query_error)
-                component_logger()->info("{}: [{}]", msg_query->getMsg().cStr(), ::getpid());
+            auto [msg, err] = RecvQuery();
+            if (!err)
+                component_logger()->info("{}: [{}]", msg->getMsg().cStr(), ::getpid());
             else
-                component_logger()->warn("Recv() error in {}, errorcode: {}", __func__, query_error.error_code());
+                component_logger()->warn("Recv() error in {}, errorcode: {}", __func__, err.error_code());
             // riaps:keep_onquery:end
         }
 
         void LocalEstimator::OnReady() {
             // riaps:keep_onready:begin
-            auto [msg_ready, error_ready] = RecvReady();
-            component_logger()->info("{}: {} {}", __func__, msg_ready->getMsg().cStr(), ::getpid());
+            auto [msg_ready, err] = RecvReady();
+            if (!err) {
+                component_logger()->info("{}: {} {}", __func__, msg_ready->getMsg().cStr(), ::getpid());
 
-            MessageBuilder<messages::SensorQuery> query_builder;
-            query_builder->setMsg("sensor_query");
-            auto query_error = SendQuery(query_builder);
-            if (!query_error) {
-                auto [query_reader, query_error] = RecvQuery();
-                MessageBuilder<messages::Estimate> msg_estimate;
-                msg_estimate->setMsg(fmt::format("local_est({})", ::getpid()));
-                auto estimate_error = SendEstimate(msg_estimate);
-                if (estimate_error) {
-                    component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, estimate_error.error_code());
+                MessageBuilder<messages::SensorQuery> query_builder;
+                query_builder->setMsg("sensor_query");
+                auto query_error = SendQuery(query_builder);
+                if (!query_error) {
+                    auto [query_reader, query_error] = RecvQuery();
+                    MessageBuilder<messages::Estimate> msg_estimate;
+                    msg_estimate->setMsg(fmt::format("local_est({})", ::getpid()));
+                    auto estimate_error = SendEstimate(msg_estimate);
+                    if (estimate_error) {
+                        component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, estimate_error.error_code());
+                    }
+                } else {
+                    component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, query_error.error_code());
                 }
-            } else {
-                component_logger()->warn("Error sending message: {}, errorcode: {}", __func__, query_error.error_code());
-            }
 
+            }
             // riaps:keep_onready:end
-         }
+        }
 
         // riaps:keep_impl:begin
 
