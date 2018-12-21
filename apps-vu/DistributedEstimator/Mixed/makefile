@@ -32,7 +32,8 @@ else
 endif
 
 CMakeLists.txt: compselection.sh
-	source compselection.sh && riaps_gen -m ${JSON} -cpp ${CPPCOMPS} -py ${PYCOMPS} -o . -s capnp
+	source ./compselection.sh && riaps_gen -m ${JSON} -o .
+
 
 all-amd64: build/amd64/Makefile
 ifndef CMAKE
@@ -48,6 +49,7 @@ else
 	make -C build/armhf -j2
 endif
 
+
 clean-armhf: build/armhf/Makefile
 ifndef CMAKE
 	$(error "cmake is not available. Please install")
@@ -62,7 +64,7 @@ else
 	make -C build/amd64 clean -j2
 endif
 
-reformat:
+reformat: cpp
 ifndef CLANG-FORMAT
 	$(error "clang-format is not available. Please install")
 else

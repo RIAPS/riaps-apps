@@ -32,7 +32,7 @@ else
 endif
 
 CMakeLists.txt: compselection.sh
-	source compselection.sh && riaps_gen -m ${JSON} -cpp ${CPPCOMPS} -py ${PYCOMPS} -o . -s capnp
+	source ./compselection.sh && riaps_gen -m ${JSON} -o .
 
 
 all-amd64: build/amd64/Makefile
