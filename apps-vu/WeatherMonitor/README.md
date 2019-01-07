@@ -29,7 +29,7 @@ toolchain for indexer settings.  The same can be done for the application under 
 4) If the CMakeLists.txt file does not exist, run the **riaps-gen** tool to create the component shells and the CMakeLists.txt file.  Below is an example for the DistributedEstimator example where the model file (.json) for the project is specified and the output directory is the current directory.
 
 ```
-riaps-gen -m DistributedEstimator.json -o .
+riaps_gen -m DistributedEstimator.json -o .
 ```
 
 5) Create build targets for both the amd64 and armhf architectures, along with a realclean target.  Default setup works, names typically used are all-amd64 and all-armhf.  The make commands can be found in the "makefile".
