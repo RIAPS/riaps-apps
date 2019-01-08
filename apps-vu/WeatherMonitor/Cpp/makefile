@@ -3,7 +3,9 @@ CMAKE := $(shell which cmake 2> /dev/null)
 CLANG-FORMAT := $(shell which clang-format 2> /dev/null)
 RM-CMD := $(shell which rm 2> /dev/null)
 all:
+package:
 
+ifneq ("$(wildcard CMakeLists.txt)","")
 realclean:
 ifndef RM-CMD
 	rmdir build /s /q
@@ -30,10 +32,6 @@ else
 	cmake -Darch=amd64  -DCMAKE_INSTALL_PREFIX="/" ../..
 	@echo "done"
 endif
-
-CMakeLists.txt: compselection.sh
-	source ./compselection.sh && riaps_gen -m ${JSON} -o .
-
 
 all-amd64: build/amd64/Makefile
 ifndef CMAKE
@@ -64,9 +62,19 @@ else
 	make -C build/amd64 clean -j2
 endif
 
-reformat: cpp
+reformat:
 ifndef CLANG-FORMAT
 	$(error "clang-format is not available. Please install")
 else
 	find . -iname *.h -o -iname *.cc -o -iname *.cpp | xargs clang-format -i -style=file
+endif
+else
+realclean:
+	@echo "This is a python only project. Build command do not apply"
+reformat:
+	@echo "This is a python only project. Build command do not apply"
+all-armhf:
+	@echo "This is a python only project. Build command do not apply"
+all-amd64:
+	@echo "This is a python only project. Build command do not apply"
 endif

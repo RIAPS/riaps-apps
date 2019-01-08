@@ -24,10 +24,9 @@ The following steps can be used to pull this application into an Eclipse project
 
 1) Pull the content of this repository.
 
-2) Create a "C/C++" project from "Makefile Project with Existing Code".
+2) Create a "C/C++" project from "Existing Code as Makefile Project".
 
-3) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Linux GCC"
-toolchain for indexer settings.  The same can be done for the application under the "Mixed" folder.
+3) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Linux GCC" toolchain for indexer settings.  The same can be done for the application under the "Mixed" folder.
 
 4) If the CMakeLists.txt file does not exist, run the **riaps-gen** tool to create the component shells and the CMakeLists.txt file.  Below is an example for the DistributedEstimator example where the model file (.json) for the project is specified and the output directory is the current directory.
 
@@ -37,13 +36,12 @@ riaps_gen -m DistributedEstimator.json -o .
 
 5) Create build targets for both the amd64 and armhf architectures, along with a realclean target.  Default setup works, names typically used are all-amd64 and all-armhf.  The make commands can be found in the "makefile".
 
-6) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then
-"Paths and Symbols", add the following GNU C++ Includes for this project under both GNU C and GNU C++:
+6) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then "Paths and Symbols", add the following GNU C++ Includes for this project under the GNU C++:
 
 - /usr/include/python3.6m
 - /opt/riaps/amd64/include
 - /opt/riaps/amd64/include/pybind11/include
-- /Cpp/include (this is a workspace path and depends on the project name, utilize "Workspace" navigation when adding this directory path)
+- /<project_name>/include (this is a workspace path and depends on the project name, utilize "Workspace" navigation when adding this directory path)
 
 7) To easily access the RIAPS platform tools from within Eclipse, import the [riaps_ctrl.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_ctrl.launch) and [riaps_deplo.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_deplo.launch) files.  
 
