@@ -17,7 +17,7 @@ class TempMonitor(Component):
         super(TempMonitor, self).__init__()
         self.pid = os.getpid()
         now = time.ctime(int(time.time()))
-        self.logger.info("(PID %s)-starting TempMonitor, %s",str(self.pid),str(now))
+        self.logger.info("(PID %s)-starting TempMonitor, %s" % (str(self.pid),str(now)))
 # riaps:keep_constr:end
 
 # riaps:keep_tempupdate:begin
@@ -26,11 +26,11 @@ class TempMonitor(Component):
         msg = self.tempupdate.recv_pyobj()
         now = time.ctime(int(time.time()))
         temperatureTime, temperatureValue = msg
-        self.logger.info("on_tempupdate(): Temperature:%s, PID %s, Timestamp:%s", temperatureValue, str(now), temperatureTime)
+        self.logger.info("on_tempupdate(): Temperature:%s, PID %s, Timestamp:%s" % (temperatureValue,str(now),temperatureTime))
 # riaps:keep_tempupdate:end
 
 # riaps:keep_impl:begin
     def __destroy__(self):
         now = time.time()
-        self.logger.info("%s - stopping TempMonitor, %s",str(self.pid),now)
+        self.logger.info("%s - stopping TempMonitor, %s" % (str(self.pid),now))
 # riaps:keep_impl:end

@@ -11,7 +11,7 @@ class Sensor(Component):
     def __init__(self,value):
         super(Sensor, self).__init__()
         self.pid = os.getpid()
-        self.logger.info("(PID %s) - starting Sensor",str(self.pid))
+        self.logger.info("(PID %s) - starting Sensor" % str(self.pid))
         if value == 0.0:
             self.myValue = (10.0 * random.random()) - 5.0
         else:
@@ -29,12 +29,12 @@ class Sensor(Component):
 # riaps:keep_request:begin
     def on_request(self):
         msg = self.request.recv_pyobj()
-        self.logger.info("PID (%s) - on_query():%s",str(self.pid),str(msg))
+        self.logger.info("PID (%s) - on_query():%s" % (str(self.pid),str(msg)))
         rep = (msg,self.myValue)        # Send (timestamp,value)
         self.request.send_pyobj(rep)
 # riaps:keep_request:end
 
 # riaps:keep_impl:begin
     def __destroy__(self):
-        self.logger.info("(PID %s) - stopping Sensor",str(self.pid))
+        self.logger.info("(PID %s) - stopping Sensor" % str(self.pid))
 # riaps:keep_impl:end

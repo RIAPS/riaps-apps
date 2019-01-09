@@ -17,7 +17,7 @@ class Sensor(Component):
     def on_request(self):
         bytes = self.request.recv()
         req = distributedestimator_capnp.SensorQuery.from_bytes(bytes)
-        self.logger.info("on_request():%s", req.msg)
+        self.logger.info("on_request():%s" % req.msg)
         rep = distributedestimator_capnp.SensorValue.new_message()
         rep.msg = "sensor_rep"
         repBytes = rep.to_bytes()
@@ -27,7 +27,7 @@ class Sensor(Component):
 # riaps:keep_clock:begin
     def on_clock(self):
         msg = self.clock.recv_pyobj()
-        self.logger.info('on_clock(): %s',str(msg))
+        self.logger.info("on_clock(): %s" % str(msg))
         msg = distributedestimator_capnp.SensorReady.new_message()
         msg.msg = "data_ready"
         msgBytes = msg.to_bytes()

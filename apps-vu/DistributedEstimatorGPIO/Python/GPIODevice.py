@@ -27,7 +27,7 @@ class GPIODevice(Component):
 # riaps:keep_blink:begin
     def on_blink(self):
         msg = self.blink.recv_pyobj()            # Receive blink message
-        self.logger.info('on_blink():%s',msg)
+        self.logger.info('on_blink():%s' % msg)
         ''' Toggle GPIO '''
         GPIO.output(self.pinName, self.gpioOn)
         time.sleep(0.250)

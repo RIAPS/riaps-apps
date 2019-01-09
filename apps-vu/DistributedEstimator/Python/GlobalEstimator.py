@@ -15,13 +15,13 @@ class GlobalEstimator(Component):
 # riaps:keep_wakeup:begin
     def on_wakeup(self):
         msg = self.wakeup.recv_pyobj()
-        self.logger.info("on_wakeup():%s",msg)
+        self.logger.info("on_wakeup():%s" % msg)
 # riaps:keep_wakeup:end
 
 # riaps:keep_estimate:begin
     def on_estimate(self):
         msg = self.estimate.recv_pyobj()
-        self.logger.info("on_estimate():%s",msg)
+        self.logger.info("on_estimate():%s" % msg)
 # riaps:keep_estimate:end
 
 # riaps:keep_impl:begin

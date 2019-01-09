@@ -17,8 +17,8 @@ class TempSensor(Component):
         self.pid = os.getpid()
         self.temperature = 65
         now = time.ctime(int(time.time()))
-        self.logger.info("(PID %s)-starting TempSensor, %s",str(self.pid),str(now))
-        self.logger.info("Initial temp:%d, %s",self.temperature,str(now))
+        self.logger.info("(PID %s)-starting TempSensor, %s" % (str(self.pid),str(now)))
+        self.logger.info("Initial temp:%d, %s" % (self.temperature,str(now)))
 # riaps:keep_constr:end
 
 # riaps:keep_clock:begin
@@ -28,12 +28,12 @@ class TempSensor(Component):
         self.temperature = self.temperature + 1
         msg = str(self.temperature)
         msg = (now,msg)
-        self.logger.info("on_clock(): Temperature - %s, PID %s, %s",str(msg[1]),str(self.pid),str(now))
+        self.logger.info("on_clock(): Temperature - %s, PID %s, %s" % (str(msg[1]),str(self.pid),str(now)))
         self.ready.send_pyobj(msg)
 # riaps:keep_clock:end
 
 # riaps:keep_impl:begin
     def __destroy__(self):
         now = time.time()
-        self.logger.info("%s - stopping TempSensor, %s",str(self.pid),now)
+        self.logger.info("%s - stopping TempSensor, %s" % (str(self.pid),now))
 # riaps:keep_impl:end
