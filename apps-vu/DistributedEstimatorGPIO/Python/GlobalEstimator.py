@@ -30,7 +30,7 @@ class GlobalEstimator(Component):
 # riaps:keep_wakeup:begin
     def on_wakeup(self):
         now = self.wakeup.recv_pyobj()
-        #self.logger.info('PID(%s) - on_wakeup(): %s',str(self.pid),str(now))
+        #self.logger.info('PID(%s) - on_wakeup(): %s' % (str(self.pid),str(now)))
 
         ''' Average existing estimate '''
         if self.availNumEst != 0:
@@ -40,5 +40,5 @@ class GlobalEstimator(Component):
 
 # riaps:keep_impl:begin
     def __destroy__(self):
-        self.logger.info("(PID %s) - stopping GlobalEstimator" % str(self.pid))  
+        self.logger.info("(PID %s) - stopping GlobalEstimator" % str(self.pid))
 # riaps:keep_impl:end

@@ -21,7 +21,7 @@ class Sensor(Component):
 # riaps:keep_clock:begin
     def on_clock(self):
         now = self.clock.recv_pyobj()
-        # self.logger.info('PID(%s) - on_clock(): %s',str(self.pid),str(now))
+        # self.logger.info('PID(%s) - on_clock(): %s' % (str(self.pid),str(now)))
         msg = "data_ready"
         self.ready.send_pyobj(msg)
 # riaps:keep_clock:end

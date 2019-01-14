@@ -33,7 +33,7 @@ class LocalEstimator(Component):
 # riaps:keep_query:begin
     def on_query(self):
         req = self.query.recv_pyobj()
-        #self.logger.info("PID (%s) - on_query():%s",str(self.pid),str(req))
+        #self.logger.info("PID (%s) - on_query():%s" % (str(self.pid),str(req)))
         (sTime,sensorVal) = req
         self.pending -= 1
 
