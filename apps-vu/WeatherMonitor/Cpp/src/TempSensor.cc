@@ -26,21 +26,23 @@ namespace weathermonitor {
         void TempSensor::OnClock() {
             // riaps:keep_onclock:begin
             auto msg = RecvClock();
-        	component_logger()->info("{}", __func__);
+            component_logger()->info("{}", __func__);
 
-			this->temperature += 1;
-			MessageBuilder<messages::TempData> builder;
-			builder->setTemperature(this->temperature);
+            this->temperature += 1;
+            MessageBuilder<messages::TempData> builder;
+            builder->setTemperature(this->temperature);
 
-			auto pub_error = SendReady(builder);
-			if (pub_error){
-				component_logger()->warn("Error publishing temperature: {}, errorcode: {}", __func__, pub_error.error_code());
-			}
-           // riaps:keep_onclock:end
+            auto pub_error = SendReady(builder);
+            if (pub_error){
+                component_logger()->warn("Error publishing temperature: {}, errorcode: {}", __func__, pub_error.error_code());
+            }
+            // riaps:keep_onclock:end
         }
 
         // riaps:keep_impl:begin
+        void TempSensor::HandlePeerStateChange(const std::string& state, const std::string& uuid) {
 
+        }
         // riaps:keep_impl:end
 
         // riaps:keep_destruct:begin

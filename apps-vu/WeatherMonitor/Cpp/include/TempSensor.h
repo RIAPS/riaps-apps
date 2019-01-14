@@ -26,8 +26,10 @@ namespace weathermonitor {
             virtual ~TempSensor();
 
             // riaps:keep_decl:begin
-		    private:
-			    double temperature;
+            virtual void HandlePeerStateChange(const std::string& state, const std::string& uuid) override;
+
+        private:
+            double temperature;
             // riaps:keep_decl:end
         };
     }

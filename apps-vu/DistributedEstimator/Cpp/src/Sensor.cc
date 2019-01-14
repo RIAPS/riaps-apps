@@ -56,7 +56,9 @@ namespace distributedestimator {
         }
 
         // riaps:keep_impl:begin
+        void Sensor::HandlePeerStateChange(const std::string& state, const std::string& uuid) {
 
+        }
         // riaps:keep_impl:end
 
         // riaps:keep_destruct:begin

@@ -43,7 +43,9 @@ namespace distributedestimator {
         }
 
         // riaps:keep_impl:begin
+        void GlobalEstimator::HandlePeerStateChange(const std::string& state, const std::string& uuid) {
 
+        }
         // riaps:keep_impl:end
 
         // riaps:keep_destruct:begin
