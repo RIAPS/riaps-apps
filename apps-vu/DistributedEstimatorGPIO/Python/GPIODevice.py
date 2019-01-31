@@ -16,7 +16,7 @@ class GPIODevice(Component):
         super(GPIODevice, self).__init__()
         self.logger.info("GPIODevice - starting")
         ''' Enable GPIO '''
-        self.pinName = 'USR3'
+        self.pinName = 'USR2'
         self.initialValue = 0
         self.setupDelay = 60
         self.gpioOn = 1
