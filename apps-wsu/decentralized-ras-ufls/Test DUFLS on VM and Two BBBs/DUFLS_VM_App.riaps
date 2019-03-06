@@ -1,48 +1,48 @@
 app DUFLS_VM_App
 {
-	message dp_msg;
-	message nls_msg;
-	library DUFLS_lib;
+    message dp_msg;
+    message nls_msg;
+    library DUFLS_lib;
 
-	component Node01_GA01
-	{
-		timer clock 10;
-		pub share_dp_pub: dp_msg;
-		sub notice_ls_sub: nls_msg;
+    component Node01_GA01
+    {
+        timer clock 10;
+        pub share_dp_pub: dp_msg;
+        sub notice_ls_sub: nls_msg;
     }
 
-	component Node02_SA01
-	{
-		timer clock 10;
-		sub share_dp_sub: dp_msg;
-		pub notice_ls_pub: nls_msg;
+    component Node02_SA01
+    {
+        timer clock 10;
+        sub share_dp_sub: dp_msg;
+        pub notice_ls_pub: nls_msg;
     }
 
-	component Node03_SA02
-	{
-		timer clock 10;
-		sub share_dp_sub: dp_msg;
-		pub notice_ls_pub: nls_msg;
+    component Node03_SA02
+    {
+        timer clock 10;
+        sub share_dp_sub: dp_msg;
+        pub notice_ls_pub: nls_msg;
     }
 
-	actor Node_01
-	{
-		{
-			ga_01: Node01_GA01;
-		}
-	}
+    actor Node_01
+    {
+        {
+            ga_01: Node01_GA01;
+        }
+    }
 
-	actor Node_02
-	{
-		{
-			sa_01: Node02_SA01;
-		}
-	}
+    actor Node_02
+    {
+        {
+            sa_01: Node02_SA01;
+        }
+    }
 
-	actor Node_03
-	{
-		{
-			sa_02: Node03_SA02;
-		}
-	}
+    actor Node_03
+    {
+        {
+            sa_02: Node03_SA02;
+        }
+    }
 }

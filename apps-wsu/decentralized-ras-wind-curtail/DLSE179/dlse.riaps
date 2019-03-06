@@ -2,6 +2,7 @@ app DLSE {
     message testMessage;
     message phasorData;
     message phasorReply;
+    library utils;
 
     component Group (group_no) {
         timer clock 2000;

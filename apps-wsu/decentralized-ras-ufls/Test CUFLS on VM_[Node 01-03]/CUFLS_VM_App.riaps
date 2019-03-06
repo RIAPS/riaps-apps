@@ -1,41 +1,41 @@
 app CUFLS_VM_App
 {
-	message random;
-	library CUFLS_lib;
+    message random;
+    library CUFLS_lib;
 
-	component CuflsRelayNode01
-	{
-		timer clock 20;
+    component CuflsRelayNode01
+    {
+        timer clock 20;
     }
 
-	component CuflsRelayNode02
-	{
-		timer clock 20;
+    component CuflsRelayNode02
+    {
+        timer clock 20;
     }
 
-	component CuflsRelayNode03
-	{
-		timer clock 20;
+    component CuflsRelayNode03
+    {
+        timer clock 20;
     }
 
-	actor Node_01
-	{
-		{
-			crn_01: CuflsRelayNode01;
-		}
-	}
+    actor Node_01
+    {
+        {
+            crn_01: CuflsRelayNode01;
+        }
+    }
 
-	actor Node_02
-	{
-		{
-			crn_02: CuflsRelayNode02;
-		}
-	}
+    actor Node_02
+    {
+        {
+            crn_02: CuflsRelayNode02;
+        }
+    }
 
-	actor Node_03
-	{
-		{
-			crn_03: CuflsRelayNode03;
-		}
-	}
+    actor Node_03
+    {
+        {
+            crn_03: CuflsRelayNode03;
+        }
+    }
 }

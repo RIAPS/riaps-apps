@@ -1,5 +1,5 @@
 app RASApplication {
-	on (192.168.7.2) DataProvider;
-	on (192.168.3.226) LeaderNode;
-	on (192.168.3.227) BackupNode;
+    on (192.168.7.2) DataProvider;
+    on (192.168.3.226) LeaderNode;
+    on (192.168.3.227) BackupNode;
 }
