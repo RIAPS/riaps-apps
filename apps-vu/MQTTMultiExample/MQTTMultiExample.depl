@@ -1,0 +1,3 @@
+app MQTTMultiExample {
+    on all MQTTActor;
+}

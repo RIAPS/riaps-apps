@@ -1,9 +1,12 @@
+SHELL := /bin/bash
 CMAKE := $(shell which cmake 2> /dev/null)
 CLANG-FORMAT := $(shell which clang-format 2> /dev/null)
 RM-CMD := $(shell which rm 2> /dev/null)
-all: 
+all:
+package:
 
-realclean:		 
+ifneq ("$(wildcard CMakeLists.txt)","")
+realclean:
 ifndef RM-CMD
 	rmdir build /s /q
 else
@@ -16,7 +19,7 @@ ifndef CMAKE
 else
 	mkdir -p build/armhf/
 	cd build/armhf/ && \
-	cmake -DCMAKE_TOOLCHAIN_FILE=.toolchain.arm-linux-gnueabihf.cmake -DCMAKE_INSTALL_PREFIX="/"  ../..
+	cmake -Darch=armhf -DCMAKE_INSTALL_PREFIX="/"  ../..
 	@echo "done"
 endif
 
@@ -26,7 +29,7 @@ ifndef CMAKE
 else
 	mkdir -p build/amd64/
 	cd build/amd64/ && \
-	cmake -DCMAKE_TOOLCHAIN_FILE=.toolchain.amd64.cmake  -DCMAKE_INSTALL_PREFIX="/" ../..
+	cmake -Darch=amd64  -DCMAKE_INSTALL_PREFIX="/" ../..
 	@echo "done"
 endif
 
@@ -63,11 +66,15 @@ reformat: cpp
 ifndef CLANG-FORMAT
 	$(error "clang-format is not available. Please install")
 else
-	clang-format -i -style=file cpp/*.cc
-	clang-format -i -style=file cpp/include/*.h
+	find . -iname *.h -o -iname *.cc -o -iname *.cpp | xargs clang-format -i -style=file
 endif
-
-
-package: package.sh
-	chmod +x package.sh
-	./package.sh
+else
+realclean:
+	@echo "This is a python only project. Build command do not apply"
+reformat:
+	@echo "This is a python only project. Build command do not apply"
+all-armhf:
+	@echo "This is a python only project. Build command do not apply"
+all-amd64:
+	@echo "This is a python only project. Build command do not apply"
+endif

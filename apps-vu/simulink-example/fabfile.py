@@ -9,7 +9,7 @@ env.password = 'riaps'
 appName = "Sltest"
 files = ["libactuator.so", "libcontrollersl.so", "libsensor.so"]
 
-paths = [("./json-gen/%s_app.json" % appName, "~/riaps_apps/%s/%s_app.json" % (appName, appName))]
+paths = [("./%s_app.json" % appName, "~/riaps_apps/%s/%s_app.json" % (appName, appName))]
 
 for file in files:
     paths.append(("./build/armhf/bin/%s"%file, "~/riaps_apps/%s/%s"%(appName, file)))
@@ -31,8 +31,8 @@ def buildamd():
 
 @runs_once
 def compileCapnp():
-    with lcd("./messages-gen"):
-        local("capnp compile -oc++ *.capnp")       
+    with lcd("./include/messages"):
+        local("capnp compile -oc++ *.capnp")
 
 @parallel
 def deploy():

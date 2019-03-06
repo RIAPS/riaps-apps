@@ -1,0 +1,119 @@
+{
+  "name": "Sltest",
+  "groups": {},
+  "devices": {},
+  "components": {
+    "ControllerSL": {
+      "name": "ControllerSL",
+      "formals": [],
+      "language": "default",
+      "libraries": [],
+      "ports": {
+        "reqs": {},
+        "anss": {},
+        "pubs": {
+          "force": {
+            "type": "Force",
+            "timed": false,
+            "deadline": 0
+          }
+        },
+        "reps": {},
+        "inss": {},
+        "subs": {
+          "position": {
+            "type": "Position",
+            "timed": false,
+            "deadline": 0
+          }
+        },
+        "clts": {},
+        "srvs": {},
+        "tims": {},
+        "qrys": {}
+      }
+    },
+    "Sensor": {
+      "name": "Sensor",
+      "formals": [],
+      "language": "default",
+      "libraries": [],
+      "ports": {
+        "reqs": {},
+        "anss": {},
+        "pubs": {
+          "position": {
+            "type": "Position",
+            "timed": false,
+            "deadline": 0
+          }
+        },
+        "reps": {},
+        "inss": {},
+        "subs": {},
+        "clts": {},
+        "srvs": {},
+        "tims": {
+          "clock": {
+            "period": 10
+          }
+        },
+        "qrys": {}
+      }
+    },
+    "Actuator": {
+      "name": "Actuator",
+      "formals": [],
+      "language": "default",
+      "libraries": [],
+      "ports": {
+        "reqs": {},
+        "anss": {},
+        "pubs": {},
+        "reps": {},
+        "inss": {},
+        "subs": {
+          "force": {
+            "type": "Force",
+            "timed": false,
+            "deadline": 0
+          }
+        },
+        "clts": {},
+        "srvs": {},
+        "tims": {},
+        "qrys": {}
+      }
+    }
+  },
+  "actors": {
+    "ActOne": {
+      "internals": [],
+      "locals": [],
+      "formals": [],
+      "instances": {
+        "controller": {
+          "type": "ControllerSL",
+          "actuals": []
+        },
+        "actuator": {
+          "type": "Actuator",
+          "actuals": []
+        },
+        "sensor": {
+          "type": "Sensor",
+          "actuals": []
+        }
+      }
+    }
+  },
+  "messages": [
+    {
+      "name": "Position"
+    },
+    {
+      "name": "Force"
+    }
+  ],
+  "libraries": []
+}

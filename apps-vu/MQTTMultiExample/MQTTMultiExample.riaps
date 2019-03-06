@@ -1,0 +1,69 @@
+app MQTTMultiExample
+{
+	message MQTTSent_A;
+	message MQTTReceived_A;
+	
+	message MQTTSent_B;
+	message MQTTReceived_B;
+	
+	library mqtt;
+	
+	device MQTT_A(host="iot.eclipse.org", port=1883, qos=0, topic="RIAPS/MQTTMultiExample_A")
+	{
+		
+		// uses {
+		// library mqtt;
+		// }
+		// Define messaging ports
+		pub incoming : MQTTReceived_A;
+	    sub outgoing : MQTTSent_A;
+	    inside _incoming;
+	    timer clock 1000;
+	}
+	
+	device MQTT_B(host="iot.eclipse.org", port=1883, qos=0, topic="RIAPS/MQTTMultiExample_B")
+	{
+		// uses {
+		// library mqtt;
+		// }
+		// Define messaging ports
+		pub incoming : MQTTReceived_B;
+	    sub outgoing : MQTTSent_B;
+	    inside _incoming;
+	    timer clock 1000;
+	}
+	
+	
+	component Publisher_A
+	{
+		timer sampling 2000;
+      	pub outgoing : MQTTSent_A;
+	}
+	component Subscriber_A
+	{
+		sub incoming : MQTTReceived_A;
+	}
+	
+	component Publisher_B
+	{
+		timer sampling 2000;
+      	pub outgoing : MQTTSent_B;
+	}
+	component Subscriber_B
+	{
+		sub incoming : MQTTReceived_B;
+	}
+	
+	actor MQTTActor
+	{
+		local MQTTSent_A, MQTTReceived_A, MQTTSent_B, MQTTReceived_B;
+		{
+			publisher_A : Publisher_A;
+			subscriber_A: Subscriber_A;
+			publisher_B : Publisher_B;
+			subscriber_B: Subscriber_B;
+			mqtt_A : MQTT_A(host="iot.eclipse.org", port=1883, qos=0, topic="RIAPS/MQTTMultiExample_A");
+			mqtt_B : MQTT_B(host="iot.eclipse.org", port=1883, qos=0, topic="RIAPS/MQTTMultiExample_B");
+		}
+	}
+}
