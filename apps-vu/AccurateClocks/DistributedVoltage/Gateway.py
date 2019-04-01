@@ -23,9 +23,9 @@ class Gateway(Component):
 
         s = ""
         for i in values:
-            s = f'{s} {i} at {timestamp.tvSpec}.{timestamp.tvNspec}'
-        self.logger.info("values arrived: %s" % s)
-        pass
+            s = f'{i} at {timestamp.tvSpec}.{timestamp.tvNspec}'
+            self.logger.info("values arrived: %s" % s)
+  
 # riaps:keep_currentvoltage:end
 
 # riaps:keep_impl:begin
