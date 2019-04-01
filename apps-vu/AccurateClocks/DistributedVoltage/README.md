@@ -41,7 +41,7 @@ library will be call from the RIAPS Modbus UART shared library.
     The above method applies, but use the following configuration statement.
 
     ```
-    ac_cv_func_malloc_0_nonnull=yes ./configure --host=arm-linux-gnueabihf
+    ac_cv_func_malloc_0_nonnull=yes ./configure --host=arm-linux-gnueabihf --prefix=/usr/arm-linux-gnueabihf
     ```
 
 > Note: cmjones01 fork was used to allow option for asynchronous operation in the future
