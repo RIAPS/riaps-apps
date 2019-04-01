@@ -1,4 +1,4 @@
 Requirements:
 
- - Install modbus library on the development machine: [link]
+ - Install modbus library on the development machine. https://github.com/RIAPS/riaps-library/tree/master/ModbusTesting/ModbusUartAllC%2B%2BComponents
  
