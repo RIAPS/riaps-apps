@@ -23,21 +23,21 @@ library will be call from the RIAPS Modbus UART shared library.
     sudo apt-get install autoconf libtool pkg-config
     cd libmodbus
     ./autogen.sh
-    ./configure
+    ./configure --libdir=/usr/lib/arm-linux-gnueabihf --includedir=/usr/include/arm-linux-gnueabihf
     make
 
         libmodbus 3.1.2
         ===============
         prefix:                 /usr/local
         sysconfdir:             ${prefix}/etc
-        libdir:                 ${exec_prefix}/lib
-        includedir:             ${prefix}/include
+        libdir:                 /usr/lib/arm-linux-gnueabihf
+        includedir:             /usr/include/arm-linux-gnueabihf
 
     sudo make install
 
     `----------------------------------------------------------------
     Libraries have been installed in:
-        /usr/local/lib
+        /usr/lib/arm-linux-gnueabihf
     `----------------------------------------------------------------
     ```
 
