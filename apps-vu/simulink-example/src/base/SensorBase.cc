@@ -18,7 +18,7 @@ namespace sltest {
                           const py::dict     args             ,
                           const std::string& application_name ,
                           const std::string& actor_name       ) : ComponentBase(application_name, actor_name){
-            auto conf = PyConfigConverter::convert(type_spec, actor_spec);
+            auto conf = PyConfigConverter::convert(type_spec, actor_spec, args);
             conf.component_name = name;
             conf.component_type = type_name;
             conf.is_device=false;
@@ -45,5 +45,3 @@ namespace sltest {
         void SensorBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
     }
 }
-
-

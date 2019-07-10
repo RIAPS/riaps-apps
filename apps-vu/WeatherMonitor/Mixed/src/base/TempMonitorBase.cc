@@ -1,16 +1,15 @@
 
 
 
-
 #include <componentmodel/r_pyconfigconverter.h>
-#include <base/ControllerSLBase.h>
+#include <base/TempMonitorBase.h>
 
 using namespace std;
 using namespace riaps::ports;
 
-namespace sltest {
+namespace weathermonitor {
     namespace components {
-        ControllerSLBase::ControllerSLBase(const py::object*  parent_actor     ,
+        TempMonitorBase::TempMonitorBase(const py::object*  parent_actor     ,
                           const py::dict     actor_spec       ,
                           const py::dict     type_spec        ,
                           const std::string& name             ,
@@ -25,26 +24,22 @@ namespace sltest {
             set_config(conf);
         }
 
-        tuple<MessageReader<messages::Position>, PortError> ControllerSLBase::RecvPosition() {
-            auto port = GetPortAs<riaps::ports::SubscriberPort>(PORT_SUB_POSITION);
+        tuple<MessageReader<messages::TempData>, PortError> TempMonitorBase::RecvTempupdate() {
+            auto port = GetPortAs<riaps::ports::SubscriberPort>(PORT_SUB_TEMPUPDATE);
             auto [msg_bytes, error] = port->Recv();
-            MessageReader<messages::Position> reader(msg_bytes);
+            MessageReader<messages::TempData> reader(msg_bytes);
             return make_tuple(reader, error);
         }
 
 
-        riaps::ports::PortError ControllerSLBase::SendForce(MessageBuilder<messages::Force>& message) {
-            return SendMessageOnPort(message.capnp_builder(), PORT_PUB_FORCE);
-        }
 
-
-        void ControllerSLBase::DispatchMessage(riaps::ports::PortBase* port) {
+        void TempMonitorBase::DispatchMessage(riaps::ports::PortBase* port) {
             auto port_name = port->port_name();
-            if (port_name == PORT_SUB_POSITION) {
-                OnPosition();
+            if (port_name == PORT_SUB_TEMPUPDATE) {
+                OnTempupdate();
             }
         }
 
-        void ControllerSLBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
+        void TempMonitorBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
     }
 }
