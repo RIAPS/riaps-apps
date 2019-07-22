@@ -34,7 +34,9 @@ namespace weathermonitor {
         }
 
         // riaps:keep_impl:begin
+        void TempMonitor::HandlePeerStateChange(const std::string& state, const std::string& uuid) {
 
+        }
         // riaps:keep_impl:end
 
         // riaps:keep_destruct:begin
