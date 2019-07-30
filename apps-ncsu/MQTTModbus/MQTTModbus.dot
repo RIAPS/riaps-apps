@@ -1,0 +1,73 @@
+digraph MQTTModbus {
+rankdir=TB;
+nodesep="0.1";
+ranksep="1.5";
+orientation=l;
+subgraph msgs {
+rank=min;
+ModbusData [shape=ellipse];
+}
+
+mqtt_MQTT_3 -> SCADACommand_4;
+DSPData_5 -> mqtt_MQTT_3;
+ModbusStatusRequest_ModbusStatus_7 -> modbus_ModbusUartReqRepDevice_6;
+ModbusCommand_ModbusResponse_8 -> modbus_ModbusUartReqRepDevice_6;
+commInitiator_ComputationalComponent_9 -> DSPData_5;
+commInitiator_ComputationalComponent_9 -> ModbusData;
+SCADACommand_4 -> commInitiator_ComputationalComponent_9;
+commInitiator_ComputationalComponent_9 -> ModbusStatusRequest_ModbusStatus_7;
+commInitiator_ComputationalComponent_9 -> ModbusCommand_ModbusResponse_8;
+subgraph "cluster_192.168.10.93" {
+label="192.168.10.93";
+rankdir=BT;
+rank=max;
+subgraph MQTTModbusActor_msgs_2 {
+rank=min;
+SCADACommand_4 [label=SCADACommand, shape=ellipse];
+DSPData_5 [label=DSPData, shape=ellipse];
+ModbusStatusRequest_ModbusStatus_7 [label="{ModbusStatusRequest | ModbusStatus}", shape=Mrecord];
+ModbusCommand_ModbusResponse_8 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_MQTTModbusActor_1 {
+label=MQTTModbusActor;
+style=rounded;
+mqtt_MQTT_3 [label="mqtt:MQTT", rank=max, shape=component];
+modbus_ModbusUartReqRepDevice_6 [label="modbus:ModbusUartReqRepDevice", rank=max, shape=component];
+commInitiator_ComputationalComponent_9 [label="commInitiator:ComputationalComponent", rank=max, shape=component];
+}
+
+}
+
+mqtt_MQTT_12 -> SCADACommand_13;
+DSPData_14 -> mqtt_MQTT_12;
+ModbusStatusRequest_ModbusStatus_16 -> modbus_ModbusUartReqRepDevice_15;
+ModbusCommand_ModbusResponse_17 -> modbus_ModbusUartReqRepDevice_15;
+commInitiator_ComputationalComponent_18 -> DSPData_14;
+commInitiator_ComputationalComponent_18 -> ModbusData;
+SCADACommand_13 -> commInitiator_ComputationalComponent_18;
+commInitiator_ComputationalComponent_18 -> ModbusStatusRequest_ModbusStatus_16;
+commInitiator_ComputationalComponent_18 -> ModbusCommand_ModbusResponse_17;
+subgraph "cluster_192.168.10.94" {
+label="192.168.10.94";
+rankdir=BT;
+rank=max;
+subgraph MQTTModbusActor_msgs_11 {
+rank=min;
+SCADACommand_13 [label=SCADACommand, shape=ellipse];
+DSPData_14 [label=DSPData, shape=ellipse];
+ModbusStatusRequest_ModbusStatus_16 [label="{ModbusStatusRequest | ModbusStatus}", shape=Mrecord];
+ModbusCommand_ModbusResponse_17 [label="{ModbusCommand | ModbusResponse}", shape=Mrecord];
+}
+
+subgraph cluster_MQTTModbusActor_10 {
+label=MQTTModbusActor;
+style=rounded;
+mqtt_MQTT_12 [label="mqtt:MQTT", rank=max, shape=component];
+modbus_ModbusUartReqRepDevice_15 [label="modbus:ModbusUartReqRepDevice", rank=max, shape=component];
+commInitiator_ComputationalComponent_18 [label="commInitiator:ComputationalComponent", rank=max, shape=component];
+}
+
+}
+
+}

@@ -1,6 +1,6 @@
 # RIAPS Applications Developed by North Carolina State University
 
-This is a collection of applications used for microgrid control. The six major applications are:
+This is a collection of applications used for microgrid control. The seven major applications are:
 
 1. ac-microgrid-resync: This application is for microgrid resynchronization. It uses the RIAPS platform as a simple communication tool for receving and forwarding C37.118 messages from SEL relay and to Opal-RT simulator. No control algortihm is implemented on the RIAPS platform. All the control algorithms, including power electronics inverter control and microgrid secondary/resynchronziation control, are implemented in Opal-RT simulator. This application was demonstrated at the 2017 ARPA-E Energy Innovation Summit.  
 
@@ -12,14 +12,15 @@ This is a collection of applications used for microgrid control. The six major a
       - The secondary/resynchronziation control algorithm is implemented on RIAPS platform.
 
    This application was demonstrated at the 2018 ARPA-E Energy Innovation Summit.
- 
+
 4. **ac-microgrid-resync-dsp-RelayInOpal**: This applicaion is the same as **ac-microgrid-resync-dsp** except the relay is simulated in Opal-RT simulator. The demonstration can run without a SEL relay.
- 
-5. **ac-microgrid-transactive-energy-in-grid-tied**: This application is for microgrid transactive energy trading under grid-tied mode. For detail about the transactive part can be found in [3]. 
+
+5. **ac-microgrid-transactive-energy-in-grid-tied**: This application is for microgrid transactive energy trading under grid-tied mode. For detail about the transactive part can be found in [3].
 
 
 6. **dc-microgrid-interleaving**: This application is for interleaving the DC/DC converters in a DC microgrid. More details can be found in [4].
 
+7. **MQTTModbus**:  This application enables a user interface communication through a MQTT communication channel to remote RIAPS nodes.
 
 The up-to-date applications are marked as **bold**.
 

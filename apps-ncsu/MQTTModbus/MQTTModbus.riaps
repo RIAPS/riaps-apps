@@ -1,0 +1,74 @@
+/*
+MQTT-Modbus
+
+Created on May 18, 2019
+
+@author: Danny Crescimone
+*/
+
+app MQTTModbus
+{
+    message DSPData;  //Data for SCADA
+    message SCADACommand; //commands of SCADA
+
+    message ModbusStatusRequest; // send request to determine Modbus status
+    message ModbusStatus;        // provides Modbus status (True for open/ready, False for not connected)
+    message ModbusCommand;     // send Modbus action Request
+    message ModbusResponse;    // get response from Modbus action
+    message ModbusData;  	 // information for the logger to grab
+
+    library serialModbusLib;
+
+    device MQTT(host="iot.eclipse.org", port=1883, qos=2, topic1="SCADAcommand",topic2="DSPdata")
+    {
+        // Define messaging ports
+        pub subPort : SCADACommand;
+        sub pubPort : DSPData;
+        inside _incoming;
+        timer clock 1000;
+    }
+
+    // Modbus (UART) device interface - UART1
+    //     considered the server for the request/response interaction
+    device ModbusUartReqRepDevice(slaveaddress=10,port='UART1',baudrate=38400,serialTimeout=1.0)
+    {
+        rep modbusStatusRepPort : (ModbusStatusRequest,ModbusStatus);
+        rep modbusCommandRepPort : (ModbusCommand,ModbusResponse);
+    }
+
+
+    // Example Component to show Modbus I/F usage
+    component ComputationalComponent(dev="LVSST/G")
+    {
+        timer clock 8000;
+        sub RecCommand: SCADACommand;
+        pub pubPort : DSPData;
+        pub tx_modbusData : ModbusData;   // When data is ready
+        req modbusStatusReqPort : (ModbusStatusRequest,ModbusStatus);
+        req modbusCommandReqPort : (ModbusCommand,ModbusResponse); // Port used to communicate with the ModbusUartDevice
+    }
+
+    component Logger(db_host='127.0.0.1', db_port=8086, db_name='MOdbusIO', db_user='riaps', db_password='riaps')
+    {
+        sub rx_modbusData : ModbusData;
+    }
+
+
+    actor MQTTModbusActor(name, sub, pub)
+    {
+        local DSPData ,SCADACommand, ModbusStatusRequest, ModbusStatus, ModbusCommand, ModbusResponse;	// Local message types
+        {
+
+            mqtt : MQTT(host="iot.eclipse.org", port=1883, qos=2, topic1=sub,topic2=pub);
+            modbus : ModbusUartReqRepDevice(slaveaddress=10,port='UART1',baudrate=38400,serialTimeout=1);  // Slave Address is in decimal
+            commInitiator : ComputationalComponent(dev = name);
+        }
+    }
+
+    actor Logger()
+    {
+        {
+            logger : Logger(db_host='127.0.0.1', db_port=8086, db_name='ModbusIO', db_user='riaps', db_password='riaps');
+        }
+    }
+}

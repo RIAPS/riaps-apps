@@ -1,0 +1,18 @@
+app MQTTModbus {
+
+//LVSST1
+    on (192.168.0.248) MQTTModbusActor(name="LVSST/G", sub="LVSST/1/G/command", pub="LVSST/1/G/data");
+    on (192.168.0.137) MQTTModbusActor(name="LVSST/L", sub="LVSST/1/L/command", pub="LVSST/1/L/data");
+    on (192.168.0.199) MQTTModbusActor(name="DCESD", sub="DCESD/1/command", pub="DCESD/1/data");
+
+//LVSST2
+    //on (192.168.0.201) MQTTModbusActor(name="LVSST/G", sub="LVSST/2/G/command", pub="LVSST/2/G/data");
+    //on (192.168.0.112) MQTTModbusActor(name="LVSST/L", sub="LVSST/2/L/command", pub="LVSST/2/L/data");
+    //on (192.168.0.230) MQTTModbusActor(name="DCESD", sub="DCESD/2/command", pub="DCESD/2/data");
+
+// LVSST3    
+    //on (192.168.0.107) MQTTModbusActor(name="LVSST/G", sub="LVSST/3/G/command", pub="LVSST/3/G/data");
+    //on (192.168.0.192) MQTTModbusActor(name="LVSST/L", sub="LVSST/3/L/command", pub="LVSST/3/L/data");
+
+    //on (192.168.0.217) Logger;
+}
