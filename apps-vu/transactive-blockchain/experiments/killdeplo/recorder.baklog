@@ -1,0 +1,1352 @@
+Jan 25 01:13:54 bbb-a327 systemd[1]: riaps-deplo.service: Failed with result 'signal'.
+Jan 25 01:13:54 bbb-a327 systemd[1]: riaps-deplo.service: Service hold-off time over, scheduling restart.
+Jan 25 01:13:54 bbb-a327 systemd[1]: riaps-deplo.service: Scheduled restart job, restart counter is at 1.
+Jan 25 01:13:54 bbb-a327 systemd[1]: Stopped RIAPS Deployment Manager Service.
+Jan 25 01:13:54 bbb-a327 systemd[1]: Started RIAPS Deployment Manager Service.
+Jan 25 01:14:02 bbb-a327 systemd[1]: Stopping RIAPS Deployment Manager Service...
+Jan 25 01:14:03 bbb-a327 systemd[1]: Stopped RIAPS Deployment Manager Service.
+Jan 25 01:14:03 bbb-a327 systemd[1]: Started RIAPS Deployment Manager Service.
+Jan 25 01:14:11 bbb-a327 sudo[14621]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc qdisc del dev eth0 root
+Jan 25 01:14:11 bbb-a327 sudo[14621]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:14:11 bbb-a327 sudo[14621]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:14:11 bbb-a327 sudo[14623]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc qdisc add dev eth0 root handle 1001: htb
+Jan 25 01:14:11 bbb-a327 sudo[14623]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:14:12 bbb-a327 sudo[14623]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:14:12 bbb-a327 sudo[14625]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc class add dev eth0 parent 1001: classid 1001:1001 htb rate 118kbps ceil 131kbps
+Jan 25 01:14:12 bbb-a327 sudo[14625]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:14:12 bbb-a327 sudo[14625]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:14:52 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:52.884] [rbeacon] [info] Starting RIAPS DISCOVERY SERVICE
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.169] [rdiscovery] [info] Starting DHT node on 172.21.20.51:4222 (04a316b6a327)
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.197] [rbeacon] [info] DHT thread is initialized, starts beaconing.
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.726] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.42;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.730] [rdiscovery] [info] Join: 172.21.20.42
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.734] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.33; 172.21.20.42;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.738] [rdiscovery] [info] Join: 172.21.20.33
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.741] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.33; 172.21.20.42; 172.21.20.45;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.743] [rdiscovery] [info] Join: 172.21.20.45
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.746] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.33; 172.21.20.42; 172.21.20.45; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.748] [rdiscovery] [info] Join: 172.21.20.8
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.750] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.755] [rdiscovery] [info] Join: 172.21.20.43
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.763] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.766] [rdiscovery] [info] Join: 172.21.20.3
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.770] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.776] [rdiscovery] [info] Join: 172.21.20.67
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.780] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.782] [rdiscovery] [info] Join: 172.21.20.66
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.788] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.790] [rdiscovery] [info] Join: 172.21.20.53
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.796] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.799] [rdiscovery] [info] Join: 172.21.20.64
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.822] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.869] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.59; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.871] [rdiscovery] [info] Join: 172.21.20.59
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.879] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.59; 172.21.20.61; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.881] [rdiscovery] [info] Join: 172.21.20.61
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.888] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.893] [rdiscovery] [info] Join: 172.21.20.60
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.930] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.63; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:53 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:53.933] [rdiscovery] [info] Join: 172.21.20.63
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.013] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.63; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.031] [rdiscovery] [info] Join: 172.21.20.5
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.184] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.47; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.63; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.189] [rdiscovery] [info] Join: 172.21.20.47
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.194] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.47; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.63; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.197] [rdiscovery] [info] Join: 172.21.20.62
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.5213
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525634
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.52812
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.530029
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.529965
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.529746
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.528317
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.528033
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.527142
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.526077
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524573
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522644
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522015
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520481
+Jan 25 01:14:54 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:14:54.862] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.51825
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525593
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524992
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525024
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524796
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523587
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523283
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523324
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.518916
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.518098
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.515931
+Jan 25 01:14:55 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.515603
+Jan 25 01:15:16 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:16.860] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:17 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.519753
+Jan 25 01:15:17 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522971
+Jan 25 01:15:17 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525141
+Jan 25 01:15:17 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525945
+Jan 25 01:15:29 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:29.150] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:29 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.514654
+Jan 25 01:15:29 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.518531
+Jan 25 01:15:29 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.52032
+Jan 25 01:15:29 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521658
+Jan 25 01:15:36 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:36.276] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:36 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.515396
+Jan 25 01:15:36 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.519219
+Jan 25 01:15:36 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521485
+Jan 25 01:15:36 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520726
+Jan 25 01:15:38 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:38.864] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:39 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.512469
+Jan 25 01:15:39 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.515833
+Jan 25 01:15:39 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.517627
+Jan 25 01:15:39 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520606
+Jan 25 01:15:47 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:47.522] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.518931
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520077
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521592
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523029
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523751
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520942
+Jan 25 01:15:48 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520757
+Jan 25 01:15:49 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:49.526] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:15:50 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521324
+Jan 25 01:15:50 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.5255
+Jan 25 01:15:50 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525986
+Jan 25 01:15:50 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.535031
+Jan 25 01:15:50 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.535554
+Jan 25 01:15:59 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:15:59.986] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.517608
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521949
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.52316
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523638
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523407
+Jan 25 01:16:00 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521651
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:04.257] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.519296
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521678
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522015
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521043
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521083
+Jan 25 01:16:04 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520606
+Jan 25 01:16:11 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:11.533] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:12 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.516201
+Jan 25 01:16:12 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.519394
+Jan 25 01:16:12 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521206
+Jan 25 01:16:12 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522386
+Jan 25 01:16:12 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.523633
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:22.010] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524193
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.526897
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.521041
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522943
+Jan 25 01:16:22 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522439
+Jan 25 01:16:33 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:33.557] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:34 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.520007
+Jan 25 01:16:34 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524809
+Jan 25 01:16:34 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.527133
+Jan 25 01:16:34 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.530241
+Jan 25 01:16:34 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.531788
+Jan 25 01:16:39 bbb-a327 sudo[14732]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/usr/sbin/adduser --disabled-login --gecos GECOS --no-create-home transactiveenergya327
+Jan 25 01:16:39 bbb-a327 sudo[14732]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:16:40 bbb-a327 RIAPS-DEPLO[14608]: Adding user `transactiveenergya327' ...
+Jan 25 01:16:40 bbb-a327 RIAPS-DEPLO[14608]: Adding new group `transactiveenergya327' (1000) ...
+Jan 25 01:16:40 bbb-a327 groupadd[14734]: group added to /etc/group: name=transactiveenergya327, GID=1000
+Jan 25 01:16:40 bbb-a327 groupadd[14734]: group added to /etc/gshadow: name=transactiveenergya327
+Jan 25 01:16:40 bbb-a327 groupadd[14734]: new group: name=transactiveenergya327, GID=1000
+Jan 25 01:16:40 bbb-a327 RIAPS-DEPLO[14608]: Adding new user `transactiveenergya327' (1000) with group `transactiveenergya327' ...
+Jan 25 01:16:40 bbb-a327 useradd[14738]: new user: name=transactiveenergya327, UID=1000, GID=1000, home=/home/transactiveenergya327, shell=/bin/bash
+Jan 25 01:16:40 bbb-a327 RIAPS-DEPLO[14608]: Not creating home directory `/home/transactiveenergya327'.
+Jan 25 01:16:40 bbb-a327 chfn[14744]: changed user 'transactiveenergya327' information
+Jan 25 01:16:40 bbb-a327 sudo[14732]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:16:40 bbb-a327 sudo[14748]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/bin/chown -R transactiveenergya327:transactiveenergya327 /home/riaps/riaps_apps/TransactiveEnergy
+Jan 25 01:16:40 bbb-a327 sudo[14748]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:16:41 bbb-a327 sudo[14748]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:16:41 bbb-a327 sudo[14750]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/bin/chmod o-rwx /home/riaps/riaps_apps/TransactiveEnergy
+Jan 25 01:16:41 bbb-a327 sudo[14750]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:16:41 bbb-a327 sudo[14750]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:16:41 bbb-a327 sudo[14752]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc class add dev eth0 parent 1001:1001 classid 1001:1000 htb rate 118kbps ceil 131kbps
+Jan 25 01:16:41 bbb-a327 sudo[14752]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:16:41 bbb-a327 sudo[14752]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:16:41 bbb-a327 sudo[14754]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc qdisc add dev eth0 parent 1001:1000 handle 1000: htb
+Jan 25 01:16:41 bbb-a327 sudo[14754]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 25 01:16:41 bbb-a327 sudo[14754]: pam_unix(sudo:session): session closed for user root
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:44.462] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.537861
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.538995
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541837
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.540238
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.537598
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.534354
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.534082
+Jan 25 01:16:44 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.525595
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:49,041:[14756]:Recorder:(PID 14756) - starting Recorder
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,114:[14756]:Recorder:(PID 14756) - starting Recorder
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:49.149] [rdiscovery] [info] Register actor with PID - 14756 : /TransactiveEnergy/Recorder/
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:49.589] [rdiscovery] [info] Lookup: /TransactiveEnergy/Query_contract_address#Contract_address/rep
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,611:[14756]:Recorder:peer 0AE99E8A8D1634DF1017BAD99318A3F6 is on at: 1548379009.6108134
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,617:[14756]:Recorder:peer 59F1F2F404D860396C5CDC4F3A86A42D is on at: 1548379009.6174123
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,627:[14756]:Recorder:peer 207D4B56F388B5076FE988B2BDEAABD9 is on at: 1548379009.626894
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,641:[14756]:Recorder:peer D43B30293DEA0EA0AADE71DF0B3B1C8E is on at: 1548379009.6416507
+Jan 25 01:16:49 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:16:49,648:[14756]:Recorder:peer 207D4B56F388B5076FE988B2BDEAABD9 is on at: 1548379009.6486518
+Jan 25 01:16:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:50,598:[14756]:Recorder:PID(14756) - on_poller(): 1548379010.59627
+Jan 25 01:16:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:50,603:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:51,610:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:51,615:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:51,619:[14756]:Recorder:PID(14756) - on_poller(): 1548379011.5981874
+Jan 25 01:16:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:51,622:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:52 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:16:52.485] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:16:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:52,629:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:52,636:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:52,638:[14756]:Recorder:PID(14756) - on_poller(): 1548379012.598868
+Jan 25 01:16:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:52,638:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.529972
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.533519
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.53468
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.536915
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.536682
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.535317
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.53401
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.533793
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.524668
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:53,648:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:53,653:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:53,658:[14756]:Recorder:PID(14756) - on_poller(): 1548379013.5996041
+Jan 25 01:16:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:53,661:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:54,668:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:54,673:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:54,680:[14756]:Recorder:PID(14756) - on_poller(): 1548379014.6002805
+Jan 25 01:16:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:54,683:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:55,691:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:55,697:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:55,701:[14756]:Recorder:PID(14756) - on_poller(): 1548379015.6009326
+Jan 25 01:16:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:55,705:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:56,712:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:56,718:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:56,722:[14756]:Recorder:PID(14756) - on_poller(): 1548379016.601613
+Jan 25 01:16:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:56,728:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:57,735:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:57,740:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:57,742:[14756]:Recorder:PID(14756) - on_poller(): 1548379017.6022558
+Jan 25 01:16:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:57,742:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:58,752:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:58,758:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:58,762:[14756]:Recorder:PID(14756) - on_poller(): 1548379018.6029334
+Jan 25 01:16:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:58,765:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:16:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:59,773:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:16:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:59,778:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:16:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:59,782:[14756]:Recorder:PID(14756) - on_poller(): 1548379019.6036825
+Jan 25 01:16:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:16:59,785:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:00,792:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:00,800:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:00,801:[14756]:Recorder:PID(14756) - on_poller(): 1548379020.6043346
+Jan 25 01:17:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:00,802:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:01,806:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:01,808:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:01,809:[14756]:Recorder:PID(14756) - on_poller(): 1548379021.6049747
+Jan 25 01:17:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:01,810:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:02,816:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:02,819:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:02,822:[14756]:Recorder:PID(14756) - on_poller(): 1548379022.6067827
+Jan 25 01:17:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:02,825:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:03,832:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:03,839:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:03,840:[14756]:Recorder:PID(14756) - on_poller(): 1548379023.6074214
+Jan 25 01:17:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:03,841:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:04,845:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:04,851:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:04,853:[14756]:Recorder:PID(14756) - on_poller(): 1548379024.6082108
+Jan 25 01:17:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:04,853:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:17:05.441] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:39827
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:05,857:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:05,863:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:05,871:[14756]:Recorder:PID(14756) - on_poller(): 1548379025.608948
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:05,874:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.509544
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.516003
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.522097
+Jan 25 01:17:05 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.539204
+Jan 25 01:17:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:06,883:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:06,888:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:06,890:[14756]:Recorder:PID(14756) - on_poller(): 1548379026.6096833
+Jan 25 01:17:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:06,890:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:07,899:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:07,904:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:07,908:[14756]:Recorder:PID(14756) - on_poller(): 1548379027.6103375
+Jan 25 01:17:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:07,910:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:08,917:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:08,924:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:08,928:[14756]:Recorder:PID(14756) - on_poller(): 1548379028.6109633
+Jan 25 01:17:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:08,929:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:09,933:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:09,944:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:09,948:[14756]:Recorder:PID(14756) - on_poller(): 1548379029.611781
+Jan 25 01:17:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:09,952:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:10,958:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:10,966:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:10,982:[14756]:Recorder:PID(14756) - on_poller(): 1548379030.6124191
+Jan 25 01:17:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:10,986:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:11,996:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:12,004:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:12,010:[14756]:Recorder:PID(14756) - on_poller(): 1548379031.6130514
+Jan 25 01:17:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:12,016:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:13,023:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:13,028:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:13,032:[14756]:Recorder:PID(14756) - on_poller(): 1548379032.6136646
+Jan 25 01:17:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:13,036:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:14,047:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:14,054:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:14,060:[14756]:Recorder:PID(14756) - on_poller(): 1548379033.6143134
+Jan 25 01:17:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:14,063:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:15,069:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:15,076:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:15,077:[14756]:Recorder:PID(14756) - on_poller(): 1548379034.61497
+Jan 25 01:17:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:15,078:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:16,082:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:16,088:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:16,092:[14756]:Recorder:PID(14756) - on_poller(): 1548379035.6156557
+Jan 25 01:17:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:16,095:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:17,102:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:17,126:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:17,134:[14756]:Recorder:PID(14756) - on_poller(): 1548379036.6162806
+Jan 25 01:17:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:17,138:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:18,152:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:18,157:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:18,159:[14756]:Recorder:PID(14756) - on_poller(): 1548379037.6170053
+Jan 25 01:17:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:18,164:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:19,170:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:19,176:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:19,180:[14756]:Recorder:PID(14756) - on_poller(): 1548379038.6176496
+Jan 25 01:17:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:19,182:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:20,189:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:20,194:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:20,198:[14756]:Recorder:PID(14756) - on_poller(): 1548379039.6182952
+Jan 25 01:17:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:20,201:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:21,210:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:21,215:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:21,219:[14756]:Recorder:PID(14756) - on_poller(): 1548379040.618956
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:21,222:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:17:21.745] [rdiscovery] [info] Search for registered actor: /TransactiveEnergy/Recorder/
+Jan 25 01:17:21 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:17:21.748] [rdiscovery] [info] Update() returns contractAddr@172.21.20.53:40823 to /TransactiveEnergy/Recorder/
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,230:[14756]:Recorder:query_contract_address:send exception = 11
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,235:[14756]:Recorder:query_contract_address: try again
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,243:[14756]:Recorder:PID(14756) - on_poller(): 1548379041.6196861
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,246:[14756]:Recorder:{'request': 'query_contract_address'}
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,321:[14756]:Recorder:PID (14756) - on_contractAddr():{'contract': '0x5d122f855c9b0066d38fb8f9f2a42d0d51df0341', 'time': 3241.3888487815857}
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,324:[14756]:Recorder:Contract address: 0x5d122f855c9b0066d38fb8f9f2a42d0d51df0341
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,327:[14756]:Recorder:Setting up connection to Ethereum client...
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,376:[14756]:Recorder:Creating contract object...
+Jan 25 01:17:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:22,807:[14756]:Recorder:PID(14756) - on_poller(): 1548379042.6203585
+Jan 25 01:17:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:23,622:[14756]:Recorder:PID(14756) - on_poller(): 1548379043.6210825
+Jan 25 01:17:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:24,622:[14756]:Recorder:PID(14756) - on_poller(): 1548379044.621799
+Jan 25 01:17:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:25,623:[14756]:Recorder:PID(14756) - on_poller(): 1548379045.6225026
+Jan 25 01:17:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:26,624:[14756]:Recorder:PID(14756) - on_poller(): 1548379046.6232038
+Jan 25 01:17:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:27,625:[14756]:Recorder:PID(14756) - on_poller(): 1548379047.6242065
+Jan 25 01:17:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:28,626:[14756]:Recorder:PID(14756) - on_poller(): 1548379048.624984
+Jan 25 01:17:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:29,626:[14756]:Recorder:PID(14756) - on_poller(): 1548379049.6258907
+Jan 25 01:17:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:30,627:[14756]:Recorder:PID(14756) - on_poller(): 1548379050.626601
+Jan 25 01:17:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:31,628:[14756]:Recorder:PID(14756) - on_poller(): 1548379051.627317
+Jan 25 01:17:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:32,629:[14756]:Recorder:PID(14756) - on_poller(): 1548379052.6281734
+Jan 25 01:17:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:33,629:[14756]:Recorder:PID(14756) - on_poller(): 1548379053.6288671
+Jan 25 01:17:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:34,630:[14756]:Recorder:PID(14756) - on_poller(): 1548379054.629574
+Jan 25 01:17:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:35,631:[14756]:Recorder:PID(14756) - on_poller(): 1548379055.630279
+Jan 25 01:17:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:36,632:[14756]:Recorder:PID(14756) - on_poller(): 1548379056.631015
+Jan 25 01:17:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:37,633:[14756]:Recorder:PID(14756) - on_poller(): 1548379057.632075
+Jan 25 01:17:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:38,633:[14756]:Recorder:PID(14756) - on_poller(): 1548379058.6328003
+Jan 25 01:17:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:39,634:[14756]:Recorder:PID(14756) - on_poller(): 1548379059.6335466
+Jan 25 01:17:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:40,635:[14756]:Recorder:PID(14756) - on_poller(): 1548379060.6343153
+Jan 25 01:17:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:41,636:[14756]:Recorder:PID(14756) - on_poller(): 1548379061.6350284
+Jan 25 01:17:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:42,638:[14756]:Recorder:PID(14756) - on_poller(): 1548379062.6360667
+Jan 25 01:17:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:43,637:[14756]:Recorder:PID(14756) - on_poller(): 1548379063.6367648
+Jan 25 01:17:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:44,638:[14756]:Recorder:PID(14756) - on_poller(): 1548379064.6374948
+Jan 25 01:17:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:45,640:[14756]:Recorder:PID(14756) - on_poller(): 1548379065.6388857
+Jan 25 01:17:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:46,641:[14756]:Recorder:PID(14756) - on_poller(): 1548379066.6404784
+Jan 25 01:17:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:47,642:[14756]:Recorder:PID(14756) - on_poller(): 1548379067.641231
+Jan 25 01:17:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:48,642:[14756]:Recorder:PID(14756) - on_poller(): 1548379068.6419666
+Jan 25 01:17:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:49,643:[14756]:Recorder:PID(14756) - on_poller(): 1548379069.6426816
+Jan 25 01:17:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:50,644:[14756]:Recorder:PID(14756) - on_poller(): 1548379070.6433716
+Jan 25 01:17:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:51,645:[14756]:Recorder:PID(14756) - on_poller(): 1548379071.644311
+Jan 25 01:17:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:52,646:[14756]:Recorder:PID(14756) - on_poller(): 1548379072.6451526
+Jan 25 01:17:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:53,646:[14756]:Recorder:PID(14756) - on_poller(): 1548379073.645919
+Jan 25 01:17:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:54,647:[14756]:Recorder:PID(14756) - on_poller(): 1548379074.6466904
+Jan 25 01:17:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:55,649:[14756]:Recorder:PID(14756) - on_poller(): 1548379075.647405
+Jan 25 01:17:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:56,650:[14756]:Recorder:PID(14756) - on_poller(): 1548379076.6493015
+Jan 25 01:17:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:57,651:[14756]:Recorder:PID(14756) - on_poller(): 1548379077.650029
+Jan 25 01:17:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:58,651:[14756]:Recorder:PID(14756) - on_poller(): 1548379078.6507719
+Jan 25 01:17:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:17:59,652:[14756]:Recorder:PID(14756) - on_poller(): 1548379079.651672
+Jan 25 01:18:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:00,653:[14756]:Recorder:PID(14756) - on_poller(): 1548379080.6524029
+Jan 25 01:18:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:01,654:[14756]:Recorder:PID(14756) - on_poller(): 1548379081.6531508
+Jan 25 01:18:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:02,654:[14756]:Recorder:PID(14756) - on_poller(): 1548379082.653885
+Jan 25 01:18:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:03,655:[14756]:Recorder:PID(14756) - on_poller(): 1548379083.6546898
+Jan 25 01:18:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:04,656:[14756]:Recorder:PID(14756) - on_poller(): 1548379084.655553
+Jan 25 01:18:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:05,657:[14756]:Recorder:PID(14756) - on_poller(): 1548379085.656276
+Jan 25 01:18:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:06,658:[14756]:Recorder:PID(14756) - on_poller(): 1548379086.657015
+Jan 25 01:18:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:07,658:[14756]:Recorder:PID(14756) - on_poller(): 1548379087.657768
+Jan 25 01:18:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:08,659:[14756]:Recorder:PID(14756) - on_poller(): 1548379088.6585174
+Jan 25 01:18:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:09,660:[14756]:Recorder:PID(14756) - on_poller(): 1548379089.6592689
+Jan 25 01:18:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:10,661:[14756]:Recorder:PID(14756) - on_poller(): 1548379090.660149
+Jan 25 01:18:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:11,661:[14756]:Recorder:PID(14756) - on_poller(): 1548379091.6608741
+Jan 25 01:18:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:12,662:[14756]:Recorder:PID(14756) - on_poller(): 1548379092.6616783
+Jan 25 01:18:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:13,663:[14756]:Recorder:PID(14756) - on_poller(): 1548379093.6624148
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,664:[14756]:Recorder:PID(14756) - on_poller(): 1548379094.6631577
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,852:[14756]:Recorder:BuyingOfferPosted({'ID': 19, 'prosumer': 106, 'startTime': 46, 'endTime': 46, 'energy': 9400}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,863:[14756]:Recorder:SellingOfferPosted({'ID': 10, 'prosumer': 101, 'startTime': 42, 'endTime': 42, 'energy': 5200}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,878:[14756]:Recorder:SellingOfferPosted({'ID': 26, 'prosumer': 101, 'startTime': 58, 'endTime': 58, 'energy': 9400}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,881:[14756]:Recorder:BuyingOfferPosted({'ID': 58, 'prosumer': 106, 'startTime': 85, 'endTime': 85, 'energy': 4100}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,888:[14756]:Recorder:BuyingOfferPosted({'ID': 67, 'prosumer': 106, 'startTime': 94, 'endTime': 94, 'energy': 3500}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,908:[14756]:Recorder:SellingOfferPosted({'ID': 33, 'prosumer': 101, 'startTime': 64, 'endTime': 64, 'energy': 8300}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,911:[14756]:Recorder:SellingOfferPosted({'ID': 55, 'prosumer': 101, 'startTime': 86, 'endTime': 86, 'energy': 100}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,914:[14756]:Recorder:BuyingOfferPosted({'ID': 6, 'prosumer': 106, 'startTime': 33, 'endTime': 33, 'energy': 6200}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,920:[14756]:Recorder:BuyingOfferPosted({'ID': 15, 'prosumer': 106, 'startTime': 42, 'endTime': 42, 'energy': 9100}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,929:[14756]:Recorder:BuyingOfferPosted({'ID': 38, 'prosumer': 106, 'startTime': 65, 'endTime': 65, 'energy': 8000}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,942:[14756]:Recorder:SellingOfferPosted({'ID': 46, 'prosumer': 101, 'startTime': 77, 'endTime': 77, 'energy': 2800}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,945:[14756]:Recorder:SellingOfferPosted({'ID': 49, 'prosumer': 101, 'startTime': 80, 'endTime': 80, 'energy': 1600}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,953:[14756]:Recorder:BuyingOfferPosted({'ID': 55, 'prosumer': 106, 'startTime': 82, 'endTime': 82, 'energy': 4000}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,964:[14756]:Recorder:BuyingOfferPosted({'ID': 31, 'prosumer': 106, 'startTime': 58, 'endTime': 58, 'energy': 7400}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,976:[14756]:Recorder:BuyingOfferPosted({'ID': 47, 'prosumer': 106, 'startTime': 74, 'endTime': 74, 'energy': 6600}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,980:[14756]:Recorder:BuyingOfferPosted({'ID': 11, 'prosumer': 106, 'startTime': 38, 'endTime': 38, 'energy': 8900}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,984:[14756]:Recorder:BuyingOfferPosted({'ID': 29, 'prosumer': 106, 'startTime': 56, 'endTime': 56, 'energy': 7400}).
+Jan 25 01:18:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:14,988:[14756]:Recorder:BuyingOfferPosted({'ID': 46, 'prosumer': 106, 'startTime': 73, 'endTime': 73, 'energy': 7100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,000:[14756]:Recorder:ProsumerRegistered({'prosumer': 110, 'feeder': 1}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,008:[14756]:Recorder:BuyingOfferPosted({'ID': 8, 'prosumer': 106, 'startTime': 35, 'endTime': 35, 'energy': 7800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,012:[14756]:Recorder:BuyingOfferPosted({'ID': 20, 'prosumer': 106, 'startTime': 47, 'endTime': 47, 'energy': 9400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,027:[14756]:Recorder:SellingOfferPosted({'ID': 23, 'prosumer': 101, 'startTime': 55, 'endTime': 55, 'energy': 9300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,030:[14756]:Recorder:SellingOfferPosted({'ID': 31, 'prosumer': 101, 'startTime': 62, 'endTime': 62, 'energy': 8800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,044:[14756]:Recorder:BuyingOfferPosted({'ID': 9, 'prosumer': 106, 'startTime': 36, 'endTime': 36, 'energy': 8400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,048:[14756]:Recorder:BuyingOfferPosted({'ID': 13, 'prosumer': 106, 'startTime': 40, 'endTime': 40, 'energy': 9000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,052:[14756]:Recorder:SellingOfferPosted({'ID': 0, 'prosumer': 101, 'startTime': 32, 'endTime': 32, 'energy': 1000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,064:[14756]:Recorder:BuyingOfferPosted({'ID': 7, 'prosumer': 106, 'startTime': 34, 'endTime': 34, 'energy': 7000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,068:[14756]:Recorder:BuyingOfferPosted({'ID': 18, 'prosumer': 106, 'startTime': 45, 'endTime': 45, 'energy': 9300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,076:[14756]:Recorder:BuyingOfferPosted({'ID': 33, 'prosumer': 106, 'startTime': 60, 'endTime': 60, 'energy': 7600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,081:[14756]:Recorder:BuyingOfferPosted({'ID': 35, 'prosumer': 106, 'startTime': 62, 'endTime': 62, 'energy': 7900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.992411
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,112:[14756]:Recorder:SellingOfferPosted({'ID': 35, 'prosumer': 101, 'startTime': 66, 'endTime': 66, 'energy': 7700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,133:[14756]:Recorder:BuyingOfferPosted({'ID': 53, 'prosumer': 106, 'startTime': 80, 'endTime': 80, 'energy': 4000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,143:[14756]:Recorder:BuyingOfferPosted({'ID': 16, 'prosumer': 106, 'startTime': 43, 'endTime': 43, 'energy': 9200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,157:[14756]:Recorder:SellingOfferPosted({'ID': 20, 'prosumer': 101, 'startTime': 52, 'endTime': 52, 'energy': 8900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,172:[14756]:Recorder:SellingOfferPosted({'ID': 30, 'prosumer': 101, 'startTime': 61, 'endTime': 61, 'energy': 9100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,175:[14756]:Recorder:BuyingOfferPosted({'ID': 52, 'prosumer': 106, 'startTime': 79, 'endTime': 79, 'energy': 4200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,198:[14756]:Recorder:SellingOfferPosted({'ID': 29, 'prosumer': 101, 'startTime': 60, 'endTime': 60, 'energy': 9200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,215:[14756]:Recorder:BuyingOfferPosted({'ID': 64, 'prosumer': 106, 'startTime': 91, 'endTime': 91, 'energy': 3600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,224:[14756]:Recorder:BuyingOfferPosted({'ID': 14, 'prosumer': 106, 'startTime': 41, 'endTime': 41, 'energy': 9000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,227:[14756]:Recorder:SellingOfferPosted({'ID': 4, 'prosumer': 101, 'startTime': 36, 'endTime': 36, 'energy': 2400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,238:[14756]:Recorder:SellingOfferPosted({'ID': 6, 'prosumer': 101, 'startTime': 38, 'endTime': 38, 'energy': 3300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,244:[14756]:Recorder:SellingOfferPosted({'ID': 9, 'prosumer': 101, 'startTime': 41, 'endTime': 41, 'energy': 4700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,248:[14756]:Recorder:SellingOfferPosted({'ID': 22, 'prosumer': 101, 'startTime': 54, 'endTime': 54, 'energy': 9200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,260:[14756]:Recorder:SellingOfferPosted({'ID': 24, 'prosumer': 101, 'startTime': 56, 'endTime': 56, 'energy': 9400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,264:[14756]:Recorder:SellingOfferPosted({'ID': 15, 'prosumer': 101, 'startTime': 47, 'endTime': 47, 'energy': 7300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,268:[14756]:Recorder:BuyingOfferPosted({'ID': 36, 'prosumer': 106, 'startTime': 63, 'endTime': 63, 'energy': 8000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,284:[14756]:Recorder:SellingOfferPosted({'ID': 45, 'prosumer': 101, 'startTime': 76, 'endTime': 76, 'energy': 3200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,289:[14756]:Recorder:SellingOfferPosted({'ID': 2, 'prosumer': 101, 'startTime': 34, 'endTime': 34, 'energy': 1700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,304:[14756]:Recorder:SellingOfferPosted({'ID': 8, 'prosumer': 101, 'startTime': 40, 'endTime': 40, 'energy': 4200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,307:[14756]:Recorder:BuyingOfferPosted({'ID': 27, 'prosumer': 106, 'startTime': 54, 'endTime': 54, 'energy': 7800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,309:[14756]:Recorder:BuyingOfferPosted({'ID': 45, 'prosumer': 106, 'startTime': 72, 'endTime': 72, 'energy': 7400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,324:[14756]:Recorder:BuyingOfferPosted({'ID': 63, 'prosumer': 106, 'startTime': 90, 'endTime': 90, 'energy': 3700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,326:[14756]:Recorder:SellingOfferPosted({'ID': 54, 'prosumer': 101, 'startTime': 85, 'endTime': 85, 'energy': 300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,332:[14756]:Recorder:BuyingOfferPosted({'ID': 17, 'prosumer': 106, 'startTime': 44, 'endTime': 44, 'energy': 9200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,340:[14756]:Recorder:SellingOfferPosted({'ID': 21, 'prosumer': 101, 'startTime': 53, 'endTime': 53, 'energy': 9100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,344:[14756]:Recorder:BuyingOfferPosted({'ID': 51, 'prosumer': 106, 'startTime': 78, 'endTime': 78, 'energy': 4500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,360:[14756]:Recorder:BuyingOfferPosted({'ID': 57, 'prosumer': 106, 'startTime': 84, 'endTime': 84, 'energy': 4100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,364:[14756]:Recorder:BuyingOfferPosted({'ID': 62, 'prosumer': 106, 'startTime': 89, 'endTime': 89, 'energy': 3700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,368:[14756]:Recorder:ProsumerRegistered({'prosumer': 110, 'feeder': 1}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,384:[14756]:Recorder:BuyingOfferPosted({'ID': 26, 'prosumer': 106, 'startTime': 53, 'endTime': 53, 'energy': 8100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,387:[14756]:Recorder:BuyingOfferPosted({'ID': 30, 'prosumer': 106, 'startTime': 57, 'endTime': 57, 'energy': 7300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,395:[14756]:Recorder:BuyingOfferPosted({'ID': 34, 'prosumer': 106, 'startTime': 61, 'endTime': 61, 'energy': 7700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,404:[14756]:Recorder:BuyingOfferPosted({'ID': 40, 'prosumer': 106, 'startTime': 67, 'endTime': 67, 'energy': 7900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,412:[14756]:Recorder:SellingOfferPosted({'ID': 39, 'prosumer': 101, 'startTime': 70, 'endTime': 70, 'energy': 6000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,415:[14756]:Recorder:BuyingOfferPosted({'ID': 4, 'prosumer': 106, 'startTime': 31, 'endTime': 31, 'energy': 4800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,430:[14756]:Recorder:BuyingOfferPosted({'ID': 32, 'prosumer': 106, 'startTime': 59, 'endTime': 59, 'energy': 7400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,449:[14756]:Recorder:SellingOfferPosted({'ID': 36, 'prosumer': 101, 'startTime': 67, 'endTime': 67, 'energy': 7300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,460:[14756]:Recorder:SellingOfferPosted({'ID': 47, 'prosumer': 101, 'startTime': 78, 'endTime': 78, 'energy': 2400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,467:[14756]:Recorder:BuyingOfferPosted({'ID': 0, 'prosumer': 106, 'startTime': 27, 'endTime': 27, 'energy': 3400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,480:[14756]:Recorder:SellingOfferPosted({'ID': 48, 'prosumer': 101, 'startTime': 79, 'endTime': 79, 'energy': 2000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,484:[14756]:Recorder:BuyingOfferPosted({'ID': 1, 'prosumer': 106, 'startTime': 28, 'endTime': 28, 'energy': 3600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,492:[14756]:Recorder:BuyingOfferPosted({'ID': 3, 'prosumer': 106, 'startTime': 30, 'endTime': 30, 'energy': 4300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,508:[14756]:Recorder:BuyingOfferPosted({'ID': 10, 'prosumer': 106, 'startTime': 37, 'endTime': 37, 'energy': 8800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,512:[14756]:Recorder:BuyingOfferPosted({'ID': 22, 'prosumer': 106, 'startTime': 49, 'endTime': 49, 'energy': 9200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,528:[14756]:Recorder:SellingOfferPosted({'ID': 37, 'prosumer': 101, 'startTime': 68, 'endTime': 68, 'energy': 6900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,531:[14756]:Recorder:SellingOfferPosted({'ID': 40, 'prosumer': 101, 'startTime': 71, 'endTime': 71, 'energy': 5600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,534:[14756]:Recorder:BuyingOfferPosted({'ID': 5, 'prosumer': 106, 'startTime': 32, 'endTime': 32, 'energy': 5400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,544:[14756]:Recorder:SellingOfferPosted({'ID': 1, 'prosumer': 101, 'startTime': 33, 'endTime': 33, 'energy': 1300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,546:[14756]:Recorder:SellingOfferPosted({'ID': 17, 'prosumer': 101, 'startTime': 49, 'endTime': 49, 'energy': 8100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,562:[14756]:Recorder:BuyingOfferPosted({'ID': 41, 'prosumer': 106, 'startTime': 68, 'endTime': 68, 'energy': 7800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,565:[14756]:Recorder:BuyingOfferPosted({'ID': 50, 'prosumer': 106, 'startTime': 77, 'endTime': 77, 'energy': 5000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,568:[14756]:Recorder:SellingOfferPosted({'ID': 44, 'prosumer': 101, 'startTime': 75, 'endTime': 75, 'energy': 3700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,584:[14756]:Recorder:BuyingOfferPosted({'ID': 68, 'prosumer': 106, 'startTime': 95, 'endTime': 95, 'energy': 3400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,586:[14756]:Recorder:BuyingOfferPosted({'ID': 2, 'prosumer': 106, 'startTime': 29, 'endTime': 29, 'energy': 3900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,594:[14756]:Recorder:SellingOfferPosted({'ID': 5, 'prosumer': 101, 'startTime': 37, 'endTime': 37, 'energy': 2900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,603:[14756]:Recorder:BuyingOfferPosted({'ID': 21, 'prosumer': 106, 'startTime': 48, 'endTime': 48, 'energy': 9400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,609:[14756]:Recorder:SellingOfferPosted({'ID': 14, 'prosumer': 101, 'startTime': 46, 'endTime': 46, 'energy': 6900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,624:[14756]:Recorder:BuyingOfferPosted({'ID': 37, 'prosumer': 106, 'startTime': 64, 'endTime': 64, 'energy': 8000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,627:[14756]:Recorder:BuyingOfferPosted({'ID': 49, 'prosumer': 106, 'startTime': 76, 'endTime': 76, 'energy': 5500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,629:[14756]:Recorder:SellingOfferPosted({'ID': 50, 'prosumer': 101, 'startTime': 81, 'endTime': 81, 'energy': 1300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,637:[14756]:Recorder:BuyingOfferPosted({'ID': 66, 'prosumer': 106, 'startTime': 93, 'endTime': 93, 'energy': 3500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,652:[14756]:Recorder:SellingOfferPosted({'ID': 3, 'prosumer': 101, 'startTime': 35, 'endTime': 35, 'energy': 2000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,660:[14756]:Recorder:SellingOfferPosted({'ID': 25, 'prosumer': 101, 'startTime': 57, 'endTime': 57, 'energy': 9400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,668:[14756]:Recorder:BuyingOfferPosted({'ID': 65, 'prosumer': 106, 'startTime': 92, 'endTime': 92, 'energy': 3600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,680:[14756]:Recorder:BuyingOfferPosted({'ID': 54, 'prosumer': 106, 'startTime': 81, 'endTime': 81, 'energy': 3900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,692:[14756]:Recorder:ProsumerRegistered({'prosumer': 110, 'feeder': 1}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,701:[14756]:Recorder:SellingOfferPosted({'ID': 32, 'prosumer': 101, 'startTime': 63, 'endTime': 63, 'energy': 8600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,717:[14756]:Recorder:BuyingOfferPosted({'ID': 43, 'prosumer': 106, 'startTime': 70, 'endTime': 70, 'energy': 7800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,733:[14756]:Recorder:SellingOfferPosted({'ID': 53, 'prosumer': 101, 'startTime': 84, 'endTime': 84, 'energy': 500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,736:[14756]:Recorder:SellingOfferPosted({'ID': 38, 'prosumer': 101, 'startTime': 69, 'endTime': 69, 'energy': 6500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,744:[14756]:Recorder:SellingOfferPosted({'ID': 42, 'prosumer': 101, 'startTime': 73, 'endTime': 73, 'energy': 4600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,748:[14756]:Recorder:BuyingOfferPosted({'ID': 69, 'prosumer': 106, 'startTime': 96, 'endTime': 96, 'energy': 3300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,760:[14756]:Recorder:BuyingOfferPosted({'ID': 48, 'prosumer': 106, 'startTime': 75, 'endTime': 75, 'energy': 6000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,764:[14756]:Recorder:SellingOfferPosted({'ID': 12, 'prosumer': 101, 'startTime': 44, 'endTime': 44, 'energy': 6100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,768:[14756]:Recorder:SellingOfferPosted({'ID': 13, 'prosumer': 101, 'startTime': 45, 'endTime': 45, 'energy': 6500}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,785:[14756]:Recorder:BuyingOfferPosted({'ID': 23, 'prosumer': 106, 'startTime': 50, 'endTime': 50, 'energy': 9000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,791:[14756]:Recorder:BuyingOfferPosted({'ID': 24, 'prosumer': 106, 'startTime': 51, 'endTime': 51, 'energy': 8700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,794:[14756]:Recorder:SellingOfferPosted({'ID': 18, 'prosumer': 101, 'startTime': 50, 'endTime': 50, 'energy': 8400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,808:[14756]:Recorder:SellingOfferPosted({'ID': 28, 'prosumer': 101, 'startTime': 59, 'endTime': 59, 'energy': 8300}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,812:[14756]:Recorder:BuyingOfferPosted({'ID': 12, 'prosumer': 106, 'startTime': 39, 'endTime': 39, 'energy': 9000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,820:[14756]:Recorder:SellingOfferPosted({'ID': 51, 'prosumer': 101, 'startTime': 82, 'endTime': 82, 'energy': 1000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,823:[14756]:Recorder:BuyingOfferPosted({'ID': 25, 'prosumer': 106, 'startTime': 52, 'endTime': 52, 'energy': 8400}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,836:[14756]:Recorder:SellingOfferPosted({'ID': 19, 'prosumer': 101, 'startTime': 51, 'endTime': 51, 'energy': 8600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,840:[14756]:Recorder:BuyingOfferPosted({'ID': 39, 'prosumer': 106, 'startTime': 66, 'endTime': 66, 'energy': 7900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,850:[14756]:Recorder:SellingOfferPosted({'ID': 41, 'prosumer': 101, 'startTime': 72, 'endTime': 72, 'energy': 5100}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,864:[14756]:Recorder:SellingOfferPosted({'ID': 52, 'prosumer': 101, 'startTime': 83, 'endTime': 83, 'energy': 700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,867:[14756]:Recorder:BuyingOfferPosted({'ID': 60, 'prosumer': 106, 'startTime': 87, 'endTime': 87, 'energy': 3900}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,874:[14756]:Recorder:SellingOfferPosted({'ID': 11, 'prosumer': 101, 'startTime': 43, 'endTime': 43, 'energy': 5600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,884:[14756]:Recorder:BuyingOfferPosted({'ID': 28, 'prosumer': 106, 'startTime': 55, 'endTime': 55, 'energy': 7600}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,892:[14756]:Recorder:BuyingOfferPosted({'ID': 56, 'prosumer': 106, 'startTime': 83, 'endTime': 83, 'energy': 4000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,896:[14756]:Recorder:BuyingOfferPosted({'ID': 59, 'prosumer': 106, 'startTime': 86, 'endTime': 86, 'energy': 4000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,908:[14756]:Recorder:BuyingOfferPosted({'ID': 44, 'prosumer': 106, 'startTime': 71, 'endTime': 71, 'energy': 7700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,912:[14756]:Recorder:SellingOfferPosted({'ID': 7, 'prosumer': 101, 'startTime': 39, 'endTime': 39, 'energy': 3800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,916:[14756]:Recorder:SellingOfferPosted({'ID': 16, 'prosumer': 101, 'startTime': 48, 'endTime': 48, 'energy': 7700}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,928:[14756]:Recorder:SellingOfferPosted({'ID': 27, 'prosumer': 101, 'startTime': 59, 'endTime': 59, 'energy': 1000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,936:[14756]:Recorder:SellingOfferPosted({'ID': 34, 'prosumer': 101, 'startTime': 65, 'endTime': 65, 'energy': 8000}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,938:[14756]:Recorder:BuyingOfferPosted({'ID': 42, 'prosumer': 106, 'startTime': 69, 'endTime': 69, 'energy': 7800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,957:[14756]:Recorder:BuyingOfferPosted({'ID': 61, 'prosumer': 106, 'startTime': 88, 'endTime': 88, 'energy': 3800}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,966:[14756]:Recorder:SellingOfferPosted({'ID': 43, 'prosumer': 101, 'startTime': 74, 'endTime': 74, 'energy': 4200}).
+Jan 25 01:18:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:15,975:[14756]:Recorder:PID(14756) - on_poller(): 1548379095.6643252
+Jan 25 01:18:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:16,666:[14756]:Recorder:PID(14756) - on_poller(): 1548379096.6651113
+Jan 25 01:18:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:17,666:[14756]:Recorder:PID(14756) - on_poller(): 1548379097.6659021
+Jan 25 01:18:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:18,667:[14756]:Recorder:PID(14756) - on_poller(): 1548379098.6666434
+Jan 25 01:18:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:19,668:[14756]:Recorder:PID(14756) - on_poller(): 1548379099.6673524
+Jan 25 01:18:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:20,670:[14756]:Recorder:PID(14756) - on_poller(): 1548379100.6681921
+Jan 25 01:18:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:21,669:[14756]:Recorder:PID(14756) - on_poller(): 1548379101.668873
+Jan 25 01:18:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:22,670:[14756]:Recorder:PID(14756) - on_poller(): 1548379102.6695857
+Jan 25 01:18:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:23,671:[14756]:Recorder:PID(14756) - on_poller(): 1548379103.6703045
+Jan 25 01:18:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:24,672:[14756]:Recorder:PID(14756) - on_poller(): 1548379104.6710265
+Jan 25 01:18:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:25,673:[14756]:Recorder:PID(14756) - on_poller(): 1548379105.672108
+Jan 25 01:18:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:26,673:[14756]:Recorder:PID(14756) - on_poller(): 1548379106.6728373
+Jan 25 01:18:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:27,674:[14756]:Recorder:PID(14756) - on_poller(): 1548379107.6736572
+Jan 25 01:18:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:28,675:[14756]:Recorder:PID(14756) - on_poller(): 1548379108.674378
+Jan 25 01:18:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:29,677:[14756]:Recorder:PID(14756) - on_poller(): 1548379109.6760845
+Jan 25 01:18:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:30,677:[14756]:Recorder:PID(14756) - on_poller(): 1548379110.6768064
+Jan 25 01:18:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:31,678:[14756]:Recorder:PID(14756) - on_poller(): 1548379111.677529
+Jan 25 01:18:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:32,679:[14756]:Recorder:PID(14756) - on_poller(): 1548379112.6782448
+Jan 25 01:18:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:33,680:[14756]:Recorder:PID(14756) - on_poller(): 1548379113.6789804
+Jan 25 01:18:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:34,680:[14756]:Recorder:PID(14756) - on_poller(): 1548379114.679723
+Jan 25 01:18:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:35,681:[14756]:Recorder:PID(14756) - on_poller(): 1548379115.6804664
+Jan 25 01:18:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:36,682:[14756]:Recorder:PID(14756) - on_poller(): 1548379116.6812403
+Jan 25 01:18:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:37,683:[14756]:Recorder:PID(14756) - on_poller(): 1548379117.6819866
+Jan 25 01:18:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:38,684:[14756]:Recorder:PID(14756) - on_poller(): 1548379118.6828165
+Jan 25 01:18:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:39,684:[14756]:Recorder:PID(14756) - on_poller(): 1548379119.683734
+Jan 25 01:18:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:40,685:[14756]:Recorder:PID(14756) - on_poller(): 1548379120.6844857
+Jan 25 01:18:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:41,686:[14756]:Recorder:PID(14756) - on_poller(): 1548379121.6852307
+Jan 25 01:18:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:42,687:[14756]:Recorder:PID(14756) - on_poller(): 1548379122.6860087
+Jan 25 01:18:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:43,687:[14756]:Recorder:PID(14756) - on_poller(): 1548379123.6867638
+Jan 25 01:18:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:44,688:[14756]:Recorder:PID(14756) - on_poller(): 1548379124.6875803
+Jan 25 01:18:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:45,689:[14756]:Recorder:PID(14756) - on_poller(): 1548379125.6883113
+Jan 25 01:18:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:46,690:[14756]:Recorder:PID(14756) - on_poller(): 1548379126.6890533
+Jan 25 01:18:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:47,690:[14756]:Recorder:PID(14756) - on_poller(): 1548379127.6897912
+Jan 25 01:18:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:48,691:[14756]:Recorder:PID(14756) - on_poller(): 1548379128.6905088
+Jan 25 01:18:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:49,692:[14756]:Recorder:PID(14756) - on_poller(): 1548379129.69125
+Jan 25 01:18:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:50,693:[14756]:Recorder:PID(14756) - on_poller(): 1548379130.6921406
+Jan 25 01:18:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:51,694:[14756]:Recorder:PID(14756) - on_poller(): 1548379131.6929882
+Jan 25 01:18:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:52,694:[14756]:Recorder:PID(14756) - on_poller(): 1548379132.6939604
+Jan 25 01:18:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:53,695:[14756]:Recorder:PID(14756) - on_poller(): 1548379133.6947067
+Jan 25 01:18:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:53,773:[14756]:Recorder:SolutionCreated({'solutionID': 0, 'solverID': 1}).
+Jan 25 01:18:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:53,777:[14756]:Recorder:SolutionCreated Solver:1 Solution:0
+Jan 25 01:18:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:54,696:[14756]:Recorder:PID(14756) - on_poller(): 1548379134.6954257
+Jan 25 01:18:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:55,697:[14756]:Recorder:PID(14756) - on_poller(): 1548379135.6963477
+Jan 25 01:18:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:56,698:[14756]:Recorder:PID(14756) - on_poller(): 1548379136.697091
+Jan 25 01:18:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:57,698:[14756]:Recorder:PID(14756) - on_poller(): 1548379137.6978405
+Jan 25 01:18:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:58,699:[14756]:Recorder:PID(14756) - on_poller(): 1548379138.6985683
+Jan 25 01:18:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:18:59,700:[14756]:Recorder:PID(14756) - on_poller(): 1548379139.6992912
+Jan 25 01:19:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:00,701:[14756]:Recorder:PID(14756) - on_poller(): 1548379140.7001195
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,701:[14756]:Recorder:PID(14756) - on_poller(): 1548379141.7008567
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,821:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 3300}).
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,836:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:000, pwr:2000
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,907:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 3300}).
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,910:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 5700}).
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,918:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:000, pwr:2400
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,966:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 5700}).
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,976:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 7400}).
+Jan 25 01:19:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:01,980:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:000, pwr:1700
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,049:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 7400}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,060:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 10300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,074:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:000, pwr:2900
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,134:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 10300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,142:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 11300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,148:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:000, pwr:1000
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,227:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 11300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,244:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 1300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,247:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:000, pwr:1300
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,302:[14756]:Recorder:TradeAdded({'solutionID': 0, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 1300}).
+Jan 25 01:19:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:02,702:[14756]:Recorder:PID(14756) - on_poller(): 1548379142.7016335
+Jan 25 01:19:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:03,703:[14756]:Recorder:PID(14756) - on_poller(): 1548379143.702397
+Jan 25 01:19:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:04,704:[14756]:Recorder:PID(14756) - on_poller(): 1548379144.7031255
+Jan 25 01:19:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:05,705:[14756]:Recorder:PID(14756) - on_poller(): 1548379145.7044418
+Jan 25 01:19:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:06,706:[14756]:Recorder:PID(14756) - on_poller(): 1548379146.7051811
+Jan 25 01:19:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:07,706:[14756]:Recorder:PID(14756) - on_poller(): 1548379147.7059212
+Jan 25 01:19:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:08,707:[14756]:Recorder:PID(14756) - on_poller(): 1548379148.706659
+Jan 25 01:19:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:09,708:[14756]:Recorder:PID(14756) - on_poller(): 1548379149.7073925
+Jan 25 01:19:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:10,709:[14756]:Recorder:PID(14756) - on_poller(): 1548379150.708239
+Jan 25 01:19:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:11,709:[14756]:Recorder:PID(14756) - on_poller(): 1548379151.708992
+Jan 25 01:19:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:12,710:[14756]:Recorder:PID(14756) - on_poller(): 1548379152.7097247
+Jan 25 01:19:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:13,712:[14756]:Recorder:PID(14756) - on_poller(): 1548379153.7118764
+Jan 25 01:19:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:14,713:[14756]:Recorder:PID(14756) - on_poller(): 1548379154.7126844
+Jan 25 01:19:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:15,716:[14756]:Recorder:PID(14756) - on_poller(): 1548379155.715839
+Jan 25 01:19:16 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:19:16,334:[14756]:Recorder:peer D43B30293DEA0EA0AADE71DF0B3B1C8E is off at: 1548379156.3345516
+Jan 25 01:19:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:16,717:[14756]:Recorder:PID(14756) - on_poller(): 1548379156.7166805
+Jan 25 01:19:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:17,718:[14756]:Recorder:PID(14756) - on_poller(): 1548379157.7174273
+Jan 25 01:19:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:18,719:[14756]:Recorder:PID(14756) - on_poller(): 1548379158.7181575
+Jan 25 01:19:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:19,720:[14756]:Recorder:PID(14756) - on_poller(): 1548379159.7192063
+Jan 25 01:19:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:20,721:[14756]:Recorder:PID(14756) - on_poller(): 1548379160.720307
+Jan 25 01:19:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:21,722:[14756]:Recorder:PID(14756) - on_poller(): 1548379161.7216384
+Jan 25 01:19:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:22,723:[14756]:Recorder:PID(14756) - on_poller(): 1548379162.7223523
+Jan 25 01:19:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:23,724:[14756]:Recorder:PID(14756) - on_poller(): 1548379163.72312
+Jan 25 01:19:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:24,725:[14756]:Recorder:PID(14756) - on_poller(): 1548379164.724306
+Jan 25 01:19:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:25,726:[14756]:Recorder:PID(14756) - on_poller(): 1548379165.725048
+Jan 25 01:19:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:26,726:[14756]:Recorder:PID(14756) - on_poller(): 1548379166.725873
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:19:27.125] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:45937
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:27,727:[14756]:Recorder:PID(14756) - on_poller(): 1548379167.7266357
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.628888
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.627705
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.637579
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.596388
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.595578
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.598819
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.59921
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.599081
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.599117
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.598878
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.598757
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.598608
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.597723
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.597603
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.597636
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.597674
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.59771
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.597747
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.593962
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586702
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.58676
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.5868
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586856
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586898
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586935
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586958
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.586995
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.59361
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.593711
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.593754
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.593794
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.577948
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.577974
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578002
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578043
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578079
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578114
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.57815
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.57819
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578225
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578259
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578297
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578333
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578354
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578387
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578423
+Jan 25 01:19:27 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.578456
+Jan 25 01:19:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:28,728:[14756]:Recorder:PID(14756) - on_poller(): 1548379168.7273939
+Jan 25 01:19:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:29,729:[14756]:Recorder:PID(14756) - on_poller(): 1548379169.7282495
+Jan 25 01:19:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:30,731:[14756]:Recorder:PID(14756) - on_poller(): 1548379170.7289922
+Jan 25 01:19:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:31,732:[14756]:Recorder:PID(14756) - on_poller(): 1548379171.7309027
+Jan 25 01:19:32 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:19:32,711:[14756]:Recorder:peer 74D29EAFB3D61D76B38534DD32DA6140 is on at: 1548379172.7113862
+Jan 25 01:19:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:32,733:[14756]:Recorder:PID(14756) - on_poller(): 1548379172.7317467
+Jan 25 01:19:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:33,734:[14756]:Recorder:PID(14756) - on_poller(): 1548379173.733296
+Jan 25 01:19:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:34,735:[14756]:Recorder:PID(14756) - on_poller(): 1548379174.7341025
+Jan 25 01:19:35 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:19:35,681:[14756]:Recorder:peer 74D29EAFB3D61D76B38534DD32DA6140 is on at: 1548379175.6815743
+Jan 25 01:19:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:35,735:[14756]:Recorder:PID(14756) - on_poller(): 1548379175.7348452
+Jan 25 01:19:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:35,785:[14756]:Recorder:Finalized({'interval': 27, 'bestSolution': 0}).
+Jan 25 01:19:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:35,788:[14756]:Recorder:interval finalized : 27
+Jan 25 01:19:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:36,736:[14756]:Recorder:PID(14756) - on_poller(): 1548379176.7356348
+Jan 25 01:19:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:37,737:[14756]:Recorder:PID(14756) - on_poller(): 1548379177.736387
+Jan 25 01:19:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:38,738:[14756]:Recorder:PID(14756) - on_poller(): 1548379178.7372835
+Jan 25 01:19:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:39,739:[14756]:Recorder:PID(14756) - on_poller(): 1548379179.7380216
+Jan 25 01:19:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:40,739:[14756]:Recorder:PID(14756) - on_poller(): 1548379180.7387478
+Jan 25 01:19:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:41,740:[14756]:Recorder:PID(14756) - on_poller(): 1548379181.7396553
+Jan 25 01:19:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:42,741:[14756]:Recorder:PID(14756) - on_poller(): 1548379182.7404363
+Jan 25 01:19:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:43,742:[14756]:Recorder:PID(14756) - on_poller(): 1548379183.7411888
+Jan 25 01:19:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:44,743:[14756]:Recorder:PID(14756) - on_poller(): 1548379184.742178
+Jan 25 01:19:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:45,744:[14756]:Recorder:PID(14756) - on_poller(): 1548379185.7429292
+Jan 25 01:19:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:46,744:[14756]:Recorder:PID(14756) - on_poller(): 1548379186.7437878
+Jan 25 01:19:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:47,745:[14756]:Recorder:PID(14756) - on_poller(): 1548379187.7444952
+Jan 25 01:19:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:48,746:[14756]:Recorder:PID(14756) - on_poller(): 1548379188.7452202
+Jan 25 01:19:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:49,747:[14756]:Recorder:PID(14756) - on_poller(): 1548379189.7460363
+Jan 25 01:19:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:50,748:[14756]:Recorder:PID(14756) - on_poller(): 1548379190.7468753
+Jan 25 01:19:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:51,748:[14756]:Recorder:PID(14756) - on_poller(): 1548379191.7476633
+Jan 25 01:19:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:52,749:[14756]:Recorder:PID(14756) - on_poller(): 1548379192.7484078
+Jan 25 01:19:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:53,750:[14756]:Recorder:PID(14756) - on_poller(): 1548379193.7491457
+Jan 25 01:19:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:54,750:[14756]:Recorder:PID(14756) - on_poller(): 1548379194.7498672
+Jan 25 01:19:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:55,751:[14756]:Recorder:PID(14756) - on_poller(): 1548379195.750616
+Jan 25 01:19:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:56,752:[14756]:Recorder:PID(14756) - on_poller(): 1548379196.7513466
+Jan 25 01:19:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:57,753:[14756]:Recorder:PID(14756) - on_poller(): 1548379197.7522042
+Jan 25 01:19:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:58,753:[14756]:Recorder:PID(14756) - on_poller(): 1548379198.7529447
+Jan 25 01:19:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:19:59,754:[14756]:Recorder:PID(14756) - on_poller(): 1548379199.7536466
+Jan 25 01:20:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:00,755:[14756]:Recorder:PID(14756) - on_poller(): 1548379200.7545068
+Jan 25 01:20:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:01,756:[14756]:Recorder:PID(14756) - on_poller(): 1548379201.7553596
+Jan 25 01:20:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:02,757:[14756]:Recorder:PID(14756) - on_poller(): 1548379202.7563899
+Jan 25 01:20:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:03,758:[14756]:Recorder:PID(14756) - on_poller(): 1548379203.7571616
+Jan 25 01:20:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:04,759:[14756]:Recorder:PID(14756) - on_poller(): 1548379204.7579792
+Jan 25 01:20:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:05,760:[14756]:Recorder:PID(14756) - on_poller(): 1548379205.7588022
+Jan 25 01:20:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:06,760:[14756]:Recorder:PID(14756) - on_poller(): 1548379206.759675
+Jan 25 01:20:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:07,761:[14756]:Recorder:PID(14756) - on_poller(): 1548379207.760401
+Jan 25 01:20:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:08,762:[14756]:Recorder:PID(14756) - on_poller(): 1548379208.761157
+Jan 25 01:20:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:09,762:[14756]:Recorder:PID(14756) - on_poller(): 1548379209.7619064
+Jan 25 01:20:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:10,763:[14756]:Recorder:PID(14756) - on_poller(): 1548379210.7626297
+Jan 25 01:20:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:11,764:[14756]:Recorder:PID(14756) - on_poller(): 1548379211.7633824
+Jan 25 01:20:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:12,765:[14756]:Recorder:PID(14756) - on_poller(): 1548379212.764257
+Jan 25 01:20:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:13,766:[14756]:Recorder:PID(14756) - on_poller(): 1548379213.7650683
+Jan 25 01:20:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:14,766:[14756]:Recorder:PID(14756) - on_poller(): 1548379214.7658112
+Jan 25 01:20:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:15,767:[14756]:Recorder:PID(14756) - on_poller(): 1548379215.7665377
+Jan 25 01:20:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:16,768:[14756]:Recorder:PID(14756) - on_poller(): 1548379216.7672498
+Jan 25 01:20:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:17,769:[14756]:Recorder:PID(14756) - on_poller(): 1548379217.768233
+Jan 25 01:20:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:18,769:[14756]:Recorder:PID(14756) - on_poller(): 1548379218.7689412
+Jan 25 01:20:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:18,876:[14756]:Recorder:SolutionCreated({'solutionID': 1, 'solverID': 1}).
+Jan 25 01:20:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:18,881:[14756]:Recorder:SolutionCreated Solver:1 Solution:1
+Jan 25 01:20:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:19,770:[14756]:Recorder:PID(14756) - on_poller(): 1548379219.769712
+Jan 25 01:20:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:20,771:[14756]:Recorder:PID(14756) - on_poller(): 1548379220.770502
+Jan 25 01:20:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:21,772:[14756]:Recorder:PID(14756) - on_poller(): 1548379221.7713032
+Jan 25 01:20:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:22,773:[14756]:Recorder:PID(14756) - on_poller(): 1548379222.77225
+Jan 25 01:20:23 bbb-a327 RIAPS-DEPLO[14608]: WARNING:01:20:23,390:[14756]:Recorder:peer 74D29EAFB3D61D76B38534DD32DA6140 is off at: 1548379223.390277
+Jan 25 01:20:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:23,774:[14756]:Recorder:PID(14756) - on_poller(): 1548379223.7730143
+Jan 25 01:20:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:24,774:[14756]:Recorder:PID(14756) - on_poller(): 1548379224.773831
+Jan 25 01:20:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:25,775:[14756]:Recorder:PID(14756) - on_poller(): 1548379225.7746692
+Jan 25 01:20:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:26,776:[14756]:Recorder:PID(14756) - on_poller(): 1548379226.7753983
+Jan 25 01:20:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:27,777:[14756]:Recorder:PID(14756) - on_poller(): 1548379227.7762697
+Jan 25 01:20:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:28,778:[14756]:Recorder:PID(14756) - on_poller(): 1548379228.7769935
+Jan 25 01:20:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:29,778:[14756]:Recorder:PID(14756) - on_poller(): 1548379229.7777126
+Jan 25 01:20:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:30,779:[14756]:Recorder:PID(14756) - on_poller(): 1548379230.77847
+Jan 25 01:20:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:31,780:[14756]:Recorder:PID(14756) - on_poller(): 1548379231.7791822
+Jan 25 01:20:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:32,786:[14756]:Recorder:PID(14756) - on_poller(): 1548379232.7858562
+Jan 25 01:20:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:33,787:[14756]:Recorder:PID(14756) - on_poller(): 1548379233.7866023
+Jan 25 01:20:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:34,788:[14756]:Recorder:PID(14756) - on_poller(): 1548379234.7873266
+Jan 25 01:20:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:35,789:[14756]:Recorder:PID(14756) - on_poller(): 1548379235.788202
+Jan 25 01:20:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:36,790:[14756]:Recorder:PID(14756) - on_poller(): 1548379236.789008
+Jan 25 01:20:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:37,790:[14756]:Recorder:PID(14756) - on_poller(): 1548379237.789757
+Jan 25 01:20:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:38,791:[14756]:Recorder:PID(14756) - on_poller(): 1548379238.7905054
+Jan 25 01:20:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:39,792:[14756]:Recorder:PID(14756) - on_poller(): 1548379239.7912407
+Jan 25 01:20:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:40,793:[14756]:Recorder:PID(14756) - on_poller(): 1548379240.7921188
+Jan 25 01:20:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:41,793:[14756]:Recorder:PID(14756) - on_poller(): 1548379241.7928212
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:20:42.118] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:45121
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.576301
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.579289
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.569847
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571534
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571673
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571562
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571602
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571351
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.57123
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.571094
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570985
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570856
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570726
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570597
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570466
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570362
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.57022
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.570104
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.568896
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542718
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542573
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542459
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542489
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542392
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542424
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542385
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542417
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.542253
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.54215
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541821
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541864
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541754
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541629
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541528
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: Dropping packet with high delay: 0.541374
+Jan 25 01:20:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:42,794:[14756]:Recorder:PID(14756) - on_poller(): 1548379242.793557
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,795:[14756]:Recorder:PID(14756) - on_poller(): 1548379243.794309
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,874:[14756]:Recorder:SellingOfferPosted({'ID': 59, 'prosumer': 101, 'startTime': 35, 'endTime': 35, 'energy': 2000}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,888:[14756]:Recorder:SellingOfferPosted({'ID': 82, 'prosumer': 101, 'startTime': 58, 'endTime': 58, 'energy': 9400}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,890:[14756]:Recorder:SellingOfferPosted({'ID': 62, 'prosumer': 101, 'startTime': 38, 'endTime': 38, 'energy': 3300}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,895:[14756]:Recorder:SellingOfferPosted({'ID': 72, 'prosumer': 101, 'startTime': 48, 'endTime': 48, 'energy': 7700}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,900:[14756]:Recorder:SellingOfferPosted({'ID': 80, 'prosumer': 101, 'startTime': 56, 'endTime': 56, 'energy': 9400}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,904:[14756]:Recorder:SellingOfferPosted({'ID': 105, 'prosumer': 101, 'startTime': 80, 'endTime': 80, 'energy': 1600}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,908:[14756]:Recorder:SellingOfferPosted({'ID': 77, 'prosumer': 101, 'startTime': 53, 'endTime': 53, 'energy': 9100}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,916:[14756]:Recorder:SellingOfferPosted({'ID': 83, 'prosumer': 101, 'startTime': 59, 'endTime': 59, 'energy': 1000}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,918:[14756]:Recorder:SellingOfferPosted({'ID': 95, 'prosumer': 101, 'startTime': 70, 'endTime': 70, 'energy': 6000}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,921:[14756]:Recorder:SellingOfferPosted({'ID': 90, 'prosumer': 101, 'startTime': 65, 'endTime': 65, 'energy': 8000}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,928:[14756]:Recorder:SellingOfferPosted({'ID': 103, 'prosumer': 101, 'startTime': 78, 'endTime': 78, 'energy': 2400}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,930:[14756]:Recorder:SellingOfferPosted({'ID': 111, 'prosumer': 101, 'startTime': 86, 'endTime': 86, 'energy': 100}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,933:[14756]:Recorder:SellingOfferPosted({'ID': 65, 'prosumer': 101, 'startTime': 41, 'endTime': 41, 'energy': 4700}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,940:[14756]:Recorder:SellingOfferPosted({'ID': 66, 'prosumer': 101, 'startTime': 42, 'endTime': 42, 'energy': 5200}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,942:[14756]:Recorder:SellingOfferPosted({'ID': 69, 'prosumer': 101, 'startTime': 45, 'endTime': 45, 'energy': 6500}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,948:[14756]:Recorder:SellingOfferPosted({'ID': 84, 'prosumer': 101, 'startTime': 59, 'endTime': 59, 'energy': 8300}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,952:[14756]:Recorder:SellingOfferPosted({'ID': 67, 'prosumer': 101, 'startTime': 43, 'endTime': 43, 'energy': 5600}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,956:[14756]:Recorder:SellingOfferPosted({'ID': 94, 'prosumer': 101, 'startTime': 69, 'endTime': 69, 'energy': 6500}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,964:[14756]:Recorder:SellingOfferPosted({'ID': 81, 'prosumer': 101, 'startTime': 57, 'endTime': 57, 'energy': 9400}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,967:[14756]:Recorder:SellingOfferPosted({'ID': 86, 'prosumer': 101, 'startTime': 61, 'endTime': 61, 'energy': 9100}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,970:[14756]:Recorder:SellingOfferPosted({'ID': 99, 'prosumer': 101, 'startTime': 74, 'endTime': 74, 'energy': 4200}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,980:[14756]:Recorder:SellingOfferPosted({'ID': 63, 'prosumer': 101, 'startTime': 39, 'endTime': 39, 'energy': 3800}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,984:[14756]:Recorder:SellingOfferPosted({'ID': 87, 'prosumer': 101, 'startTime': 62, 'endTime': 62, 'energy': 8800}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,988:[14756]:Recorder:SellingOfferPosted({'ID': 110, 'prosumer': 101, 'startTime': 85, 'endTime': 85, 'energy': 300}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,992:[14756]:Recorder:SellingOfferPosted({'ID': 75, 'prosumer': 101, 'startTime': 51, 'endTime': 51, 'energy': 8600}).
+Jan 25 01:20:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:43,996:[14756]:Recorder:SellingOfferPosted({'ID': 91, 'prosumer': 101, 'startTime': 66, 'endTime': 66, 'energy': 7700}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,000:[14756]:Recorder:SellingOfferPosted({'ID': 101, 'prosumer': 101, 'startTime': 76, 'endTime': 76, 'energy': 3200}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,004:[14756]:Recorder:SellingOfferPosted({'ID': 97, 'prosumer': 101, 'startTime': 72, 'endTime': 72, 'energy': 5100}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,008:[14756]:Recorder:SellingOfferPosted({'ID': 70, 'prosumer': 101, 'startTime': 46, 'endTime': 46, 'energy': 6900}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,016:[14756]:Recorder:SellingOfferPosted({'ID': 98, 'prosumer': 101, 'startTime': 73, 'endTime': 73, 'energy': 4600}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,018:[14756]:Recorder:SellingOfferPosted({'ID': 107, 'prosumer': 101, 'startTime': 82, 'endTime': 82, 'energy': 1000}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,023:[14756]:Recorder:ProsumerRegistered({'prosumer': 110, 'feeder': 1}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,028:[14756]:Recorder:SellingOfferPosted({'ID': 56, 'prosumer': 101, 'startTime': 32, 'endTime': 32, 'energy': 1000}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,041:[14756]:Recorder:SellingOfferPosted({'ID': 57, 'prosumer': 101, 'startTime': 33, 'endTime': 33, 'energy': 1300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,053:[14756]:Recorder:SellingOfferPosted({'ID': 61, 'prosumer': 101, 'startTime': 37, 'endTime': 37, 'energy': 2900}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,054:[14756]:Recorder:SellingOfferPosted({'ID': 71, 'prosumer': 101, 'startTime': 47, 'endTime': 47, 'energy': 7300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,064:[14756]:Recorder:SellingOfferPosted({'ID': 74, 'prosumer': 101, 'startTime': 50, 'endTime': 50, 'energy': 8400}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,075:[14756]:Recorder:SellingOfferPosted({'ID': 92, 'prosumer': 101, 'startTime': 67, 'endTime': 67, 'energy': 7300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,085:[14756]:Recorder:SellingOfferPosted({'ID': 96, 'prosumer': 101, 'startTime': 71, 'endTime': 71, 'energy': 5600}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,086:[14756]:Recorder:SellingOfferPosted({'ID': 58, 'prosumer': 101, 'startTime': 34, 'endTime': 34, 'energy': 1700}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,086:[14756]:Recorder:SellingOfferPosted({'ID': 89, 'prosumer': 101, 'startTime': 64, 'endTime': 64, 'energy': 8300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,095:[14756]:Recorder:SellingOfferPosted({'ID': 102, 'prosumer': 101, 'startTime': 77, 'endTime': 77, 'energy': 2800}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,097:[14756]:Recorder:SellingOfferPosted({'ID': 109, 'prosumer': 101, 'startTime': 84, 'endTime': 84, 'energy': 500}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,100:[14756]:Recorder:SellingOfferPosted({'ID': 79, 'prosumer': 101, 'startTime': 55, 'endTime': 55, 'energy': 9300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,103:[14756]:Recorder:SellingOfferPosted({'ID': 93, 'prosumer': 101, 'startTime': 68, 'endTime': 68, 'energy': 6900}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,106:[14756]:Recorder:SellingOfferPosted({'ID': 106, 'prosumer': 101, 'startTime': 81, 'endTime': 81, 'energy': 1300}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,109:[14756]:Recorder:SellingOfferPosted({'ID': 108, 'prosumer': 101, 'startTime': 83, 'endTime': 83, 'energy': 700}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,113:[14756]:Recorder:SellingOfferPosted({'ID': 60, 'prosumer': 101, 'startTime': 36, 'endTime': 36, 'energy': 2400}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,118:[14756]:Recorder:SellingOfferPosted({'ID': 73, 'prosumer': 101, 'startTime': 49, 'endTime': 49, 'energy': 8100}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,121:[14756]:Recorder:SellingOfferPosted({'ID': 76, 'prosumer': 101, 'startTime': 52, 'endTime': 52, 'energy': 8900}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,123:[14756]:Recorder:SellingOfferPosted({'ID': 78, 'prosumer': 101, 'startTime': 54, 'endTime': 54, 'energy': 9200}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,124:[14756]:Recorder:SellingOfferPosted({'ID': 85, 'prosumer': 101, 'startTime': 60, 'endTime': 60, 'energy': 9200}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,125:[14756]:Recorder:SellingOfferPosted({'ID': 88, 'prosumer': 101, 'startTime': 63, 'endTime': 63, 'energy': 8600}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,129:[14756]:Recorder:SellingOfferPosted({'ID': 64, 'prosumer': 101, 'startTime': 40, 'endTime': 40, 'energy': 4200}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,130:[14756]:Recorder:SellingOfferPosted({'ID': 68, 'prosumer': 101, 'startTime': 44, 'endTime': 44, 'energy': 6100}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,131:[14756]:Recorder:SellingOfferPosted({'ID': 100, 'prosumer': 101, 'startTime': 75, 'endTime': 75, 'energy': 3700}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,136:[14756]:Recorder:SellingOfferPosted({'ID': 104, 'prosumer': 101, 'startTime': 79, 'endTime': 79, 'energy': 2000}).
+Jan 25 01:20:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:44,797:[14756]:Recorder:PID(14756) - on_poller(): 1548379244.7950494
+Jan 25 01:20:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:45,798:[14756]:Recorder:PID(14756) - on_poller(): 1548379245.7970316
+Jan 25 01:20:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:46,798:[14756]:Recorder:PID(14756) - on_poller(): 1548379246.7977695
+Jan 25 01:20:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:47,799:[14756]:Recorder:PID(14756) - on_poller(): 1548379247.7986202
+Jan 25 01:20:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:48,800:[14756]:Recorder:PID(14756) - on_poller(): 1548379248.7997065
+Jan 25 01:20:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:48,900:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 6500}).
+Jan 25 01:20:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:48,904:[14756]:Recorder:TradeAdded : interval:42, Solver:1, SolutionID:001, pwr:5200
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,005:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 6500}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,012:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 11800}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,020:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:001, pwr:2000
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,136:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 11800}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,152:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 14200}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,155:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:001, pwr:2400
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,261:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 14200}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,268:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 25700}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,280:[14756]:Recorder:TradeAdded : interval:43, Solver:1, SolutionID:001, pwr:5600
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,373:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 25700}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,410:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 33300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,432:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:001, pwr:2900
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,613:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 33300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,624:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 1300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,632:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:001, pwr:1300
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,727:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 1300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,734:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 9800}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,740:[14756]:Recorder:TradeAdded : interval:38, Solver:1, SolutionID:001, pwr:3300
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,793:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 9800}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,797:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 18400}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,800:[14756]:Recorder:TradeAdded : interval:40, Solver:1, SolutionID:001, pwr:4200
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,830:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 18400}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,833:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 20100}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,836:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:001, pwr:1700
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,864:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 20100}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,869:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 30400}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,872:[14756]:Recorder:TradeAdded : interval:41, Solver:1, SolutionID:001, pwr:4700
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,905:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 30400}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,908:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 34300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,911:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:001, pwr:1000
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,946:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 34300}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,958:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 38100}).
+Jan 25 01:20:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,963:[14756]:Recorder:TradeAdded : interval:39, Solver:1, SolutionID:001, pwr:3800
+Jan 25 01:20:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:49,999:[14756]:Recorder:TradeAdded({'solutionID': 1, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 38100}).
+Jan 25 01:20:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:50,003:[14756]:Recorder:PID(14756) - on_poller(): 1548379249.8012466
+Jan 25 01:20:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:50,804:[14756]:Recorder:PID(14756) - on_poller(): 1548379250.8018963
+Jan 25 01:20:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:51,803:[14756]:Recorder:PID(14756) - on_poller(): 1548379251.802625
+Jan 25 01:20:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:52,804:[14756]:Recorder:PID(14756) - on_poller(): 1548379252.8033602
+Jan 25 01:20:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:53,805:[14756]:Recorder:PID(14756) - on_poller(): 1548379253.8043602
+Jan 25 01:20:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:54,806:[14756]:Recorder:PID(14756) - on_poller(): 1548379254.8050566
+Jan 25 01:20:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:55,806:[14756]:Recorder:PID(14756) - on_poller(): 1548379255.8058076
+Jan 25 01:20:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:56,808:[14756]:Recorder:PID(14756) - on_poller(): 1548379256.8066459
+Jan 25 01:20:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:57,808:[14756]:Recorder:PID(14756) - on_poller(): 1548379257.8076942
+Jan 25 01:20:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:58,809:[14756]:Recorder:PID(14756) - on_poller(): 1548379258.8084533
+Jan 25 01:20:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:20:59,810:[14756]:Recorder:PID(14756) - on_poller(): 1548379259.8092546
+Jan 25 01:21:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:00,811:[14756]:Recorder:PID(14756) - on_poller(): 1548379260.810116
+Jan 25 01:21:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:01,812:[14756]:Recorder:PID(14756) - on_poller(): 1548379261.8108444
+Jan 25 01:21:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:02,812:[14756]:Recorder:PID(14756) - on_poller(): 1548379262.811764
+Jan 25 01:21:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:03,813:[14756]:Recorder:PID(14756) - on_poller(): 1548379263.8124785
+Jan 25 01:21:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:04,814:[14756]:Recorder:PID(14756) - on_poller(): 1548379264.813202
+Jan 25 01:21:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:05,815:[14756]:Recorder:PID(14756) - on_poller(): 1548379265.8140209
+Jan 25 01:21:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:06,816:[14756]:Recorder:PID(14756) - on_poller(): 1548379266.8147867
+Jan 25 01:21:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:07,816:[14756]:Recorder:PID(14756) - on_poller(): 1548379267.8156173
+Jan 25 01:21:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:08,817:[14756]:Recorder:PID(14756) - on_poller(): 1548379268.816372
+Jan 25 01:21:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:09,818:[14756]:Recorder:PID(14756) - on_poller(): 1548379269.8171184
+Jan 25 01:21:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:10,818:[14756]:Recorder:PID(14756) - on_poller(): 1548379270.8178766
+Jan 25 01:21:11 bbb-a327 RIAPS-DEPLO[14608]: [2019-01-25 01:21:11.574] [rdiscovery] [info] Known nodes: *172.21.20.51*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.63; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 25 01:21:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:11,819:[14756]:Recorder:PID(14756) - on_poller(): 1548379271.8187077
+Jan 25 01:21:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:12,820:[14756]:Recorder:PID(14756) - on_poller(): 1548379272.8197355
+Jan 25 01:21:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:13,821:[14756]:Recorder:PID(14756) - on_poller(): 1548379273.8204918
+Jan 25 01:21:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:14,822:[14756]:Recorder:PID(14756) - on_poller(): 1548379274.821219
+Jan 25 01:21:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:15,822:[14756]:Recorder:PID(14756) - on_poller(): 1548379275.821955
+Jan 25 01:21:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:16,823:[14756]:Recorder:PID(14756) - on_poller(): 1548379276.8226836
+Jan 25 01:21:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:17,824:[14756]:Recorder:PID(14756) - on_poller(): 1548379277.8234143
+Jan 25 01:21:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:18,826:[14756]:Recorder:PID(14756) - on_poller(): 1548379278.8253222
+Jan 25 01:21:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:19,827:[14756]:Recorder:PID(14756) - on_poller(): 1548379279.8260958
+Jan 25 01:21:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:20,828:[14756]:Recorder:PID(14756) - on_poller(): 1548379280.8268104
+Jan 25 01:21:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:21,828:[14756]:Recorder:PID(14756) - on_poller(): 1548379281.8276181
+Jan 25 01:21:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:22,829:[14756]:Recorder:PID(14756) - on_poller(): 1548379282.8283436
+Jan 25 01:21:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:23,830:[14756]:Recorder:PID(14756) - on_poller(): 1548379283.8291698
+Jan 25 01:21:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:24,830:[14756]:Recorder:PID(14756) - on_poller(): 1548379284.8299222
+Jan 25 01:21:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:25,831:[14756]:Recorder:PID(14756) - on_poller(): 1548379285.8306096
+Jan 25 01:21:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:26,832:[14756]:Recorder:PID(14756) - on_poller(): 1548379286.8313549
+Jan 25 01:21:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:27,833:[14756]:Recorder:PID(14756) - on_poller(): 1548379287.8323658
+Jan 25 01:21:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:28,834:[14756]:Recorder:PID(14756) - on_poller(): 1548379288.8331172
+Jan 25 01:21:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:29,834:[14756]:Recorder:PID(14756) - on_poller(): 1548379289.8338702
+Jan 25 01:21:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:30,835:[14756]:Recorder:PID(14756) - on_poller(): 1548379290.8346076
+Jan 25 01:21:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:31,836:[14756]:Recorder:PID(14756) - on_poller(): 1548379291.8353474
+Jan 25 01:21:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:32,837:[14756]:Recorder:PID(14756) - on_poller(): 1548379292.836226
+Jan 25 01:21:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:33,837:[14756]:Recorder:PID(14756) - on_poller(): 1548379293.8369308
+Jan 25 01:21:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:34,838:[14756]:Recorder:PID(14756) - on_poller(): 1548379294.8376987
+Jan 25 01:21:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:35,839:[14756]:Recorder:PID(14756) - on_poller(): 1548379295.8384895
+Jan 25 01:21:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:36,840:[14756]:Recorder:PID(14756) - on_poller(): 1548379296.8392258
+Jan 25 01:21:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:37,841:[14756]:Recorder:PID(14756) - on_poller(): 1548379297.8402116
+Jan 25 01:21:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:38,842:[14756]:Recorder:PID(14756) - on_poller(): 1548379298.841234
+Jan 25 01:21:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:39,850:[14756]:Recorder:PID(14756) - on_poller(): 1548379299.8490896
+Jan 25 01:21:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:40,850:[14756]:Recorder:PID(14756) - on_poller(): 1548379300.8498414
+Jan 25 01:21:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:41,851:[14756]:Recorder:PID(14756) - on_poller(): 1548379301.8506148
+Jan 25 01:21:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:42,853:[14756]:Recorder:PID(14756) - on_poller(): 1548379302.8522189
+Jan 25 01:21:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:43,854:[14756]:Recorder:PID(14756) - on_poller(): 1548379303.8529968
+Jan 25 01:21:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:44,854:[14756]:Recorder:PID(14756) - on_poller(): 1548379304.8537674
+Jan 25 01:21:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:45,109:[14756]:Recorder:SolutionCreated({'solutionID': 2, 'solverID': 1}).
+Jan 25 01:21:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:45,113:[14756]:Recorder:SolutionCreated Solver:1 Solution:2
+Jan 25 01:21:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:45,855:[14756]:Recorder:PID(14756) - on_poller(): 1548379305.854484
+Jan 25 01:21:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:46,856:[14756]:Recorder:PID(14756) - on_poller(): 1548379306.85522
+Jan 25 01:21:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:47,857:[14756]:Recorder:PID(14756) - on_poller(): 1548379307.8562431
+Jan 25 01:21:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:48,863:[14756]:Recorder:PID(14756) - on_poller(): 1548379308.8598487
+Jan 25 01:21:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:49,861:[14756]:Recorder:PID(14756) - on_poller(): 1548379309.8607504
+Jan 25 01:21:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:50,862:[14756]:Recorder:PID(14756) - on_poller(): 1548379310.8615162
+Jan 25 01:21:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:51,863:[14756]:Recorder:PID(14756) - on_poller(): 1548379311.8622932
+Jan 25 01:21:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:52,864:[14756]:Recorder:PID(14756) - on_poller(): 1548379312.863039
+Jan 25 01:21:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:53,865:[14756]:Recorder:PID(14756) - on_poller(): 1548379313.8641438
+Jan 25 01:21:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:54,866:[14756]:Recorder:PID(14756) - on_poller(): 1548379314.8656197
+Jan 25 01:21:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:55,867:[14756]:Recorder:PID(14756) - on_poller(): 1548379315.8663538
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,274:[14756]:Recorder:Finalized({'interval': 28, 'bestSolution': 1}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,284:[14756]:Recorder:interval finalized : 28
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,289:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 43500}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,297:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:002, pwr:2400
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,436:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 43500}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,439:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 64, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 54300}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,442:[14756]:Recorder:TradeAdded : interval:40, Solver:1, SolutionID:002, pwr:4200
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,488:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 64, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 54300}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,491:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 17200}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,494:[14756]:Recorder:TradeAdded : interval:42, Solver:1, SolutionID:002, pwr:5200
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,707:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 17200}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,711:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 24400}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,716:[14756]:Recorder:TradeAdded : interval:38, Solver:1, SolutionID:002, pwr:3300
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,859:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 24400}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,864:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 69, 'buyerID': 18, 'time': 45, 'power': 2800, 'objective': 67000}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,867:[14756]:Recorder:TradeAdded : interval:45, Solver:1, SolutionID:002, pwr:2800
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,910:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 69, 'buyerID': 18, 'time': 45, 'power': 2800, 'objective': 67000}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,913:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 80900}).
+Jan 25 01:21:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:56,917:[14756]:Recorder:TradeAdded : interval:41, Solver:1, SolutionID:002, pwr:4700
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,068:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 80900}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,072:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 65, 'buyerID': 14, 'time': 41, 'power': 4300, 'objective': 85200}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,076:[14756]:Recorder:TradeAdded : interval:41, Solver:1, SolutionID:002, pwr:9000
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,142:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 65, 'buyerID': 14, 'time': 41, 'power': 4300, 'objective': 85200}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,145:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 62, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 27700}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,148:[14756]:Recorder:TradeAdded : interval:38, Solver:1, SolutionID:002, pwr:6600
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,305:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 62, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 27700}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,308:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 59, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 31700}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,316:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:002, pwr:2000
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,364:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 59, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 31700}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,368:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 13, 'buyerID': 18, 'time': 45, 'power': 6500, 'objective': 64200}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,371:[14756]:Recorder:TradeAdded : interval:45, Solver:1, SolutionID:002, pwr:9300
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,416:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 13, 'buyerID': 18, 'time': 45, 'power': 6500, 'objective': 64200}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,420:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 12, 'buyerID': 17, 'time': 44, 'power': 6100, 'objective': 91300}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,424:[14756]:Recorder:TradeAdded : interval:44, Solver:1, SolutionID:002, pwr:6100
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,563:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 12, 'buyerID': 17, 'time': 44, 'power': 6100, 'objective': 91300}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,571:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 16, 'buyerID': 21, 'time': 48, 'power': 7700, 'objective': 109900}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,577:[14756]:Recorder:TradeAdded : interval:48, Solver:1, SolutionID:002, pwr:7700
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,627:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 16, 'buyerID': 21, 'time': 48, 'power': 7700, 'objective': 109900}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,632:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 60, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 45900}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,634:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:002, pwr:4800
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,804:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 60, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 45900}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,807:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 50100}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,811:[14756]:Recorder:TradeAdded : interval:40, Solver:1, SolutionID:002, pwr:8400
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,958:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 50100}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,978:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 97300}).
+Jan 25 01:21:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:57,983:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:002, pwr:2900
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,105:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 97300}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,108:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 56, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 102200}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,112:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:002, pwr:1000
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,146:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 56, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 102200}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,150:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 72, 'buyerID': 21, 'time': 48, 'power': 1700, 'objective': 111600}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,154:[14756]:Recorder:TradeAdded : interval:48, Solver:1, SolutionID:002, pwr:9400
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,317:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 72, 'buyerID': 21, 'time': 48, 'power': 1700, 'objective': 111600}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,324:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 63, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 119200}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,329:[14756]:Recorder:TradeAdded : interval:39, Solver:1, SolutionID:002, pwr:3800
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,512:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 63, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 119200}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,517:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 14, 'buyerID': 19, 'time': 46, 'power': 6900, 'objective': 6900}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,531:[14756]:Recorder:TradeAdded : interval:46, Solver:1, SolutionID:002, pwr:6900
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,654:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 14, 'buyerID': 19, 'time': 46, 'power': 6900, 'objective': 6900}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,661:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 10700}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,676:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:002, pwr:1300
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,764:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 10700}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,773:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 66, 'buyerID': 15, 'time': 42, 'power': 3900, 'objective': 21100}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,776:[14756]:Recorder:TradeAdded : interval:42, Solver:1, SolutionID:002, pwr:9100
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,843:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 66, 'buyerID': 15, 'time': 42, 'power': 3900, 'objective': 21100}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,860:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 101200}).
+Jan 25 01:21:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:58,865:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:002, pwr:2000
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,065:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 101200}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,071:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 71, 'buyerID': 20, 'time': 47, 'power': 2100, 'objective': 41100}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,084:[14756]:Recorder:TradeAdded : interval:47, Solver:1, SolutionID:002, pwr:2100
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,159:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 71, 'buyerID': 20, 'time': 47, 'power': 2100, 'objective': 41100}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,173:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 56000}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,181:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:002, pwr:1700
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,290:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 56000}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,293:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 72600}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,304:[14756]:Recorder:TradeAdded : interval:43, Solver:1, SolutionID:002, pwr:5600
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,500:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 72600}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,508:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 67, 'buyerID': 16, 'time': 43, 'power': 3600, 'objective': 76200}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,516:[14756]:Recorder:TradeAdded : interval:43, Solver:1, SolutionID:002, pwr:9200
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,741:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 67, 'buyerID': 16, 'time': 43, 'power': 3600, 'objective': 76200}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,745:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 115400}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,750:[14756]:Recorder:TradeAdded : interval:39, Solver:1, SolutionID:002, pwr:7600
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,860:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 115400}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,864:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 70, 'buyerID': 19, 'time': 46, 'power': 2500, 'objective': 9400}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,868:[14756]:Recorder:TradeAdded : interval:46, Solver:1, SolutionID:002, pwr:9400
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,984:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 70, 'buyerID': 19, 'time': 46, 'power': 2500, 'objective': 9400}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,988:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 57, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 12000}).
+Jan 25 01:21:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:21:59,992:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:002, pwr:2600
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,137:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 57, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 12000}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,143:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 29700}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,146:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:002, pwr:4000
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,248:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 29700}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,256:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 15, 'buyerID': 20, 'time': 47, 'power': 7300, 'objective': 39000}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,261:[14756]:Recorder:TradeAdded : interval:47, Solver:1, SolutionID:002, pwr:9400
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,331:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 15, 'buyerID': 20, 'time': 47, 'power': 7300, 'objective': 39000}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,338:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 58, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 57700}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,341:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:002, pwr:3400
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,514:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 58, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 57700}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,517:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 61, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 100200}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,521:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:002, pwr:5800
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,612:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 61, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 100200}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,620:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 68, 'buyerID': 17, 'time': 44, 'power': 3100, 'objective': 94400}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,624:[14756]:Recorder:TradeAdded : interval:44, Solver:1, SolutionID:002, pwr:9200
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,664:[14756]:Recorder:TradeAdded({'solutionID': 2, 'sellerID': 68, 'buyerID': 17, 'time': 44, 'power': 3100, 'objective': 94400}).
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,667:[14756]:Recorder:PID(14756) - on_poller(): 1548379316.868504
+Jan 25 01:22:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:00,920:[14756]:Recorder:PID(14756) - on_poller(): 1548379317.8692071
+Jan 25 01:22:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:01,182:[14756]:Recorder:PID(14756) - on_poller(): 1548379318.8799992
+Jan 25 01:22:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:01,439:[14756]:Recorder:PID(14756) - on_poller(): 1548379319.887895
+Jan 25 01:22:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:01,777:[14756]:Recorder:PID(14756) - on_poller(): 1548379320.8885772
+Jan 25 01:22:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:02,060:[14756]:Recorder:PID(14756) - on_poller(): 1548379321.8893113
+Jan 25 01:22:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:02,891:[14756]:Recorder:PID(14756) - on_poller(): 1548379322.8900318
+Jan 25 01:22:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:03,892:[14756]:Recorder:PID(14756) - on_poller(): 1548379323.89095
+Jan 25 01:22:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:04,892:[14756]:Recorder:PID(14756) - on_poller(): 1548379324.8917215
+Jan 25 01:22:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:05,893:[14756]:Recorder:PID(14756) - on_poller(): 1548379325.8924491
+Jan 25 01:22:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:06,894:[14756]:Recorder:PID(14756) - on_poller(): 1548379326.8931854
+Jan 25 01:22:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:07,895:[14756]:Recorder:PID(14756) - on_poller(): 1548379327.8939707
+Jan 25 01:22:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:08,897:[14756]:Recorder:PID(14756) - on_poller(): 1548379328.8947623
+Jan 25 01:22:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:09,076:[14756]:Recorder:SolutionCreated({'solutionID': 3, 'solverID': 1}).
+Jan 25 01:22:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:09,081:[14756]:Recorder:SolutionCreated Solver:1 Solution:3
+Jan 25 01:22:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:09,896:[14756]:Recorder:PID(14756) - on_poller(): 1548379329.8956933
+Jan 25 01:22:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:10,897:[14756]:Recorder:PID(14756) - on_poller(): 1548379330.8964717
+Jan 25 01:22:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:11,898:[14756]:Recorder:PID(14756) - on_poller(): 1548379331.897269
+Jan 25 01:22:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:12,899:[14756]:Recorder:PID(14756) - on_poller(): 1548379332.898378
+Jan 25 01:22:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:13,900:[14756]:Recorder:PID(14756) - on_poller(): 1548379333.8991745
+Jan 25 01:22:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:14,901:[14756]:Recorder:PID(14756) - on_poller(): 1548379334.900149
+Jan 25 01:22:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:15,902:[14756]:Recorder:PID(14756) - on_poller(): 1548379335.900931
+Jan 25 01:22:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:16,903:[14756]:Recorder:PID(14756) - on_poller(): 1548379336.9020395
+Jan 25 01:22:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:17,903:[14756]:Recorder:PID(14756) - on_poller(): 1548379337.902779
+Jan 25 01:22:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:18,904:[14756]:Recorder:PID(14756) - on_poller(): 1548379338.9036324
+Jan 25 01:22:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:19,905:[14756]:Recorder:PID(14756) - on_poller(): 1548379339.904479
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,178:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 18, 'buyerID': 23, 'time': 50, 'power': 8400, 'objective': 145100}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,184:[14756]:Recorder:TradeAdded : interval:50, Solver:1, SolutionID:003, pwr:8400
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,276:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 18, 'buyerID': 23, 'time': 50, 'power': 8400, 'objective': 145100}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,279:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 75, 'buyerID': 24, 'time': 51, 'power': 100, 'objective': 154400}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,284:[14756]:Recorder:TradeAdded : interval:51, Solver:1, SolutionID:003, pwr:100
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,372:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 75, 'buyerID': 24, 'time': 51, 'power': 100, 'objective': 154400}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,376:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 59, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 31700}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,380:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:003, pwr:2000
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,440:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 59, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 31700}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,452:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 71, 'buyerID': 20, 'time': 47, 'power': 2100, 'objective': 41100}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,457:[14756]:Recorder:TradeAdded : interval:47, Solver:1, SolutionID:003, pwr:2100
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,524:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 71, 'buyerID': 20, 'time': 47, 'power': 2100, 'objective': 41100}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,527:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 13, 'buyerID': 18, 'time': 45, 'power': 6500, 'objective': 64200}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,530:[14756]:Recorder:TradeAdded : interval:45, Solver:1, SolutionID:003, pwr:6500
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,784:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 13, 'buyerID': 18, 'time': 45, 'power': 6500, 'objective': 64200}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,791:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 68, 'buyerID': 17, 'time': 44, 'power': 3100, 'objective': 102200}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,796:[14756]:Recorder:TradeAdded : interval:44, Solver:1, SolutionID:003, pwr:3100
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,858:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 68, 'buyerID': 17, 'time': 44, 'power': 3100, 'objective': 102200}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,861:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 56, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 127300}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,864:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:003, pwr:1000
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,941:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 56, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 127300}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,952:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 62, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 27700}).
+Jan 25 01:22:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:20,953:[14756]:Recorder:TradeAdded : interval:38, Solver:1, SolutionID:003, pwr:3300
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,031:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 62, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 27700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,034:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 29700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,037:[14756]:Recorder:TradeAdded : interval:35, Solver:1, SolutionID:003, pwr:4000
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,247:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 29700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,250:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 64, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 54300}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,253:[14756]:Recorder:TradeAdded : interval:40, Solver:1, SolutionID:003, pwr:4200
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,449:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 64, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 54300}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,452:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 22, 'buyerID': 27, 'time': 54, 'power': 7800, 'objective': 93000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,456:[14756]:Recorder:TradeAdded : interval:54, Solver:1, SolutionID:003, pwr:7800
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,491:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 22, 'buyerID': 27, 'time': 54, 'power': 7800, 'objective': 93000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,494:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 16, 'buyerID': 21, 'time': 48, 'power': 7700, 'objective': 135000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,498:[14756]:Recorder:TradeAdded : interval:48, Solver:1, SolutionID:003, pwr:7700
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,680:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 16, 'buyerID': 21, 'time': 48, 'power': 7700, 'objective': 135000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,690:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 69, 'buyerID': 18, 'time': 45, 'power': 2800, 'objective': 67000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,693:[14756]:Recorder:TradeAdded : interval:45, Solver:1, SolutionID:003, pwr:9300
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,874:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 69, 'buyerID': 18, 'time': 45, 'power': 2800, 'objective': 67000}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,877:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 72, 'buyerID': 21, 'time': 48, 'power': 1700, 'objective': 136700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,882:[14756]:Recorder:TradeAdded : interval:48, Solver:1, SolutionID:003, pwr:9400
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,974:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 72, 'buyerID': 21, 'time': 48, 'power': 1700, 'objective': 136700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,985:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 10700}).
+Jan 25 01:22:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:21,989:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:003, pwr:1300
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,067:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 10700}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,072:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 17200}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,074:[14756]:Recorder:TradeAdded : interval:42, Solver:1, SolutionID:003, pwr:5200
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,322:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 17200}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,325:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 80900}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,329:[14756]:Recorder:TradeAdded : interval:41, Solver:1, SolutionID:003, pwr:4700
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,398:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 80900}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,401:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 63, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 162000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,404:[14756]:Recorder:TradeAdded : interval:39, Solver:1, SolutionID:003, pwr:3800
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,524:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 63, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 162000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,527:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 19, 'buyerID': 24, 'time': 51, 'power': 8600, 'objective': 154300}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,530:[14756]:Recorder:TradeAdded : interval:51, Solver:1, SolutionID:003, pwr:8700
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,719:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 19, 'buyerID': 24, 'time': 51, 'power': 8600, 'objective': 154300}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,740:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 57, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 12000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,748:[14756]:Recorder:TradeAdded : interval:33, Solver:1, SolutionID:003, pwr:2600
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,854:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 57, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 12000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,860:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 15, 'buyerID': 20, 'time': 47, 'power': 7300, 'objective': 39000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,868:[14756]:Recorder:TradeAdded : interval:47, Solver:1, SolutionID:003, pwr:9400
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,951:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 15, 'buyerID': 20, 'time': 47, 'power': 7300, 'objective': 39000}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,956:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 65, 'buyerID': 14, 'time': 41, 'power': 4300, 'objective': 85200}).
+Jan 25 01:22:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:22,968:[14756]:Recorder:TradeAdded : interval:41, Solver:1, SolutionID:003, pwr:9000
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,134:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 65, 'buyerID': 14, 'time': 41, 'power': 4300, 'objective': 85200}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,148:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 12, 'buyerID': 17, 'time': 44, 'power': 6100, 'objective': 99100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,151:[14756]:Recorder:TradeAdded : interval:44, Solver:1, SolutionID:003, pwr:9200
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,247:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 12, 'buyerID': 17, 'time': 44, 'power': 6100, 'objective': 99100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,256:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 113200}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,260:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:003, pwr:2900
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,337:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 113200}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,344:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 66, 'buyerID': 15, 'time': 42, 'power': 3900, 'objective': 21100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,347:[14756]:Recorder:TradeAdded : interval:42, Solver:1, SolutionID:003, pwr:9100
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,449:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 66, 'buyerID': 15, 'time': 42, 'power': 3900, 'objective': 21100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,456:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 24400}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,463:[14756]:Recorder:TradeAdded : interval:38, Solver:1, SolutionID:003, pwr:6600
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,528:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 24400}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,535:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 50100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,539:[14756]:Recorder:TradeAdded : interval:40, Solver:1, SolutionID:003, pwr:8400
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,723:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 50100}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,732:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 126300}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,736:[14756]:Recorder:TradeAdded : interval:32, Solver:1, SolutionID:003, pwr:2000
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,832:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 126300}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,837:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 20, 'buyerID': 25, 'time': 52, 'power': 8400, 'objective': 170400}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,844:[14756]:Recorder:TradeAdded : interval:52, Solver:1, SolutionID:003, pwr:8400
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,965:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 20, 'buyerID': 25, 'time': 52, 'power': 8400, 'objective': 170400}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,976:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 14, 'buyerID': 19, 'time': 46, 'power': 6900, 'objective': 6900}).
+Jan 25 01:22:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:23,980:[14756]:Recorder:TradeAdded : interval:46, Solver:1, SolutionID:003, pwr:6900
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,056:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 14, 'buyerID': 19, 'time': 46, 'power': 6900, 'objective': 6900}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,068:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 43500}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,071:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:003, pwr:2400
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,295:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 43500}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,306:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 67, 'buyerID': 16, 'time': 43, 'power': 3600, 'objective': 76200}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,322:[14756]:Recorder:TradeAdded : interval:43, Solver:1, SolutionID:003, pwr:3600
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,386:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 67, 'buyerID': 16, 'time': 43, 'power': 3600, 'objective': 76200}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,396:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 61, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 116100}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,404:[14756]:Recorder:TradeAdded : interval:37, Solver:1, SolutionID:003, pwr:5800
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,480:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 61, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 116100}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,483:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 21, 'buyerID': 26, 'time': 53, 'power': 8100, 'objective': 110300}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,489:[14756]:Recorder:TradeAdded : interval:53, Solver:1, SolutionID:003, pwr:8100
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,627:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 21, 'buyerID': 26, 'time': 53, 'power': 8100, 'objective': 110300}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,637:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 17, 'buyerID': 22, 'time': 49, 'power': 8100, 'objective': 124200}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,640:[14756]:Recorder:TradeAdded : interval:49, Solver:1, SolutionID:003, pwr:8100
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,722:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 17, 'buyerID': 22, 'time': 49, 'power': 8100, 'objective': 124200}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,733:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 73, 'buyerID': 22, 'time': 49, 'power': 1100, 'objective': 125300}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,736:[14756]:Recorder:TradeAdded : interval:49, Solver:1, SolutionID:003, pwr:9200
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,975:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 73, 'buyerID': 22, 'time': 49, 'power': 1100, 'objective': 125300}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,979:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 70, 'buyerID': 19, 'time': 46, 'power': 2500, 'objective': 9400}).
+Jan 25 01:22:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:24,982:[14756]:Recorder:TradeAdded : interval:46, Solver:1, SolutionID:003, pwr:9400
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,171:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 70, 'buyerID': 19, 'time': 46, 'power': 2500, 'objective': 9400}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,176:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 60, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 45900}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,184:[14756]:Recorder:TradeAdded : interval:36, Solver:1, SolutionID:003, pwr:4800
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,254:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 60, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 45900}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,261:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 56000}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,266:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:003, pwr:1700
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,329:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 56000}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,334:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 58, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 57700}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,335:[14756]:Recorder:TradeAdded : interval:34, Solver:1, SolutionID:003, pwr:3400
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,624:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 58, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 57700}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,630:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 72600}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,633:[14756]:Recorder:TradeAdded : interval:43, Solver:1, SolutionID:003, pwr:9200
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,737:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 72600}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,745:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 74, 'buyerID': 23, 'time': 50, 'power': 600, 'objective': 145700}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,748:[14756]:Recorder:TradeAdded : interval:50, Solver:1, SolutionID:003, pwr:9000
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,803:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 74, 'buyerID': 23, 'time': 50, 'power': 600, 'objective': 145700}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,806:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 158200}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,811:[14756]:Recorder:TradeAdded : interval:39, Solver:1, SolutionID:003, pwr:7600
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,870:[14756]:Recorder:TradeAdded({'solutionID': 3, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 158200}).
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,875:[14756]:Recorder:PID(14756) - on_poller(): 1548379340.9052594
+Jan 25 01:22:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:25,997:[14756]:Recorder:PID(14756) - on_poller(): 1548379341.906137
+Jan 25 01:22:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:26,206:[14756]:Recorder:PID(14756) - on_poller(): 1548379342.9095385
+Jan 25 01:22:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:26,696:[14756]:Recorder:PID(14756) - on_poller(): 1548379343.9102461
+Jan 25 01:22:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:27,039:[14756]:Recorder:PID(14756) - on_poller(): 1548379344.9110894
+Jan 25 01:22:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:27,206:[14756]:Recorder:PID(14756) - on_poller(): 1548379345.9120307
+Jan 25 01:22:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:27,354:[14756]:Recorder:PID(14756) - on_poller(): 1548379346.91276
+Jan 25 01:22:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:27,916:[14756]:Recorder:PID(14756) - on_poller(): 1548379347.913461
+Jan 25 01:22:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:28,916:[14756]:Recorder:PID(14756) - on_poller(): 1548379348.9157162
+Jan 25 01:22:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:29,917:[14756]:Recorder:PID(14756) - on_poller(): 1548379349.9164977
+Jan 25 01:22:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:30,918:[14756]:Recorder:PID(14756) - on_poller(): 1548379350.9172254
+Jan 25 01:22:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:31,944:[14756]:Recorder:PID(14756) - on_poller(): 1548379351.9179628
+Jan 25 01:22:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:32,939:[14756]:Recorder:PID(14756) - on_poller(): 1548379352.9385772
+Jan 25 01:22:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:33,941:[14756]:Recorder:PID(14756) - on_poller(): 1548379353.939789
+Jan 25 01:22:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:34,946:[14756]:Recorder:PID(14756) - on_poller(): 1548379354.9456592
+Jan 25 01:22:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:35,947:[14756]:Recorder:PID(14756) - on_poller(): 1548379355.9465287
+Jan 25 01:22:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:36,948:[14756]:Recorder:PID(14756) - on_poller(): 1548379356.9473655
+Jan 25 01:22:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:37,949:[14756]:Recorder:PID(14756) - on_poller(): 1548379357.9483573
+Jan 25 01:22:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:38,950:[14756]:Recorder:PID(14756) - on_poller(): 1548379358.9491415
+Jan 25 01:22:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:39,951:[14756]:Recorder:PID(14756) - on_poller(): 1548379359.9499533
+Jan 25 01:22:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:40,951:[14756]:Recorder:PID(14756) - on_poller(): 1548379360.9507337
+Jan 25 01:22:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:41,952:[14756]:Recorder:PID(14756) - on_poller(): 1548379361.9516141
+Jan 25 01:22:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:42,953:[14756]:Recorder:PID(14756) - on_poller(): 1548379362.9523141
+Jan 25 01:22:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:43,954:[14756]:Recorder:PID(14756) - on_poller(): 1548379363.953053
+Jan 25 01:22:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:44,954:[14756]:Recorder:PID(14756) - on_poller(): 1548379364.953797
+Jan 25 01:22:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:45,955:[14756]:Recorder:PID(14756) - on_poller(): 1548379365.9545498
+Jan 25 01:22:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:46,957:[14756]:Recorder:PID(14756) - on_poller(): 1548379366.9569187
+Jan 25 01:22:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:47,960:[14756]:Recorder:PID(14756) - on_poller(): 1548379367.959941
+Jan 25 01:22:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:48,964:[14756]:Recorder:PID(14756) - on_poller(): 1548379368.9607563
+Jan 25 01:22:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:49,962:[14756]:Recorder:PID(14756) - on_poller(): 1548379369.9615371
+Jan 25 01:22:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:50,963:[14756]:Recorder:PID(14756) - on_poller(): 1548379370.9623294
+Jan 25 01:22:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:51,964:[14756]:Recorder:PID(14756) - on_poller(): 1548379371.9630527
+Jan 25 01:22:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:52,965:[14756]:Recorder:PID(14756) - on_poller(): 1548379372.964167
+Jan 25 01:22:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:53,965:[14756]:Recorder:PID(14756) - on_poller(): 1548379373.9649012
+Jan 25 01:22:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:54,966:[14756]:Recorder:PID(14756) - on_poller(): 1548379374.9656513
+Jan 25 01:22:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:55,967:[14756]:Recorder:PID(14756) - on_poller(): 1548379375.9664042
+Jan 25 01:22:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:56,968:[14756]:Recorder:PID(14756) - on_poller(): 1548379376.96716
+Jan 25 01:22:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:57,969:[14756]:Recorder:PID(14756) - on_poller(): 1548379377.9683704
+Jan 25 01:22:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:58,970:[14756]:Recorder:PID(14756) - on_poller(): 1548379378.9691195
+Jan 25 01:22:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:22:59,970:[14756]:Recorder:PID(14756) - on_poller(): 1548379379.9699094
+Jan 25 01:23:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:00,976:[14756]:Recorder:PID(14756) - on_poller(): 1548379380.9707181
+Jan 25 01:23:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:01,972:[14756]:Recorder:PID(14756) - on_poller(): 1548379381.9716535
+Jan 25 01:23:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:02,973:[14756]:Recorder:PID(14756) - on_poller(): 1548379382.9724088
+Jan 25 01:23:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:03,975:[14756]:Recorder:PID(14756) - on_poller(): 1548379383.973174
+Jan 25 01:23:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:04,974:[14756]:Recorder:PID(14756) - on_poller(): 1548379384.973918
+Jan 25 01:23:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:05,975:[14756]:Recorder:PID(14756) - on_poller(): 1548379385.9746552
+Jan 25 01:23:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:06,976:[14756]:Recorder:PID(14756) - on_poller(): 1548379386.9753995
+Jan 25 01:23:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:07,977:[14756]:Recorder:PID(14756) - on_poller(): 1548379387.9763844
+Jan 25 01:23:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:08,978:[14756]:Recorder:PID(14756) - on_poller(): 1548379388.9771478
+Jan 25 01:23:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:09,978:[14756]:Recorder:PID(14756) - on_poller(): 1548379389.9779
+Jan 25 01:23:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:10,980:[14756]:Recorder:PID(14756) - on_poller(): 1548379390.9786513
+Jan 25 01:23:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:11,981:[14756]:Recorder:PID(14756) - on_poller(): 1548379391.9793909
+Jan 25 01:23:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:12,985:[14756]:Recorder:PID(14756) - on_poller(): 1548379392.9803827
+Jan 25 01:23:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:13,989:[14756]:Recorder:PID(14756) - on_poller(): 1548379393.9883463
+Jan 25 01:23:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:14,990:[14756]:Recorder:PID(14756) - on_poller(): 1548379394.9891727
+Jan 25 01:23:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:15,990:[14756]:Recorder:PID(14756) - on_poller(): 1548379395.9899817
+Jan 25 01:23:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:16,992:[14756]:Recorder:PID(14756) - on_poller(): 1548379396.991318
+Jan 25 01:23:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:17,993:[14756]:Recorder:PID(14756) - on_poller(): 1548379397.9922695
+Jan 25 01:23:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:18,994:[14756]:Recorder:PID(14756) - on_poller(): 1548379398.9930081
+Jan 25 01:23:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:19,994:[14756]:Recorder:PID(14756) - on_poller(): 1548379399.9937556
+Jan 25 01:23:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:20,995:[14756]:Recorder:PID(14756) - on_poller(): 1548379400.994523
+Jan 25 01:23:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:21,996:[14756]:Recorder:PID(14756) - on_poller(): 1548379401.9952483
+Jan 25 01:23:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:22,997:[14756]:Recorder:PID(14756) - on_poller(): 1548379402.9962273
+Jan 25 01:23:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:23,998:[14756]:Recorder:PID(14756) - on_poller(): 1548379403.996981
+Jan 25 01:23:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:24,998:[14756]:Recorder:PID(14756) - on_poller(): 1548379404.9977007
+Jan 25 01:23:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:26,000:[14756]:Recorder:PID(14756) - on_poller(): 1548379405.9996562
+Jan 25 01:23:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:27,001:[14756]:Recorder:PID(14756) - on_poller(): 1548379407.000451
+Jan 25 01:23:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:28,002:[14756]:Recorder:PID(14756) - on_poller(): 1548379408.0011675
+Jan 25 01:23:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:29,002:[14756]:Recorder:PID(14756) - on_poller(): 1548379409.0019107
+Jan 25 01:23:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:30,004:[14756]:Recorder:PID(14756) - on_poller(): 1548379410.0027122
+Jan 25 01:23:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:31,005:[14756]:Recorder:PID(14756) - on_poller(): 1548379411.0037744
+Jan 25 01:23:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:32,006:[14756]:Recorder:PID(14756) - on_poller(): 1548379412.0045316
+Jan 25 01:23:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:33,007:[14756]:Recorder:PID(14756) - on_poller(): 1548379413.0063558
+Jan 25 01:23:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:34,009:[14756]:Recorder:PID(14756) - on_poller(): 1548379414.0071383
+Jan 25 01:23:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:35,016:[14756]:Recorder:PID(14756) - on_poller(): 1548379415.0158901
+Jan 25 01:23:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:36,017:[14756]:Recorder:PID(14756) - on_poller(): 1548379416.0167165
+Jan 25 01:23:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:37,019:[14756]:Recorder:PID(14756) - on_poller(): 1548379417.0175128
+Jan 25 01:23:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:38,026:[14756]:Recorder:PID(14756) - on_poller(): 1548379418.0247612
+Jan 25 01:23:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:39,032:[14756]:Recorder:PID(14756) - on_poller(): 1548379419.0267196
+Jan 25 01:23:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:40,028:[14756]:Recorder:PID(14756) - on_poller(): 1548379420.0278227
+Jan 25 01:23:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:41,029:[14756]:Recorder:PID(14756) - on_poller(): 1548379421.0285897
+Jan 25 01:23:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:42,031:[14756]:Recorder:PID(14756) - on_poller(): 1548379422.0294192
+Jan 25 01:23:43 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:43,031:[14756]:Recorder:PID(14756) - on_poller(): 1548379423.0302742
+Jan 25 01:23:44 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:44,032:[14756]:Recorder:PID(14756) - on_poller(): 1548379424.0312846
+Jan 25 01:23:45 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:45,033:[14756]:Recorder:PID(14756) - on_poller(): 1548379425.0324275
+Jan 25 01:23:46 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:46,034:[14756]:Recorder:PID(14756) - on_poller(): 1548379426.0332274
+Jan 25 01:23:47 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:47,035:[14756]:Recorder:PID(14756) - on_poller(): 1548379427.0339847
+Jan 25 01:23:48 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:48,036:[14756]:Recorder:PID(14756) - on_poller(): 1548379428.0347328
+Jan 25 01:23:49 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:49,036:[14756]:Recorder:PID(14756) - on_poller(): 1548379429.0357366
+Jan 25 01:23:50 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:50,037:[14756]:Recorder:PID(14756) - on_poller(): 1548379430.0365374
+Jan 25 01:23:51 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:51,038:[14756]:Recorder:PID(14756) - on_poller(): 1548379431.0373857
+Jan 25 01:23:52 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:52,039:[14756]:Recorder:PID(14756) - on_poller(): 1548379432.0380862
+Jan 25 01:23:53 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:53,040:[14756]:Recorder:PID(14756) - on_poller(): 1548379433.0388522
+Jan 25 01:23:54 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:54,040:[14756]:Recorder:PID(14756) - on_poller(): 1548379434.0396638
+Jan 25 01:23:55 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:55,041:[14756]:Recorder:PID(14756) - on_poller(): 1548379435.0403757
+Jan 25 01:23:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:56,042:[14756]:Recorder:PID(14756) - on_poller(): 1548379436.0411048
+Jan 25 01:23:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:56,130:[14756]:Recorder:Finalized({'interval': 29, 'bestSolution': 3}).
+Jan 25 01:23:56 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:56,133:[14756]:Recorder:interval finalized : 29
+Jan 25 01:23:57 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:57,042:[14756]:Recorder:PID(14756) - on_poller(): 1548379437.0418487
+Jan 25 01:23:58 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:58,044:[14756]:Recorder:PID(14756) - on_poller(): 1548379438.042668
+Jan 25 01:23:59 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:23:59,044:[14756]:Recorder:PID(14756) - on_poller(): 1548379439.0435357
+Jan 25 01:24:00 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:00,045:[14756]:Recorder:PID(14756) - on_poller(): 1548379440.0442975
+Jan 25 01:24:01 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:01,046:[14756]:Recorder:PID(14756) - on_poller(): 1548379441.0450635
+Jan 25 01:24:02 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:02,047:[14756]:Recorder:PID(14756) - on_poller(): 1548379442.0458965
+Jan 25 01:24:03 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:03,052:[14756]:Recorder:PID(14756) - on_poller(): 1548379443.0468788
+Jan 25 01:24:04 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:04,048:[14756]:Recorder:PID(14756) - on_poller(): 1548379444.0476925
+Jan 25 01:24:05 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:05,049:[14756]:Recorder:PID(14756) - on_poller(): 1548379445.0484245
+Jan 25 01:24:06 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:06,050:[14756]:Recorder:PID(14756) - on_poller(): 1548379446.0491238
+Jan 25 01:24:07 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:07,050:[14756]:Recorder:PID(14756) - on_poller(): 1548379447.0498552
+Jan 25 01:24:08 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:08,051:[14756]:Recorder:PID(14756) - on_poller(): 1548379448.0506086
+Jan 25 01:24:09 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:09,054:[14756]:Recorder:PID(14756) - on_poller(): 1548379449.0513945
+Jan 25 01:24:10 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:10,053:[14756]:Recorder:PID(14756) - on_poller(): 1548379450.052371
+Jan 25 01:24:11 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:11,054:[14756]:Recorder:PID(14756) - on_poller(): 1548379451.0531821
+Jan 25 01:24:12 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:12,054:[14756]:Recorder:PID(14756) - on_poller(): 1548379452.0539455
+Jan 25 01:24:13 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:13,056:[14756]:Recorder:PID(14756) - on_poller(): 1548379453.0547051
+Jan 25 01:24:14 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:14,056:[14756]:Recorder:PID(14756) - on_poller(): 1548379454.0558915
+Jan 25 01:24:15 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:15,057:[14756]:Recorder:PID(14756) - on_poller(): 1548379455.056694
+Jan 25 01:24:16 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:16,059:[14756]:Recorder:PID(14756) - on_poller(): 1548379456.058422
+Jan 25 01:24:17 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:17,060:[14756]:Recorder:PID(14756) - on_poller(): 1548379457.0591853
+Jan 25 01:24:18 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:18,061:[14756]:Recorder:PID(14756) - on_poller(): 1548379458.0602276
+Jan 25 01:24:19 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:19,062:[14756]:Recorder:PID(14756) - on_poller(): 1548379459.061031
+Jan 25 01:24:20 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:20,062:[14756]:Recorder:PID(14756) - on_poller(): 1548379460.061776
+Jan 25 01:24:21 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:21,063:[14756]:Recorder:PID(14756) - on_poller(): 1548379461.0625196
+Jan 25 01:24:22 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:22,064:[14756]:Recorder:PID(14756) - on_poller(): 1548379462.0633066
+Jan 25 01:24:23 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:23,065:[14756]:Recorder:PID(14756) - on_poller(): 1548379463.0642755
+Jan 25 01:24:24 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:24,066:[14756]:Recorder:PID(14756) - on_poller(): 1548379464.0650215
+Jan 25 01:24:25 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:25,066:[14756]:Recorder:PID(14756) - on_poller(): 1548379465.0657895
+Jan 25 01:24:26 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:26,067:[14756]:Recorder:PID(14756) - on_poller(): 1548379466.0666554
+Jan 25 01:24:27 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:27,071:[14756]:Recorder:PID(14756) - on_poller(): 1548379467.0678775
+Jan 25 01:24:28 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:28,069:[14756]:Recorder:PID(14756) - on_poller(): 1548379468.0686123
+Jan 25 01:24:29 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:29,070:[14756]:Recorder:PID(14756) - on_poller(): 1548379469.0693667
+Jan 25 01:24:30 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:30,071:[14756]:Recorder:PID(14756) - on_poller(): 1548379470.0701334
+Jan 25 01:24:31 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:31,073:[14756]:Recorder:PID(14756) - on_poller(): 1548379471.0709443
+Jan 25 01:24:32 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:32,074:[14756]:Recorder:PID(14756) - on_poller(): 1548379472.0718832
+Jan 25 01:24:33 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:33,075:[14756]:Recorder:PID(14756) - on_poller(): 1548379473.0743542
+Jan 25 01:24:34 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:34,076:[14756]:Recorder:PID(14756) - on_poller(): 1548379474.0751088
+Jan 25 01:24:35 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:35,077:[14756]:Recorder:PID(14756) - on_poller(): 1548379475.0762012
+Jan 25 01:24:36 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:36,078:[14756]:Recorder:PID(14756) - on_poller(): 1548379476.0769668
+Jan 25 01:24:37 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:37,078:[14756]:Recorder:PID(14756) - on_poller(): 1548379477.0778043
+Jan 25 01:24:38 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:38,084:[14756]:Recorder:PID(14756) - on_poller(): 1548379478.0786014
+Jan 25 01:24:39 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:39,080:[14756]:Recorder:PID(14756) - on_poller(): 1548379479.079369
+Jan 25 01:24:40 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:40,081:[14756]:Recorder:PID(14756) - on_poller(): 1548379480.0802872
+Jan 25 01:24:41 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:41,082:[14756]:Recorder:PID(14756) - on_poller(): 1548379481.0810843
+Jan 25 01:24:42 bbb-a327 RIAPS-DEPLO[14608]: INFO:01:24:42,082:[14756]:Recorder:PID(14756) - on_poller(): 1548379482.0818582

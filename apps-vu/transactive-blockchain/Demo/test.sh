@@ -21,3 +21,5 @@ echo $T106
 echo ${BBBs[@]}
 
 echo $PASS
+
+echo $PASS | sudo -E -S riaps_deplo | tee -a $EXPERIMENTS/deplo.log

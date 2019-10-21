@@ -27,7 +27,8 @@ class Trader(Component):
         self.net_production = self.read_data(self.prosumer_id)
         self.selling_offers = set()
         self.buying_offers = set()
-        self.connected =0
+        self.connected = 0
+        self.logger.warning("Disconnected: %s %s" %(self.connected, str(self.pid)))
 
         self.dbase = Database()
 
@@ -75,7 +76,7 @@ class Trader(Component):
                 self.contract = MatchingContract(client, self.contract_address)
                 self.contract.registerProsumer(self.account, prosumer_id, PROSUMER_FEEDER[prosumer_id])
                 self.connected = 1
-                self.logger.warning("Connected: %s" %self.connected)
+                self.logger.warning("Connected: %s %s" %(self.connected, str(self.pid)))
             else :
                 self.logger.info("reply is:%s " %req)
         except PortError as e:
@@ -89,6 +90,7 @@ class Trader(Component):
         self.logger.info('PID(%s) - on_poller(): %s',str(self.pid),str(now))
 
         if self.connected == 0 :
+            self.logger.info('Connected?: %s %s' %(self.connected==1, str(self.pid)))
             self.query_contract_address()
         elif self.connected == 1 :
             self.logger.debug("Polling events...")
@@ -168,7 +170,7 @@ class Trader(Component):
             self.logger.warning("UUID: %s" %self.getUUID())
             self.logger.warning("NIC is %s" % state)
             self.connected = 0
-            self.logger.warning("Connected: %s" %self.connected)
+            self.logger.warning("Disconnected: %s %s" %(self.connected, str(self.pid)))
         elif state =="up":
             self.logger.warning("NIC is %s" % state)
 #             self.connectGrafana()#This appears to be unnecessary...

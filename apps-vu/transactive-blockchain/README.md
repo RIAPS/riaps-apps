@@ -58,7 +58,7 @@ To excute on only the CTRL node replace `ALL` with `CTRL`
 ### Control Node
 * Install 64 bit Geth version 1.7.0
   * https://github.com/ethereum/go-ethereum/wiki/Installing-Geth#download-standalone-bundle
-    * https://gethstore.blob.core.windows.net/builds/geth-linux-arm5-1.7.0-6c6c7b2a.tar.gz
+    * https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.7.0-6c6c7b2a.tar.gz
   * set `GETH` and `GETHEXE` in `Demo/.env` corresponding to the location of the bundle.
   * Add `genesis-data.json` and `password.txt` from `miner` folder into the standalone bundle folder`GETH`(specified in `Demo/.env`)
 This application was devloped and tested with the version 1.7.0 of the standalone bundle, other options could be made to work but may require some modification to the launch script, as well as the python rpc client.

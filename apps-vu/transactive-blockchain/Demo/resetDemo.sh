@@ -2,7 +2,7 @@
 source .env
 
 pkill python3
-pkill geth
+# pkill geth
 tmux kill-server
 #tmux kill-session -a
 #tmux kill-session -t miner
@@ -12,7 +12,7 @@ sudo pkill -SIGKILL redis
 
 fab -f fab/fabfile.py -R ALL kill:TransactiveEnergy
 fab -f fab/fabfile.py -H localhost kill:TransactiveEnergy
-fab -f fab/fabfile.py -R ALL restartDeplo
+fab -f fab/fabfile.py -R BBBs restartDeplo
 
 
 

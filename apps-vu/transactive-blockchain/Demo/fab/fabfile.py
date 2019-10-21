@@ -34,7 +34,7 @@ def prunCommand(command):
 
 @fabi.task
 def put(src,dst):
-	fabi.put(src, dst)
+	fabi.put(src, dst, use_sudo=True)
 
 @fabi.task
 @fabi.parallel

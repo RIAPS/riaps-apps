@@ -1,0 +1,1293 @@
+-- Logs begin at Thu 2019-01-31 22:53:03 UTC. --
+Jan 31 22:53:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:53:05,663:[32201]:riaps.deplo.depm:starting disco
+Jan 31 22:53:06 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:06.212] [rbeacon] [info] Starting RIAPS DISCOVERY SERVICE
+Jan 31 22:53:06 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:06.430] [rdiscovery] [info] Starting DHT node on 172.21.20.63:4222 (b0d5ccf0e1ec)
+Jan 31 22:53:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:53:06,454:[32201]:riaps.deplo.depm:disco started
+Jan 31 22:53:06 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:06.464] [rbeacon] [info] DHT thread is initialized, starts beaconing.
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.005] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.53;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.012] [rdiscovery] [info] Join: 172.21.20.53
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.028] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.5; 172.21.20.53;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.032] [rdiscovery] [info] Join: 172.21.20.5
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.061] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.5; 172.21.20.53; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.067] [rdiscovery] [info] Join: 172.21.20.8
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.071] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.5; 172.21.20.53; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.077] [rdiscovery] [info] Join: 172.21.20.3
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.080] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.082] [rdiscovery] [info] Join: 172.21.20.42
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.085] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.088] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.62; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.092] [rdiscovery] [info] Join: 172.21.20.62
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.096] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.62; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.098] [rdiscovery] [info] Join: 172.21.20.33
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.102] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.62; 172.21.20.66; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.104] [rdiscovery] [info] Join: 172.21.20.66
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.107] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.110] [rdiscovery] [info] Join: 172.21.20.64
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.114] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.116] [rdiscovery] [info] Join: 172.21.20.59
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.119] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.119] [rdiscovery] [info] Join: 172.21.20.43
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.122] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.123] [rdiscovery] [info] Join: 172.21.20.45
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.125] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.127] [rdiscovery] [info] Join: 172.21.20.67
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.129] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.61; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.129] [rdiscovery] [info] Join: 172.21.20.61
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.132] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 22:53:07 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:07.134] [rdiscovery] [info] Join: 172.21.20.60
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:08.102] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:08.155] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.51; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:08.157] [rdiscovery] [info] Join: 172.21.20.51
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.554292
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.537264
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.53962
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.540407
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.541171
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.539399
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.53933
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.5388
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.538619
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.537132
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.535751
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.534634
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.533908
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.532747
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.53231
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.532291
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.532323
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.53049
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.530527
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.530568
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.524196
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.522716
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.522738
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.522777
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.519474
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.501616
+Jan 31 22:53:08 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.501659
+Jan 31 22:53:10 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:10.155] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.47; 172.21.20.5; 172.21.20.51; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 22:53:10 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:10.159] [rdiscovery] [info] Join: 172.21.20.47
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:29.114] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.532152
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.534013
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.536395
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.537898
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.537534
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.520955
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.520054
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.51596
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.514352
+Jan 31 22:53:29 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.51438
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:53:50.111] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.517985
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.520164
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.522165
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.522314
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.520275
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.52031
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.519824
+Jan 31 22:53:50 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.517823
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:11.115] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.524899
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.527684
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.529106
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.531177
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.529319
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.529338
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.529378
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.528485
+Jan 31 22:54:11 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.526734
+Jan 31 22:54:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:26,156:[32201]:riaps.deplo.depm:callCommand: ('install', 'TransactiveEnergy')
+Jan 31 22:54:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:26,162:[32201]:riaps.deplo.depm:handleCommand: ('install', 'TransactiveEnergy')
+Jan 31 22:54:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:29,024:[32201]:riaps.deplo.depm:doCommand: ('setupApp', 'TransactiveEnergy', 'TransactiveEnergy.json')
+Jan 31 22:54:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:29,034:[32201]:riaps.deplo.depm:handleCommand: ('setupApp', 'TransactiveEnergy', 'TransactiveEnergy.json')
+Jan 31 22:54:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:29,202:[32201]:riaps.deplo.depm:doCommand: ('launch', 'TransactiveEnergy', 'TransactiveEnergy.json', 'Trader', ['--ID', '106', '--logfile', 'Trader106'])
+Jan 31 22:54:29 bbb-e1ec sudo[32293]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/usr/sbin/adduser --disabled-login --gecos GECOS --no-create-home transactiveenergye1ec
+Jan 31 22:54:29 bbb-e1ec sudo[32293]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:30 bbb-e1ec RIAPS-DEPLO[32201]: Adding user `transactiveenergye1ec' ...
+Jan 31 22:54:30 bbb-e1ec RIAPS-DEPLO[32201]: Adding new group `transactiveenergye1ec' (1000) ...
+Jan 31 22:54:30 bbb-e1ec groupadd[32295]: group added to /etc/group: name=transactiveenergye1ec, GID=1000
+Jan 31 22:54:30 bbb-e1ec groupadd[32295]: group added to /etc/gshadow: name=transactiveenergye1ec
+Jan 31 22:54:30 bbb-e1ec groupadd[32295]: new group: name=transactiveenergye1ec, GID=1000
+Jan 31 22:54:30 bbb-e1ec RIAPS-DEPLO[32201]: Adding new user `transactiveenergye1ec' (1000) with group `transactiveenergye1ec' ...
+Jan 31 22:54:30 bbb-e1ec useradd[32299]: new user: name=transactiveenergye1ec, UID=1000, GID=1000, home=/home/transactiveenergye1ec, shell=/bin/bash
+Jan 31 22:54:30 bbb-e1ec RIAPS-DEPLO[32201]: Not creating home directory `/home/transactiveenergye1ec'.
+Jan 31 22:54:31 bbb-e1ec chfn[32305]: changed user 'transactiveenergye1ec' information
+Jan 31 22:54:31 bbb-e1ec sudo[32293]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:31 bbb-e1ec sudo[32310]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/bin/chown -R transactiveenergye1ec:transactiveenergye1ec /home/riaps/riaps_apps/TransactiveEnergy
+Jan 31 22:54:31 bbb-e1ec sudo[32310]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:31 bbb-e1ec sudo[32310]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:31 bbb-e1ec sudo[32312]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/bin/chmod o-rwx /home/riaps/riaps_apps/TransactiveEnergy
+Jan 31 22:54:31 bbb-e1ec sudo[32312]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:31 bbb-e1ec sudo[32312]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:31 bbb-e1ec sudo[32314]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc class add dev eth0 parent 1001:1001 classid 1001:1000 htb rate 118kbps ceil 131kbps
+Jan 31 22:54:31 bbb-e1ec sudo[32314]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:31 bbb-e1ec sudo[32314]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:31 bbb-e1ec sudo[32316]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc qdisc add dev eth0 parent 1001:1000 handle 1000: htb
+Jan 31 22:54:31 bbb-e1ec sudo[32316]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:31 bbb-e1ec sudo[32316]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:31,840:[32201]:riaps.deplo.depm:handleCommand: ('launch', 'TransactiveEnergy', 'TransactiveEnergy.json', 'Trader', ['--ID', '106', '--logfile', 'Trader106'])
+Jan 31 22:54:32 bbb-e1ec sudo[32318]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc class add dev eth0 parent 1000: classid 1000:1 htb rate 102400bps ceil 204800bps
+Jan 31 22:54:32 bbb-e1ec sudo[32318]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Command line is not complete. Try option "help"
+Jan 31 22:54:32 bbb-e1ec sudo[32318]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:32.148] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:54:32 bbb-e1ec sudo[32321]:     root : TTY=unknown ; PWD=/ ; USER=root ; COMMAND=/sbin/tc filter add dev eth0 parent 1000:1 protocol ip prio 10 handle 1: cgroup
+Jan 31 22:54:32 bbb-e1ec sudo[32321]: pam_unix(sudo:session): session opened for user root by (uid=0)
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: RTNETLINK answers: No such file or directory
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: We have an error talking to the kernel
+Jan 31 22:54:32 bbb-e1ec sudo[32321]: pam_unix(sudo:session): session closed for user root
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:32,303:[32201]:riaps.deplo.depm:Launching ['riaps_actor', 'TransactiveEnergy', '/home/riaps/riaps_apps/TransactiveEnergy/TransactiveEnergy.json', 'Trader', '--ID', '106', '--logfile', 'Trader106']
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.536918
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.540289
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.543519
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.545701
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.545849
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.543417
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.5429
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.535224
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.534333
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.526703
+Jan 31 22:54:32 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.526284
+Jan 31 22:54:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:33,968:[32201]:riaps.deplo.depm:Started TransactiveEnergy.Trader
+Jan 31 22:54:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:33,974:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'83EE5DBBEE18F2602777A85899BEA364')
+Jan 31 22:54:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:33,976:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'D337B9EDCB08FF4A0E85EE6A022D429E')
+Jan 31 22:54:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:33,977:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'2E85D5644833C64355A2FCBE4DE7AF8B')
+Jan 31 22:54:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:33,989:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'55D8059BF14179CA73B01FE3DA280B49')
+Jan 31 22:54:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:35,595:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'83EE5DBBEE18F2602777A85899BEA364')
+Jan 31 22:54:37 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:2019-01-31 22:54:37,568:[32323]:root: Log configuration file /usr/local/riaps/etc/riaps-log.conf has a problem: 'logger_riaps.deplo.rm'.
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,064:[32323]:Trader:(PID 32323) - starting Trader
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,074:[32323]:Trader:Reading net production values...
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,087:[32323]:Trader:Read 96 values.
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:39,145:[32323]:Trader:(PID 32323) - starting Trader
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:39.163] [rdiscovery] [info] Register actor with PID - 32323 : /TransactiveEnergy/Trader/
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,232:[32201]:riaps.deplo.depm:handleClient
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,236:[32201]:riaps.deplo.depm:handleActorReg: TransactiveEnergy Trader
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:39,353:[32201]:riaps.deplo.depm:zmqDevice ID = TransactiveEnergy.Trader-32323
+Jan 31 22:54:39 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:39.641] [rdiscovery] [info] Register service: /TransactiveEnergy/Ack_finalized/pub@172.21.20.63:45187
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:42.915] [rdiscovery] [info] Lookup: /TransactiveEnergy/Query_contract_address#Contract_address/rep
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,925:[32323]:Trader:handleActivate: 1548975282.9248085
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,941:[32323]:Trader:UUID: B6FEAD17C7E12447AACE260B6D245B9D
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,947:[32323]:Trader:UUID: 83EE5DBBEE18F2602777A85899BEA364, STATE: on
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,959:[32323]:Trader:UUID: D337B9EDCB08FF4A0E85EE6A022D429E, STATE: on
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,970:[32323]:Trader:UUID: 2E85D5644833C64355A2FCBE4DE7AF8B, STATE: on
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,979:[32323]:Trader:UUID: 55D8059BF14179CA73B01FE3DA280B49, STATE: on
+Jan 31 22:54:42 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:54:42,984:[32323]:Trader:UUID: 83EE5DBBEE18F2602777A85899BEA364, STATE: on
+Jan 31 22:54:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:43,924:[32323]:Trader:PID(32323) - on_poller(): 1548975283.9230587
+Jan 31 22:54:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:43,932:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:44,939:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:44,945:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:44,948:[32323]:Trader:PID(32323) - on_poller(): 1548975284.9238741
+Jan 31 22:54:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:44,953:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:45,959:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:45,965:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:45,967:[32323]:Trader:PID(32323) - on_poller(): 1548975285.9245663
+Jan 31 22:54:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:45,971:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:46,975:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:46,982:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:46,985:[32323]:Trader:PID(32323) - on_poller(): 1548975286.9253757
+Jan 31 22:54:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:46,988:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:47,994:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:48,000:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:48,004:[32323]:Trader:PID(32323) - on_poller(): 1548975287.926017
+Jan 31 22:54:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:48,007:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:49,013:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:49,019:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:49,020:[32323]:Trader:PID(32323) - on_post(): 1548975287.923331
+Jan 31 22:54:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:49,024:[32323]:Trader:PID(32323) - on_poller(): 1548975288.9266663
+Jan 31 22:54:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:49,028:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:50,038:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:50,044:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:50,050:[32323]:Trader:PID(32323) - on_poller(): 1548975289.9273546
+Jan 31 22:54:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:50,054:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:51,061:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:51,066:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:51,070:[32323]:Trader:PID(32323) - on_poller(): 1548975290.9280462
+Jan 31 22:54:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:51,073:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:52,085:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:52,091:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:52,093:[32323]:Trader:PID(32323) - on_poller(): 1548975291.928705
+Jan 31 22:54:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:52,099:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:53,108:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:53,114:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:53,119:[32323]:Trader:PID(32323) - on_poller(): 1548975292.9294758
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:53,120:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:54:53.138] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.523874
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.523278
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.524858
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.526637
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.52441
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.52442
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.516509
+Jan 31 22:54:53 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.516526
+Jan 31 22:54:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:54,123:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:54,145:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:54,150:[32323]:Trader:PID(32323) - on_post(): 1548975292.9241915
+Jan 31 22:54:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:54,154:[32323]:Trader:PID(32323) - on_poller(): 1548975293.9300823
+Jan 31 22:54:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:54,159:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:55,166:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:55,171:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:55,176:[32323]:Trader:PID(32323) - on_poller(): 1548975294.9307654
+Jan 31 22:54:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:55,180:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:56,186:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:56,191:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:56,196:[32323]:Trader:PID(32323) - on_poller(): 1548975295.9314516
+Jan 31 22:54:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:56,201:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:57,212:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:57,220:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:57,231:[32323]:Trader:PID(32323) - on_poller(): 1548975296.9331346
+Jan 31 22:54:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:57,235:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:58,243:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:58,248:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:58,252:[32323]:Trader:PID(32323) - on_poller(): 1548975297.934068
+Jan 31 22:54:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:58,255:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:54:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:59,267:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:54:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:59,275:[32323]:Trader:query_contract_address: try again
+Jan 31 22:54:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:59,278:[32323]:Trader:PID(32323) - on_post(): 1548975297.924888
+Jan 31 22:54:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:59,282:[32323]:Trader:PID(32323) - on_poller(): 1548975298.9346368
+Jan 31 22:54:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:54:59,284:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:00,292:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:00,297:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:00,300:[32323]:Trader:PID(32323) - on_poller(): 1548975299.9353514
+Jan 31 22:55:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:00,305:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:01,313:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:01,318:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:01,320:[32323]:Trader:PID(32323) - on_poller(): 1548975300.936056
+Jan 31 22:55:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:01,320:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:02,330:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:02,335:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:02,344:[32323]:Trader:PID(32323) - on_poller(): 1548975301.9367676
+Jan 31 22:55:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:02,356:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:03,364:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:03,369:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:03,376:[32323]:Trader:PID(32323) - on_poller(): 1548975302.9380362
+Jan 31 22:55:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:03,379:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:04,383:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:04,390:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:04,391:[32323]:Trader:PID(32323) - on_post(): 1548975302.9258053
+Jan 31 22:55:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:04,392:[32323]:Trader:PID(32323) - on_poller(): 1548975303.9386156
+Jan 31 22:55:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:04,392:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:05,404:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:05,410:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:05,411:[32323]:Trader:PID(32323) - on_poller(): 1548975304.939288
+Jan 31 22:55:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:05,412:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:06,416:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:06,421:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:06,423:[32323]:Trader:PID(32323) - on_poller(): 1548975305.939982
+Jan 31 22:55:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:06,423:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:07,428:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:07,434:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:07,435:[32323]:Trader:PID(32323) - on_poller(): 1548975306.9406683
+Jan 31 22:55:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:07,436:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:08,440:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:08,445:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:08,449:[32323]:Trader:PID(32323) - on_poller(): 1548975307.9413724
+Jan 31 22:55:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:08,453:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:09,469:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:09,476:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:09,480:[32323]:Trader:PID(32323) - on_post(): 1548975307.9265409
+Jan 31 22:55:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:09,485:[32323]:Trader:PID(32323) - on_poller(): 1548975308.9419928
+Jan 31 22:55:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:09,488:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:10,494:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:10,500:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:10,503:[32323]:Trader:PID(32323) - on_poller(): 1548975309.9426959
+Jan 31 22:55:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:10,506:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:11,513:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:11,518:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:11,519:[32323]:Trader:PID(32323) - on_poller(): 1548975310.9434156
+Jan 31 22:55:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:11,520:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:12,529:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:12,535:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:12,538:[32323]:Trader:PID(32323) - on_poller(): 1548975311.9441068
+Jan 31 22:55:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:12,542:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:13,550:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:13,555:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:13,557:[32323]:Trader:PID(32323) - on_poller(): 1548975312.9447207
+Jan 31 22:55:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:13,562:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:55:14.149] [rdiscovery] [info] Service is considered as zombie: 172.21.20.53:33881
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:14,569:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:14,574:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:14,578:[32323]:Trader:PID(32323) - on_post(): 1548975312.9272587
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:14,582:[32323]:Trader:PID(32323) - on_poller(): 1548975313.945435
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:14,584:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.514162
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.515493
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.518633
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.519008
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.515873
+Jan 31 22:55:14 bbb-e1ec RIAPS-DEPLO[32201]: Dropping packet with high delay: 0.51589
+Jan 31 22:55:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:15,591:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:15,596:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:15,602:[32323]:Trader:PID(32323) - on_poller(): 1548975314.9460835
+Jan 31 22:55:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:15,603:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:16,607:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:16,612:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:16,615:[32323]:Trader:PID(32323) - on_poller(): 1548975315.9467175
+Jan 31 22:55:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:16,616:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:17,623:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:17,628:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:17,632:[32323]:Trader:PID(32323) - on_poller(): 1548975316.9475036
+Jan 31 22:55:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:17,635:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:18,642:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:18,648:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:18,652:[32323]:Trader:PID(32323) - on_poller(): 1548975317.9481385
+Jan 31 22:55:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:18,655:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:19,662:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:19,667:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:19,668:[32323]:Trader:PID(32323) - on_post(): 1548975317.927999
+Jan 31 22:55:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:19,675:[32323]:Trader:PID(32323) - on_poller(): 1548975318.948772
+Jan 31 22:55:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:19,678:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:20,685:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:20,690:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:20,692:[32323]:Trader:PID(32323) - on_poller(): 1548975319.9495404
+Jan 31 22:55:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:20,693:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:21,702:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:21,707:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:21,713:[32323]:Trader:PID(32323) - on_poller(): 1548975320.9502594
+Jan 31 22:55:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:21,716:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:22,723:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:22,728:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:22,731:[32323]:Trader:PID(32323) - on_poller(): 1548975321.9509575
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:22,734:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:55:22.987] [rdiscovery] [info] Search for registered actor: /TransactiveEnergy/Trader/
+Jan 31 22:55:22 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:55:22.990] [rdiscovery] [info] Update() returns contractAddr@172.21.20.53:38743 to /TransactiveEnergy/Trader/
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,741:[32323]:Trader:query_contract_address:send exception = 11
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,746:[32323]:Trader:query_contract_address: try again
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,758:[32323]:Trader:PID(32323) - on_poller(): 1548975322.9515548
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,762:[32323]:Trader:{'request': 'query_contract_address'}
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,768:[32323]:Trader:PID(32323) - on_post(): 1548975322.9287312
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,782:[32323]:Trader:PID (32323) - on_contractAddr():{'contract': '0x390bb4aba5789e0e83d564939526b1da9f6e06fc', 'time': 3250.0018815994263}
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,786:[32323]:Trader:Contract address: 0x390bb4aba5789e0e83d564939526b1da9f6e06fc
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,788:[32323]:Trader:Setting up connection to Ethereum client...
+Jan 31 22:55:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:23,813:[32323]:Trader:Creating contract object...
+Jan 31 22:55:24 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:55:24,066:[32323]:Trader:Connected: 1
+Jan 31 22:55:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:24,074:[32323]:Trader:PID(32323) - on_poller(): 1548975323.9521787
+Jan 31 22:55:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:24,954:[32323]:Trader:PID(32323) - on_poller(): 1548975324.9530249
+Jan 31 22:55:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:25,955:[32323]:Trader:PID(32323) - on_poller(): 1548975325.954019
+Jan 31 22:55:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:26,955:[32323]:Trader:PID(32323) - on_poller(): 1548975326.9547877
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,930:[32323]:Trader:PID(32323) - on_post(): 1548975327.929483
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,935:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,938:[32323]:Trader:energy: -3200
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,941:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,944:[32323]:Trader:energy: -3100
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,947:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,950:[32323]:Trader:energy: -3000
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,953:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,957:[32323]:Trader:energy: -2900
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,962:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,963:[32323]:Trader:energy: -2700
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,964:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,964:[32323]:Trader:energy: -2600
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,971:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,976:[32323]:Trader:energy: -2500
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,981:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,985:[32323]:Trader:energy: -2500
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,988:[32323]:Trader:Offers posted.
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,991:[32323]:Trader:energy: -2400
+Jan 31 22:55:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,994:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:27,996:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,006:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,012:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,019:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,022:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,025:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,029:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,037:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,040:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,044:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,048:[32323]:Trader:energy: -2400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,053:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,057:[32323]:Trader:energy: -2500
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,061:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,065:[32323]:Trader:energy: -2700
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,073:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,076:[32323]:Trader:energy: -2800
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,079:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,085:[32323]:Trader:energy: -3000
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,088:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,091:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,097:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,100:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,105:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,108:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,113:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,116:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,123:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,126:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,129:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,132:[32323]:Trader:energy: -3200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,148:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,153:[32323]:Trader:energy: -3300
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,156:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,164:[32323]:Trader:energy: -3400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,167:[32323]:Trader:postBuyingOffer(106, 27, 27, 3400)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,324:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,350:[32323]:Trader:energy: -3600
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,357:[32323]:Trader:postBuyingOffer(106, 28, 28, 3600)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,539:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,542:[32323]:Trader:energy: -3900
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,545:[32323]:Trader:postBuyingOffer(106, 29, 29, 3900)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,591:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,598:[32323]:Trader:energy: -4300
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,605:[32323]:Trader:postBuyingOffer(106, 30, 30, 4300)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,715:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,719:[32323]:Trader:energy: -4800
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,727:[32323]:Trader:postBuyingOffer(106, 31, 31, 4800)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,812:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,815:[32323]:Trader:energy: -5400
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,821:[32323]:Trader:postBuyingOffer(106, 32, 32, 5400)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,900:[32323]:Trader:Offers posted.
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,913:[32323]:Trader:energy: -6200
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,916:[32323]:Trader:postBuyingOffer(106, 33, 33, 6200)
+Jan 31 22:55:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:28,989:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,002:[32323]:Trader:energy: -7000
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,005:[32323]:Trader:postBuyingOffer(106, 34, 34, 7000)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,112:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,121:[32323]:Trader:energy: -7800
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,126:[32323]:Trader:postBuyingOffer(106, 35, 35, 7800)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,374:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,381:[32323]:Trader:energy: -8400
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,387:[32323]:Trader:postBuyingOffer(106, 36, 36, 8400)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,478:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,481:[32323]:Trader:energy: -8800
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,489:[32323]:Trader:postBuyingOffer(106, 37, 37, 8800)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,562:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,569:[32323]:Trader:energy: -8900
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,572:[32323]:Trader:postBuyingOffer(106, 38, 38, 8900)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,663:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,669:[32323]:Trader:energy: -9000
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,673:[32323]:Trader:postBuyingOffer(106, 39, 39, 9000)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,751:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,754:[32323]:Trader:energy: -9000
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,761:[32323]:Trader:postBuyingOffer(106, 40, 40, 9000)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,832:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,839:[32323]:Trader:energy: -9000
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,845:[32323]:Trader:postBuyingOffer(106, 41, 41, 9000)
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,979:[32323]:Trader:Offers posted.
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,993:[32323]:Trader:energy: -9100
+Jan 31 22:55:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:29,996:[32323]:Trader:postBuyingOffer(106, 42, 42, 9100)
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,080:[32323]:Trader:Offers posted.
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,085:[32323]:Trader:energy: -9200
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,089:[32323]:Trader:postBuyingOffer(106, 43, 43, 9200)
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,195:[32323]:Trader:Offers posted.
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,201:[32323]:Trader:energy: -9200
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,205:[32323]:Trader:postBuyingOffer(106, 44, 44, 9200)
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,313:[32323]:Trader:Offers posted.
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,333:[32323]:Trader:energy: -9300
+Jan 31 22:55:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:30,339:[32323]:Trader:postBuyingOffer(106, 45, 45, 9300)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,054:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,057:[32323]:Trader:energy: -9400
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,061:[32323]:Trader:postBuyingOffer(106, 46, 46, 9400)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,128:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,143:[32323]:Trader:energy: -9400
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,149:[32323]:Trader:postBuyingOffer(106, 47, 47, 9400)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,227:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,233:[32323]:Trader:energy: -9400
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,238:[32323]:Trader:postBuyingOffer(106, 48, 48, 9400)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,352:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,361:[32323]:Trader:energy: -9200
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,365:[32323]:Trader:postBuyingOffer(106, 49, 49, 9200)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,453:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,456:[32323]:Trader:energy: -9000
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,461:[32323]:Trader:postBuyingOffer(106, 50, 50, 9000)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,568:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,573:[32323]:Trader:energy: -8700
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,576:[32323]:Trader:postBuyingOffer(106, 51, 51, 8700)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,682:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,689:[32323]:Trader:energy: -8400
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,692:[32323]:Trader:postBuyingOffer(106, 52, 52, 8400)
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,932:[32323]:Trader:Offers posted.
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,936:[32323]:Trader:energy: -8100
+Jan 31 22:55:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:31,945:[32323]:Trader:postBuyingOffer(106, 53, 53, 8100)
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,042:[32323]:Trader:Offers posted.
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,052:[32323]:Trader:energy: -7800
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,058:[32323]:Trader:postBuyingOffer(106, 54, 54, 7800)
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,739:[32323]:Trader:Offers posted.
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,749:[32323]:Trader:energy: -7600
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,752:[32323]:Trader:postBuyingOffer(106, 55, 55, 7600)
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,841:[32323]:Trader:Offers posted.
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,844:[32323]:Trader:energy: -7400
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,851:[32323]:Trader:postBuyingOffer(106, 56, 56, 7400)
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,944:[32323]:Trader:Offers posted.
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,953:[32323]:Trader:energy: -7300
+Jan 31 22:55:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:32,956:[32323]:Trader:postBuyingOffer(106, 57, 57, 7300)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,037:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,040:[32323]:Trader:energy: -7400
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,047:[32323]:Trader:postBuyingOffer(106, 58, 58, 7400)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,119:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,129:[32323]:Trader:energy: -7400
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,132:[32323]:Trader:postBuyingOffer(106, 59, 59, 7400)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,225:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,233:[32323]:Trader:energy: -7600
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,239:[32323]:Trader:postBuyingOffer(106, 60, 60, 7600)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,374:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,385:[32323]:Trader:energy: -7700
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,388:[32323]:Trader:postBuyingOffer(106, 61, 61, 7700)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,464:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,469:[32323]:Trader:energy: -7900
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,472:[32323]:Trader:postBuyingOffer(106, 62, 62, 7900)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,564:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,573:[32323]:Trader:energy: -8000
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,576:[32323]:Trader:postBuyingOffer(106, 63, 63, 8000)
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,707:[32323]:Trader:Offers posted.
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,713:[32323]:Trader:energy: -8000
+Jan 31 22:55:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:33,720:[32323]:Trader:postBuyingOffer(106, 64, 64, 8000)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:34,999:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,005:[32323]:Trader:energy: -8000
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,006:[32323]:Trader:postBuyingOffer(106, 65, 65, 8000)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,086:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,089:[32323]:Trader:energy: -7900
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,095:[32323]:Trader:postBuyingOffer(106, 66, 66, 7900)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,183:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,189:[32323]:Trader:energy: -7900
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,192:[32323]:Trader:postBuyingOffer(106, 67, 67, 7900)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,291:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,299:[32323]:Trader:energy: -7800
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,305:[32323]:Trader:postBuyingOffer(106, 68, 68, 7800)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,419:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,426:[32323]:Trader:energy: -7800
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,429:[32323]:Trader:postBuyingOffer(106, 69, 69, 7800)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,507:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,511:[32323]:Trader:energy: -7800
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,515:[32323]:Trader:postBuyingOffer(106, 70, 70, 7800)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,616:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,625:[32323]:Trader:energy: -7700
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,628:[32323]:Trader:postBuyingOffer(106, 71, 71, 7700)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,696:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,704:[32323]:Trader:energy: -7400
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,712:[32323]:Trader:postBuyingOffer(106, 72, 72, 7400)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,779:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,785:[32323]:Trader:energy: -7100
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,790:[32323]:Trader:postBuyingOffer(106, 73, 73, 7100)
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,879:[32323]:Trader:Offers posted.
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,887:[32323]:Trader:energy: -6600
+Jan 31 22:55:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:35,894:[32323]:Trader:postBuyingOffer(106, 74, 74, 6600)
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,672:[32323]:Trader:Offers posted.
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,685:[32323]:Trader:energy: -6000
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,688:[32323]:Trader:postBuyingOffer(106, 75, 75, 6000)
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,838:[32323]:Trader:Offers posted.
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,841:[32323]:Trader:energy: -5500
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,849:[32323]:Trader:postBuyingOffer(106, 76, 76, 5500)
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,964:[32323]:Trader:Offers posted.
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,973:[32323]:Trader:energy: -5000
+Jan 31 22:55:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:37,976:[32323]:Trader:postBuyingOffer(106, 77, 77, 5000)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,049:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,053:[32323]:Trader:energy: -4500
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,057:[32323]:Trader:postBuyingOffer(106, 78, 78, 4500)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,146:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,152:[32323]:Trader:energy: -4200
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,160:[32323]:Trader:postBuyingOffer(106, 79, 79, 4200)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,242:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,259:[32323]:Trader:energy: -4000
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,275:[32323]:Trader:postBuyingOffer(106, 80, 80, 4000)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,394:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,398:[32323]:Trader:energy: -3900
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,405:[32323]:Trader:postBuyingOffer(106, 81, 81, 3900)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,496:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,507:[32323]:Trader:energy: -4000
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,510:[32323]:Trader:postBuyingOffer(106, 82, 82, 4000)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,579:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,585:[32323]:Trader:energy: -4000
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,588:[32323]:Trader:postBuyingOffer(106, 83, 83, 4000)
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,690:[32323]:Trader:Offers posted.
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,700:[32323]:Trader:energy: -4100
+Jan 31 22:55:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:38,708:[32323]:Trader:postBuyingOffer(106, 84, 84, 4100)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,484:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,493:[32323]:Trader:energy: -4100
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,496:[32323]:Trader:postBuyingOffer(106, 85, 85, 4100)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,577:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,585:[32323]:Trader:energy: -4000
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,588:[32323]:Trader:postBuyingOffer(106, 86, 86, 4000)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,679:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,683:[32323]:Trader:energy: -3900
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,689:[32323]:Trader:postBuyingOffer(106, 87, 87, 3900)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,762:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,771:[32323]:Trader:energy: -3800
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,777:[32323]:Trader:postBuyingOffer(106, 88, 88, 3800)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,840:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,848:[32323]:Trader:energy: -3700
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,853:[32323]:Trader:postBuyingOffer(106, 89, 89, 3700)
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,952:[32323]:Trader:Offers posted.
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,955:[32323]:Trader:energy: -3700
+Jan 31 22:55:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:40,960:[32323]:Trader:postBuyingOffer(106, 90, 90, 3700)
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,066:[32323]:Trader:Offers posted.
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,078:[32323]:Trader:energy: -3600
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,081:[32323]:Trader:postBuyingOffer(106, 91, 91, 3600)
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,178:[32323]:Trader:Offers posted.
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,180:[32323]:Trader:energy: -3600
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,188:[32323]:Trader:postBuyingOffer(106, 92, 92, 3600)
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,271:[32323]:Trader:Offers posted.
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,280:[32323]:Trader:energy: -3500
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,289:[32323]:Trader:postBuyingOffer(106, 93, 93, 3500)
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,372:[32323]:Trader:Offers posted.
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,385:[32323]:Trader:energy: -3500
+Jan 31 22:55:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:41,388:[32323]:Trader:postBuyingOffer(106, 94, 94, 3500)
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,659:[32323]:Trader:Offers posted.
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,665:[32323]:Trader:energy: -3400
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,669:[32323]:Trader:postBuyingOffer(106, 95, 95, 3400)
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,776:[32323]:Trader:Offers posted.
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,785:[32323]:Trader:energy: -3300
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,788:[32323]:Trader:postBuyingOffer(106, 96, 96, 3300)
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,844:[32323]:Trader:Offers posted.
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,852:[32323]:Trader:PID(32323) - on_poller(): 1548975327.9566953
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,911:[32323]:Trader:PID(32323) - on_post(): 1548975332.930441
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,916:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,922:[32323]:Trader:PID(32323) - on_poller(): 1548975328.962883
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,974:[32323]:Trader:PID(32323) - on_post(): 1548975337.9364617
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,978:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:43,984:[32323]:Trader:PID(32323) - on_poller(): 1548975329.963847
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,078:[32323]:Trader:PID(32323) - on_post(): 1548975342.9371738
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,082:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,090:[32323]:Trader:PID(32323) - on_poller(): 1548975330.9646015
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,125:[32323]:Trader:PID(32323) - on_poller(): 1548975331.9660711
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,166:[32323]:Trader:PID(32323) - on_poller(): 1548975332.9671493
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,260:[32323]:Trader:PID(32323) - on_poller(): 1548975333.9678872
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,312:[32323]:Trader:PID(32323) - on_poller(): 1548975334.9744103
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,354:[32323]:Trader:PID(32323) - on_poller(): 1548975335.9751596
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,396:[32323]:Trader:PID(32323) - on_poller(): 1548975336.9763772
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,437:[32323]:Trader:PID(32323) - on_poller(): 1548975337.98169
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,506:[32323]:Trader:PID(32323) - on_poller(): 1548975338.9823987
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,547:[32323]:Trader:PID(32323) - on_poller(): 1548975339.983143
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,610:[32323]:Trader:PID(32323) - on_poller(): 1548975340.9838665
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,676:[32323]:Trader:PID(32323) - on_poller(): 1548975341.9848945
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,760:[32323]:Trader:PID(32323) - on_poller(): 1548975342.9864402
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,844:[32323]:Trader:PID(32323) - on_poller(): 1548975343.987466
+Jan 31 22:55:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:44,990:[32323]:Trader:PID(32323) - on_poller(): 1548975344.988164
+Jan 31 22:55:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:45,991:[32323]:Trader:PID(32323) - on_poller(): 1548975345.9902055
+Jan 31 22:55:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:46,992:[32323]:Trader:PID(32323) - on_poller(): 1548975346.9909923
+Jan 31 22:55:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:47,939:[32323]:Trader:PID(32323) - on_post(): 1548975347.9381025
+Jan 31 22:55:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:47,947:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:47,992:[32323]:Trader:PID(32323) - on_poller(): 1548975347.9917893
+Jan 31 22:55:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:48,993:[32323]:Trader:PID(32323) - on_poller(): 1548975348.992687
+Jan 31 22:55:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:49,994:[32323]:Trader:PID(32323) - on_poller(): 1548975349.9937
+Jan 31 22:55:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:50,995:[32323]:Trader:PID(32323) - on_poller(): 1548975350.9945247
+Jan 31 22:55:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:51,996:[32323]:Trader:PID(32323) - on_poller(): 1548975351.9952903
+Jan 31 22:55:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:52,939:[32323]:Trader:PID(32323) - on_post(): 1548975352.9389315
+Jan 31 22:55:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:52,943:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:52,997:[32323]:Trader:PID(32323) - on_poller(): 1548975352.996068
+Jan 31 22:55:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:53,998:[32323]:Trader:PID(32323) - on_poller(): 1548975353.9968748
+Jan 31 22:55:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:54,999:[32323]:Trader:PID(32323) - on_poller(): 1548975354.9980745
+Jan 31 22:55:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:56,000:[32323]:Trader:PID(32323) - on_poller(): 1548975355.9988537
+Jan 31 22:55:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:57,000:[32323]:Trader:PID(32323) - on_poller(): 1548975356.9996948
+Jan 31 22:55:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:57,940:[32323]:Trader:PID(32323) - on_post(): 1548975357.9396908
+Jan 31 22:55:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:57,943:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:55:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:58,001:[32323]:Trader:PID(32323) - on_poller(): 1548975358.0006258
+Jan 31 22:55:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:59,003:[32323]:Trader:PID(32323) - on_poller(): 1548975359.0024335
+Jan 31 22:55:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:55:59,175:[32201]:riaps.deplo.depm:handleFMMon: ('peer-', 'TransactiveEnergy', 'Trader', b'83EE5DBBEE18F2602777A85899BEA364')
+Jan 31 22:55:59 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:55:59,184:[32323]:Trader:UUID: 83EE5DBBEE18F2602777A85899BEA364, STATE: off
+Jan 31 22:56:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:00,004:[32323]:Trader:PID(32323) - on_poller(): 1548975360.0032215
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,005:[32323]:Trader:PID(32323) - on_poller(): 1548975361.0040371
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,222:[32323]:Trader:BuyingOfferPosted({'ID': 5, 'prosumer': 106, 'startTime': 32, 'endTime': 32, 'energy': 5400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,229:[32323]:Trader:BuyingOfferPosted({'ID': 21, 'prosumer': 106, 'startTime': 48, 'endTime': 48, 'energy': 9400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,235:[32323]:Trader:BuyingOfferPosted({'ID': 50, 'prosumer': 106, 'startTime': 77, 'endTime': 77, 'energy': 5000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,243:[32323]:Trader:BuyingOfferPosted({'ID': 56, 'prosumer': 106, 'startTime': 83, 'endTime': 83, 'energy': 4000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,247:[32323]:Trader:BuyingOfferPosted({'ID': 69, 'prosumer': 106, 'startTime': 96, 'endTime': 96, 'energy': 3300}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,250:[32323]:Trader:BuyingOfferPosted({'ID': 2, 'prosumer': 106, 'startTime': 29, 'endTime': 29, 'energy': 3900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,258:[32323]:Trader:BuyingOfferPosted({'ID': 10, 'prosumer': 106, 'startTime': 37, 'endTime': 37, 'energy': 8800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,268:[32323]:Trader:BuyingOfferPosted({'ID': 48, 'prosumer': 106, 'startTime': 75, 'endTime': 75, 'energy': 6000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,278:[32323]:Trader:BuyingOfferPosted({'ID': 49, 'prosumer': 106, 'startTime': 76, 'endTime': 76, 'energy': 5500}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,305:[32323]:Trader:BuyingOfferPosted({'ID': 58, 'prosumer': 106, 'startTime': 85, 'endTime': 85, 'energy': 4100}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,312:[32323]:Trader:BuyingOfferPosted({'ID': 19, 'prosumer': 106, 'startTime': 46, 'endTime': 46, 'energy': 9400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,315:[32323]:Trader:BuyingOfferPosted({'ID': 20, 'prosumer': 106, 'startTime': 47, 'endTime': 47, 'energy': 9400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,321:[32323]:Trader:BuyingOfferPosted({'ID': 26, 'prosumer': 106, 'startTime': 53, 'endTime': 53, 'energy': 8100}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,324:[32323]:Trader:BuyingOfferPosted({'ID': 35, 'prosumer': 106, 'startTime': 62, 'endTime': 62, 'energy': 7900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,329:[32323]:Trader:BuyingOfferPosted({'ID': 30, 'prosumer': 106, 'startTime': 57, 'endTime': 57, 'energy': 7300}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,332:[32323]:Trader:BuyingOfferPosted({'ID': 51, 'prosumer': 106, 'startTime': 78, 'endTime': 78, 'energy': 4500}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,344:[32323]:Trader:BuyingOfferPosted({'ID': 53, 'prosumer': 106, 'startTime': 80, 'endTime': 80, 'energy': 4000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,352:[32323]:Trader:BuyingOfferPosted({'ID': 60, 'prosumer': 106, 'startTime': 87, 'endTime': 87, 'energy': 3900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,355:[32323]:Trader:BuyingOfferPosted({'ID': 12, 'prosumer': 106, 'startTime': 39, 'endTime': 39, 'energy': 9000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,358:[32323]:Trader:BuyingOfferPosted({'ID': 17, 'prosumer': 106, 'startTime': 44, 'endTime': 44, 'energy': 9200}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,368:[32323]:Trader:BuyingOfferPosted({'ID': 27, 'prosumer': 106, 'startTime': 54, 'endTime': 54, 'energy': 7800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,381:[32323]:Trader:BuyingOfferPosted({'ID': 34, 'prosumer': 106, 'startTime': 61, 'endTime': 61, 'energy': 7700}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,385:[32323]:Trader:BuyingOfferPosted({'ID': 45, 'prosumer': 106, 'startTime': 72, 'endTime': 72, 'energy': 7400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,388:[32323]:Trader:BuyingOfferPosted({'ID': 9, 'prosumer': 106, 'startTime': 36, 'endTime': 36, 'energy': 8400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,392:[32323]:Trader:BuyingOfferPosted({'ID': 18, 'prosumer': 106, 'startTime': 45, 'endTime': 45, 'energy': 9300}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,399:[32323]:Trader:BuyingOfferPosted({'ID': 23, 'prosumer': 106, 'startTime': 50, 'endTime': 50, 'energy': 9000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,403:[32323]:Trader:BuyingOfferPosted({'ID': 8, 'prosumer': 106, 'startTime': 35, 'endTime': 35, 'energy': 7800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,406:[32323]:Trader:BuyingOfferPosted({'ID': 13, 'prosumer': 106, 'startTime': 40, 'endTime': 40, 'energy': 9000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,413:[32323]:Trader:BuyingOfferPosted({'ID': 29, 'prosumer': 106, 'startTime': 56, 'endTime': 56, 'energy': 7400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,416:[32323]:Trader:BuyingOfferPosted({'ID': 32, 'prosumer': 106, 'startTime': 59, 'endTime': 59, 'energy': 7400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,421:[32323]:Trader:BuyingOfferPosted({'ID': 33, 'prosumer': 106, 'startTime': 60, 'endTime': 60, 'energy': 7600}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,425:[32323]:Trader:BuyingOfferPosted({'ID': 42, 'prosumer': 106, 'startTime': 69, 'endTime': 69, 'energy': 7800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,429:[32323]:Trader:BuyingOfferPosted({'ID': 67, 'prosumer': 106, 'startTime': 94, 'endTime': 94, 'energy': 3500}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,433:[32323]:Trader:BuyingOfferPosted({'ID': 68, 'prosumer': 106, 'startTime': 95, 'endTime': 95, 'energy': 3400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,437:[32323]:Trader:BuyingOfferPosted({'ID': 22, 'prosumer': 106, 'startTime': 49, 'endTime': 49, 'energy': 9200}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,441:[32323]:Trader:BuyingOfferPosted({'ID': 24, 'prosumer': 106, 'startTime': 51, 'endTime': 51, 'energy': 8700}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,446:[32323]:Trader:BuyingOfferPosted({'ID': 3, 'prosumer': 106, 'startTime': 30, 'endTime': 30, 'energy': 4300}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,455:[32323]:Trader:BuyingOfferPosted({'ID': 44, 'prosumer': 106, 'startTime': 71, 'endTime': 71, 'energy': 7700}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,461:[32323]:Trader:BuyingOfferPosted({'ID': 54, 'prosumer': 106, 'startTime': 81, 'endTime': 81, 'energy': 3900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,467:[32323]:Trader:BuyingOfferPosted({'ID': 65, 'prosumer': 106, 'startTime': 92, 'endTime': 92, 'energy': 3600}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,470:[32323]:Trader:BuyingOfferPosted({'ID': 0, 'prosumer': 106, 'startTime': 27, 'endTime': 27, 'energy': 3400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,476:[32323]:Trader:BuyingOfferPosted({'ID': 16, 'prosumer': 106, 'startTime': 43, 'endTime': 43, 'energy': 9200}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,481:[32323]:Trader:BuyingOfferPosted({'ID': 36, 'prosumer': 106, 'startTime': 63, 'endTime': 63, 'energy': 8000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,486:[32323]:Trader:BuyingOfferPosted({'ID': 40, 'prosumer': 106, 'startTime': 67, 'endTime': 67, 'energy': 7900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,489:[32323]:Trader:BuyingOfferPosted({'ID': 52, 'prosumer': 106, 'startTime': 79, 'endTime': 79, 'energy': 4200}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,493:[32323]:Trader:BuyingOfferPosted({'ID': 4, 'prosumer': 106, 'startTime': 31, 'endTime': 31, 'energy': 4800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,506:[32323]:Trader:BuyingOfferPosted({'ID': 15, 'prosumer': 106, 'startTime': 42, 'endTime': 42, 'energy': 9100}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,510:[32323]:Trader:BuyingOfferPosted({'ID': 25, 'prosumer': 106, 'startTime': 52, 'endTime': 52, 'energy': 8400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,514:[32323]:Trader:BuyingOfferPosted({'ID': 41, 'prosumer': 106, 'startTime': 68, 'endTime': 68, 'energy': 7800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,516:[32323]:Trader:BuyingOfferPosted({'ID': 66, 'prosumer': 106, 'startTime': 93, 'endTime': 93, 'energy': 3500}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,530:[32323]:Trader:BuyingOfferPosted({'ID': 14, 'prosumer': 106, 'startTime': 41, 'endTime': 41, 'energy': 9000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,540:[32323]:Trader:BuyingOfferPosted({'ID': 57, 'prosumer': 106, 'startTime': 84, 'endTime': 84, 'energy': 4100}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,552:[32323]:Trader:BuyingOfferPosted({'ID': 62, 'prosumer': 106, 'startTime': 89, 'endTime': 89, 'energy': 3700}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,559:[32323]:Trader:BuyingOfferPosted({'ID': 43, 'prosumer': 106, 'startTime': 70, 'endTime': 70, 'energy': 7800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,563:[32323]:Trader:BuyingOfferPosted({'ID': 63, 'prosumer': 106, 'startTime': 90, 'endTime': 90, 'energy': 3700}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,570:[32323]:Trader:BuyingOfferPosted({'ID': 31, 'prosumer': 106, 'startTime': 58, 'endTime': 58, 'energy': 7400}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,575:[32323]:Trader:BuyingOfferPosted({'ID': 55, 'prosumer': 106, 'startTime': 82, 'endTime': 82, 'energy': 4000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,581:[32323]:Trader:BuyingOfferPosted({'ID': 59, 'prosumer': 106, 'startTime': 86, 'endTime': 86, 'energy': 4000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,585:[32323]:Trader:BuyingOfferPosted({'ID': 61, 'prosumer': 106, 'startTime': 88, 'endTime': 88, 'energy': 3800}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,593:[32323]:Trader:BuyingOfferPosted({'ID': 64, 'prosumer': 106, 'startTime': 91, 'endTime': 91, 'energy': 3600}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,603:[32323]:Trader:BuyingOfferPosted({'ID': 6, 'prosumer': 106, 'startTime': 33, 'endTime': 33, 'energy': 6200}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,615:[32323]:Trader:BuyingOfferPosted({'ID': 7, 'prosumer': 106, 'startTime': 34, 'endTime': 34, 'energy': 7000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,624:[32323]:Trader:BuyingOfferPosted({'ID': 28, 'prosumer': 106, 'startTime': 55, 'endTime': 55, 'energy': 7600}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,633:[32323]:Trader:BuyingOfferPosted({'ID': 37, 'prosumer': 106, 'startTime': 64, 'endTime': 64, 'energy': 8000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,637:[32323]:Trader:BuyingOfferPosted({'ID': 38, 'prosumer': 106, 'startTime': 65, 'endTime': 65, 'energy': 8000}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,640:[32323]:Trader:BuyingOfferPosted({'ID': 39, 'prosumer': 106, 'startTime': 66, 'endTime': 66, 'energy': 7900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,647:[32323]:Trader:BuyingOfferPosted({'ID': 46, 'prosumer': 106, 'startTime': 73, 'endTime': 73, 'energy': 7100}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,650:[32323]:Trader:BuyingOfferPosted({'ID': 1, 'prosumer': 106, 'startTime': 28, 'endTime': 28, 'energy': 3600}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,653:[32323]:Trader:BuyingOfferPosted({'ID': 11, 'prosumer': 106, 'startTime': 38, 'endTime': 38, 'energy': 8900}).
+Jan 31 22:56:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:01,657:[32323]:Trader:BuyingOfferPosted({'ID': 47, 'prosumer': 106, 'startTime': 74, 'endTime': 74, 'energy': 6600}).
+Jan 31 22:56:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:02,006:[32323]:Trader:PID(32323) - on_poller(): 1548975362.0048265
+Jan 31 22:56:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:02,942:[32323]:Trader:PID(32323) - on_post(): 1548975362.9404864
+Jan 31 22:56:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:02,946:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:03,007:[32323]:Trader:PID(32323) - on_poller(): 1548975363.0066373
+Jan 31 22:56:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:04,008:[32323]:Trader:PID(32323) - on_poller(): 1548975364.007742
+Jan 31 22:56:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:05,009:[32323]:Trader:PID(32323) - on_poller(): 1548975365.0085304
+Jan 31 22:56:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:06,010:[32323]:Trader:PID(32323) - on_poller(): 1548975366.0094974
+Jan 31 22:56:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:07,011:[32323]:Trader:PID(32323) - on_poller(): 1548975367.0102832
+Jan 31 22:56:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:07,942:[32323]:Trader:PID(32323) - on_post(): 1548975367.9414308
+Jan 31 22:56:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:07,945:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:08,012:[32323]:Trader:PID(32323) - on_poller(): 1548975368.0110674
+Jan 31 22:56:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:09,013:[32323]:Trader:PID(32323) - on_poller(): 1548975369.0118635
+Jan 31 22:56:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:10,013:[32323]:Trader:PID(32323) - on_poller(): 1548975370.0126483
+Jan 31 22:56:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:11,014:[32323]:Trader:PID(32323) - on_poller(): 1548975371.013591
+Jan 31 22:56:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:12,015:[32323]:Trader:PID(32323) - on_poller(): 1548975372.014353
+Jan 31 22:56:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:12,943:[32323]:Trader:PID(32323) - on_post(): 1548975372.9422076
+Jan 31 22:56:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:12,946:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:13,016:[32323]:Trader:PID(32323) - on_poller(): 1548975373.0151637
+Jan 31 22:56:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:14,016:[32323]:Trader:PID(32323) - on_poller(): 1548975374.0158868
+Jan 31 22:56:14 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:56:14.383] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:40919
+Jan 31 22:56:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:15,017:[32323]:Trader:PID(32323) - on_poller(): 1548975375.0166304
+Jan 31 22:56:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:16,018:[32323]:Trader:PID(32323) - on_poller(): 1548975376.0175629
+Jan 31 22:56:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:17,019:[32323]:Trader:PID(32323) - on_poller(): 1548975377.0183592
+Jan 31 22:56:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:17,943:[32323]:Trader:PID(32323) - on_post(): 1548975377.9429345
+Jan 31 22:56:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:17,947:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:18,020:[32323]:Trader:PID(32323) - on_poller(): 1548975378.0191002
+Jan 31 22:56:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:19,020:[32323]:Trader:PID(32323) - on_poller(): 1548975379.019861
+Jan 31 22:56:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:19,799:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'B1114805F748025DB52A7969257616E7')
+Jan 31 22:56:19 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:56:19,809:[32323]:Trader:UUID: B1114805F748025DB52A7969257616E7, STATE: on
+Jan 31 22:56:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:20,021:[32323]:Trader:PID(32323) - on_poller(): 1548975380.0205925
+Jan 31 22:56:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:21,022:[32323]:Trader:PID(32323) - on_poller(): 1548975381.0214338
+Jan 31 22:56:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:22,023:[32323]:Trader:PID(32323) - on_poller(): 1548975382.02219
+Jan 31 22:56:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:22,945:[32323]:Trader:PID(32323) - on_post(): 1548975382.9436722
+Jan 31 22:56:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:22,948:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:23,023:[32323]:Trader:PID(32323) - on_poller(): 1548975383.0229392
+Jan 31 22:56:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:24,024:[32323]:Trader:PID(32323) - on_poller(): 1548975384.0237083
+Jan 31 22:56:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:24,669:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'B1114805F748025DB52A7969257616E7')
+Jan 31 22:56:24 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:56:24,680:[32323]:Trader:UUID: B1114805F748025DB52A7969257616E7, STATE: on
+Jan 31 22:56:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:25,025:[32323]:Trader:PID(32323) - on_poller(): 1548975385.0244792
+Jan 31 22:56:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:26,026:[32323]:Trader:PID(32323) - on_poller(): 1548975386.0253386
+Jan 31 22:56:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:27,027:[32323]:Trader:PID(32323) - on_poller(): 1548975387.0260527
+Jan 31 22:56:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:27,946:[32323]:Trader:PID(32323) - on_post(): 1548975387.9449255
+Jan 31 22:56:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:27,949:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:28,027:[32323]:Trader:PID(32323) - on_poller(): 1548975388.0267746
+Jan 31 22:56:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:29,028:[32323]:Trader:PID(32323) - on_poller(): 1548975389.0275264
+Jan 31 22:56:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:30,033:[32323]:Trader:PID(32323) - on_poller(): 1548975390.0282626
+Jan 31 22:56:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:31,030:[32323]:Trader:PID(32323) - on_poller(): 1548975391.0289981
+Jan 31 22:56:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:32,031:[32323]:Trader:PID(32323) - on_poller(): 1548975392.0300276
+Jan 31 22:56:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:32,947:[32323]:Trader:PID(32323) - on_post(): 1548975392.946023
+Jan 31 22:56:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:32,951:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:33,031:[32323]:Trader:PID(32323) - on_poller(): 1548975393.030761
+Jan 31 22:56:34 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:34,032:[32323]:Trader:PID(32323) - on_poller(): 1548975394.031497
+Jan 31 22:56:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:35,033:[32323]:Trader:PID(32323) - on_poller(): 1548975395.0322611
+Jan 31 22:56:36 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:36,034:[32323]:Trader:PID(32323) - on_poller(): 1548975396.0329976
+Jan 31 22:56:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:37,034:[32323]:Trader:PID(32323) - on_poller(): 1548975397.0338707
+Jan 31 22:56:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:37,947:[32323]:Trader:PID(32323) - on_post(): 1548975397.9467938
+Jan 31 22:56:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:37,952:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:38,035:[32323]:Trader:PID(32323) - on_poller(): 1548975398.034632
+Jan 31 22:56:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:39,036:[32323]:Trader:PID(32323) - on_poller(): 1548975399.0353785
+Jan 31 22:56:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:40,037:[32323]:Trader:PID(32323) - on_poller(): 1548975400.0360885
+Jan 31 22:56:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:41,038:[32323]:Trader:PID(32323) - on_poller(): 1548975401.0368528
+Jan 31 22:56:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:42,038:[32323]:Trader:PID(32323) - on_poller(): 1548975402.0379438
+Jan 31 22:56:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:42,948:[32323]:Trader:PID(32323) - on_post(): 1548975402.9475539
+Jan 31 22:56:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:42,952:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:43,039:[32323]:Trader:PID(32323) - on_poller(): 1548975403.038701
+Jan 31 22:56:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:44,040:[32323]:Trader:PID(32323) - on_poller(): 1548975404.03946
+Jan 31 22:56:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:45,041:[32323]:Trader:PID(32323) - on_poller(): 1548975405.0402184
+Jan 31 22:56:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:46,042:[32323]:Trader:PID(32323) - on_poller(): 1548975406.0409915
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,042:[32323]:Trader:PID(32323) - on_poller(): 1548975407.0418751
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,119:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 3900}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,125:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 12100}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,128:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 27500}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,136:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 26200}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,140:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 29200}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,147:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 32500}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,150:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 1000}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,153:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 7700}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,157:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 10100}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,161:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 16300}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,166:[32323]:Trader:TradeAdded({'solutionID': 0, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 21500}).
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,949:[32323]:Trader:PID(32323) - on_post(): 1548975407.9482846
+Jan 31 22:56:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:47,953:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:48,043:[32323]:Trader:PID(32323) - on_poller(): 1548975408.0426133
+Jan 31 22:56:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:49,044:[32323]:Trader:PID(32323) - on_poller(): 1548975409.04336
+Jan 31 22:56:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:50,045:[32323]:Trader:PID(32323) - on_poller(): 1548975410.0440955
+Jan 31 22:56:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:51,046:[32323]:Trader:PID(32323) - on_poller(): 1548975411.0449083
+Jan 31 22:56:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:52,047:[32323]:Trader:PID(32323) - on_poller(): 1548975412.0461066
+Jan 31 22:56:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:52,950:[32323]:Trader:PID(32323) - on_post(): 1548975412.9490058
+Jan 31 22:56:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:52,954:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:53,047:[32323]:Trader:PID(32323) - on_poller(): 1548975413.0469425
+Jan 31 22:56:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:54,048:[32323]:Trader:PID(32323) - on_poller(): 1548975414.047683
+Jan 31 22:56:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:55,049:[32323]:Trader:PID(32323) - on_poller(): 1548975415.0484068
+Jan 31 22:56:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:56,050:[32323]:Trader:PID(32323) - on_poller(): 1548975416.0491548
+Jan 31 22:56:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:57,051:[32323]:Trader:PID(32323) - on_poller(): 1548975417.0500371
+Jan 31 22:56:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:57,950:[32323]:Trader:PID(32323) - on_post(): 1548975417.9499235
+Jan 31 22:56:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:57,955:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:56:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:58,051:[32323]:Trader:PID(32323) - on_poller(): 1548975418.0507693
+Jan 31 22:56:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:56:59,052:[32323]:Trader:PID(32323) - on_poller(): 1548975419.0515769
+Jan 31 22:57:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:00,053:[32323]:Trader:PID(32323) - on_poller(): 1548975420.0523329
+Jan 31 22:57:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:01,054:[32323]:Trader:PID(32323) - on_poller(): 1548975421.0530708
+Jan 31 22:57:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:02,055:[32323]:Trader:PID(32323) - on_poller(): 1548975422.0542133
+Jan 31 22:57:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:02,951:[32323]:Trader:PID(32323) - on_post(): 1548975422.9506702
+Jan 31 22:57:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:02,955:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:03,055:[32323]:Trader:PID(32323) - on_poller(): 1548975423.0549388
+Jan 31 22:57:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:04,056:[32323]:Trader:PID(32323) - on_poller(): 1548975424.055712
+Jan 31 22:57:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:05,057:[32323]:Trader:PID(32323) - on_poller(): 1548975425.0564601
+Jan 31 22:57:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:06,058:[32323]:Trader:PID(32323) - on_poller(): 1548975426.0573287
+Jan 31 22:57:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:07,059:[32323]:Trader:PID(32323) - on_poller(): 1548975427.0581198
+Jan 31 22:57:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:07,952:[32323]:Trader:PID(32323) - on_post(): 1548975427.9514146
+Jan 31 22:57:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:07,957:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:08,059:[32323]:Trader:PID(32323) - on_poller(): 1548975428.0588386
+Jan 31 22:57:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:09,060:[32323]:Trader:PID(32323) - on_poller(): 1548975429.0595574
+Jan 31 22:57:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:10,061:[32323]:Trader:PID(32323) - on_poller(): 1548975430.0602949
+Jan 31 22:57:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:11,062:[32323]:Trader:PID(32323) - on_poller(): 1548975431.061054
+Jan 31 22:57:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:12,063:[32323]:Trader:PID(32323) - on_poller(): 1548975432.062029
+Jan 31 22:57:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:12,953:[32323]:Trader:PID(32323) - on_post(): 1548975432.9521677
+Jan 31 22:57:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:12,957:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:13,063:[32323]:Trader:PID(32323) - on_poller(): 1548975433.0627918
+Jan 31 22:57:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:14,064:[32323]:Trader:PID(32323) - on_poller(): 1548975434.0635216
+Jan 31 22:57:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:15,065:[32323]:Trader:PID(32323) - on_poller(): 1548975435.064282
+Jan 31 22:57:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:16,066:[32323]:Trader:PID(32323) - on_poller(): 1548975436.0650148
+Jan 31 22:57:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:17,066:[32323]:Trader:PID(32323) - on_poller(): 1548975437.0658977
+Jan 31 22:57:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:17,954:[32323]:Trader:PID(32323) - on_post(): 1548975437.9529262
+Jan 31 22:57:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:17,958:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:18,067:[32323]:Trader:PID(32323) - on_poller(): 1548975438.066623
+Jan 31 22:57:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:19,068:[32323]:Trader:PID(32323) - on_poller(): 1548975439.067362
+Jan 31 22:57:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:20,069:[32323]:Trader:PID(32323) - on_poller(): 1548975440.0684557
+Jan 31 22:57:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:21,070:[32323]:Trader:PID(32323) - on_poller(): 1548975441.0693243
+Jan 31 22:57:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:22,071:[32323]:Trader:PID(32323) - on_poller(): 1548975442.070096
+Jan 31 22:57:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:22,954:[32323]:Trader:PID(32323) - on_post(): 1548975442.953951
+Jan 31 22:57:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:22,959:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:23,071:[32323]:Trader:PID(32323) - on_poller(): 1548975443.0708337
+Jan 31 22:57:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:24,072:[32323]:Trader:PID(32323) - on_poller(): 1548975444.0715623
+Jan 31 22:57:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:25,073:[32323]:Trader:PID(32323) - on_poller(): 1548975445.0722847
+Jan 31 22:57:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:26,074:[32323]:Trader:PID(32323) - on_poller(): 1548975446.0730221
+Jan 31 22:57:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:27,075:[32323]:Trader:PID(32323) - on_poller(): 1548975447.0740864
+Jan 31 22:57:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:27,955:[32323]:Trader:PID(32323) - on_post(): 1548975447.9546723
+Jan 31 22:57:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:27,959:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:28,075:[32323]:Trader:PID(32323) - on_poller(): 1548975448.0748613
+Jan 31 22:57:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:29,076:[32323]:Trader:PID(32323) - on_poller(): 1548975449.075642
+Jan 31 22:57:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:30,077:[32323]:Trader:PID(32323) - on_poller(): 1548975450.0763988
+Jan 31 22:57:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:31,078:[32323]:Trader:PID(32323) - on_poller(): 1548975451.0771606
+Jan 31 22:57:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:32,079:[32323]:Trader:PID(32323) - on_poller(): 1548975452.078055
+Jan 31 22:57:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:32,956:[32323]:Trader:PID(32323) - on_post(): 1548975452.9555445
+Jan 31 22:57:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:32,961:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:33,079:[32323]:Trader:PID(32323) - on_poller(): 1548975453.0788114
+Jan 31 22:57:34 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:34,080:[32323]:Trader:PID(32323) - on_poller(): 1548975454.0795586
+Jan 31 22:57:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:35,081:[32323]:Trader:PID(32323) - on_poller(): 1548975455.080279
+Jan 31 22:57:36 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:36,082:[32323]:Trader:PID(32323) - on_poller(): 1548975456.0810292
+Jan 31 22:57:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:37,083:[32323]:Trader:PID(32323) - on_poller(): 1548975457.0819848
+Jan 31 22:57:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:37,957:[32323]:Trader:PID(32323) - on_post(): 1548975457.9563324
+Jan 31 22:57:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:37,961:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:38,083:[32323]:Trader:PID(32323) - on_poller(): 1548975458.082722
+Jan 31 22:57:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:39,084:[32323]:Trader:PID(32323) - on_poller(): 1548975459.0834477
+Jan 31 22:57:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:40,085:[32323]:Trader:PID(32323) - on_poller(): 1548975460.0842016
+Jan 31 22:57:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:41,086:[32323]:Trader:PID(32323) - on_poller(): 1548975461.0849898
+Jan 31 22:57:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:42,087:[32323]:Trader:PID(32323) - on_poller(): 1548975462.086002
+Jan 31 22:57:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:42,958:[32323]:Trader:PID(32323) - on_post(): 1548975462.9574225
+Jan 31 22:57:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:42,963:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:43,087:[32323]:Trader:PID(32323) - on_poller(): 1548975463.08676
+Jan 31 22:57:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:44,088:[32323]:Trader:PID(32323) - on_poller(): 1548975464.0875404
+Jan 31 22:57:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:45,089:[32323]:Trader:PID(32323) - on_poller(): 1548975465.0882654
+Jan 31 22:57:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:46,090:[32323]:Trader:PID(32323) - on_poller(): 1548975466.0890002
+Jan 31 22:57:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:47,090:[32323]:Trader:PID(32323) - on_poller(): 1548975467.0898647
+Jan 31 22:57:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:47,959:[32323]:Trader:PID(32323) - on_post(): 1548975467.958167
+Jan 31 22:57:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:47,963:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:48,091:[32323]:Trader:PID(32323) - on_poller(): 1548975468.090719
+Jan 31 22:57:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:49,092:[32323]:Trader:PID(32323) - on_poller(): 1548975469.0915012
+Jan 31 22:57:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:50,093:[32323]:Trader:PID(32323) - on_poller(): 1548975470.0922694
+Jan 31 22:57:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:51,094:[32323]:Trader:PID(32323) - on_poller(): 1548975471.093056
+Jan 31 22:57:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:52,095:[32323]:Trader:PID(32323) - on_poller(): 1548975472.0940945
+Jan 31 22:57:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:52,959:[32323]:Trader:PID(32323) - on_post(): 1548975472.9589148
+Jan 31 22:57:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:52,964:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:53,095:[32323]:Trader:PID(32323) - on_poller(): 1548975473.094862
+Jan 31 22:57:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:54,096:[32323]:Trader:PID(32323) - on_poller(): 1548975474.095617
+Jan 31 22:57:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:55,098:[32323]:Trader:PID(32323) - on_poller(): 1548975475.0968668
+Jan 31 22:57:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:56,099:[32323]:Trader:PID(32323) - on_poller(): 1548975476.0980644
+Jan 31 22:57:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:57,099:[32323]:Trader:PID(32323) - on_poller(): 1548975477.098847
+Jan 31 22:57:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:57,960:[32323]:Trader:PID(32323) - on_post(): 1548975477.9596667
+Jan 31 22:57:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:57,965:[32323]:Trader:Posting offers for interval 27...
+Jan 31 22:57:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:58,100:[32323]:Trader:PID(32323) - on_poller(): 1548975478.099593
+Jan 31 22:57:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:58,142:[32323]:Trader:interval finalized : 27
+Jan 31 22:57:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:58,149:[32323]:Trader:time_interval: 28 = finalized: 27 + 1
+Jan 31 22:57:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:57:59,101:[32323]:Trader:PID(32323) - on_poller(): 1548975479.1003299
+Jan 31 22:58:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:00,102:[32323]:Trader:PID(32323) - on_poller(): 1548975480.101165
+Jan 31 22:58:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:01,103:[32323]:Trader:PID(32323) - on_poller(): 1548975481.1021771
+Jan 31 22:58:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:02,103:[32323]:Trader:PID(32323) - on_poller(): 1548975482.1029196
+Jan 31 22:58:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:02,961:[32323]:Trader:PID(32323) - on_post(): 1548975482.9604056
+Jan 31 22:58:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:02,966:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:03,104:[32323]:Trader:PID(32323) - on_poller(): 1548975483.1036372
+Jan 31 22:58:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:04,105:[32323]:Trader:PID(32323) - on_poller(): 1548975484.104398
+Jan 31 22:58:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:05,106:[32323]:Trader:PID(32323) - on_poller(): 1548975485.105426
+Jan 31 22:58:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:06,107:[32323]:Trader:PID(32323) - on_poller(): 1548975486.106155
+Jan 31 22:58:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:07,107:[32323]:Trader:PID(32323) - on_poller(): 1548975487.1069016
+Jan 31 22:58:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:07,962:[32323]:Trader:PID(32323) - on_post(): 1548975487.9611416
+Jan 31 22:58:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:07,965:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:08,108:[32323]:Trader:PID(32323) - on_poller(): 1548975488.1076279
+Jan 31 22:58:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:09,109:[32323]:Trader:PID(32323) - on_poller(): 1548975489.10835
+Jan 31 22:58:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:10,110:[32323]:Trader:PID(32323) - on_poller(): 1548975490.1090908
+Jan 31 22:58:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:11,111:[32323]:Trader:PID(32323) - on_poller(): 1548975491.1100383
+Jan 31 22:58:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:12,111:[32323]:Trader:PID(32323) - on_poller(): 1548975492.1107612
+Jan 31 22:58:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:12,963:[32323]:Trader:PID(32323) - on_post(): 1548975492.9624946
+Jan 31 22:58:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:12,967:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:13,112:[32323]:Trader:PID(32323) - on_poller(): 1548975493.1114945
+Jan 31 22:58:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:14,114:[32323]:Trader:PID(32323) - on_poller(): 1548975494.1122186
+Jan 31 22:58:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:15,115:[32323]:Trader:PID(32323) - on_poller(): 1548975495.1144452
+Jan 31 22:58:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:16,116:[32323]:Trader:PID(32323) - on_poller(): 1548975496.115188
+Jan 31 22:58:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:17,116:[32323]:Trader:PID(32323) - on_poller(): 1548975497.1159294
+Jan 31 22:58:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:17,964:[32323]:Trader:PID(32323) - on_post(): 1548975497.9639673
+Jan 31 22:58:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:17,970:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:18,117:[32323]:Trader:PID(32323) - on_poller(): 1548975498.1166646
+Jan 31 22:58:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:19,118:[32323]:Trader:PID(32323) - on_poller(): 1548975499.1174574
+Jan 31 22:58:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:20,119:[32323]:Trader:PID(32323) - on_poller(): 1548975500.1182334
+Jan 31 22:58:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:21,119:[32323]:Trader:PID(32323) - on_poller(): 1548975501.118978
+Jan 31 22:58:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:22,120:[32323]:Trader:PID(32323) - on_poller(): 1548975502.1196976
+Jan 31 22:58:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:22,965:[32323]:Trader:PID(32323) - on_post(): 1548975502.9647105
+Jan 31 22:58:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:22,969:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:23,121:[32323]:Trader:PID(32323) - on_poller(): 1548975503.1204526
+Jan 31 22:58:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:24,122:[32323]:Trader:PID(32323) - on_poller(): 1548975504.1213949
+Jan 31 22:58:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:25,123:[32323]:Trader:PID(32323) - on_poller(): 1548975505.122134
+Jan 31 22:58:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:26,123:[32323]:Trader:PID(32323) - on_poller(): 1548975506.1228535
+Jan 31 22:58:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:27,124:[32323]:Trader:PID(32323) - on_poller(): 1548975507.1235948
+Jan 31 22:58:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:27,966:[32323]:Trader:PID(32323) - on_post(): 1548975507.965479
+Jan 31 22:58:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:27,970:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:28,125:[32323]:Trader:PID(32323) - on_poller(): 1548975508.1243486
+Jan 31 22:58:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:29,126:[32323]:Trader:PID(32323) - on_poller(): 1548975509.125182
+Jan 31 22:58:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:30,127:[32323]:Trader:PID(32323) - on_poller(): 1548975510.1261532
+Jan 31 22:58:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:31,127:[32323]:Trader:PID(32323) - on_poller(): 1548975511.1269312
+Jan 31 22:58:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:31,263:[32201]:riaps.deplo.depm:handleFMMon: ('peer-', 'TransactiveEnergy', 'Trader', b'B1114805F748025DB52A7969257616E7')
+Jan 31 22:58:31 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:58:31,273:[32323]:Trader:UUID: B1114805F748025DB52A7969257616E7, STATE: off
+Jan 31 22:58:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:32,128:[32323]:Trader:PID(32323) - on_poller(): 1548975512.1276815
+Jan 31 22:58:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:32,967:[32323]:Trader:PID(32323) - on_post(): 1548975512.9662313
+Jan 31 22:58:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:32,970:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:33,130:[32323]:Trader:PID(32323) - on_poller(): 1548975513.128423
+Jan 31 22:58:34 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:34,131:[32323]:Trader:PID(32323) - on_poller(): 1548975514.130397
+Jan 31 22:58:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:35,132:[32323]:Trader:PID(32323) - on_poller(): 1548975515.1311111
+Jan 31 22:58:36 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:36,132:[32323]:Trader:PID(32323) - on_poller(): 1548975516.131825
+Jan 31 22:58:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:37,133:[32323]:Trader:PID(32323) - on_poller(): 1548975517.1325753
+Jan 31 22:58:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:37,968:[32323]:Trader:PID(32323) - on_post(): 1548975517.9673822
+Jan 31 22:58:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:37,973:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:38,134:[32323]:Trader:PID(32323) - on_poller(): 1548975518.133412
+Jan 31 22:58:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:39,135:[32323]:Trader:PID(32323) - on_poller(): 1548975519.134137
+Jan 31 22:58:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:40,135:[32323]:Trader:PID(32323) - on_poller(): 1548975520.1348755
+Jan 31 22:58:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:41,136:[32323]:Trader:PID(32323) - on_poller(): 1548975521.135632
+Jan 31 22:58:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:42,137:[32323]:Trader:PID(32323) - on_poller(): 1548975522.1364546
+Jan 31 22:58:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:42,969:[32323]:Trader:PID(32323) - on_post(): 1548975522.9682686
+Jan 31 22:58:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:42,972:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:43,138:[32323]:Trader:PID(32323) - on_poller(): 1548975523.1371899
+Jan 31 22:58:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:44,139:[32323]:Trader:PID(32323) - on_poller(): 1548975524.1380534
+Jan 31 22:58:44 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 22:58:44.800] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:41655
+Jan 31 22:58:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:45,139:[32323]:Trader:PID(32323) - on_poller(): 1548975525.1388516
+Jan 31 22:58:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:46,141:[32323]:Trader:PID(32323) - on_poller(): 1548975526.1402807
+Jan 31 22:58:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:47,142:[32323]:Trader:PID(32323) - on_poller(): 1548975527.1410105
+Jan 31 22:58:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:47,970:[32323]:Trader:PID(32323) - on_post(): 1548975527.9691107
+Jan 31 22:58:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:47,973:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:48,142:[32323]:Trader:PID(32323) - on_poller(): 1548975528.1419618
+Jan 31 22:58:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:49,143:[32323]:Trader:PID(32323) - on_poller(): 1548975529.1427183
+Jan 31 22:58:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:50,144:[32323]:Trader:PID(32323) - on_poller(): 1548975530.1434581
+Jan 31 22:58:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:50,219:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'DADD810ABC1424E90A11CB6DA5688D29')
+Jan 31 22:58:50 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:58:50,238:[32323]:Trader:UUID: DADD810ABC1424E90A11CB6DA5688D29, STATE: on
+Jan 31 22:58:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:51,146:[32323]:Trader:PID(32323) - on_poller(): 1548975531.1442187
+Jan 31 22:58:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:52,148:[32323]:Trader:PID(32323) - on_poller(): 1548975532.145941
+Jan 31 22:58:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:52,971:[32323]:Trader:PID(32323) - on_post(): 1548975532.9700754
+Jan 31 22:58:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:52,974:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:53,147:[32323]:Trader:PID(32323) - on_poller(): 1548975533.1466975
+Jan 31 22:58:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:54,148:[32323]:Trader:PID(32323) - on_poller(): 1548975534.1474383
+Jan 31 22:58:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:54,415:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'DADD810ABC1424E90A11CB6DA5688D29')
+Jan 31 22:58:54 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:58:54,427:[32323]:Trader:UUID: DADD810ABC1424E90A11CB6DA5688D29, STATE: on
+Jan 31 22:58:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:55,149:[32323]:Trader:PID(32323) - on_poller(): 1548975535.1482193
+Jan 31 22:58:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:56,150:[32323]:Trader:PID(32323) - on_poller(): 1548975536.148968
+Jan 31 22:58:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:56,548:[32201]:riaps.deplo.depm:handleFMMon: ('peer+', 'TransactiveEnergy', 'Trader', b'DADD810ABC1424E90A11CB6DA5688D29')
+Jan 31 22:58:56 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:22:58:56,560:[32323]:Trader:UUID: DADD810ABC1424E90A11CB6DA5688D29, STATE: on
+Jan 31 22:58:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:57,150:[32323]:Trader:PID(32323) - on_poller(): 1548975537.1499228
+Jan 31 22:58:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:57,971:[32323]:Trader:PID(32323) - on_post(): 1548975537.970792
+Jan 31 22:58:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:57,975:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:58:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:58,151:[32323]:Trader:PID(32323) - on_poller(): 1548975538.1506457
+Jan 31 22:58:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:58:59,152:[32323]:Trader:PID(32323) - on_poller(): 1548975539.1514544
+Jan 31 22:59:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:00,153:[32323]:Trader:PID(32323) - on_poller(): 1548975540.1522362
+Jan 31 22:59:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:01,153:[32323]:Trader:PID(32323) - on_poller(): 1548975541.1529512
+Jan 31 22:59:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:02,160:[32323]:Trader:PID(32323) - on_poller(): 1548975542.1593404
+Jan 31 22:59:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:02,972:[32323]:Trader:PID(32323) - on_post(): 1548975542.9715364
+Jan 31 22:59:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:02,975:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:03,161:[32323]:Trader:PID(32323) - on_poller(): 1548975543.1600573
+Jan 31 22:59:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:04,162:[32323]:Trader:PID(32323) - on_poller(): 1548975544.1608
+Jan 31 22:59:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:05,163:[32323]:Trader:PID(32323) - on_poller(): 1548975545.1620045
+Jan 31 22:59:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:06,163:[32323]:Trader:PID(32323) - on_poller(): 1548975546.162765
+Jan 31 22:59:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:07,164:[32323]:Trader:PID(32323) - on_poller(): 1548975547.163505
+Jan 31 22:59:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:07,973:[32323]:Trader:PID(32323) - on_post(): 1548975547.9722729
+Jan 31 22:59:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:07,976:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:08,165:[32323]:Trader:PID(32323) - on_poller(): 1548975548.1642637
+Jan 31 22:59:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:09,166:[32323]:Trader:PID(32323) - on_poller(): 1548975549.165048
+Jan 31 22:59:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:10,167:[32323]:Trader:PID(32323) - on_poller(): 1548975550.1659918
+Jan 31 22:59:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:11,167:[32323]:Trader:PID(32323) - on_poller(): 1548975551.1667562
+Jan 31 22:59:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:12,168:[32323]:Trader:PID(32323) - on_poller(): 1548975552.1675153
+Jan 31 22:59:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:12,974:[32323]:Trader:PID(32323) - on_post(): 1548975552.9730153
+Jan 31 22:59:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:12,977:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:13,169:[32323]:Trader:PID(32323) - on_poller(): 1548975553.1682296
+Jan 31 22:59:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:14,170:[32323]:Trader:PID(32323) - on_poller(): 1548975554.1689398
+Jan 31 22:59:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:15,171:[32323]:Trader:PID(32323) - on_poller(): 1548975555.1700125
+Jan 31 22:59:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:16,171:[32323]:Trader:PID(32323) - on_poller(): 1548975556.170753
+Jan 31 22:59:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:17,173:[32323]:Trader:PID(32323) - on_poller(): 1548975557.1725016
+Jan 31 22:59:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:17,976:[32323]:Trader:PID(32323) - on_post(): 1548975557.9739275
+Jan 31 22:59:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:17,979:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:18,174:[32323]:Trader:PID(32323) - on_poller(): 1548975558.173397
+Jan 31 22:59:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:19,175:[32323]:Trader:PID(32323) - on_poller(): 1548975559.1741557
+Jan 31 22:59:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:20,175:[32323]:Trader:PID(32323) - on_poller(): 1548975560.1749136
+Jan 31 22:59:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:21,176:[32323]:Trader:PID(32323) - on_poller(): 1548975561.17567
+Jan 31 22:59:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:22,177:[32323]:Trader:PID(32323) - on_poller(): 1548975562.1764302
+Jan 31 22:59:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:22,975:[32323]:Trader:PID(32323) - on_post(): 1548975562.9746652
+Jan 31 22:59:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:22,980:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:23,178:[32323]:Trader:PID(32323) - on_poller(): 1548975563.17719
+Jan 31 22:59:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:24,181:[32323]:Trader:PID(32323) - on_poller(): 1548975564.1781087
+Jan 31 22:59:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:25,182:[32323]:Trader:PID(32323) - on_poller(): 1548975565.181352
+Jan 31 22:59:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:26,183:[32323]:Trader:PID(32323) - on_poller(): 1548975566.1820893
+Jan 31 22:59:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:27,183:[32323]:Trader:PID(32323) - on_poller(): 1548975567.1828415
+Jan 31 22:59:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:27,976:[32323]:Trader:PID(32323) - on_post(): 1548975567.9754207
+Jan 31 22:59:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:27,981:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:28,184:[32323]:Trader:PID(32323) - on_poller(): 1548975568.183555
+Jan 31 22:59:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:29,185:[32323]:Trader:PID(32323) - on_poller(): 1548975569.1842928
+Jan 31 22:59:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:30,186:[32323]:Trader:PID(32323) - on_poller(): 1548975570.1850977
+Jan 31 22:59:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:31,187:[32323]:Trader:PID(32323) - on_poller(): 1548975571.1860318
+Jan 31 22:59:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:32,187:[32323]:Trader:PID(32323) - on_poller(): 1548975572.1868026
+Jan 31 22:59:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:32,977:[32323]:Trader:PID(32323) - on_post(): 1548975572.9765775
+Jan 31 22:59:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:32,981:[32323]:Trader:Posting offers for interval 28...
+Jan 31 22:59:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:33,188:[32323]:Trader:PID(32323) - on_poller(): 1548975573.1875737
+Jan 31 22:59:34 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:34,189:[32323]:Trader:PID(32323) - on_poller(): 1548975574.1883245
+Jan 31 22:59:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:35,190:[32323]:Trader:PID(32323) - on_poller(): 1548975575.1891134
+Jan 31 22:59:36 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:36,191:[32323]:Trader:PID(32323) - on_poller(): 1548975576.1900053
+Jan 31 22:59:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:37,191:[32323]:Trader:PID(32323) - on_poller(): 1548975577.1907508
+Jan 31 22:59:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:37,243:[32323]:Trader:interval finalized : 28
+Jan 31 22:59:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:37,249:[32323]:Trader:time_interval: 29 = finalized: 28 + 1
+Jan 31 22:59:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:37,978:[32323]:Trader:PID(32323) - on_post(): 1548975577.9774055
+Jan 31 22:59:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:37,982:[32323]:Trader:Posting offers for interval 29...
+Jan 31 22:59:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:38,192:[32323]:Trader:PID(32323) - on_poller(): 1548975578.191489
+Jan 31 22:59:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:39,193:[32323]:Trader:PID(32323) - on_poller(): 1548975579.1922047
+Jan 31 22:59:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:40,194:[32323]:Trader:PID(32323) - on_poller(): 1548975580.1929388
+Jan 31 22:59:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:41,195:[32323]:Trader:PID(32323) - on_poller(): 1548975581.1941166
+Jan 31 22:59:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:42,195:[32323]:Trader:PID(32323) - on_poller(): 1548975582.1948667
+Jan 31 22:59:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:42,979:[32323]:Trader:PID(32323) - on_post(): 1548975582.9781673
+Jan 31 22:59:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:42,983:[32323]:Trader:Posting offers for interval 29...
+Jan 31 22:59:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:43,196:[32323]:Trader:PID(32323) - on_poller(): 1548975583.1956186
+Jan 31 22:59:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:44,197:[32323]:Trader:PID(32323) - on_poller(): 1548975584.1963751
+Jan 31 22:59:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:45,198:[32323]:Trader:PID(32323) - on_poller(): 1548975585.197117
+Jan 31 22:59:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:46,199:[32323]:Trader:PID(32323) - on_poller(): 1548975586.198043
+Jan 31 22:59:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:47,199:[32323]:Trader:PID(32323) - on_poller(): 1548975587.1988018
+Jan 31 22:59:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:47,979:[32323]:Trader:PID(32323) - on_post(): 1548975587.978914
+Jan 31 22:59:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:47,983:[32323]:Trader:Posting offers for interval 29...
+Jan 31 22:59:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:48,200:[32323]:Trader:PID(32323) - on_poller(): 1548975588.1995525
+Jan 31 22:59:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:49,201:[32323]:Trader:PID(32323) - on_poller(): 1548975589.200299
+Jan 31 22:59:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:50,202:[32323]:Trader:PID(32323) - on_poller(): 1548975590.201041
+Jan 31 22:59:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:51,202:[32323]:Trader:PID(32323) - on_poller(): 1548975591.201967
+Jan 31 22:59:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:52,203:[32323]:Trader:PID(32323) - on_poller(): 1548975592.2028322
+Jan 31 22:59:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:52,980:[32323]:Trader:PID(32323) - on_post(): 1548975592.9796276
+Jan 31 22:59:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:52,985:[32323]:Trader:Posting offers for interval 29...
+Jan 31 22:59:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:53,204:[32323]:Trader:PID(32323) - on_poller(): 1548975593.203718
+Jan 31 22:59:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:54,205:[32323]:Trader:PID(32323) - on_poller(): 1548975594.2044597
+Jan 31 22:59:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:55,206:[32323]:Trader:PID(32323) - on_poller(): 1548975595.2051945
+Jan 31 22:59:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:56,207:[32323]:Trader:PID(32323) - on_poller(): 1548975596.2061653
+Jan 31 22:59:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:57,208:[32323]:Trader:PID(32323) - on_poller(): 1548975597.2069862
+Jan 31 22:59:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:57,981:[32323]:Trader:PID(32323) - on_post(): 1548975597.980411
+Jan 31 22:59:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:57,985:[32323]:Trader:Posting offers for interval 29...
+Jan 31 22:59:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:58,209:[32323]:Trader:PID(32323) - on_poller(): 1548975598.2081864
+Jan 31 22:59:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:22:59:59,211:[32323]:Trader:PID(32323) - on_poller(): 1548975599.2089837
+Jan 31 23:00:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:00,211:[32323]:Trader:PID(32323) - on_poller(): 1548975600.209989
+Jan 31 23:00:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:01,211:[32323]:Trader:PID(32323) - on_poller(): 1548975601.210765
+Jan 31 23:00:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:02,212:[32323]:Trader:PID(32323) - on_poller(): 1548975602.2115605
+Jan 31 23:00:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:02,320:[32201]:riaps.deplo.depm:handleFMMon: ('peer-', 'TransactiveEnergy', 'Trader', b'DADD810ABC1424E90A11CB6DA5688D29')
+Jan 31 23:00:02 bbb-e1ec RIAPS-DEPLO[32201]: WARNING:23:00:02,333:[32323]:Trader:UUID: DADD810ABC1424E90A11CB6DA5688D29, STATE: off
+Jan 31 23:00:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:02,982:[32323]:Trader:PID(32323) - on_post(): 1548975602.981163
+Jan 31 23:00:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:02,986:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:03,213:[32323]:Trader:PID(32323) - on_poller(): 1548975603.21228
+Jan 31 23:00:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:04,214:[32323]:Trader:PID(32323) - on_poller(): 1548975604.2129858
+Jan 31 23:00:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:05,214:[32323]:Trader:PID(32323) - on_poller(): 1548975605.2138762
+Jan 31 23:00:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:06,215:[32323]:Trader:PID(32323) - on_poller(): 1548975606.214937
+Jan 31 23:00:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:07,218:[32323]:Trader:PID(32323) - on_poller(): 1548975607.2157187
+Jan 31 23:00:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:07,983:[32323]:Trader:PID(32323) - on_post(): 1548975607.9824612
+Jan 31 23:00:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:07,987:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:08,217:[32323]:Trader:PID(32323) - on_poller(): 1548975608.2165108
+Jan 31 23:00:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:09,219:[32323]:Trader:PID(32323) - on_poller(): 1548975609.2182403
+Jan 31 23:00:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:10,220:[32323]:Trader:PID(32323) - on_poller(): 1548975610.2195623
+Jan 31 23:00:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:11,221:[32323]:Trader:PID(32323) - on_poller(): 1548975611.2204392
+Jan 31 23:00:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:12,222:[32323]:Trader:PID(32323) - on_poller(): 1548975612.2211688
+Jan 31 23:00:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:12,984:[32323]:Trader:PID(32323) - on_post(): 1548975612.9831927
+Jan 31 23:00:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:12,987:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:13,223:[32323]:Trader:PID(32323) - on_poller(): 1548975613.2221167
+Jan 31 23:00:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:14,223:[32323]:Trader:PID(32323) - on_poller(): 1548975614.2228491
+Jan 31 23:00:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:15,224:[32323]:Trader:PID(32323) - on_poller(): 1548975615.2235513
+Jan 31 23:00:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:16,225:[32323]:Trader:PID(32323) - on_poller(): 1548975616.2242959
+Jan 31 23:00:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:17,226:[32323]:Trader:PID(32323) - on_poller(): 1548975617.2250247
+Jan 31 23:00:17 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 23:00:17.748] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:40265
+Jan 31 23:00:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:17,984:[32323]:Trader:PID(32323) - on_post(): 1548975617.9839199
+Jan 31 23:00:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:17,990:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:18,227:[32323]:Trader:PID(32323) - on_poller(): 1548975618.2260587
+Jan 31 23:00:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:19,227:[32323]:Trader:PID(32323) - on_poller(): 1548975619.2268033
+Jan 31 23:00:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:20,228:[32323]:Trader:PID(32323) - on_poller(): 1548975620.2275345
+Jan 31 23:00:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:21,229:[32323]:Trader:PID(32323) - on_poller(): 1548975621.2282605
+Jan 31 23:00:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:22,230:[32323]:Trader:PID(32323) - on_poller(): 1548975622.228974
+Jan 31 23:00:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:22,985:[32323]:Trader:PID(32323) - on_post(): 1548975622.9846766
+Jan 31 23:00:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:22,990:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:23,231:[32323]:Trader:PID(32323) - on_poller(): 1548975623.2308347
+Jan 31 23:00:23 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 23:00:23.399] [rdiscovery] [info] Service is considered as zombie: 172.21.20.47:46869
+Jan 31 23:00:24 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:24,232:[32323]:Trader:PID(32323) - on_poller(): 1548975624.2315419
+Jan 31 23:00:25 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:25,233:[32323]:Trader:PID(32323) - on_poller(): 1548975625.232244
+Jan 31 23:00:26 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:26,234:[32323]:Trader:PID(32323) - on_poller(): 1548975626.2329652
+Jan 31 23:00:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:27,234:[32323]:Trader:PID(32323) - on_poller(): 1548975627.233952
+Jan 31 23:00:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:27,986:[32323]:Trader:PID(32323) - on_post(): 1548975627.985588
+Jan 31 23:00:27 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:27,991:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:28 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:28,235:[32323]:Trader:PID(32323) - on_poller(): 1548975628.2347045
+Jan 31 23:00:29 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:29,236:[32323]:Trader:PID(32323) - on_poller(): 1548975629.2354307
+Jan 31 23:00:30 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:30,237:[32323]:Trader:PID(32323) - on_poller(): 1548975630.2363317
+Jan 31 23:00:31 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:31,238:[32323]:Trader:PID(32323) - on_poller(): 1548975631.2371035
+Jan 31 23:00:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:32,239:[32323]:Trader:PID(32323) - on_poller(): 1548975632.2380931
+Jan 31 23:00:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:32,987:[32323]:Trader:PID(32323) - on_post(): 1548975632.9863245
+Jan 31 23:00:32 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:32,991:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:33 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:33,239:[32323]:Trader:PID(32323) - on_poller(): 1548975633.2388356
+Jan 31 23:00:34 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:34,240:[32323]:Trader:PID(32323) - on_poller(): 1548975634.239589
+Jan 31 23:00:35 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:35,241:[32323]:Trader:PID(32323) - on_poller(): 1548975635.2403288
+Jan 31 23:00:36 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:36,242:[32323]:Trader:PID(32323) - on_poller(): 1548975636.2410579
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,243:[32323]:Trader:PID(32323) - on_poller(): 1548975637.242043
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,387:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 8, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 117000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,391:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 69, 'buyerID': 18, 'time': 45, 'power': 2800, 'objective': 97800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,396:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 17, 'buyerID': 22, 'time': 49, 'power': 8100, 'objective': 144700}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,401:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 113, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 201500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,404:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 117, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 21100}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,412:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 22, 'buyerID': 27, 'time': 54, 'power': 7800, 'objective': 81300}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,415:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 4, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 83700}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,420:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 11, 'buyerID': 16, 'time': 43, 'power': 5600, 'objective': 160100}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,425:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 23, 'buyerID': 28, 'time': 55, 'power': 7600, 'objective': 214200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,428:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 5, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 15300}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,435:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 61, 'buyerID': 10, 'time': 37, 'power': 2900, 'objective': 18200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,439:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 74, 'buyerID': 23, 'time': 50, 'power': 600, 'objective': 106800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,443:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 66, 'buyerID': 15, 'time': 42, 'power': 3900, 'objective': 172800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,449:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 112, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 3000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,452:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 75, 'buyerID': 24, 'time': 51, 'power': 100, 'objective': 154500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,457:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 10, 'buyerID': 15, 'time': 42, 'power': 5200, 'objective': 168900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,460:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 64, 'buyerID': 13, 'time': 40, 'power': 4200, 'objective': 121200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,467:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 63, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 62900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,470:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 18, 'buyerID': 23, 'time': 50, 'power': 8400, 'objective': 106200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,473:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 73, 'buyerID': 22, 'time': 49, 'power': 1100, 'objective': 145800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,481:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 9, 'buyerID': 14, 'time': 41, 'power': 4700, 'objective': 185900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,484:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 16, 'buyerID': 21, 'time': 48, 'power': 7700, 'objective': 10700}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,489:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 60, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 86100}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,494:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 58, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 204900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,508:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 114, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 206600}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,517:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 70, 'buyerID': 19, 'time': 46, 'power': 2500, 'objective': 30500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,521:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 120, 'buyerID': 13, 'time': 40, 'power': 600, 'objective': 121800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,525:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 24, 'buyerID': 29, 'time': 56, 'power': 7400, 'objective': 129200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,532:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 67, 'buyerID': 16, 'time': 43, 'power': 3600, 'objective': 163700}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,535:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 71, 'buyerID': 20, 'time': 47, 'power': 2100, 'objective': 39900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,541:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 57, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 200200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,544:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 21, 'buyerID': 26, 'time': 53, 'power': 8100, 'objective': 48000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,547:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 59, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 110800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,550:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 20, 'buyerID': 25, 'time': 52, 'power': 8400, 'objective': 181200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,555:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 1, 'buyerID': 6, 'time': 33, 'power': 1300, 'objective': 198900}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,562:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 6, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 217500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,565:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 72, 'buyerID': 21, 'time': 48, 'power': 1700, 'objective': 12400}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,569:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 14, 'buyerID': 19, 'time': 46, 'power': 6900, 'objective': 28000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,573:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 119, 'buyerID': 12, 'time': 39, 'power': 1400, 'objective': 64300}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,577:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 116, 'buyerID': 9, 'time': 36, 'power': 2400, 'objective': 88500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,581:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 3, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 108800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,585:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 56, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 2000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,589:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 12, 'buyerID': 17, 'time': 44, 'power': 6100, 'objective': 70400}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,593:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 13, 'buyerID': 18, 'time': 45, 'power': 6500, 'objective': 95000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,597:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 28, 'buyerID': 32, 'time': 59, 'power': 7400, 'objective': 136600}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,605:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 19, 'buyerID': 24, 'time': 51, 'power': 8600, 'objective': 154400}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,608:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 26, 'buyerID': 31, 'time': 58, 'power': 7400, 'objective': 197600}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,611:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 25, 'buyerID': 30, 'time': 57, 'power': 7300, 'objective': 55300}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,615:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 62, 'buyerID': 11, 'time': 38, 'power': 3300, 'objective': 220800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,619:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 68, 'buyerID': 17, 'time': 44, 'power': 3100, 'objective': 73500}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,625:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 2, 'buyerID': 7, 'time': 34, 'power': 1700, 'objective': 203200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,629:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 0, 'buyerID': 5, 'time': 32, 'power': 1000, 'objective': 1000}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,633:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 7, 'buyerID': 12, 'time': 39, 'power': 3800, 'objective': 59100}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,637:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 115, 'buyerID': 8, 'time': 35, 'power': 2000, 'objective': 112800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,641:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 65, 'buyerID': 14, 'time': 41, 'power': 4300, 'objective': 190200}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,645:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 118, 'buyerID': 11, 'time': 38, 'power': 2300, 'objective': 223100}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,649:[32323]:Trader:TradeAdded({'solutionID': 2, 'sellerID': 15, 'buyerID': 20, 'time': 47, 'power': 7300, 'objective': 37800}).
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,988:[32323]:Trader:PID(32323) - on_post(): 1548975637.987068
+Jan 31 23:00:37 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:37,991:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:38 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:38,243:[32323]:Trader:PID(32323) - on_poller(): 1548975638.2427766
+Jan 31 23:00:39 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:39,244:[32323]:Trader:PID(32323) - on_poller(): 1548975639.2435107
+Jan 31 23:00:40 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:40,245:[32323]:Trader:PID(32323) - on_poller(): 1548975640.244231
+Jan 31 23:00:41 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:41,246:[32323]:Trader:PID(32323) - on_poller(): 1548975641.2449853
+Jan 31 23:00:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:42,246:[32323]:Trader:PID(32323) - on_poller(): 1548975642.2459037
+Jan 31 23:00:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:42,988:[32323]:Trader:PID(32323) - on_post(): 1548975642.987821
+Jan 31 23:00:42 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:42,992:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:43 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:43,247:[32323]:Trader:PID(32323) - on_poller(): 1548975643.2466574
+Jan 31 23:00:44 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:44,248:[32323]:Trader:PID(32323) - on_poller(): 1548975644.2473924
+Jan 31 23:00:45 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:45,249:[32323]:Trader:PID(32323) - on_poller(): 1548975645.2481275
+Jan 31 23:00:46 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:46,250:[32323]:Trader:PID(32323) - on_poller(): 1548975646.248855
+Jan 31 23:00:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:47,251:[32323]:Trader:PID(32323) - on_poller(): 1548975647.2500515
+Jan 31 23:00:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:47,989:[32323]:Trader:PID(32323) - on_post(): 1548975647.9885561
+Jan 31 23:00:47 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:47,993:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:48 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:48,251:[32323]:Trader:PID(32323) - on_poller(): 1548975648.2507865
+Jan 31 23:00:49 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:49,252:[32323]:Trader:PID(32323) - on_poller(): 1548975649.2514942
+Jan 31 23:00:50 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:50,253:[32323]:Trader:PID(32323) - on_poller(): 1548975650.2522087
+Jan 31 23:00:51 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:51,254:[32323]:Trader:PID(32323) - on_poller(): 1548975651.2529254
+Jan 31 23:00:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:52,255:[32323]:Trader:PID(32323) - on_poller(): 1548975652.2540107
+Jan 31 23:00:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:52,990:[32323]:Trader:PID(32323) - on_post(): 1548975652.989385
+Jan 31 23:00:52 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:52,994:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:53 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:53,256:[32323]:Trader:PID(32323) - on_poller(): 1548975653.2552059
+Jan 31 23:00:53 bbb-e1ec RIAPS-DEPLO[32201]: [2019-01-31 23:00:53.385] [rdiscovery] [info] Known nodes: *172.21.20.63*; 172.21.20.3; 172.21.20.33; 172.21.20.42; 172.21.20.43; 172.21.20.45; 172.21.20.5; 172.21.20.51; 172.21.20.53; 172.21.20.59; 172.21.20.60; 172.21.20.61; 172.21.20.62; 172.21.20.64; 172.21.20.66; 172.21.20.67; 172.21.20.8;
+Jan 31 23:00:54 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:54,257:[32323]:Trader:PID(32323) - on_poller(): 1548975654.256348
+Jan 31 23:00:55 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:55,258:[32323]:Trader:PID(32323) - on_poller(): 1548975655.2571003
+Jan 31 23:00:56 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:56,258:[32323]:Trader:PID(32323) - on_poller(): 1548975656.2579393
+Jan 31 23:00:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:57,259:[32323]:Trader:PID(32323) - on_poller(): 1548975657.2586806
+Jan 31 23:00:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:57,991:[32323]:Trader:PID(32323) - on_post(): 1548975657.9900942
+Jan 31 23:00:57 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:57,994:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:00:58 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:58,260:[32323]:Trader:PID(32323) - on_poller(): 1548975658.2594066
+Jan 31 23:00:59 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:00:59,261:[32323]:Trader:PID(32323) - on_poller(): 1548975659.2601237
+Jan 31 23:01:00 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:00,262:[32323]:Trader:PID(32323) - on_poller(): 1548975660.2608228
+Jan 31 23:01:01 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:01,262:[32323]:Trader:PID(32323) - on_poller(): 1548975661.2618454
+Jan 31 23:01:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:02,263:[32323]:Trader:PID(32323) - on_poller(): 1548975662.2625847
+Jan 31 23:01:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:02,991:[32323]:Trader:PID(32323) - on_post(): 1548975662.9908206
+Jan 31 23:01:02 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:02,996:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:01:03 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:03,264:[32323]:Trader:PID(32323) - on_poller(): 1548975663.2633078
+Jan 31 23:01:04 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:04,264:[32323]:Trader:PID(32323) - on_poller(): 1548975664.2640002
+Jan 31 23:01:05 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:05,266:[32323]:Trader:PID(32323) - on_poller(): 1548975665.2647247
+Jan 31 23:01:06 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:06,266:[32323]:Trader:PID(32323) - on_poller(): 1548975666.2654788
+Jan 31 23:01:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:07,267:[32323]:Trader:PID(32323) - on_poller(): 1548975667.2662332
+Jan 31 23:01:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:07,992:[32323]:Trader:PID(32323) - on_post(): 1548975667.9915512
+Jan 31 23:01:07 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:07,996:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:01:08 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:08,268:[32323]:Trader:PID(32323) - on_poller(): 1548975668.2669961
+Jan 31 23:01:09 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:09,268:[32323]:Trader:PID(32323) - on_poller(): 1548975669.2677326
+Jan 31 23:01:10 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:10,269:[32323]:Trader:PID(32323) - on_poller(): 1548975670.2684562
+Jan 31 23:01:11 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:11,270:[32323]:Trader:PID(32323) - on_poller(): 1548975671.269159
+Jan 31 23:01:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:12,271:[32323]:Trader:PID(32323) - on_poller(): 1548975672.2700107
+Jan 31 23:01:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:12,993:[32323]:Trader:PID(32323) - on_post(): 1548975672.9922805
+Jan 31 23:01:12 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:12,997:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:01:13 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:13,271:[32323]:Trader:PID(32323) - on_poller(): 1548975673.2707412
+Jan 31 23:01:14 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:14,272:[32323]:Trader:PID(32323) - on_poller(): 1548975674.27146
+Jan 31 23:01:15 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:15,273:[32323]:Trader:PID(32323) - on_poller(): 1548975675.2722085
+Jan 31 23:01:16 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:16,274:[32323]:Trader:PID(32323) - on_poller(): 1548975676.272919
+Jan 31 23:01:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:17,275:[32323]:Trader:PID(32323) - on_poller(): 1548975677.2741208
+Jan 31 23:01:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:17,994:[32323]:Trader:PID(32323) - on_post(): 1548975677.993028
+Jan 31 23:01:17 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:17,998:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:01:18 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:18,275:[32323]:Trader:PID(32323) - on_poller(): 1548975678.274872
+Jan 31 23:01:19 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:19,276:[32323]:Trader:PID(32323) - on_poller(): 1548975679.2756212
+Jan 31 23:01:20 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:20,277:[32323]:Trader:PID(32323) - on_poller(): 1548975680.2763383
+Jan 31 23:01:21 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:21,278:[32323]:Trader:PID(32323) - on_poller(): 1548975681.2770834
+Jan 31 23:01:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:22,278:[32323]:Trader:PID(32323) - on_poller(): 1548975682.277938
+Jan 31 23:01:22 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:22,994:[32323]:Trader:PID(32323) - on_post(): 1548975682.993859
+Jan 31 23:01:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:22,999:[32323]:Trader:Posting offers for interval 29...
+Jan 31 23:01:23 bbb-e1ec RIAPS-DEPLO[32201]: INFO:23:01:23,279:[32323]:Trader:PID(32323) - on_poller(): 1548975683.2786448

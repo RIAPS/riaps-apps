@@ -150,6 +150,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"DSO",
             "ports":{
                 "anss":{},
@@ -183,6 +184,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"PubSim",
             "ports":{
                 "anss":{},
@@ -221,6 +223,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"Recorder",
             "ports":{
                 "anss":{},
@@ -254,6 +257,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"Solver",
             "ports":{
                 "anss":{},
@@ -291,6 +295,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"SubSim",
             "ports":{
                 "anss":{},
@@ -330,6 +335,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"TSMrecv",
             "ports":{
                 "anss":{},
@@ -361,6 +367,7 @@
                     "name":"logfile"
                 }
             ],
+            "language":"default",
             "name":"Trader",
             "ports":{
                 "anss":{},
