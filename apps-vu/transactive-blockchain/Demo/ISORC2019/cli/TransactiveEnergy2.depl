@@ -1,0 +1,17 @@
+app TransactiveEnergy{
+	on (172.21.20.32)  Trader(ID=101,logfile="Trader101");
+	on (172.21.20.31) Trader(ID=102,logfile="Trader102");
+	//on (172.21.20.59) Trader(ID=103,logfile="Trader103");
+	//on (172.21.20.60) Trader(ID=104,logfile="Trader104");
+	//on (172.21.20.61) Trader(ID=105,logfile="Trader105");
+
+	//on (172.21.20.31) Trader(ID=106,logfile="Trader106");
+	//on (172.21.20.61) Trader(ID=107,logfile="Trader107");
+	//on (172.21.20.62) Trader(ID=108,logfile="Trader108");
+	//on (172.21.20.64) Trader(ID=109,logfile="Trader109");
+	//on (172.21.20.18) Trader(ID=110,logfile="Trader110");
+
+	on (172.21.20.29) DSO(logfile="DSO", simlog="subSim");
+	on (172.21.20.30) Recorder(logfile="Recorder", simlog="pubSim")	;
+	on (172.21.20.100) Solver(logfile="Solver1");
+}

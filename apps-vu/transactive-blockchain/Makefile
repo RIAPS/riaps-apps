@@ -2,14 +2,17 @@ include /etc/lsb-release
 
 setup:
 	sudo apt-get install -y tmux
+
 	sudo pip3 install python-dotenv
 	sudo apt-get install -y libcurl4-openssl-dev
 	sudo pip3 install pycurl
 	sudo pip3 install influxdb
 	sudo timedatectl set-timezone UTC
+
 	make geth
 	make grafana
 	make influx
+
 	sudo pip3 install scipy
 	sudo pip3 install numpy
 

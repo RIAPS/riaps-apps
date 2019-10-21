@@ -1,0 +1,31 @@
+riaps@bbb-1b70:~$ tail -f /tmp/Trader101.log
+WARNING:23:48:14,117:[1793]:Trader:(PID 1793) - starting Trader
+WARNING:23:48:21,021:[1793]:Trader:handleActivate: 1549064901.0216267
+WARNING:23:48:21,039:[1793]:Trader:UUID: 1352F73129DC696D7B2640D8AACD74CC
+WARNING:23:48:44,941:[1793]:Trader:Connected: 1 1793
+^C
+riaps@bbb-1b70:~$ tail -f /tmp/Trader101.log
+WARNING:23:51:47,019:[1904]:Trader:(PID 1904) - starting Trader
+WARNING:23:51:57,677:[1904]:Trader:handleActivate: 1549065117.6770315
+WARNING:23:51:57,683:[1904]:Trader:UUID: 123E62AB792103D38EDB736666B30E56
+WARNING:23:51:57,722:[1904]:Trader:UUID: C307A412EC532944D3AA1D361763AF30, STATE: on
+WARNING:23:51:59,117:[1904]:Trader:Connected: 1 1904
+^C
+riaps@bbb-1b70:~$ ps -ef | grep deplo
+root      1713  1694  0 23:47 pts/0    00:00:00 sudo journalctl -f -u riaps-deplo.service
+root      1715  1713  0 23:47 pts/0    00:00:00 journalctl -f -u riaps-deplo.service
+root      1842     1 30 23:51 ?        00:01:05 /usr/bin/python3 /usr/local/bin/riaps_deplo
+riaps     1978   945  0 23:54 pts/1    00:00:00 grep --color=auto deplo
+riaps@bbb-1b70:~$ sudo kill -9 1842
+riaps@bbb-1b70:~$ tail -f /tmp/Trader101.log
+WARNING:23:51:47,019:[1904]:Trader:(PID 1904) - starting Trader
+WARNING:23:51:57,677:[1904]:Trader:handleActivate: 1549065117.6770315
+WARNING:23:51:57,683:[1904]:Trader:UUID: 123E62AB792103D38EDB736666B30E56
+WARNING:23:51:57,722:[1904]:Trader:UUID: C307A412EC532944D3AA1D361763AF30, STATE: on
+WARNING:23:51:59,117:[1904]:Trader:Connected: 1 1904
+^C
+riaps@bbb-1b70:~$ tail -f /tmp/Trader101.log
+WARNING:23:55:46,015:[2044]:Trader:(PID 2044) - starting Trader
+WARNING:23:55:51,658:[2044]:Trader:handleActivate: 1549065351.6581566
+WARNING:23:55:51,669:[2044]:Trader:UUID: 3FB14685481707CFC5958B5778E8CB6E
+WARNING:23:55:52,976:[2044]:Trader:Connected: 1 2044

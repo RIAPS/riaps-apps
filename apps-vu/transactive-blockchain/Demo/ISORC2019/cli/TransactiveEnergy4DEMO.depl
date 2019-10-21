@@ -1,0 +1,12 @@
+app TransactiveEnergy{
+
+
+	on (172.21.20.31) Trader(ID=305,logfile="Trader305");
+	on (172.21.20.32) Trader(ID=304,logfile="304");
+
+
+	on (172.21.20.29) DSO(logfile="DSO", simlog="subSim");
+	on (172.21.20.30) Recorder(logfile="Recorder", simlog="pubSim")	;
+
+	on (172.21.20.100) Solver(logfile="Solver1");
+}

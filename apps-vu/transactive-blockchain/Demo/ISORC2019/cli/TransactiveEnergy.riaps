@@ -1,0 +1,96 @@
+// RIAPS WeatherMonitor
+app TransactiveEnergy {
+    message SimInt;
+    message subreadyreq;
+    message subreadyrep;
+
+    message Query_contract_address;
+    message Contract_address;
+    message Ack_finalized;
+
+    library libs;
+
+    // Publisher component
+    component PubSim(logfile="pubSim") {
+    	pub pubSimPort : SimInt; //publish port to send values
+    	rep ready : (subreadyreq, subreadyrep); // receive acknowledgement
+    	timer clock 1000;
+    }
+
+    // Subscriber Component
+    component SubSim(logfile="subSim") {
+    	sub subSimPort : SimInt; // subscribe port to receive values
+    	req ready : (subreadyreq, subreadyrep); //send acknowledgement
+    	timer connect 1000;
+    }
+
+	// Distributed System Operator
+    component DSO(logfile = "DSO") {
+      rep contractAddr : (Query_contract_address,Contract_address) ;	//
+      timer finalizer 120000;
+    }
+
+    component TSMrecv(logfile = "TSM"){
+      sub ack : Ack_finalized timed ;
+    }
+
+    // Traders, and Solvers
+    component Trader(ID=101, logfile="") {
+      req contractAddr : (Query_contract_address,Contract_address) ;	// Subscriber port to trigger component with Temperature messages
+      timer poller 1000;
+      timer post 5000;
+      pub ack : Ack_finalized timed;
+    }
+
+    component Solver(logfile = "Solver1") {
+    	req contractAddr : (Query_contract_address,Contract_address) ;	// Subscriber port to trigger component with Temperature messages
+    	timer poller 1000;
+    	//timer solve 5000 within 500 msec;
+      timer solve 5000;
+
+    }
+
+    component Recorder(logfile = "Recorder"){
+    	req contractAddr : (Query_contract_address,Contract_address) ;	// Subscriber port to trigger component with Temperature messages
+    	timer poller 1000;
+    }
+
+    // Energy Traders
+    actor Trader(ID=101,logfile = "Trader101"){
+    	uses {
+//    		net rate 10 kbps ceil 12 kbps burst 1.2 k; // Net limits
+   		net rate 100 kbps ceil 200 kbps;
+    	}
+    	{
+    		trader : Trader(ID=ID, logfile=logfile);
+    	}
+    }
+
+    // Energy Solvers
+    actor Solver(logfile = "Solver1"){
+    	uses {
+//    		space 50 mb;
+    		space 100 mb;
+    		mem 135 mb;
+//    		cpu max 30% over 1;
+    	}
+    	{
+    		solver : Solver(logfile=logfile);
+    	}
+    }
+
+    actor DSO(logfile = "DSO",simlog="subSim"){
+    	{
+    		dso : DSO(logfile=logfile);
+    		//subcomp : SubSim(logfile=simlog);
+        tsmRecv : TSMrecv(logfile = "TSMrecv");
+    	}
+    }
+
+    actor Recorder(logfile = "Recorder", simlog="pubSim"){
+    	{
+    		recorder : Recorder(logfile=logfile);
+    		//pubcomp : PubSim(logfile = simlog);
+    	}
+    }
+}
