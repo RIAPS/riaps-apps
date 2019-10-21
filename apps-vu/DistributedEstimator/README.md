@@ -26,7 +26,7 @@ The following steps can be used to pull this application into an Eclipse project
 
 2) Create a "C/C++" project from "Existing Code as Makefile Project".
 
-3) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Linux GCC" toolchain for indexer settings.  The same can be done for the application under the "Mixed" folder.
+3) Select the application files under the "Cpp" folder in the local copy of the repository, and select "Cross GCC" toolchain for indexer settings.  The same can be done for the application under the "Mixed" folder.
 
 4) If the CMakeLists.txt file does not exist, run the **riaps-gen** tool to create the component shells and the CMakeLists.txt file.  Below is an example for the DistributedEstimator example where the model file (.json) for the project is specified and the output directory is the current directory.
 
