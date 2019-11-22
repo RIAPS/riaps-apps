@@ -1,17 +1,18 @@
-# CMakeLists.txt that works with RIAPS v1.1.17 and later
+# CMakeLists.txt that works with RIAPS v1.1.16 and earlier
 cmake_minimum_required(VERSION 3.10)
-project(DistributedVoltage)
+project(WeatherMonitor)
 
 option(arch "amd64/armhf" "amd64")
 set(CMAKE_SYSTEM_NAME Linux)
 
+set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wno-psabi")
 
 set(PYBIND11_CPP_STANDARD -std=c++17)
 
 
-##Set the platform
+#Set the platform
 if (${arch} STREQUAL "armhf")
  set(TOOLCHAIN_PREFIX /usr/bin/arm-linux-gnueabihf)
  set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
@@ -26,18 +27,13 @@ endif()
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-if (${arch} STREQUAL "armhf")
- set(riaps_prefix /usr/arm-linux-gnueabihf)
-else()
- set(riaps_prefix /usr/local)
-endif()
+set(CMAKE_INSTALL_PREFIX ${riaps_prefix}/${arch})
 
 set(DEPENDENCIES ${riaps_prefix})
-set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/include)
-set (LIBALLPATH_LIB ${DEPENDENCIES}/lib)
+set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/${arch}/include)
+set (LIBALLPATH_LIB ${DEPENDENCIES}/${arch}/lib)
 include_directories(${LIBALLPATH_INCLUDE})
-include_directories(/usr/include/python3.6m/)
-include_directories(/usr/local/include/python3.6/)
+include_directories(${LIBALLPATH_INCLUDE}/pybind11/include)
 link_directories(${LIBALLPATH_LIB})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
@@ -45,6 +41,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
 include_directories(include)
+include_directories(/usr/include/python3.6m/)
 
 # riaps:keep_cmake:begin
 
@@ -52,21 +49,21 @@ include_directories(include)
 
 
 add_custom_command(
-        OUTPUT  "${CMAKE_SOURCE_DIR}/include/messages/distributedvoltage.capnp.c++"
-        DEPENDS "${CMAKE_SOURCE_DIR}/distributedvoltage.capnp"
+        OUTPUT  "${CMAKE_SOURCE_DIR}/include/messages/weathermonitor.capnp.c++"
+        DEPENDS "${CMAKE_SOURCE_DIR}/weathermonitor.capnp"
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-        COMMAND capnp compile ./distributedvoltage.capnp -oc++:./include/messages/
+        COMMAND capnp compile ./weathermonitor.capnp -oc++:./include/messages/
         COMMENT "=== Generating capnp ==="
 )
 
-# riaps:keep_modbusuart:begin
-add_library(modbusuart SHARED
-        src/ModbusUART.cc
-        src/base/ModbusUARTBase.cc
-        include/base/ModbusUARTBase.h
-        include/ModbusUART.h
-        include/messages/distributedvoltage.capnp.c++
+# riaps:keep_tempmonitor:begin
+add_library(tempmonitor SHARED
+        src/TempMonitor.cc
+        src/base/TempMonitorBase.cc
+        include/base/TempMonitorBase.h
+        include/TempMonitor.h
+        include/messages/weathermonitor.capnp.c++
         )
-target_link_libraries(modbusuart PRIVATE czmq riaps dl capnp kj modbus)
-set_target_properties(modbusuart PROPERTIES PREFIX lib SUFFIX .so)
-# riaps:keep_modbusuart:end
+target_link_libraries(tempmonitor PRIVATE czmq riaps dl capnp kj)
+set_target_properties(tempmonitor PROPERTIES PREFIX lib SUFFIX .so)
+# riaps:keep_tempmonitor:end

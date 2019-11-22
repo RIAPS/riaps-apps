@@ -36,8 +36,7 @@ riaps_gen -m DistributedEstimator.json -o .
 6) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then "Paths and Symbols", add the following GNU C++ Includes for this project under the GNU C++:
 
 - /usr/include/python3.6m
-- /opt/riaps/amd64/include
-- /opt/riaps/amd64/include/pybind11/include
+- /usr/local/include/python3.6/
 - /<project_name>/include (this is a workspace path and depends on the project name, utilize "Workspace" navigation when adding this directory path)
 
 7) To easily access the RIAPS platform tools from within Eclipse, import the [riaps_ctrl.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_ctrl.launch) and [riaps_deplo.launch](https://github.com/RIAPS/riaps-pycom/blob/master/bin/riaps_deplo.launch) files.  

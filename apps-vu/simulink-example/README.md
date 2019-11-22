@@ -1,7 +1,5 @@
 # simulink-example
 
-***Note: This is an older application and has not been tested with the current released platform***
-
 _Mass - Spring - Damper_
 
 This example shows a potential integration approach for RIAPS applications with Simulink. The example application demonstrates how to implement a software-based PID controller for controlling a dynamic physical system simulated real-time in Simulink. The simulated dynamic system is a mass-spring-damper governed by a 2nd order differential equation. The PID controller aims to control the position of the _mass_ along a predefined set of control points. The complete picture of the control loop is shown here:
@@ -23,6 +21,6 @@ Copyright 2018 Vanderbilt University
 
 The Simulink model (`mass_spring_damper.slx`) requires MATLAB/Simulink and the Simscape blockset. It was developed and tested with MATLAB R2017b. This model needs to be opened and executed in Simulink. The `UDP Send` block may need to be (re)configured with the actual IP address of the BBB node executing the PID controller application.
 
-Next, the included RIAPS application needs to be compiled, built, deployed and launched (using the standard RIAPS application development process). The actual IP address of the MATLAB host should be configured in `cpp/Actuator.cc`. 
+Next, the included RIAPS application needs to be compiled, built, deployed and launched (using the standard RIAPS application development process). The actual IP address of the MATLAB host should be configured in `cpp/Actuator.cc`.
 
 Once both parts (Simulink and RIAPS) are launched, you can observe the plot of position data in MATLAB/Simulink.

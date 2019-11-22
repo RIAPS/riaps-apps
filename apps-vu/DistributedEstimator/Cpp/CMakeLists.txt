@@ -1,15 +1,14 @@
+# CMakeLists.txt that works with RIAPS v1.1.17 and later
 cmake_minimum_required(VERSION 3.10)
 project(DistributedEstimator)
 
 option(arch "amd64/armhf" "amd64")
 set(CMAKE_SYSTEM_NAME Linux)
 
-set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wno-psabi")
 
 set(PYBIND11_CPP_STANDARD -std=c++17)
-
 
 #Set the platform
 if (${arch} STREQUAL "armhf")
@@ -26,13 +25,18 @@ endif()
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(CMAKE_INSTALL_PREFIX ${riaps_prefix}/${arch})
+if (${arch} STREQUAL "armhf")
+ set(riaps_prefix /usr/arm-linux-gnueabihf)
+else()
+ set(riaps_prefix /usr/local)
+endif()
 
 set(DEPENDENCIES ${riaps_prefix})
-set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/${arch}/include)
-set (LIBALLPATH_LIB ${DEPENDENCIES}/${arch}/lib)
+set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/include)
+set (LIBALLPATH_LIB ${DEPENDENCIES}/lib)
 include_directories(${LIBALLPATH_INCLUDE})
-include_directories(${LIBALLPATH_INCLUDE}/pybind11/include)
+include_directories(/usr/include/python3.6m/)
+include_directories(/usr/local/include/python3.6/)
 link_directories(${LIBALLPATH_LIB})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
@@ -40,7 +44,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
 include_directories(include)
-include_directories(/usr/include/python3.6m/)
 
 # riaps:keep_cmake:begin
 

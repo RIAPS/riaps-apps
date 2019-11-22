@@ -1,13 +1,15 @@
-# CMakeLists.txt that works with RIAPS v1.1.17 and later
+# CMakeLists.txt that works with RIAPS v1.1.16 and earlier
 cmake_minimum_required(VERSION 3.0.0)
 project(distributed_phase_estimation VERSION 1.0.0)
 option(arch "amd64/armhf" "amd64")
 option(BUILD_TESTS  "Build tests" ON)
 set(CMAKE_SYSTEM_NAME Linux)
 
+set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
+
 #Set the platform
 if (${arch} STREQUAL "armhf")
- set(TOOLCHAIN_PREFIX /usr/bin/arm-linux-gnueabihf)
+ set(TOOLCHAIN_PREFIX arm-linux-gnueabihf)
  set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
  set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++)
  set(CMAKE_FIND_ROOT_PATH /usr/${TOOLCHAIN_PREFIX})
@@ -20,18 +22,12 @@ else()
  set (CMAKE_C_FLAGS "-std=c99")
 endif()
 
-if (${arch} STREQUAL "armhf")
- set(riaps_prefix /usr/arm-linux-gnueabihf)
-else()
- set(riaps_prefix /usr/local)
-endif()
+set(CMAKE_INSTALL_PREFIX ${riaps_prefix}/${arch})
 
 set(DEPENDENCIES ${riaps_prefix})
-set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/include)
-set (LIBALLPATH_LIB ${DEPENDENCIES}/lib)
+set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/${arch}/include)
+set (LIBALLPATH_LIB ${DEPENDENCIES}/${arch}/lib)
 include_directories(${LIBALLPATH_INCLUDE})
-include_directories(/usr/include/python3.6m/)
-include_directories(/usr/local/include/python3.6/)
 link_directories(${LIBALLPATH_LIB})
 
 
