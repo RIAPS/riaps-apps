@@ -3,6 +3,7 @@
 from riaps.run.comp import Component
 import os
 import logging
+from riaps.run.exc import PortError
 
 import time
 # riaps:keep_import:end
@@ -26,8 +27,11 @@ class LocalEstimator(Component):
         while self.pending > 0:     # Handle the case when there is a pending request
             self.on_query()
         msg = "sensor_query"
-        if self.query.send_pyobj(msg):
+        try:
+            self.query.send_pyobj(msg)
             self.pending += 1
+        except PortError as e:
+            self.logger.error("send error (%d)" % e.errno)
 # riaps:keep_ready:end
 
 # riaps:keep_query:begin
