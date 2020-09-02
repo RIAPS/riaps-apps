@@ -27,7 +27,7 @@ namespace timertest{
                              const std::string &application_name,
                              const std::string &actor_name,
                              const py::list groups) : GeneratorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name,
-                                                                                 actor_name) {
+                                                                                 actor_name, groups) {
 
             int policy = SCHED_RR;
             struct sched_param params;

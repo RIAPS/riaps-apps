@@ -20,7 +20,7 @@ namespace timertest {
                                    const std::string &actor_name,
                                    const py::list groups)
                 : ComponentBase(application_name, actor_name) {
-            auto conf = PyConfigConverter::convert(type_spec, actor_spec);
+            auto conf = PyConfigConverter::convert(type_spec, actor_spec, args);
             auto gr = PyConfigConverter::ConvertGroups(groups);
             conf.component_name = name;
             conf.component_type = type_name;
