@@ -1,0 +1,74 @@
+// Deploy on all BBB
+app Loadshed {
+	//on (192.168.1.100) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_loadshed.sw_status.", priority = 1);
+	
+  //on (192.168.1.100) ControllerActor1(sensor="n650.distribution_load.VA",actuator="sw_p02.sw_status.", priority = 2);
+  //on (192.168.1.100) ControllerActor2(sensor="n650.distribution_load.VA",actuator="sw_p01.sw_status.", priority = 3);
+ 
+  on (10.1.1.92) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_loadshed.sw_status.", priority = 1);
+  on (10.1.1.66) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p01.sw_status.", priority = 2);
+  on (10.1.1.170) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p02.sw_status.", priority = 3);
+  on (10.1.1.242) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p03.sw_status.", priority = 4);
+  on (10.1.1.63) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p04.sw_status.", priority = 5);
+  on (10.1.1.59) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p05.sw_status.", priority = 6);
+  on (10.1.1.44) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p06.sw_status.", priority = 7);
+  on (10.1.1.98) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p07.sw_status.", priority = 8);
+  on (10.1.1.237) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p08.sw_status.", priority = 9);
+  on (10.1.1.67) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p09.sw_status.", priority = 10);
+  on (10.1.1.172) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p10.sw_status.", priority = 11);
+  on (10.1.1.164) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p11.sw_status.", priority = 12);
+  on (10.1.1.168) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p12.sw_status.", priority = 13);
+  on (10.1.1.166) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p13.sw_status.", priority = 14);
+  on (10.1.1.169) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p14.sw_status.", priority = 15);
+  on (10.1.1.60) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p15.sw_status.", priority = 16);
+  on (10.1.1.235) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p16.sw_status.", priority = 17);
+  on (10.1.1.85) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p17.sw_status.", priority = 18);
+  on (10.1.1.70) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p18.sw_status.", priority = 19);
+  on (10.1.1.42) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p19.sw_status.", priority = 20);
+  on (10.1.1.171) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p20.sw_status.", priority = 21);
+  on (10.1.1.167) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p21.sw_status.", priority = 22);
+  on (10.1.1.47) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p22.sw_status.", priority = 23);
+  on (10.1.1.161) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p23.sw_status.", priority = 24);
+  on (10.1.1.238) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p24.sw_status.", priority = 25);
+  on (10.1.1.62) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p25.sw_status.", priority = 26);
+  on (10.1.1.46) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p26.sw_status.", priority = 27);
+  on (10.1.1.55) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p27.sw_status.", priority = 28);
+  on (10.1.1.239) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p28.sw_status.", priority = 29);
+  on (10.1.1.52) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p29.sw_status.", priority = 30);
+  on (10.1.1.43) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p30.sw_status.", priority = 31);
+  on (10.1.1.244) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p31.sw_status.", priority = 32);
+  
+  //on (bbb-2839.loca) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_loadshed.sw_status.", priority = 1);
+  //on (bbb-164c.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p01.sw_status.", priority = 2);
+  //on (bbb-e835.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p02.sw_status.", priority = 3);
+  //on (bbb-ef9f.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p03.sw_status.", priority = 4);
+  //on (bbb-feb5.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p04.sw_status.", priority = 5);
+  //on (bbb-4797.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p05.sw_status.", priority = 6);
+  //on (bbb-eb18.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p06.sw_status.", priority = 7);
+  //on (bbb-fea3.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p07.sw_status.", priority = 8);
+  //on (bbb-d521.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p08.sw_status.", priority = 9);
+  //on (bbb-cdee.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p09.sw_status.", priority = 10);
+  //on (bbb-1180.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p10.sw_status.", priority = 11);
+  //on (bbb-e22d.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p11.sw_status.", priority = 12);
+  //on (bbb-a0a6.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p12.sw_status.", priority = 13);
+  //on (bbb-923a.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p13.sw_status.", priority = 14);
+  //on (bbb-be53.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p14.sw_status.", priority = 15);
+  //on (bbb-da04.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p15.sw_status.", priority = 16);
+  //on (bbb-f913.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p16.sw_status.", priority = 17);
+  //on (bbb-1d35.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p17.sw_status.", priority = 18);
+  //on (bbb-e528.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p18.sw_status.", priority = 19);
+  //on (bbb-93bb.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p19.sw_status.", priority = 20);
+  //on (bbb-e7b9.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p20.sw_status.", priority = 21);
+  //on (bbb-da61.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p21.sw_status.", priority = 22);
+  //on (bbb-20fb.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p22.sw_status.", priority = 23);
+  //on (bbb-4930.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p23.sw_status.", priority = 24);
+  //on (bbb-e7b8.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p24.sw_status.", priority = 25);
+  //on (bbb-23c6.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p25.sw_status.", priority = 26);
+  //on (bbb-f365.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p26.sw_status.", priority = 27);
+  //on (bbb-8be2.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p27.sw_status.", priority = 28);
+  //on (bbb-7030.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p28.sw_status.", priority = 29);
+  //on (bbb-5df2.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p29.sw_status.", priority = 30);
+  //on (bbb-1610.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p30.sw_status.", priority = 31);
+ // on (bbb-da2e.local) ControllerActor(sensor="n650.distribution_load.VA",actuator="sw_p31.sw_status.", priority = 32);
+ 
+}

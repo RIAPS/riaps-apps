@@ -1,0 +1,202 @@
+--- 
+broker: "tcp://localhost:5570"
+name: loadshed
+time_delta: 1s
+values: 
+  n650.distribution_load: 
+    topic: gridlabdSim/n650.distribution_load
+  sw_loadshed.phase_A_state: 
+    topic: gridlabdSim/sw_loadshed.phase_A_state
+  sw_p01.phase_A_state: 
+    topic: gridlabdSim/sw_p01.phase_A_state
+  sw_p02.phase_A_state: 
+    topic: gridlabdSim/sw_p02.phase_A_state
+
+  m675.voltage_A:
+    topic: gridlabdSim/m675.voltage_A
+
+  mp01.voltage_A:
+    topic: gridlabdSim/mp01.voltage_A
+
+  mp02.voltage_A:
+    topic: gridlabdSim/mp02.voltage_A
+
+  sw_p03.phase_A_state: 
+    topic: gridlabdSim/sw_p03.phase_A_state
+
+  mp03.voltage_A:
+    topic: gridlabdSim/mp03.voltage_A
+
+  sw_p03.phase_A_state: 
+    topic: gridlabdSim/sw_p03.phase_A_state
+
+  mp03.voltage_A:
+    topic: gridlabdSim/mp03.voltage_A
+
+  sw_p04.phase_A_state: 
+    topic: gridlabdSim/sw_p04.phase_A_state
+
+  mp04.voltage_A:
+    topic: gridlabdSim/mp04.voltage_A
+
+  sw_p05.phase_A_state: 
+    topic: gridlabdSim/sw_p05.phase_A_state
+
+  mp05.voltage_A:
+    topic: gridlabdSim/mp05.voltage_A
+
+  sw_p06.phase_A_state: 
+    topic: gridlabdSim/sw_p06.phase_A_state
+
+  mp06.voltage_A:
+    topic: gridlabdSim/mp06.voltage_A
+
+  sw_p07.phase_A_state: 
+    topic: gridlabdSim/sw_p07.phase_A_state
+
+  mp07.voltage_A:
+    topic: gridlabdSim/mp07.voltage_A
+
+  sw_p08.phase_A_state: 
+    topic: gridlabdSim/sw_p08.phase_A_state
+
+  mp08.voltage_A:
+    topic: gridlabdSim/mp08.voltage_A
+
+  sw_p09.phase_A_state: 
+    topic: gridlabdSim/sw_p09.phase_A_state
+
+  mp09.voltage_A:
+    topic: gridlabdSim/mp09.voltage_A
+
+  sw_p10.phase_A_state: 
+    topic: gridlabdSim/sw_p10.phase_A_state
+
+  mp10.voltage_A:
+    topic: gridlabdSim/mp10.voltage_A
+
+  sw_p11.phase_A_state: 
+    topic: gridlabdSim/sw_p11.phase_A_state
+
+  mp11.voltage_A:
+    topic: gridlabdSim/mp11.voltage_A
+
+  sw_p12.phase_A_state: 
+    topic: gridlabdSim/sw_p12.phase_A_state
+
+  mp12.voltage_A:
+    topic: gridlabdSim/mp12.voltage_A
+
+  sw_p13.phase_A_state: 
+    topic: gridlabdSim/sw_p13.phase_A_state
+
+  mp13.voltage_A:
+    topic: gridlabdSim/mp13.voltage_A
+
+  sw_p14.phase_A_state: 
+    topic: gridlabdSim/sw_p14.phase_A_state
+
+  mp14.voltage_A:
+    topic: gridlabdSim/mp14.voltage_A
+
+  sw_p15.phase_A_state: 
+    topic: gridlabdSim/sw_p15.phase_A_state
+
+  mp15.voltage_A:
+    topic: gridlabdSim/mp15.voltage_A
+
+  sw_p16.phase_A_state: 
+    topic: gridlabdSim/sw_p16.phase_A_state
+
+  mp16.voltage_A:
+    topic: gridlabdSim/mp16.voltage_A
+
+  sw_p17.phase_A_state: 
+    topic: gridlabdSim/sw_p17.phase_A_state
+
+  mp17.voltage_A:
+    topic: gridlabdSim/mp17.voltage_A
+
+  sw_p18.phase_A_state: 
+    topic: gridlabdSim/sw_p18.phase_A_state
+
+  mp18.voltage_A:
+    topic: gridlabdSim/mp18.voltage_A
+
+  sw_p19.phase_A_state: 
+    topic: gridlabdSim/sw_p19.phase_A_state
+
+  mp19.voltage_A:
+    topic: gridlabdSim/mp19.voltage_A
+
+  sw_p20.phase_A_state: 
+    topic: gridlabdSim/sw_p20.phase_A_state
+
+  mp20.voltage_A:
+    topic: gridlabdSim/mp20.voltage_A
+
+  sw_p21.phase_A_state: 
+    topic: gridlabdSim/sw_p21.phase_A_state
+
+  mp21.voltage_A:
+    topic: gridlabdSim/mp21.voltage_A
+
+  sw_p22.phase_A_state: 
+    topic: gridlabdSim/sw_p22.phase_A_state
+
+  mp22.voltage_A:
+    topic: gridlabdSim/mp22.voltage_A
+
+  sw_p23.phase_A_state: 
+    topic: gridlabdSim/sw_p23.phase_A_state
+
+  mp23.voltage_A:
+    topic: gridlabdSim/mp23.voltage_A
+
+  sw_p24.phase_A_state: 
+    topic: gridlabdSim/sw_p24.phase_A_state
+
+  mp24.voltage_A:
+    topic: gridlabdSim/mp24.voltage_A
+
+  sw_p25.phase_A_state: 
+    topic: gridlabdSim/sw_p25.phase_A_state
+
+  mp25.voltage_A:
+    topic: gridlabdSim/mp25.voltage_A
+
+  sw_p26.phase_A_state: 
+    topic: gridlabdSim/sw_p26.phase_A_state
+
+  mp26.voltage_A:
+    topic: gridlabdSim/mp26.voltage_A
+
+  sw_p27.phase_A_state: 
+    topic: gridlabdSim/sw_p27.phase_A_state
+
+  mp27.voltage_A:
+    topic: gridlabdSim/mp27.voltage_A
+
+  sw_p28.phase_A_state: 
+    topic: gridlabdSim/sw_p28.phase_A_state
+
+  mp28.voltage_A:
+    topic: gridlabdSim/mp28.voltage_A
+
+  sw_p29.phase_A_state: 
+    topic: gridlabdSim/sw_p29.phase_A_state
+
+  mp29.voltage_A:
+    topic: gridlabdSim/mp29.voltage_A
+
+  sw_p30.phase_A_state: 
+    topic: gridlabdSim/sw_p30.phase_A_state
+
+  mp30.voltage_A:
+    topic: gridlabdSim/mp30.voltage_A
+
+  sw_p31.phase_A_state: 
+    topic: gridlabdSim/sw_p31.phase_A_state
+
+  mp31.voltage_A:
+    topic: gridlabdSim/mp31.voltage_A

@@ -1,0 +1,61 @@
+// RIAPS GLA Interface
+
+app Loadshed {
+    message CommandReq;
+    message CommandRep;
+    message Measurement;
+    message Status;
+    message NodeState;
+    message Resend;
+    
+    // message structures:
+    // Status - {priority: (switch status, actor uuid)}
+    // NodeState - {uuid: ( name of actuator (switch), state of the node)}
+    // Resend -  {priority: (switch status, actor uuid)}
+     
+    device GridlabD {
+		rep command : (CommandReq, CommandRep);
+		pub data : Measurement;
+		inside relay;
+		//pub ready : Ready;
+		//timer notify 10000;
+    }
+    
+    component Controller (sensor,actuator,priority) {
+    	timer trigger;
+    	timer check 5000;
+    	req command : (CommandReq, CommandRep);					
+    	sub data : Measurement;
+    	pub updatestatus : Status timed;
+    	sub receivestatus : Status timed;
+    	pub sendnodeinfo : NodeState;
+    	sub recvnodeinfo : NodeState;
+    	pub resendinfo : Resend;
+    	sub recvresendinfo: Resend;
+    }
+
+	actor ControllerActor(sensor,actuator,priority) {
+		local Measurement, CommandReq, CommandRep;
+		{
+			gridlabd : GridlabD;
+			controller : Controller(sensor=sensor,actuator=actuator,priority=priority);
+		}
+	}
+	
+	actor ControllerActor1(sensor,actuator,priority) {
+		local Measurement, CommandReq, CommandRep;
+		{
+			gridlabd : GridlabD;
+			controller : Controller(sensor=sensor,actuator=actuator, priority=priority);
+		}
+	}
+	
+	actor ControllerActor2(sensor,actuator,priority) {
+		local Measurement, CommandReq, CommandRep;
+		{
+			gridlabd : GridlabD;
+			controller : Controller(sensor=sensor,actuator=actuator,priority=priority);
+		}
+	}
+
+} 

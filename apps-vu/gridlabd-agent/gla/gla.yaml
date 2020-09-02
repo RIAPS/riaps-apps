@@ -1,0 +1,6 @@
+!GLAConfig
+time_pace:  5
+time_stop:  21600
+time_base:  now
+host: 192.168.1.100
+dbhost: 192.168.1.100
