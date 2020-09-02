@@ -10,6 +10,8 @@ This example shows a potential integration approach for RIAPS applications with 
 
  ![mass_spring_damper](img/mass_spring_damper.png)
 
+>Note:  Requires RIAPS v1.1.18 or later
+
 ## Developers
 
 - Peter Volgyesi <peter.volgyesi@vanderbilt.edu>

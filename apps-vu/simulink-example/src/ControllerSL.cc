@@ -17,8 +17,9 @@ namespace sltest {
                       const std::string& type_name        ,
                       const py::dict     args             ,
                       const std::string& application_name ,
-                      const std::string& actor_name       )
-            : ControllerSLBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+                      const std::string& actor_name       ,
+                      const py::list groups)
+            : ControllerSLBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name, groups) {
 
         	/* Pack model data into RTM */
             Controller_M->blockIO = &Controller_B;
@@ -97,16 +98,18 @@ create_component_py(const py::object *parent_actor,
                     const std::string &type_name,
                     const py::dict args,
                     const std::string &application_name,
-                    const std::string &actor_name) {
+                    const std::string &actor_name,
+                    const py::list groups) {
     auto ptr = new sltest::components::ControllerSL(parent_actor, actor_spec, type_spec, name, type_name, args,
                                                                      application_name,
-                                                                     actor_name);
+                                                                     actor_name,
+                                                                     groups);
     return std::move(std::unique_ptr<sltest::components::ControllerSL>(ptr));
 }
 
 PYBIND11_MODULE(libcontrollersl, m) {
     py::class_<sltest::components::ControllerSL> testClass(m, "ControllerSL");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
 
     testClass.def("setup"                 , &sltest::components::ControllerSL::Setup);
     testClass.def("activate"              , &sltest::components::ControllerSL::Activate);
@@ -119,6 +122,7 @@ PYBIND11_MODULE(libcontrollersl, m) {
     testClass.def("handleNICStateChange"  , &sltest::components::ControllerSL::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &sltest::components::ControllerSL::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &sltest::components::ControllerSL::HandleReinstate);
+    testClass.def("handleActivate"        , &sltest::components::ControllerSL::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

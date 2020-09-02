@@ -21,13 +21,14 @@ namespace distributedestimator {
         class LocalEstimatorBase : public riaps::ComponentBase {
         public:
             LocalEstimatorBase(const py::object*  parent_actor     ,
-                          const py::dict     actor_spec       ,
-                          const py::dict     type_spec        ,
-                          const std::string& name             ,
-                          const std::string& type_name        ,
-                          const py::dict     args             ,
-                          const std::string& application_name ,
-                          const std::string& actor_name       );
+                               const py::dict     actor_spec       ,
+                               const py::dict     type_spec        ,
+                               const std::string& name             ,
+                               const std::string& type_name        ,
+                               const py::dict     args             ,
+                               const std::string& application_name ,
+                               const std::string& actor_name       ,
+                               const py::list groups               );
 
             virtual void OnQuery()=0;
             virtual void OnReady()=0;

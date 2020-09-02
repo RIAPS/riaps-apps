@@ -17,8 +17,9 @@ namespace distributedestimator {
                       const std::string& type_name        ,
                       const py::dict     args             ,
                       const std::string& application_name ,
-                      const std::string& actor_name       )
-            : GlobalEstimatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+                      const std::string& actor_name       ,
+                      const py::list groups)
+            : GlobalEstimatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name, groups) {
 
         }
         // riaps:keep_construct:end
@@ -65,16 +66,18 @@ create_component_py(const py::object *parent_actor,
                     const std::string &type_name,
                     const py::dict args,
                     const std::string &application_name,
-                    const std::string &actor_name) {
+                    const std::string &actor_name,
+                    const py::list groups) {
     auto ptr = new distributedestimator::components::GlobalEstimator(parent_actor, actor_spec, type_spec, name, type_name, args,
                                                                      application_name,
-                                                                     actor_name);
+                                                                     actor_name,
+                                                                     groups);
     return std::move(std::unique_ptr<distributedestimator::components::GlobalEstimator>(ptr));
 }
 
 PYBIND11_MODULE(libglobalestimator, m) {
     py::class_<distributedestimator::components::GlobalEstimator> testClass(m, "GlobalEstimator");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
 
     testClass.def("setup"                 , &distributedestimator::components::GlobalEstimator::Setup);
     testClass.def("activate"              , &distributedestimator::components::GlobalEstimator::Activate);
@@ -87,6 +90,7 @@ PYBIND11_MODULE(libglobalestimator, m) {
     testClass.def("handleNICStateChange"  , &distributedestimator::components::GlobalEstimator::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &distributedestimator::components::GlobalEstimator::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &distributedestimator::components::GlobalEstimator::HandleReinstate);
+    testClass.def("handleActivate"        , &distributedestimator::components::GlobalEstimator::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

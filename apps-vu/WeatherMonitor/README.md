@@ -17,6 +17,8 @@ provided to allow users to see how to program using Python or C++ for the compon
 
 ## C++ Application in Eclipse
 
+>Note:  Requires RIAPS v1.1.18 or later
+
 The following steps can be used to pull this application into an Eclipse project.
 
 1) Pull the content of this repository.
@@ -31,7 +33,7 @@ The following steps can be used to pull this application into an Eclipse project
 riaps_gen -m DistributedEstimator.json -o .
 ```
 
-5) Create build targets for both the amd64 and armhf architectures, along with a realclean target.  Default setup works, names typically used are all-amd64 and all-armhf.  The make commands can be found in the "makefile".
+5) Create build targets for amd64, armhf and arm64 architectures, along with a realclean target.  Default setup works, names typically used are all-amd64, all-armhf, all-arm64.  The make commands can be found in the "makefile".
 
 6) For C++ indexing, add include paths to the project properties.  Under "C/C++ General" and then "Paths and Symbols", add the following GNU C++ Includes for this project under the GNU C++:
 

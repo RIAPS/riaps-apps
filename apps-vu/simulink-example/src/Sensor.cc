@@ -17,8 +17,9 @@ namespace sltest {
                       const std::string& type_name        ,
                       const py::dict     args             ,
                       const std::string& application_name ,
-                      const std::string& actor_name       )
-            : SensorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+                      const std::string& actor_name       ,
+                      const py::list groups)
+            : SensorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name, groups) {
 
         	// SetDebugLevel(component_logger(), spdlog::level::level_enum::debug);
 
@@ -105,16 +106,18 @@ create_component_py(const py::object *parent_actor,
                     const std::string &type_name,
                     const py::dict args,
                     const std::string &application_name,
-                    const std::string &actor_name) {
+                    const std::string &actor_name,
+                    const py::list groups) {
     auto ptr = new sltest::components::Sensor(parent_actor, actor_spec, type_spec, name, type_name, args,
                                                                      application_name,
-                                                                     actor_name);
+                                                                     actor_name,
+                                                                     groups);
     return std::move(std::unique_ptr<sltest::components::Sensor>(ptr));
 }
 
 PYBIND11_MODULE(libsensor, m) {
     py::class_<sltest::components::Sensor> testClass(m, "Sensor");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
 
     testClass.def("setup"                 , &sltest::components::Sensor::Setup);
     testClass.def("activate"              , &sltest::components::Sensor::Activate);
@@ -127,9 +130,7 @@ PYBIND11_MODULE(libsensor, m) {
     testClass.def("handleNICStateChange"  , &sltest::components::Sensor::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &sltest::components::Sensor::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &sltest::components::Sensor::HandleReinstate);
+    testClass.def("handleActivate"        , &sltest::components::Sensor::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }
-
-
-

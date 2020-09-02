@@ -17,8 +17,9 @@ namespace sltest {
                       const std::string& type_name        ,
                       const py::dict     args             ,
                       const std::string& application_name ,
-                      const std::string& actor_name       )
-            : ActuatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+                      const std::string& actor_name       ,
+                      const py::list groups)
+            : ActuatorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name, groups) {
 
         	//const char* hostname="127.0.0.1"; /* localhost */
             const char* hostname="10.76.0.144"; /* localhost */
@@ -82,16 +83,18 @@ create_component_py(const py::object *parent_actor,
                     const std::string &type_name,
                     const py::dict args,
                     const std::string &application_name,
-                    const std::string &actor_name) {
+                    const std::string &actor_name,
+                    const py::list groups) {
     auto ptr = new sltest::components::Actuator(parent_actor, actor_spec, type_spec, name, type_name, args,
                                                                      application_name,
-                                                                     actor_name);
+                                                                     actor_name,
+                                                                     groups);
     return std::move(std::unique_ptr<sltest::components::Actuator>(ptr));
 }
 
 PYBIND11_MODULE(libactuator, m) {
     py::class_<sltest::components::Actuator> testClass(m, "Actuator");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
 
     testClass.def("setup"                 , &sltest::components::Actuator::Setup);
     testClass.def("activate"              , &sltest::components::Actuator::Activate);
@@ -104,7 +107,7 @@ PYBIND11_MODULE(libactuator, m) {
     testClass.def("handleNICStateChange"  , &sltest::components::Actuator::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &sltest::components::Actuator::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &sltest::components::Actuator::HandleReinstate);
+    testClass.def("handleActivate"        , &sltest::components::Actuator::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }
-

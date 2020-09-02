@@ -23,6 +23,16 @@ else
 	@echo "done"
 endif
 
+build/arm64/Makefile: CMakeLists.txt
+ifndef CMAKE
+	$(error "cmake is not available. Please install")
+else
+	mkdir -p build/arm64/
+	cd build/arm64/ && \
+	cmake -Darch=arm64 -DCMAKE_INSTALL_PREFIX="/"  ../..
+	@echo "done"
+endif
+
 build/amd64/Makefile: CMakeLists.txt
 ifndef CMAKE
 	$(error "cmake is not available. Please install")
@@ -47,12 +57,25 @@ else
 	make -C build/armhf -j2
 endif
 
+all-arm64: build/arm64/Makefile
+ifndef CMAKE
+	$(error "cmake is not available. Please install")
+else
+	make -C build/arm64 -j2
+endif
 
 clean-armhf: build/armhf/Makefile
 ifndef CMAKE
 	$(error "cmake is not available. Please install")
 else
 	make -C build/armhf clean -j2
+endif
+
+clean-arm64: build/armhf/Makefile
+ifndef CMAKE
+	$(error "cmake is not available. Please install")
+else
+	make -C build/arm64 clean -j2
 endif
 
 clean-amd64: build/amd64/Makefile

@@ -11,6 +11,8 @@ and report the values back to a python component.
 
 This project uses a third party library (libmodbus).  The code provided is the source code used to create the shared library.  Before an application is deployed, both libmodbus must be installed and this software must be compile into a shared library.
 
+>Note:  Requires RIAPS v1.1.18 or later
+
 ### Install libmodbus (Development Machine and BBB)
 
 This library should be installed on the machine where the library will be built and on the BBBs where the
