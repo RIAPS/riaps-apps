@@ -4,8 +4,8 @@ using Cxx = import "/capnp/c++.capnp";
 $Cxx.namespace("timertest::messages");
 
 struct TimeStamp {
-    sec @0 : Int64;
-    nsec  @1 : Int64;
+    sec @0 : Int32;
+    nsec  @1 : Int32;
 }
 
 struct SignalValue {

@@ -18,7 +18,16 @@
 namespace timertest{
     namespace components {
 
-        Generator::Generator(_component_conf_j &config, riaps::Actor &actor) : GeneratorBase(config, actor) {
+        Generator::Generator(const py::object *parent_actor,
+                             const py::dict actor_spec, // Actor json config
+                             const py::dict type_spec,  // component json config
+                             const std::string &name,
+                             const std::string &type_name,
+                             const py::dict args,
+                             const std::string &application_name,
+                             const std::string &actor_name,
+                             const py::list groups) : GeneratorBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name,
+                                                                                 actor_name) {
 
             int policy = SCHED_RR;
             struct sched_param params;
@@ -67,15 +76,15 @@ namespace timertest{
         }
 
         // With RIAPS timer
-        void Generator::OnClock(riaps::ports::PortBase *port) {
-            // std::cout << "OnClock()" <<std::endl;
+        void Generator::OnClock() {
+            auto msg = RecvClock();
             float currentValue = sin(_phase);
             _phase+=DPHASE;
 
-            capnp::MallocMessageBuilder messageBuilder;
-            auto msgSignalValue = messageBuilder.initRoot<messages::SignalValue>();
-            msgSignalValue.setVal(currentValue);
-            auto msgTimeStamp   = msgSignalValue.initTimestamp();
+            //capnp::MallocMessageBuilder messageBuilder;
+            MessageBuilder<messages::SignalValue> msg_signal_value;
+            msg_signal_value->setVal(currentValue);
+            auto msg_timestamp   = msg_signal_value->initTimestamp();
 
             timespec
                       t1Spec
@@ -91,10 +100,10 @@ namespace timertest{
 
             //msgTimeStamp.setNsec(tAvg.tv_nsec);
             //msgTimeStamp.setSec(tAvg.tv_sec);
-            msgTimeStamp.setNsec(t1Spec.tv_nsec);
-            msgTimeStamp.setSec(t1Spec.tv_sec);
+            msg_timestamp.setNsec(t1Spec.tv_nsec);
+            msg_timestamp.setSec(t1Spec.tv_sec);
 
-            SendSignalValue(messageBuilder, msgSignalValue);
+            SendSignalValue(msg_signal_value);
 
         }
 
@@ -147,24 +156,45 @@ namespace timertest{
 //            }
 //        }
 
-
-        void Generator::OnOneShotTimer(const std::string &timerid) {
-
-        }
-
-
-
         Generator::~Generator() {
             libsoc_pwm_free(_pwm_output);
         }
     }
 }
 
-riaps::ComponentBase* create_component(_component_conf_j& config, riaps::Actor& actor){
-    auto result = new timertest::components::Generator(config, actor);
-    return result;
+std::unique_ptr<timertest::components::Generator>
+create_component_py(const py::object *parent_actor,
+                    const py::dict actor_spec,
+                    const py::dict type_spec,
+                    const std::string &name,
+                    const std::string &type_name,
+                    const py::dict args,
+                    const std::string &application_name,
+                    const std::string &actor_name,
+                    const py::list groups) {
+    auto ptr = new timertest::components::Generator(parent_actor, actor_spec, type_spec, name, type_name, args,
+                                                                    application_name,
+                                                                    actor_name,
+                                                                    groups);
+    return std::move(std::unique_ptr<timertest::components::Generator>(ptr));
 }
 
-void destroy_component(riaps::ComponentBase* comp){
-    delete comp;
+PYBIND11_MODULE(libgenerator, m) {
+    py::class_<timertest::components::Generator> testClass(m, "Generator");
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
+
+    testClass.def("setup"                 , &timertest::components::Generator::Setup);
+    testClass.def("activate"              , &timertest::components::Generator::Activate);
+    testClass.def("terminate"             , &timertest::components::Generator::Terminate);
+    testClass.def("handlePortUpdate"      , &timertest::components::Generator::HandlePortUpdate);
+    testClass.def("handleCPULimit"        , &timertest::components::Generator::HandleCPULimit);
+    testClass.def("handleMemLimit"        , &timertest::components::Generator::HandleMemLimit);
+    testClass.def("handleSpcLimit"        , &timertest::components::Generator::HandleSpcLimit);
+    testClass.def("handleNetLimit"        , &timertest::components::Generator::HandleNetLimit);
+    testClass.def("handleNICStateChange"  , &timertest::components::Generator::HandleNICStateChange);
+    testClass.def("handlePeerStateChange" , &timertest::components::Generator::HandlePeerStateChange);
+    testClass.def("handleReinstate"       , &timertest::components::Generator::HandleReinstate);
+    testClass.def("handleActivate"        , &timertest::components::Generator::HandleActivate);
+
+    m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

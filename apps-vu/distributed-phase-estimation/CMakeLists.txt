@@ -1,30 +1,45 @@
 # CMakeLists.txt that works with RIAPS v1.1.17 and later
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.10)
 project(distributed_phase_estimation VERSION 1.0.0)
-option(arch "amd64/armhf" "amd64")
-option(BUILD_TESTS  "Build tests" ON)
+
+option(arch "amd64/armhf/arm64" "amd64")
 set(CMAKE_SYSTEM_NAME Linux)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "-Wno-psabi")
+
+set(PYBIND11_CPP_STANDARD -std=c++17)
 
 #Set the platform
 if (${arch} STREQUAL "armhf")
  set(TOOLCHAIN_PREFIX /usr/bin/arm-linux-gnueabihf)
  set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
- set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++)
- set(CMAKE_FIND_ROOT_PATH /usr/${TOOLCHAIN_PREFIX})
- set (CMAKE_CXX_FLAGS "-std=c++11 -g")
- set (CMAKE_C_FLAGS "-std=c99 -g")
+ set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++-7)
+ set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_PREFIX})
+ set (CMAKE_C_FLAGS "-std=c99")
+elseif(${arch} STREQUAL "arm64")
+ set(TOOLCHAIN_PREFIX /usr/bin/aarch64-linux-gnu)
+ set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
+ set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++-7)
+ set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_PREFIX})
+ set (CMAKE_C_FLAGS "-std=c99")
 else()
- set(CMAKE_C_COMPILER gcc-5)
- set(CMAKE_CXX_COMPILER g++-5)
- set (CMAKE_CXX_FLAGS "-std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0")
+ set(CMAKE_C_COMPILER gcc-7)
+ set(CMAKE_CXX_COMPILER g++-7)
  set (CMAKE_C_FLAGS "-std=c99")
 endif()
 
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 if (${arch} STREQUAL "armhf")
  set(riaps_prefix /usr/arm-linux-gnueabihf)
+elseif (${arch} STREQUAL "arm64")
+ set(riaps_prefix /usr/aarch64-linux-gnu)
 else()
  set(riaps_prefix /usr/local)
 endif()
+
+set(CMAKE_INSTALL_PREFIX ${riaps_prefix})
 
 set(DEPENDENCIES ${riaps_prefix})
 set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/include)
@@ -34,22 +49,24 @@ include_directories(/usr/include/python3.6m/)
 include_directories(/usr/local/include/python3.6/)
 link_directories(${LIBALLPATH_LIB})
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
-# Debug binaries are to be copied into "./bin" directory
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_HOME_DIRECTORY}/bin)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${CMAKE_HOME_DIRECTORY}/bin)
-
-#add includes
 include_directories(include)
+
 
 add_library(generator SHARED src/Generator.cc
                              src/base/GeneratorBase.cc
                              include/messages/timertest.capnp.c++)
 
 target_link_libraries(generator czmq riaps dl capnp kj soc)
+set_target_properties(generator PROPERTIES PREFIX lib SUFFIX .so)
 
 add_library(receiver SHARED src/Receiver.cc
                             src/base/ReceiverBase.cc
                             include/messages/timertest.capnp.c++)
 
 target_link_libraries(receiver czmq riaps dl capnp kj soc)
+
+set_target_properties(receiver PROPERTIES PREFIX lib SUFFIX .so)

@@ -13,12 +13,22 @@ namespace timertest {
 
         public:
 
-            Generator(_component_conf_j &config, riaps::Actor &actor);
+            Generator(const py::object *parent_actor,
+                      const py::dict actor_spec, // Actor json config
+                      const py::dict type_spec,  // component json config
+                      const std::string &name,
+                      const std::string &type_name,
+                      const py::dict args,
+                      const std::string &application_name,
+                      const std::string &actor_name,
+                      const py::list groups);
+
+            Generator(const Generator&) = delete;
+            Generator()                      = delete;
 
 
-            virtual void OnClock(riaps::ports::PortBase *port);
 
-            void OnOneShotTimer(const std::string& timerid);
+            virtual void OnClock();
 
             virtual ~Generator();
 
@@ -30,8 +40,15 @@ namespace timertest {
     }
 }
 
-extern "C" riaps::ComponentBase* create_component(_component_conf_j&, riaps::Actor& actor);
-extern "C" void destroy_component(riaps::ComponentBase*);
-
+std::unique_ptr<timertest::components::Generator>
+create_component_py(const py::object *parent_actor,
+                    const py::dict actor_spec,
+                    const py::dict type_spec,
+                    const std::string &name,
+                    const std::string &type_name,
+                    const py::dict args,
+                    const std::string &application_name,
+                    const std::string &actor_name,
+                    const py::list groups);
 
 #endif

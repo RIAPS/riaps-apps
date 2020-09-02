@@ -6,7 +6,7 @@
 
 #include <capnp/generated-header-support.h>
 
-#if CAPNP_VERSION != 5003
+#if CAPNP_VERSION != 6001
 #error "Version mismatch between generated code and library headers.  You must use the same version of the Cap'n Proto compiler and library."
 #endif
 
@@ -31,9 +31,9 @@ struct TimeStamp {
   class Pipeline;
 
   struct _capnpPrivate {
-    CAPNP_DECLARE_STRUCT_HEADER(99254ce5e61770e4, 2, 0)
+    CAPNP_DECLARE_STRUCT_HEADER(99254ce5e61770e4, 1, 0)
     #if !CAPNP_LITE
-    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
   };
 };
@@ -48,7 +48,7 @@ struct SignalValue {
   struct _capnpPrivate {
     CAPNP_DECLARE_STRUCT_HEADER(8e53206e30d94af8, 1, 1)
     #if !CAPNP_LITE
-    static constexpr ::capnp::_::RawBrandedSchema const* brand = &schema->defaultBrand;
+    static constexpr ::capnp::_::RawBrandedSchema const* brand() { return &schema->defaultBrand; }
     #endif  // !CAPNP_LITE
   };
 };
@@ -68,13 +68,13 @@ public:
 
 #if !CAPNP_LITE
   inline ::kj::StringTree toString() const {
-    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
   }
 #endif  // !CAPNP_LITE
 
-  inline  ::int64_t getSec() const;
+  inline  ::int32_t getSec() const;
 
-  inline  ::int64_t getNsec() const;
+  inline  ::int32_t getNsec() const;
 
 private:
   ::capnp::_::StructReader _reader;
@@ -104,11 +104,11 @@ public:
   inline ::kj::StringTree toString() const { return asReader().toString(); }
 #endif  // !CAPNP_LITE
 
-  inline  ::int64_t getSec();
-  inline void setSec( ::int64_t value);
+  inline  ::int32_t getSec();
+  inline void setSec( ::int32_t value);
 
-  inline  ::int64_t getNsec();
-  inline void setNsec( ::int64_t value);
+  inline  ::int32_t getNsec();
+  inline void setNsec( ::int32_t value);
 
 private:
   ::capnp::_::StructBuilder _builder;
@@ -149,7 +149,7 @@ public:
 
 #if !CAPNP_LITE
   inline ::kj::StringTree toString() const {
-    return ::capnp::_::structString(_reader, *_capnpPrivate::brand);
+    return ::capnp::_::structString(_reader, *_capnpPrivate::brand());
   }
 #endif  // !CAPNP_LITE
 
@@ -225,61 +225,63 @@ private:
 
 // =======================================================================================
 
-inline  ::int64_t TimeStamp::Reader::getSec() const {
-  return _reader.getDataField< ::int64_t>(
-      0 * ::capnp::ELEMENTS);
+inline  ::int32_t TimeStamp::Reader::getSec() const {
+  return _reader.getDataField< ::int32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
 }
 
-inline  ::int64_t TimeStamp::Builder::getSec() {
-  return _builder.getDataField< ::int64_t>(
-      0 * ::capnp::ELEMENTS);
+inline  ::int32_t TimeStamp::Builder::getSec() {
+  return _builder.getDataField< ::int32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
 }
-inline void TimeStamp::Builder::setSec( ::int64_t value) {
-  _builder.setDataField< ::int64_t>(
-      0 * ::capnp::ELEMENTS, value);
-}
-
-inline  ::int64_t TimeStamp::Reader::getNsec() const {
-  return _reader.getDataField< ::int64_t>(
-      1 * ::capnp::ELEMENTS);
+inline void TimeStamp::Builder::setSec( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS, value);
 }
 
-inline  ::int64_t TimeStamp::Builder::getNsec() {
-  return _builder.getDataField< ::int64_t>(
-      1 * ::capnp::ELEMENTS);
+inline  ::int32_t TimeStamp::Reader::getNsec() const {
+  return _reader.getDataField< ::int32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
 }
-inline void TimeStamp::Builder::setNsec( ::int64_t value) {
-  _builder.setDataField< ::int64_t>(
-      1 * ::capnp::ELEMENTS, value);
+
+inline  ::int32_t TimeStamp::Builder::getNsec() {
+  return _builder.getDataField< ::int32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS);
+}
+inline void TimeStamp::Builder::setNsec( ::int32_t value) {
+  _builder.setDataField< ::int32_t>(
+      ::capnp::bounded<1>() * ::capnp::ELEMENTS, value);
 }
 
 inline float SignalValue::Reader::getVal() const {
   return _reader.getDataField<float>(
-      0 * ::capnp::ELEMENTS);
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
 }
 
 inline float SignalValue::Builder::getVal() {
   return _builder.getDataField<float>(
-      0 * ::capnp::ELEMENTS);
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS);
 }
 inline void SignalValue::Builder::setVal(float value) {
   _builder.setDataField<float>(
-      0 * ::capnp::ELEMENTS, value);
+      ::capnp::bounded<0>() * ::capnp::ELEMENTS, value);
 }
 
 inline bool SignalValue::Reader::hasTimestamp() const {
-  return !_reader.getPointerField(0 * ::capnp::POINTERS).isNull();
+  return !_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
 }
 inline bool SignalValue::Builder::hasTimestamp() {
-  return !_builder.getPointerField(0 * ::capnp::POINTERS).isNull();
+  return !_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS).isNull();
 }
 inline  ::timertest::messages::TimeStamp::Reader SignalValue::Reader::getTimestamp() const {
-  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::get(
-      _reader.getPointerField(0 * ::capnp::POINTERS));
+  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::get(_reader.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
 }
 inline  ::timertest::messages::TimeStamp::Builder SignalValue::Builder::getTimestamp() {
-  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::get(
-      _builder.getPointerField(0 * ::capnp::POINTERS));
+  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::get(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
 }
 #if !CAPNP_LITE
 inline  ::timertest::messages::TimeStamp::Pipeline SignalValue::Pipeline::getTimestamp() {
@@ -287,21 +289,21 @@ inline  ::timertest::messages::TimeStamp::Pipeline SignalValue::Pipeline::getTim
 }
 #endif  // !CAPNP_LITE
 inline void SignalValue::Builder::setTimestamp( ::timertest::messages::TimeStamp::Reader value) {
-  ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::set(
-      _builder.getPointerField(0 * ::capnp::POINTERS), value);
+  ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::set(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), value);
 }
 inline  ::timertest::messages::TimeStamp::Builder SignalValue::Builder::initTimestamp() {
-  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::init(
-      _builder.getPointerField(0 * ::capnp::POINTERS));
+  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::init(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
 }
 inline void SignalValue::Builder::adoptTimestamp(
     ::capnp::Orphan< ::timertest::messages::TimeStamp>&& value) {
-  ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::adopt(
-      _builder.getPointerField(0 * ::capnp::POINTERS), kj::mv(value));
+  ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::adopt(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS), kj::mv(value));
 }
 inline ::capnp::Orphan< ::timertest::messages::TimeStamp> SignalValue::Builder::disownTimestamp() {
-  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::disown(
-      _builder.getPointerField(0 * ::capnp::POINTERS));
+  return ::capnp::_::PointerHelpers< ::timertest::messages::TimeStamp>::disown(_builder.getPointerField(
+      ::capnp::bounded<0>() * ::capnp::POINTERS));
 }
 
 }  // namespace

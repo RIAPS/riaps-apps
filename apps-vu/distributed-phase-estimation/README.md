@@ -13,13 +13,13 @@ The application implements two actors running on 3 Beaglebone Blacks (BBBs): a *
 * From the received values and timestamps, the **Receiver** estimates the timepoint of the next zero crossing and schedules an event at this timepoint
 * When the event is triggered, the **Receiver** toggles GPIO (PIN 8.19)
 
-If the time-sync is properly configured on the node, we expect the port toggling to happen exactly (todo: +- microsec) at the zero crossing. 
+If the time-sync is properly configured on the node, we expect the port toggling to happen exactly (todo: +- microsec) at the zero crossing.
 
 ## Developers
 
-- Istvan Madari - Institute for Software-Integrated Systems at Vanderbilt University 
-- Peter Volgyesi - Institute for Software-Integrated Systems at Vanderbilt University 
-- Tim Krentz - Institute for Software-Integrated Systems at Vanderbilt University 
+- Istvan Madari - Institute for Software-Integrated Systems at Vanderbilt University
+- Peter Volgyesi - Institute for Software-Integrated Systems at Vanderbilt University
+- Tim Krentz - Institute for Software-Integrated Systems at Vanderbilt University
 
 ## Installation
 
@@ -28,6 +28,9 @@ If the time-sync is properly configured on the node, we expect the port toggling
 - Install the latest RIAPS platform:  
   - Development Environment:  https://github.com/RIAPS/riaps-integration/tree/master/riaps-x86runtime
   - RIAPS Nodes (BBB):  https://github.com/RIAPS/riaps-integration/tree/master/riaps-bbbruntime
+
+> Note: Requires RIAPS v1.1.18 or later
+
 - Clone the riaps-apps repo and build the distributed-phase-estimation apps on the Development Environment
 
 ```
@@ -98,4 +101,3 @@ $ exit
 ## Expected Results
 
 ![Expected results](./PulsesWith2Cycles.png)
-

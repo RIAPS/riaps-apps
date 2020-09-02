@@ -23,7 +23,18 @@
 namespace timertest {
     namespace components {
 
-        Receiver::Receiver(_component_conf_j &config, riaps::Actor &actor) : ReceiverBase(config, actor) {
+        Receiver::Receiver(const py::object *parent_actor,
+                           const py::dict actor_spec, // Actor json config
+                           const py::dict type_spec,  // component json config
+                           const std::string &name,
+                           const std::string &type_name,
+                           const py::dict args,
+                           const std::string &application_name,
+                           const std::string &actor_name,
+                           const py::list groups) : ReceiverBase(parent_actor, actor_spec, type_spec, name, type_name, args,
+                                                                          application_name,
+                                                                          actor_name,
+                                                                          groups) {
             _pps_output = libsoc_gpio_request(PPS_OUTPUT, LS_GPIO_SHARED);
             if (!_pps_output) {
                 perror("unable to request gpio pin:");
@@ -38,9 +49,10 @@ namespace timertest {
             }
         }
 
-        void Receiver::OnSignalValue(const messages::SignalValue::Reader &message, riaps::ports::PortBase *port) {
-            auto currentValue     = message.getVal();
-            auto capnpTimestamp = message.getTimestamp();
+        void Receiver::OnSignalValue() {
+            auto [msg, error] = RecvSignalValue();
+            auto currentValue     = msg->getVal();
+            auto capnpTimestamp = msg->getTimestamp();
             auto tsCurrentTimestamp = timespec{capnpTimestamp.getSec(), capnpTimestamp.getNsec()};
 
 
@@ -87,12 +99,12 @@ namespace timertest {
             _lastTimestamp = tsCurrentTimestamp;
         }
 
-        void Receiver::OnOneShotTimer(const std::string &timerid) {
-
-            libsoc_gpio_set_level(_pps_output, HIGH);
-            libsoc_gpio_set_level(_pps_output, LOW);
-
-        }
+//        void Receiver::OnOneShotTimer(const std::string &timerid) {
+//
+//            libsoc_gpio_set_level(_pps_output, HIGH);
+//            libsoc_gpio_set_level(_pps_output, LOW);
+//
+//        }
 
         Receiver::~Receiver() {
             libsoc_gpio_free(_pps_output);
@@ -100,11 +112,39 @@ namespace timertest {
     }
 }
 
-riaps::ComponentBase* create_component(_component_conf_j& config, riaps::Actor& actor){
-    auto result = new timertest::components::Receiver(config, actor);
-    return result;
+std::unique_ptr<timertest::components::Receiver>
+create_component_py(const py::object *parent_actor,
+                    const py::dict actor_spec,
+                    const py::dict type_spec,
+                    const std::string &name,
+                    const std::string &type_name,
+                    const py::dict args,
+                    const std::string &application_name,
+                    const std::string &actor_name,
+                    const py::list groups) {
+    auto ptr = new timertest::components::Receiver(parent_actor, actor_spec, type_spec, name, type_name, args,
+                                                    application_name,
+                                                    actor_name,
+                                                    groups);
+    return std::move(std::unique_ptr<timertest::components::Receiver>(ptr));
 }
 
-void destroy_component(riaps::ComponentBase* comp){
-    delete comp;
+PYBIND11_MODULE(libreceiver, m) {
+    py::class_<timertest::components::Receiver> testClass(m, "Receiver");
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
+
+    testClass.def("setup"                 , &timertest::components::Receiver::Setup);
+    testClass.def("activate"              , &timertest::components::Receiver::Activate);
+    testClass.def("terminate"             , &timertest::components::Receiver::Terminate);
+    testClass.def("handlePortUpdate"      , &timertest::components::Receiver::HandlePortUpdate);
+    testClass.def("handleCPULimit"        , &timertest::components::Receiver::HandleCPULimit);
+    testClass.def("handleMemLimit"        , &timertest::components::Receiver::HandleMemLimit);
+    testClass.def("handleSpcLimit"        , &timertest::components::Receiver::HandleSpcLimit);
+    testClass.def("handleNetLimit"        , &timertest::components::Receiver::HandleNetLimit);
+    testClass.def("handleNICStateChange"  , &timertest::components::Receiver::HandleNICStateChange);
+    testClass.def("handlePeerStateChange" , &timertest::components::Receiver::HandlePeerStateChange);
+    testClass.def("handleReinstate"       , &timertest::components::Receiver::HandleReinstate);
+    testClass.def("handleActivate"        , &timertest::components::Receiver::HandleActivate);
+
+    m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }

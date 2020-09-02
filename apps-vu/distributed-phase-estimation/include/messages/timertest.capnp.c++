@@ -8,7 +8,7 @@ namespace schemas {
 static const ::capnp::_::AlignedData<48> b_99254ce5e61770e4 = {
   {   0,   0,   0,   0,   5,   0,   6,   0,
     228, 112,  23, 230, 229,  76,  37, 153,
-     16,   0,   0,   0,   1,   0,   2,   0,
+     16,   0,   0,   0,   1,   0,   1,   0,
      28, 186,  24,  16, 161,  19,  38, 191,
       0,   0,   7,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
@@ -39,19 +39,19 @@ static const ::capnp::_::AlignedData<48> b_99254ce5e61770e4 = {
      40,   0,   0,   0,   3,   0,   1,   0,
      52,   0,   0,   0,   2,   0,   1,   0,
     115, 101,  99,   0,   0,   0,   0,   0,
-      5,   0,   0,   0,   0,   0,   0,   0,
+      4,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
-      5,   0,   0,   0,   0,   0,   0,   0,
+      4,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
     110, 115, 101,  99,   0,   0,   0,   0,
-      5,   0,   0,   0,   0,   0,   0,   0,
+      4,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
-      5,   0,   0,   0,   0,   0,   0,   0,
+      4,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0,
       0,   0,   0,   0,   0,   0,   0,   0, }
 };
@@ -136,25 +136,19 @@ namespace timertest {
 namespace messages {
 
 // TimeStamp
-#ifndef _MSC_VER
 constexpr uint16_t TimeStamp::_capnpPrivate::dataWordSize;
 constexpr uint16_t TimeStamp::_capnpPrivate::pointerCount;
-#endif
 #if !CAPNP_LITE
 constexpr ::capnp::Kind TimeStamp::_capnpPrivate::kind;
 constexpr ::capnp::_::RawSchema const* TimeStamp::_capnpPrivate::schema;
-constexpr ::capnp::_::RawBrandedSchema const* TimeStamp::_capnpPrivate::brand;
 #endif  // !CAPNP_LITE
 
 // SignalValue
-#ifndef _MSC_VER
 constexpr uint16_t SignalValue::_capnpPrivate::dataWordSize;
 constexpr uint16_t SignalValue::_capnpPrivate::pointerCount;
-#endif
 #if !CAPNP_LITE
 constexpr ::capnp::Kind SignalValue::_capnpPrivate::kind;
 constexpr ::capnp::_::RawSchema const* SignalValue::_capnpPrivate::schema;
-constexpr ::capnp::_::RawBrandedSchema const* SignalValue::_capnpPrivate::brand;
 #endif  // !CAPNP_LITE
 
 
