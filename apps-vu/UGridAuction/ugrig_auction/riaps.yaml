@@ -1,0 +1,9 @@
+!!python/object:riaps.utils.appdesc.AppDescriptor
+home: /home/riaps/git/UGridAuction/ugrig_auction
+host: '3232235881'
+hosts:
+- 192.168.1.105
+mac: 080027a55a60
+network: {}
+sha: 080027a55a60
+url: file:////home/riaps/git/UGridAuction/ugrig_auction

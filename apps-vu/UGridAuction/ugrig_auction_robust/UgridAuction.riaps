@@ -1,0 +1,109 @@
+// RIAPS ugrid_auction
+
+app UgridAuction {
+    message bid;
+    message announcement;
+    message buyerfreed;
+    message statusmsg;
+    message priceinfo;
+    message assignack;
+    message groupcomm;
+    
+    group ReplicaGroup with leader using groupcomm;
+     
+	// buyer component
+    component Buyer(buyernum) {							
+      pub bidport : bid ;	// publish port for sending bids
+      sub freebuyer : buyerfreed; // subscribe port for getting seller assignments
+      pub statusport : statusmsg; // publish port for sending notifications to market
+      sub collect : priceinfo; // subscribe port for getting pricing info
+      pub sendack : assignack; // publish port for sending acknowledgement message to sellers
+      sub prepare: announcement; // subscribe port for getting notifications from market
+      //timer timeout;
+    }
+    
+    // seller component
+    component Seller(sellernum) {
+      sub assignport : bid;	// subscribe port to receive bids from sellers
+      pub freebuyer : buyerfreed; // publish port to send assignment messages to buyers
+      //timer timeout;
+      sub notify : announcement; // subscribe port for getting notifications from market
+      pub sendprice : priceinfo; // publish port for sending pricing info
+      sub recvack : assignack; // subscribe port for receiving acknowledgement message from buyers
+    }
+
+   // market component
+   component Market {
+   	 timer notify 1000;
+     pub announce : announcement;
+     sub statusport : statusmsg;
+   }
+
+    //  actors
+    
+    actor BuyerActor(buyernum = '1') {
+       {  
+          Buyer : Buyer(buyernum = '1');				
+       }
+    }
+    
+    actor SellerActor(sellernum = '3') {
+       {  
+          Seller : Seller(sellernum = '3');	
+       }
+    }
+    
+	actor MarketActor {
+	       {  
+	          Market : Market;	
+	       }
+	    }    
+    
+    actor BuyerActor1(buyernum = '1') {
+       {  
+          Buyer1 : Buyer(buyernum = '1');				
+       }
+    }
+
+    actor BuyerActor2(buyernum = '2') {
+       {  
+          Buyer2 : Buyer(buyernum = '2');				
+       }
+    }
+    
+    actor BuyerActor3(buyernum = '3') {
+       {  
+          Buyer3 : Buyer(buyernum = '3');				
+       }
+    }
+    
+    actor SellerActor1(sellernum = '1') {
+       {  
+          Seller1 : Seller(sellernum = '1');	
+       }
+    }
+
+    actor SellerActor2(sellernum = '2') {
+       {  
+          Seller2 : Seller(sellernum = '2');	
+       }
+    }
+    
+    actor SellerActor3(sellernum = '3') {
+       {  
+          Seller3 : Seller(sellernum = '3');	
+       }
+    }
+
+	actor MarketActor1 {
+	       {  
+	          Market1 : Market;	
+	       }
+	    } 
+
+	actor MarketActor2 {
+	       {  
+	          Market2 : Market;	
+	       }
+	    } 
+}

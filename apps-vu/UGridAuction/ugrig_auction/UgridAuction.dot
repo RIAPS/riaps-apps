@@ -1,0 +1,135 @@
+digraph UgridAuction {
+rankdir=TB;
+nodesep="0.1";
+ranksep="1.5";
+orientation=l;
+subgraph msgs {
+rank=min;
+bid [shape=ellipse];
+announcement [shape=ellipse];
+buyerfreed [shape=ellipse];
+statusmsg [shape=ellipse];
+priceinfo [shape=ellipse];
+assignack [shape=ellipse];
+}
+
+Buyer_Buyer_30 -> bid;
+Buyer_Buyer_30 -> statusmsg;
+Buyer_Buyer_30 -> assignack;
+buyerfreed -> Buyer_Buyer_30;
+priceinfo -> Buyer_Buyer_30;
+announcement -> Buyer_Buyer_30;
+subgraph "cluster_192.168.1.101" {
+label="192.168.1.101";
+rankdir=BT;
+rank=max;
+subgraph cluster_BuyerActor_29 {
+label=BuyerActor;
+style=rounded;
+Buyer_Buyer_30 [label="Buyer:Buyer", rank=max, shape=component];
+}
+
+}
+
+Buyer_Buyer_32 -> bid;
+Buyer_Buyer_32 -> statusmsg;
+Buyer_Buyer_32 -> assignack;
+buyerfreed -> Buyer_Buyer_32;
+priceinfo -> Buyer_Buyer_32;
+announcement -> Buyer_Buyer_32;
+subgraph "cluster_192.168.1.102" {
+label="192.168.1.102";
+rankdir=BT;
+rank=max;
+subgraph cluster_BuyerActor_31 {
+label=BuyerActor;
+style=rounded;
+Buyer_Buyer_32 [label="Buyer:Buyer", rank=max, shape=component];
+}
+
+}
+
+Buyer_Buyer_34 -> bid;
+Buyer_Buyer_34 -> statusmsg;
+Buyer_Buyer_34 -> assignack;
+buyerfreed -> Buyer_Buyer_34;
+priceinfo -> Buyer_Buyer_34;
+announcement -> Buyer_Buyer_34;
+subgraph "cluster_192.168.1.103" {
+label="192.168.1.103";
+rankdir=BT;
+rank=max;
+subgraph cluster_BuyerActor_33 {
+label=BuyerActor;
+style=rounded;
+Buyer_Buyer_34 [label="Buyer:Buyer", rank=max, shape=component];
+}
+
+}
+
+Seller_Seller_36 -> buyerfreed;
+Seller_Seller_36 -> priceinfo;
+bid -> Seller_Seller_36;
+announcement -> Seller_Seller_36;
+assignack -> Seller_Seller_36;
+subgraph "cluster_192.168.1.104" {
+label="192.168.1.104";
+rankdir=BT;
+rank=max;
+subgraph cluster_SellerActor_35 {
+label=SellerActor;
+style=rounded;
+Seller_Seller_36 [label="Seller:Seller", rank=max, shape=component];
+}
+
+}
+
+Seller_Seller_38 -> buyerfreed;
+Seller_Seller_38 -> priceinfo;
+bid -> Seller_Seller_38;
+announcement -> Seller_Seller_38;
+assignack -> Seller_Seller_38;
+subgraph "cluster_192.168.1.106" {
+label="192.168.1.106";
+rankdir=BT;
+rank=max;
+subgraph cluster_SellerActor_37 {
+label=SellerActor;
+style=rounded;
+Seller_Seller_38 [label="Seller:Seller", rank=max, shape=component];
+}
+
+}
+
+Seller_Seller_40 -> buyerfreed;
+Seller_Seller_40 -> priceinfo;
+bid -> Seller_Seller_40;
+announcement -> Seller_Seller_40;
+assignack -> Seller_Seller_40;
+subgraph "cluster_192.168.1.107" {
+label="192.168.1.107";
+rankdir=BT;
+rank=max;
+subgraph cluster_SellerActor_39 {
+label=SellerActor;
+style=rounded;
+Seller_Seller_40 [label="Seller:Seller", rank=max, shape=component];
+}
+
+}
+
+Market_Market_42 -> announcement;
+statusmsg -> Market_Market_42;
+subgraph "cluster_192.168.1.105" {
+label="192.168.1.105";
+rankdir=BT;
+rank=max;
+subgraph cluster_MarketActor_41 {
+label=MarketActor;
+style=rounded;
+Market_Market_42 [label="Market:Market", rank=max, shape=component];
+}
+
+}
+
+}

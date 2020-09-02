@@ -1,0 +1,10 @@
+// Deploy on all BBB
+app UgridAuction {
+	on (192.168.1.105) BuyerActor1;
+	on (192.168.1.105) BuyerActor2;
+	on (192.168.1.105) BuyerActor3;
+	on (192.168.1.105) SellerActor1;
+	on (192.168.1.105) SellerActor2;
+	on (192.168.1.105) SellerActor3;
+	on (192.168.1.105) MarketActor;
+}
