@@ -1,0 +1,26 @@
+{
+  "DeploFail": [
+    {
+      "target": [
+        "192.168.1.102"
+      ],
+      "actors": [
+        {
+          "name": "DeploFailActor",
+          "actuals": []
+        }
+      ]
+    },
+    {
+      "target": [
+        "192.168.1.100"
+      ],
+      "actors": [
+        {
+          "name": "DeploMonitorActor",
+          "actuals": []
+        }
+      ]
+    }
+  ]
+}

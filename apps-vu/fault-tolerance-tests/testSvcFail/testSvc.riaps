@@ -1,0 +1,38 @@
+app SvcFail {
+	message shutdownReq;
+	message shutdownRep;
+	message value;
+	
+	//library monitorlib;
+	
+	component SvcController(service){
+		req reqport : (shutdownReq, shutdownRep);
+		timer clock;
+		timer trigger 1000;
+		pub pubport : value;
+	}
+	
+	device SvcDevice {
+		rep repport : (shutdownReq, shutdownRep);
+		timer check 1000;
+	}
+	
+	component SvcMonitor {
+		sub subport : value;
+	}
+	
+	actor SvcFailActor(service) {
+		local shutdownRep, shutdownReq;
+		{
+			controller : SvcController(service = service);
+			ctldevice : SvcDevice;
+		}
+	}
+	
+	actor SvcMonitorActor {
+		{
+			monitor: SvcMonitor;
+		}
+	}
+	
+}

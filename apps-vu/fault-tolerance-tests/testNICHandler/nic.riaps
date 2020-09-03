@@ -1,0 +1,42 @@
+app NAME {
+  message NicReq;
+  message NicRep;
+  message intHbs;
+  message value;
+
+  component CompReq(logfile) {
+    req reqNicKill : (NicReq,NicRep);
+    timer clock 1000;
+    timer sporadic;
+    pub sendval : value;
+
+    timer intHbClock 1000;
+    pub intHbPub : intHbs;
+    sub intHbSub : intHbs;
+  }
+
+  device NicDevice(logfile) {
+    rep repPort : (NicReq,NicRep);
+
+    timer intHbClock 1000;
+    pub intHbPub : intHbs;
+    sub intHbSub : intHbs;
+  }
+  
+  component NicMonitor {
+  	sub recvval : value;
+  }
+
+  actor ActorA {
+    local NicReq, NicRep, intHbs;
+    {
+      requestor : CompReq(logfile = "CompReq");
+      killer : NicDevice(logfile = "NicDevice");
+    }
+  }
+  actor ActorB {
+  	{
+  		monitor : NicMonitor;
+  	}
+  }
+}

@@ -1,0 +1,35 @@
+app PowerFail {
+	message shutdownReq;
+	message shutdownRep;
+	message value;
+	
+	component PowerController{
+		req ReqPort : (shutdownReq, shutdownRep);
+		timer clock;
+		timer trigger 1000;
+		pub PubPort : value;
+	}
+	
+	device PowerDevice {
+		rep RepPort : (shutdownReq, shutdownRep);
+	}
+	
+	component PowerMonitor {
+		sub SubPort : value;
+	}
+	
+	actor PowerFailActor {
+		local shutdownRep, shutdownReq;
+		{
+			controller : PowerController;
+			ctldevice : PowerDevice;
+		}
+	}
+	
+	actor PowerMonitorActor {
+		{
+			monitor: PowerMonitor;
+		}
+	}
+	
+}

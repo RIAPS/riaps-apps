@@ -1,0 +1,4 @@
+app SvcFail{
+	on (192.168.1.102) SvcFailActor(service = "deplo");
+	on (192.168.1.100) SvcMonitorActor;
+}

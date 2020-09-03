@@ -1,0 +1,45 @@
+digraph DeploFail {
+rankdir=TB;
+nodesep="0.1";
+ranksep="1.5";
+orientation=l;
+subgraph msgs {
+rank=min;
+value [shape=ellipse];
+}
+
+controller_DeploController_3 -> value;
+controller_DeploController_3 -> shutdownReq_shutdownRep_4;
+shutdownReq_shutdownRep_4 -> ctldevice_DeploDevice_5;
+subgraph "cluster_192.168.1.102" {
+label="192.168.1.102";
+rankdir=BT;
+rank=max;
+subgraph DeploFailActor_msgs_2 {
+rank=min;
+shutdownReq_shutdownRep_4 [label="{shutdownReq | shutdownRep}", shape=Mrecord];
+}
+
+subgraph cluster_DeploFailActor_1 {
+label=DeploFailActor;
+style=rounded;
+controller_DeploController_3 [label="controller:DeploController", rank=max, shape=component];
+ctldevice_DeploDevice_5 [label="ctldevice:DeploDevice", rank=max, shape=component];
+}
+
+}
+
+value -> monitor_DeploMonitor_7;
+subgraph "cluster_192.168.1.100" {
+label="192.168.1.100";
+rankdir=BT;
+rank=max;
+subgraph cluster_DeploMonitorActor_6 {
+label=DeploMonitorActor;
+style=rounded;
+monitor_DeploMonitor_7 [label="monitor:DeploMonitor", rank=max, shape=component];
+}
+
+}
+
+}

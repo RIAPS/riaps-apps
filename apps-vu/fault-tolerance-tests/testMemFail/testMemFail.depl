@@ -1,0 +1,4 @@
+app MemFail{
+	on (192.168.1.102) MemFailActor;
+	on (192.168.1.100) MemMonitorActor;
+}
