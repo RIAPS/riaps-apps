@@ -1,4 +1,0 @@
-app RIAPSModbusTCP {
-    on (192.168.10.91) ModbusExampleActor(Ts = 0.05, ipArg=91 );
-    on (192.168.10.93) ModbusTCPlogger();
-}
