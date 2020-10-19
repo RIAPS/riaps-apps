@@ -1,0 +1,83 @@
+// RIAPS Modbus (UART) Device Testing
+
+app RIAPSModbusUART {
+    message ModbusCommand;     // send Modbus action Request 
+    message ModbusResponse;    // get response from Modbus action  
+    message ModbusStatusRequest; // send request to determine Modbus status
+    message ModbusStatus;        // provides Modbus status (True for open/ready, False for not connected)
+    message ModbusData;        // information for the logger to grab
+    message NodeData;
+    
+    message C37Data;   		  // tuple: raw frame (bytes), dictionary of interpreted values
+    message C37Header;		  // tuple: raw frame (bytes), string
+    message C37Config;		  // tuple: raw frame (bytes), dictionary of interpreted values
+    message PhasorData;
+    
+    library pypmu;
+    library serialModbusLib;
+    
+    // C37 device for relay
+    device C37Receiver1P13A2D(pmu_ip='192.168.10.101', pmu_port=7200) {
+      inside data_queue; 			// Inside port for forwarding messages coming from an internal thread.
+      inside config_queue;
+      inside header_queue;
+
+      timer clock 2000;             // life signal
+      pub c37data : C37Data;		// Publish port for received C37 data messages
+      pub c37header : C37Header;	// Publish port for received C37 header messages
+      pub c37config : C37Config;	// Publish port for received C37 config messages
+    }
+    
+    component Processor() {
+      sub rx_c37data : C37Data;
+      sub rx_c37header : C37Header;
+      sub rx_c37config : C37Config;
+      pub tx_phasorData: PhasorData;
+    }
+ 
+    // Modbus (UART) device interface - UART1
+    //     considered the server for the request/response interaction
+    device ModbusUartReqRepDevice(slaveaddress=10,port='UART1',baudrate=115200,serialTimeout=1.0) {      
+      rep modbusStatusRepPort : (ModbusStatusRequest,ModbusStatus);
+      rep modbusCommandRepPort : (ModbusCommand,ModbusResponse);
+      //timer clock 1000;             //life signal
+    }
+    
+    // Example Component to show Modbus I/F usage
+    component ComputationalComponent(Ts = 0.1, ip = 111) {
+      timer clock 100;  
+      sub nodeReady : NodeData;
+      sub rx_phasorData: PhasorData;
+      pub thisReady : NodeData;
+      pub tx_modbusData : ModbusData ;  	     // When data is ready, 
+      req modbusStatusReqPort : (ModbusStatusRequest,ModbusStatus);
+      req modbusCommandReqPort : (ModbusCommand,ModbusResponse); // Port used to communicate with the ModbusUartDevice
+    }
+
+    component Logger(db_host='192.168.0.102', db_port=8086, db_name='ModbusIO', db_user='riaps', db_password='riaps') {
+      sub rx_modbusData : PhasorData;	
+    }
+    
+    actor OpalIOActor() {
+       local C37Data, C37Header, C37Config;
+       {
+       	  c37receiver : C37Receiver1P13A2D(pmu_ip='192.168.10.101', pmu_port=7200);
+          processor : Processor();
+       }
+    }
+    
+    // Modbus Communication Example actor
+    actor ModbusExampleActor(TsArg, ipArg) {
+        local  ModbusStatusRequest,ModbusStatus,ModbusCommand,ModbusResponse;	// Local message types
+        {
+            modbus : ModbusUartReqRepDevice(slaveaddress=10,port='UART1',baudrate=115200,serialTimeout=3);  // Slave Address is in decimal
+            commInitiator : ComputationalComponent( Ts = TsArg, ip = ipArg ); 		
+        }
+    }
+    
+    actor ModbusLogger(){
+        {
+            logger : Logger(db_host='192.168.10.122', db_port=8086, db_name='Resync', db_user='riaps', db_password='riaps');
+        }
+    }
+}

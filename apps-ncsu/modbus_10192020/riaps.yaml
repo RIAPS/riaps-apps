@@ -1,0 +1,13 @@
+!!python/object:riaps.utils.appdesc.AppDescriptor
+home: /home/riaps/my_riaps_apps/modbus_10192020
+host: '3232238185'
+hosts:
+- 192.168.10.110
+- 192.168.10.113
+- 192.168.10.114
+- 192.168.10.112
+- 192.168.10.111
+mac: 080027e9e8cf
+network: {}
+sha: 080027e9e8cf
+url: file:////home/riaps/my_riaps_apps/modbus_10192020
