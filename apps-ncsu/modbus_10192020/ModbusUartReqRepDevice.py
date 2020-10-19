@@ -21,7 +21,7 @@ import sys
 
 
 ''' Enable debugging to gather timing information on the code execution'''
-debugMode = True
+debugMode = False
 
 class ModbusCommands(Enum):
     READ_BIT = 1
@@ -57,7 +57,7 @@ class ModbusUartReqRepDevice(Component):
 
         self.port_config = PortConfig(self.port, baudrate, bytesize, parity, stopbits, serialTimeout)
         self.slaveAddressDecimal = slaveaddress
-        self.modbus = SerialModbusComm(self, self.slaveAddressDecimal,self.port_config)
+        self.modbus = SerialModbusComm(self.slaveAddressDecimal,self.port_config)
         self.logger.info("Modbus settings %d @%s:%d %d%s%d [%d]" % (self.slaveAddressDecimal,self.port_config.portname,self.port_config.baudrate,self.port_config.bytesize,self.port_config.parity,self.port_config.stopbits,self.pid))
         self.modbus.startModbus()
         self.logger.info("Modbus started")

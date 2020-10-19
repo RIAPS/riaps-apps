@@ -69,7 +69,7 @@ class SerialModbusComm(object):
         else:
             self.portOpen = True
             self.logger.info("Opened startModbus: %s, %s, %s, %s, %s, %s" % (self.port_config.portname, str(self.port_config.baudrate), str(self.port_config.bytesize), self.port_config.parity, str(self.port_config.stopbits), str(self.port_config.serialTimeout)))
-            self.modbusInstrument.debug = True
+            self.modbusInstrument.debug = False
 
         '''
         Only port setting that is expected to be different from the default MODBUS settings is baudrate and timeout

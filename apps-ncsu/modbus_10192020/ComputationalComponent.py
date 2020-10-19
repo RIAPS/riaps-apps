@@ -105,7 +105,9 @@ class ComputationalComponent(Component):
             # If status=true, set flag and restart clock
             try:
                 msg = "readytest"
+                self.logger.info("Modbus status requested out")
                 if not self.message_sent:
+                    self.logger.info("Modbus status requested before")
                     self.modbusStatusReqPort.send_pyobj(msg)
                     self.logger.info("Modbus status requested")
                     self.message_sent = True
@@ -145,15 +147,16 @@ class ComputationalComponent(Component):
                 self.updated = 1
             else:
                 self.logger.info("Modbus either not ready or no value read")
-
+                
+            if self.display_counter_Q == 20:
+                print ("self Q %s and other Q %s" %( str(self.reactivePower),str(self.dataValues)))
+                self.display_counter_Q = 0
+            self.display_counter_Q = self.display_counter_Q + 1
+                
             if (len(self.dataValues) != 0):
                 sum_ReactivePower = 0.0
                 self.sum_OMEGASecondaryControlVariable = 0;
         
-                if self.display_counter_Q == 20:
-                    print ("self Q %s and other Q %s" %( str(self.reactivePower),str(self.dataValues)))
-                    self.display_counter_Q = 0
-                self.display_counter_Q = self.display_counter_Q + 1
             
                 if debugMode:
                     self.logger.info("self Q %s and other Q %s", str(self.reactivePower),str(self.dataValues))
