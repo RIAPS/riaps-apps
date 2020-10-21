@@ -1,0 +1,9 @@
+!!python/object:riaps.utils.appdesc.AppDescriptor
+home: /home/riaps/riaps_apps/Distributed_Voltage_Observer
+host: '3232238203'
+hosts: [192.168.10.114, 192.168.10.110, 192.168.10.112, 192.168.10.115, 192.168.10.113,
+  192.168.10.111]
+mac: 080027d5d813
+network: {}
+sha: 080027d5d813
+url: file:////home/riaps/riaps_apps/Distributed_Voltage_Observer

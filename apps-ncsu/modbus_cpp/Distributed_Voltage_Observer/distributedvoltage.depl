@@ -1,0 +1,9 @@
+app DistributedVoltage {
+	on (192.168.10.110) OpalIOActor;
+	on (192.168.10.111) Collector (Ts = 0.025, ipArg=111 );
+    on (192.168.10.112) Collector (Ts = 0.025, ipArg=112 );
+    on (192.168.10.113) Collector (Ts = 0.025, ipArg=113 );
+    on (192.168.10.114) Collector (Ts = 0.025, ipArg=114 );
+    on (192.168.10.115) Collector (Ts = 0.025, ipArg=115 );
+}
+ 

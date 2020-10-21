@@ -1,0 +1,59 @@
+app DistributedVoltage {
+
+    message Voltage;
+    message NodeData;
+    
+    message C37Data;   		  // tuple: raw frame (bytes), dictionary of interpreted values
+    message C37Header;		  // tuple: raw frame (bytes), string
+    message C37Config;		  // tuple: raw frame (bytes), dictionary of interpreted values
+    message PhasorData;
+    
+    library pypmu;
+        
+    // C37 device for relay
+    device C37Receiver1P13A2D(pmu_ip='192.168.10.101', pmu_port=7200) {
+      inside data_queue; 			// Inside port for forwarding messages coming from an internal thread.
+      inside config_queue;
+      inside header_queue;
+
+      timer clock 2000;             // life signal
+      pub c37data : C37Data;		// Publish port for received C37 data messages
+      pub c37header : C37Header;	// Publish port for received C37 header messages
+      pub c37config : C37Config;	// Publish port for received C37 config messages
+    }
+    
+    component Processor() {
+      sub rx_c37data : C37Data;
+      sub rx_c37header : C37Header;
+      sub rx_c37config : C37Config;
+      pub tx_phasorData: PhasorData;
+    }
+    
+    device ModbusUART (slaveaddress=10, port='UART1', baudrate=115200, numholdreg=3, numinputreg=4, addr=0, nb=4) in cpp {
+        pub currentvoltage : Voltage;
+        timer clock 50;
+    }
+
+    component Gateway(Ts = 0.1, ip = 111) {
+        sub currentvoltage : Voltage;
+        sub nodeReady : NodeData;
+        pub thisReady : NodeData;
+        sub rx_phasorData: PhasorData;
+    }
+    
+    actor OpalIOActor() {
+       local C37Data, C37Header, C37Config;
+       {
+       	  c37receiver : C37Receiver1P13A2D(pmu_ip='192.168.10.101', pmu_port=7200);
+          processor : Processor();
+       }
+    }
+    
+    actor Collector(TsArg, ipArg) {
+        local Voltage;
+        {
+            gateway : Gateway (Ts = TsArg, ip = ipArg );
+            modbusinstance : ModbusUART(slaveaddress=10, port='UART1', baudrate=115200, numholdreg=3, numinputreg=5, addr=1, nb=4);
+        }
+    }
+}

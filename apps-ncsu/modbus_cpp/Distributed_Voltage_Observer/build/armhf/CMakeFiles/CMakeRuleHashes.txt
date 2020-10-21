@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+3c8d6184ccc5c9c09d65222d8a5dfe52 ../../include/messages/distributedvoltage.capnp.c++
