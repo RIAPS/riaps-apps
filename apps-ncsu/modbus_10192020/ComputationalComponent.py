@@ -180,7 +180,7 @@ class ComputationalComponent(Component):
             
                 if (self.sec_en == 0):
                     self.OMEGASecondaryControlVariable = 0
-                self.eSecondaryControlVariable = 0
+                    self.eSecondaryControlVariable = 0
                 
                 '''Write all holding registers'''       
                 OMEGAToModbus = int( round ( ( self.OMEGASecondaryControlVariable+25  )*65535/50))
