@@ -10,19 +10,21 @@ using namespace riaps::ports;
 
 namespace distributedvoltage {
     namespace components {
-        ModbusUARTBase::ModbusUARTBase(const py::object*  parent_actor     ,
+        ModbusUARTBase::ModbusUARTBase(const py::object*  parent_actor,
                           const py::dict     actor_spec       ,
                           const py::dict     type_spec        ,
                           const std::string& name             ,
                           const std::string& type_name        ,
                           const py::dict     args             ,
                           const std::string& application_name ,
-                          const std::string& actor_name       ) : ComponentBase(application_name, actor_name){
+                          const std::string& actor_name       ,
+                          const py::list groups) : ComponentBase(application_name, actor_name){
             auto conf = PyConfigConverter::convert(type_spec, actor_spec);
+            auto gr = PyConfigConverter::ConvertGroups(groups);
             conf.component_name = name;
             conf.component_type = type_name;
             conf.is_device=false;
-            set_config(conf);
+            set_config(conf,gr);
         }
 
         timespec ModbusUARTBase::RecvClock() {
@@ -45,5 +47,3 @@ namespace distributedvoltage {
         void ModbusUARTBase::DispatchInsideMessage(zmsg_t *zmsg, riaps::ports::PortBase *port) { }
     }
 }
-
-

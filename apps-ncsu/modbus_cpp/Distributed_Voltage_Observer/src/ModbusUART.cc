@@ -17,8 +17,9 @@ namespace distributedvoltage {
                       const std::string& type_name        ,
                       const py::dict     args             ,
                       const std::string& application_name ,
-                      const std::string& actor_name       )
-            : ModbusUARTBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name) {
+                      const std::string& actor_name       ,
+                      const py::list groups)
+            : ModbusUARTBase(parent_actor, actor_spec, type_spec, name, type_name, args, application_name, actor_name, groups) {
             auto pid = ::getpid();
             current_status_ = ModbusUART::Status::INIT;
             ctx_ = nullptr;
@@ -226,11 +227,11 @@ namespace distributedvoltage {
                     for (uint i = 0; i<nb; i++) {
                         values.set(i, input_regs_[i]);
                     }
-                    
+
                     // Timestamp AFTER the results arrived (this is new)
                     timespec after{0, 0};
                     clock_gettime(CLOCK_REALTIME, &after);
-                    
+
                     // Compute the difference between the two timestamps
                     timespec ts_diff;
                     ts_diff.tv_sec = after.tv_sec - now.tv_sec;
@@ -246,7 +247,7 @@ namespace distributedvoltage {
                     int ns_diff = ts_diff.tv_sec*1000000000 + ts_diff.tv_nsec;
 
                     component_logger()->info("{}", ns_diff);
-                    
+
                     SendCurrentvoltage(message);
                 }
 
@@ -317,16 +318,18 @@ create_component_py(const py::object *parent_actor,
                     const std::string &type_name,
                     const py::dict args,
                     const std::string &application_name,
-                    const std::string &actor_name) {
+                    const std::string &actor_name,
+                    const py::list groups) {
     auto ptr = new distributedvoltage::components::ModbusUART(parent_actor, actor_spec, type_spec, name, type_name, args,
                                                                      application_name,
-                                                                     actor_name);
+                                                                     actor_name,
+                                                                     groups);
     return std::move(std::unique_ptr<distributedvoltage::components::ModbusUART>(ptr));
 }
 
 PYBIND11_MODULE(libmodbusuart, m) {
     py::class_<distributedvoltage::components::ModbusUART> testClass(m, "ModbusUART");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>(), const py::list>());
 
     testClass.def("setup"                 , &distributedvoltage::components::ModbusUART::Setup);
     testClass.def("activate"              , &distributedvoltage::components::ModbusUART::Activate);
@@ -339,7 +342,7 @@ PYBIND11_MODULE(libmodbusuart, m) {
     testClass.def("handleNICStateChange"  , &distributedvoltage::components::ModbusUART::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &distributedvoltage::components::ModbusUART::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &distributedvoltage::components::ModbusUART::HandleReinstate);
+    testClass.def("handleActivate"        , &distributedestimator::components::GlobalEstimator::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }
-

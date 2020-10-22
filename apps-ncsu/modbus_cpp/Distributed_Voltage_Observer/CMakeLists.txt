@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(DistributedVoltage)
 
-option(arch "amd64/armhf" "amd64")
+option(arch "amd64/armhf/arm64" "amd64")
 set(CMAKE_SYSTEM_NAME Linux)
 
 set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
@@ -18,6 +18,12 @@ if (${arch} STREQUAL "armhf")
  set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++-7)
  set(CMAKE_FIND_ROOT_PATH /usr/${TOOLCHAIN_PREFIX})
  set (CMAKE_C_FLAGS "-std=c99")
+elseif(${arch} STREQUAL "arm64")
+ set(TOOLCHAIN_PREFIX /usr/bin/aarch64-linux-gnu)
+ set(CMAKE_C_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
+ set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++-7)
+ set(CMAKE_FIND_ROOT_PATH ${TOOLCHAIN_PREFIX})
+ set (CMAKE_C_FLAGS "-std=c99")
 else()
  set(CMAKE_C_COMPILER gcc-7)
  set(CMAKE_CXX_COMPILER g++-7)
@@ -28,11 +34,20 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 #set(CMAKE_INSTALL_PREFIX ${riaps_prefix}/${arch})
 
+if (${arch} STREQUAL "armhf")
+ set(riaps_prefix /usr/arm-linux-gnueabihf)
+elseif (${arch} STREQUAL "arm64")
+ set(riaps_prefix /usr/aarch64-linux-gnu)
+else()
+ set(riaps_prefix /usr/local)
+endif()
+
 set(DEPENDENCIES ${riaps_prefix})
-set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/${arch}/include)
-set (LIBALLPATH_LIB ${DEPENDENCIES}/${arch}/lib)
+set (LIBALLPATH_INCLUDE ${DEPENDENCIES}/include)
+set (LIBALLPATH_LIB ${DEPENDENCIES}/lib)
 include_directories(${LIBALLPATH_INCLUDE})
-include_directories(${LIBALLPATH_INCLUDE}/pybind11/include)
+include_directories(/usr/include/python3.6m/)
+include_directories(/usr/local/include/python3.6/)
 link_directories(${LIBALLPATH_LIB})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
@@ -66,7 +81,3 @@ add_library(modbusuart SHARED
 target_link_libraries(modbusuart PRIVATE czmq riaps dl capnp kj modbus)
 set_target_properties(modbusuart PROPERTIES PREFIX lib SUFFIX .so)
 # riaps:keep_modbusuart:end
-
-
-
-
