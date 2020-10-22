@@ -102,17 +102,3 @@ all-armhf:
 all-amd64:
 	@echo "This is a python only project. Build command do not apply"
 endif
-	$(error "clang-format is not available. Please install")
-else
-	find . -iname *.h -o -iname *.cc -o -iname *.cpp | xargs clang-format -i -style=file
-endif
-else
-realclean:
-	@echo "This is a python only project. Build command do not apply"
-reformat:
-	@echo "This is a python only project. Build command do not apply"
-all-armhf:
-	@echo "This is a python only project. Build command do not apply"
-all-amd64:
-	@echo "This is a python only project. Build command do not apply"
-endif

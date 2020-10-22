@@ -329,7 +329,7 @@ create_component_py(const py::object *parent_actor,
 
 PYBIND11_MODULE(libmodbusuart, m) {
     py::class_<distributedvoltage::components::ModbusUART> testClass(m, "ModbusUART");
-    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&>(), const py::list>());
+    testClass.def(py::init<const py::object*, const py::dict, const py::dict, const std::string&, const std::string&, const py::dict, const std::string&, const std::string&, const py::list>());
 
     testClass.def("setup"                 , &distributedvoltage::components::ModbusUART::Setup);
     testClass.def("activate"              , &distributedvoltage::components::ModbusUART::Activate);
@@ -342,7 +342,7 @@ PYBIND11_MODULE(libmodbusuart, m) {
     testClass.def("handleNICStateChange"  , &distributedvoltage::components::ModbusUART::HandleNICStateChange);
     testClass.def("handlePeerStateChange" , &distributedvoltage::components::ModbusUART::HandlePeerStateChange);
     testClass.def("handleReinstate"       , &distributedvoltage::components::ModbusUART::HandleReinstate);
-    testClass.def("handleActivate"        , &distributedestimator::components::GlobalEstimator::HandleActivate);
+    testClass.def("handleActivate"        , &distributedvoltage::components::ModbusUART::HandleActivate);
 
     m.def("create_component_py", &create_component_py, "Instantiates the component from python configuration");
 }
