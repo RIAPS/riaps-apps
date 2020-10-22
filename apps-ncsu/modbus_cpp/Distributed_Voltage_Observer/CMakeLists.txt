@@ -4,7 +4,6 @@ project(DistributedVoltage)
 option(arch "amd64/armhf/arm64" "amd64")
 set(CMAKE_SYSTEM_NAME Linux)
 
-set(riaps_prefix "/opt/riaps/" CACHE STRING "the riaps prefix")
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wno-psabi")
 
