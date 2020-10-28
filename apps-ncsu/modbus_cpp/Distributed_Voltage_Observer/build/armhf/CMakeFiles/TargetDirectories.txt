@@ -1,3 +1,0 @@
-/home/riaps/riaps_apps/Distributed_Voltage_Observer/build/armhf/CMakeFiles/rebuild_cache.dir
-/home/riaps/riaps_apps/Distributed_Voltage_Observer/build/armhf/CMakeFiles/modbusuart.dir
-/home/riaps/riaps_apps/Distributed_Voltage_Observer/build/armhf/CMakeFiles/edit_cache.dir
